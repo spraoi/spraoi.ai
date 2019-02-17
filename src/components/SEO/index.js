@@ -7,7 +7,7 @@ import Twitter from './Twitter';
 
 // reference: https://www.gatsbyjs.org/docs/add-seo-component/
 
-const SEO = ({ article }) => (
+const SEO = ({ article, pathname, ...overrides }) => (
   <StaticQuery
     query={graphql`
       query SEO {
@@ -31,7 +31,8 @@ const SEO = ({ article }) => (
       }
     `}
     render={({ site: { buildTime, siteMetadata } }) => {
-      const data = { ...siteMetadata, ...article };
+      const data = { ...siteMetadata, ...article, ...overrides };
+      const canonicalUrl = `${data.siteUrl}${pathname}`;
 
       const breadcrumbs = [
         {
@@ -50,17 +51,24 @@ const SEO = ({ article }) => (
 
         breadcrumbs.push({
           '@type': 'ListItem',
-          item: { '@id': 'foo', name: data.title },
+          item: { '@id': canonicalUrl, name: data.title },
           position: 3,
         });
       }
 
       return (
         <>
-          <Helmet title={data.title}>
+          <Helmet
+            title={
+              data.title === siteMetadata.title
+                ? data.title
+                : `${data.title} - ${siteMetadata.title}`
+            }
+          >
             <html lang={data.siteLanguage} />
             <meta content={data.description} name="description" />
             <meta content={data.keywords} name="keywords" />
+            <link href={canonicalUrl} rel="canonical" />
             <script type="application/ld+json">
               {JSON.stringify(
                 article
@@ -75,9 +83,9 @@ const SEO = ({ article }) => (
                       headline: data.title,
                       image: { '@type': 'ImageObject', url: data.banner },
                       inLanguage: data.siteLanguage,
-                      mainEntityOfPage: 'foo',
+                      mainEntityOfPage: canonicalUrl,
                       name: data.title,
-                      url: 'foo',
+                      url: canonicalUrl,
                     }
                   : {
                       '@context': 'http://schema.org',
@@ -117,7 +125,7 @@ const SEO = ({ article }) => (
             name={siteMetadata.facebook}
             title={data.title}
             type={article ? 'article' : 'website'}
-            url={'foo'}
+            url={canonicalUrl}
           />
           <Twitter
             desc={data.description}
@@ -141,10 +149,12 @@ SEO.propTypes = {
     keywords: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
   }),
+  pathname: PropTypes.string,
 };
 
 SEO.defaultProps = {
   article: null,
+  pathname: '/',
 };
 
 export default SEO;

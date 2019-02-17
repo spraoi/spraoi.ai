@@ -1,8 +1,11 @@
+/* eslint react/no-danger: off */
+
+import PropTypes from 'prop-types';
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import SEO from '../SEO';
 
-const ArticleLayout = ({ pageContext }) => (
+const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -40,7 +43,7 @@ const ArticleLayout = ({ pageContext }) => (
       allMarkdownRemark: { edges: articles },
     }) => {
       const { frontmatter, html } = articles.find(
-        ({ node }) => node.fields.slug === pageContext.slug
+        ({ node }) => node.fields.slug === slug
       ).node;
 
       const author = people.find(({ node }) => node.id === frontmatter.author)
@@ -48,7 +51,10 @@ const ArticleLayout = ({ pageContext }) => (
 
       return (
         <article>
-          <SEO article={{ ...frontmatter, author: author.name }} />
+          <SEO
+            article={{ ...frontmatter, author: author.name }}
+            pathname={pathname}
+          />
           <header>
             <h1>{frontmatter.title}</h1>
             <h2>
@@ -61,5 +67,14 @@ const ArticleLayout = ({ pageContext }) => (
     }}
   />
 );
+
+ArticleLayout.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
+  pageContext: PropTypes.shape({
+    slug: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default ArticleLayout;

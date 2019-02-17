@@ -165,7 +165,7 @@ export default {
   },
   maxWidths: {
     button: '14rem',
-    content: '800px',
+    content: '1200px',
     sm: '500px',
     md: '800px',
     lg: '1200px',

@@ -1,5 +1,3 @@
-import React from 'react';
+const FourOhFour = () => 404;
 
-const NotFoundPage = () => <>404</>;
-
-export default NotFoundPage;
+export default FourOhFour;

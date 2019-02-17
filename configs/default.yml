@@ -1,0 +1,3 @@
+deploy:
+  cacheControlMaxAge: 300
+theme: default

@@ -1,0 +1,8 @@
+.cache/
+.env
+coverage/
+node_modules/
+public
+src/config.json
+yarn-debug.log
+yarn-error.log

@@ -3,12 +3,17 @@ const { plugins } = require('@spraoi/gatsby-config');
 module.exports = {
   plugins: [
     ...plugins,
+    'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-transformer-remark',
+    'gatsby-transformer-sharp',
     'gatsby-transformer-yaml',
     {
-      options: { fonts: ['Open Sans:300,400,700'] },
-      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        custom: { families: ['Futura:700'], urls: ['/fonts/futura/index.css'] },
+        google: { families: ['Raleway:500,600'] },
+      },
+      resolve: 'gatsby-plugin-web-font-loader',
     },
     {
       options: { name: 'articles', path: 'src/articles' },
@@ -16,6 +21,10 @@ module.exports = {
     },
     {
       options: { name: 'data', path: 'src/data' },
+      resolve: 'gatsby-source-filesystem',
+    },
+    {
+      options: { name: 'images', path: 'src/images' },
       resolve: 'gatsby-source-filesystem',
     },
   ],

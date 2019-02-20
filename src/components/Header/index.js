@@ -12,8 +12,12 @@ const StyledHeader = styled.header`
   margin: 0 auto;
   padding: ${p => p.theme.space.md};
 
+  @media (min-width: ${p => p.theme.breakpoints.sm}) {
+    padding: ${p => p.theme.space.lg};
+  }
+
   @media (min-width: ${p => p.theme.breakpoints.lg}) {
-    padding: ${p => p.theme.space.xl} ${p => p.theme.space.md};
+    padding: ${p => p.theme.space.xl} ${p => p.theme.space.lg};
   }
 `;
 
@@ -24,17 +28,24 @@ const StyledLogo = styled(Logo)`
 `;
 
 const NavList = styled.ul`
-  display: flex;
+  display: none;
+  //display: flex;
+  flex-direction: column;
+
+  @media (min-width: ${p => p.theme.breakpoints.md}) {
+    display: flex;
+    flex-direction: row;
+  }
 `;
 
 const NavLink = styled(Link)`
   color: ${p => p.theme.colors.primary};
-  font-size: ${p => p.theme.fontSizes.xs};
+  font-size: ${p => p.theme.fontSizes.sm};
   letter-spacing: ${p => p.theme.letterSpacings.sm};
   text-decoration: none;
   text-transform: uppercase;
 
-  @media (min-width: ${p => p.theme.breakpoints.lg}) {
+  @media (min-width: ${p => p.theme.breakpoints.md}) {
     margin-left: ${p => p.theme.space.lg};
   }
 `;
@@ -47,8 +58,8 @@ const Header = () => (
     <nav>
       <NavList>
         {[
-          ['/cx-solutions', 'Customer Experience Solutions'],
-          ['/ml-solutions', 'Machine Learning Solutions'],
+          ['/customer-experience-solutions', 'Customer Experience Solutions'],
+          ['/machine-learning-solutions', 'Machine Learning Solutions'],
           ['/services', 'Services'],
           ['/people', 'People'],
           ['/contact', 'Contact Us'],

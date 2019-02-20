@@ -57,9 +57,9 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
           />
           <header>
             <h1>{frontmatter.title}</h1>
-            <h2>
+            <span>
               Posted by {author.name} on {frontmatter.datePublished}
-            </h2>
+            </span>
           </header>
           <main dangerouslySetInnerHTML={{ __html: html }} />
         </article>

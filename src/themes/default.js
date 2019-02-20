@@ -9,6 +9,7 @@ const orange = '#ffcb20';
 const green = '#1de91d';
 const spraoiBlue = '#46b2e2';
 const deepBlue = '#0a2239';
+const whiteBlue = '#f8fbfe';
 
 const white = '#fefefe';
 const gray1 = '#efeeef';
@@ -23,7 +24,7 @@ const black = '#1d1d21';
 
 const primary = deepBlue;
 const primaryBg = transparentize(0.2, deepBlue);
-const primaryDark = darken(0.15, deepBlue);
+const primaryDark = darken(0.05, deepBlue);
 const primaryLight = lighten(0.15, deepBlue);
 
 const accent = spraoiBlue;
@@ -35,13 +36,13 @@ const success = green;
 const warning = orange;
 const error = red;
 
-const body = white;
+const body = whiteBlue;
 const border = gray2;
 
-const textPrimary = lighten(0.15, black);
-const textHeading = black;
+const textPrimary = primary;
+const textHeading = accent;
 const textLink = accent;
-const textSubtle = lighten(0.2, black);
+const textSubtle = gray5;
 
 const inputPrimaryBg = white;
 const inputPrimaryBorder = border;
@@ -67,27 +68,27 @@ const buttonSecondaryText = white;
 
 /* scale ratios */
 
-const fontSizeScale = 1.2;
+const fontSizeScale = 1.55;
 
 /* theme */
 
 export default {
   baseFontSizeBeforeBreakpoint: {
-    xs: '5.2vw',
-    sm: '3.6vw',
-    md: '18px',
-    lg: '18px',
-    xl: '18px',
+    xs: '5vw',
+    sm: '3.5vw',
+    md: '2.6vw',
+    lg: '1.65vw',
+    xl: '20px',
   },
   boxShadows: {
-    md: '0 3px 18px 0 rgba(0, 0, 0, 0.1)',
+    md: '0 22px 44px 0 rgba(14, 14, 33, 0.25)',
   },
   breakpoints: {
     xs: '300px',
-    sm: '500px',
-    md: '800px',
+    sm: '600px',
+    md: '900px',
     lg: '1200px',
-    xl: '1600px',
+    xl: '1500px',
   },
   colors: {
     accent,
@@ -135,8 +136,8 @@ export default {
     white,
   },
   fonts: {
-    primary: '"Open Sans", sans-serif',
-    secondary: '"Open Sans", sans-serif',
+    primary: '"Raleway", sans-serif',
+    secondary: '"Futura", sans-serif',
     mono: 'Menlo, monospace',
   },
   fontSizes: {
@@ -145,12 +146,13 @@ export default {
     sm: `${1 / fontSizeScale}rem`,
     md: '1rem',
     lg: `${fontSizeScale}rem`,
-    xl: `${fontSizeScale * fontSizeScale}rem`,
-    xxl: `${fontSizeScale * fontSizeScale * fontSizeScale}rem`,
+    xl: `${fontSizeScale ** 2}rem`,
+    xxl: `${fontSizeScale ** 3}rem`,
+    hero: '5rem',
   },
   fontWeights: {
-    light: 300,
-    normal: 400,
+    light: 500,
+    normal: 600,
     bold: 700,
   },
   letterSpacings: {
@@ -159,9 +161,9 @@ export default {
     lg: '0.125em',
   },
   lineHeights: {
-    sm: '1.2em',
-    md: '1.4em',
-    lg: '1.6em',
+    sm: '1.4em',
+    md: '1.6em',
+    lg: '2em',
   },
   maxWidths: {
     button: '14rem',

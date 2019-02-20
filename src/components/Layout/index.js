@@ -2,9 +2,20 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { App } from '@spraoi/base';
-import Header from '../Header/index';
+import Footer from '../Footer';
+import Header from '../Header';
 import config from '../../config';
 import theme from '../../theme';
+
+const Wrapper = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+`;
 
 const Content = styled.main`
   margin: 0 auto;
@@ -18,10 +29,13 @@ const Content = styled.main`
 
 const Layout = ({ children, ...rest }) => (
   <App config={config} theme={theme}>
-    <Header />
-    <Content>
-      {typeof children === 'function' ? children(rest) : children}
-    </Content>
+    <Wrapper>
+      <Header />
+      <Content>
+        {typeof children === 'function' ? children(rest) : children}
+      </Content>
+      <Footer />
+    </Wrapper>
   </App>
 );
 

@@ -66,6 +66,10 @@ const SEO = ({ article, pathname, ...overrides }) => (
             }
           >
             <html lang={data.siteLanguage} />
+            <meta
+              content="width=device-width, initial-scale=1"
+              name="viewport"
+            />
             <meta content={data.description} name="description" />
             <meta content={data.keywords} name="keywords" />
             <link href={canonicalUrl} rel="canonical" />

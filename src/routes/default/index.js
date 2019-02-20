@@ -13,7 +13,7 @@ const HeroSynapseIcon = styled(SynapseBackground)`
   top: -30.3rem;
   left: -50rem;
   width: 80rem;
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: -1;
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
@@ -32,7 +32,7 @@ const SolutionsSynapseIcon = styled(SynapseBackground)`
   top: -30.4rem;
   right: -50rem;
   width: 80rem;
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: -1;
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
@@ -41,12 +41,12 @@ const SolutionsSynapseIcon = styled(SynapseBackground)`
   }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    top: -11.8rem;
+    top: -10.3rem;
     right: -43rem;
   }
 
   @media (min-width: ${p => p.theme.breakpoints.xl}) {
-    top: -15rem;
+    top: -13.5rem;
   }
 `;
 
@@ -68,11 +68,21 @@ const Section = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: ${p => p.top};
+    padding-bottom: ${p => p.bottom.md};
+  }
+
+  @media (min-width: ${p => p.theme.breakpoints.xl}) {
+    padding-bottom: ${p => p.bottom.xl};
   }
 `;
 
-Section.PropTypes = {
+Section.propTypes = {
+  bottom: PropTypes.shape({ md: PropTypes.string, xl: PropTypes.string }),
   top: PropTypes.string.isRequired,
+};
+
+Section.defaultProps = {
+  bottom: {},
 };
 
 const SectionH1 = styled.h1`
@@ -94,8 +104,10 @@ const SectionH1 = styled.h1`
 
 const SectionH2 = styled.h2`
   font-size: ${p => p.theme.fontSizes.xl};
-  line-height: 1em;
-  white-space: nowrap;
+
+  @media (min-width: ${p => p.theme.breakpoints.xs}) {
+    line-height: 1em;
+  }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     font-size: ${p => p.theme.fontSizes.xl};
@@ -104,6 +116,7 @@ const SectionH2 = styled.h2`
 
 const SectionH3 = styled.h3`
   margin: ${p => p.theme.space.xxxs} 0;
+  color: ${p => p.theme.colors.white};
 `;
 
 const SectionParagraph = styled.p`
@@ -130,7 +143,6 @@ const FiguresLeft = styled.div`
 
   @media (min-width: ${p => p.theme.breakpoints.xl}) {
     top: -${p => p.theme.space.xl};
-    margin: 0;
   }
 `;
 
@@ -188,9 +200,6 @@ const FigureStructure2 = styled.figure`
     position: absolute;
     margin: 0;
 
-    &:nth-of-type(1) {
-    }
-
     &:nth-of-type(2) {
       top: 3rem;
       right: 0;
@@ -221,13 +230,13 @@ const FigureStructure3 = styled.figure`
     }
 
     &:nth-of-type(2) {
-      top: 12rem;
+      top: 13.5rem;
       left: 0;
     }
 
     &:nth-of-type(3) {
-      top: 14rem;
-      left: 14rem;
+      top: 15.5rem;
+      right: 0;
     }
   }
 `;
@@ -376,7 +385,7 @@ const Index = () => (
         </FigureStructure1>
       </FiguresRight>
     </HeroSection>
-    <Section top="20rem">
+    <Section top="21rem">
       <div>
         <SectionH2>Founding Team</SectionH2>
         <SectionParagraph>
@@ -412,7 +421,7 @@ const Index = () => (
         <SectionH2>Solutions & Services</SectionH2>
         <SectionParagraph>
           We have OOB solutions for machine learning and machine learning
-          enabled customer experience. Our combination of business and
+          enabled customer experiences. Our combination of business and
           engineering talent can deliver technology services in
           several&nbsp;key&nbsp;areas.
         </SectionParagraph>
@@ -432,7 +441,7 @@ const Index = () => (
         </FigureStructure3>
       </FiguresLeft>
     </Section>
-    <Section top="20rem">
+    <Section bottom={{ xl: '12.3rem', md: '14.5rem' }} top="21rem">
       <div>
         <SectionH2>Reach</SectionH2>
         <SectionParagraph>

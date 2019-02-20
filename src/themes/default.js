@@ -23,12 +23,12 @@ const black = '#1d1d21';
 /* theme colors */
 
 const primary = deepBlue;
-const primaryBg = transparentize(0.2, deepBlue);
+const primaryBg = transparentize(0.03, deepBlue);
 const primaryDark = darken(0.05, deepBlue);
 const primaryLight = lighten(0.15, deepBlue);
 
 const accent = spraoiBlue;
-const accentBg = transparentize(0.2, spraoiBlue);
+const accentBg = transparentize(0.03, spraoiBlue);
 const accentDark = darken(0.15, spraoiBlue);
 const accentLight = lighten(0.15, spraoiBlue);
 
@@ -74,7 +74,7 @@ const fontSizeScale = 1.55;
 
 export default {
   baseFontSizeBeforeBreakpoint: {
-    xs: '5vw',
+    xs: '4.4vw',
     sm: '3.5vw',
     md: '2.6vw',
     lg: '1.65vw',
@@ -191,6 +191,6 @@ export default {
   transitionSpeeds: {
     fast: '.1s',
     normal: '.2s',
-    slow: '.4',
+    slow: '.4s',
   },
 };

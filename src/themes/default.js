@@ -37,7 +37,7 @@ const warning = orange;
 const error = red;
 
 const body = whiteBlue;
-const border = gray2;
+const border = gray1;
 
 const textPrimary = primary;
 const textHeading = accent;
@@ -47,7 +47,7 @@ const textSubtle = gray5;
 const inputPrimaryBg = white;
 const inputPrimaryBorder = border;
 const inputPrimaryBorderError = error;
-const inputPrimaryBorderFocus = primary;
+const inputPrimaryBorderFocus = accent;
 const inputPrimaryPlaceholderText = gray4;
 
 const inputSecondaryBg = gray1;
@@ -74,10 +74,10 @@ const fontSizeScale = 1.55;
 
 export default {
   baseFontSizeBeforeBreakpoint: {
-    xs: '4.4vw',
-    sm: '3.5vw',
+    xs: '5vw',
+    sm: '4vw',
     md: '2.6vw',
-    lg: '1.65vw',
+    lg: '1.7vw',
     xl: '20px',
   },
   boxShadows: {
@@ -152,7 +152,8 @@ export default {
   },
   fontWeights: {
     light: 500,
-    normal: 600,
+    normal: 500,
+    semibold: 600,
     bold: 700,
   },
   letterSpacings: {

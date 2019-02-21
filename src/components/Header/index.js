@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 import { Squeeze } from 'react-burgers';
 import { ReactComponent as Logo } from '../../images/brand/spraoi-logo.svg';
+import NavList from '../NavList';
 
 const StyledHeader = styled.header`
   display: flex;
@@ -100,53 +101,6 @@ Nav.propTypes = {
   mobileNavVisible: PropTypes.bool.isRequired,
 };
 
-const NavList = styled.ul`
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    flex-direction: row;
-  }
-`;
-
-const NavItem = styled.li`
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    &:first-of-type {
-      display: none;
-    }
-
-    &:last-of-type {
-      margin-right: -${p => p.theme.space.sm};
-    }
-  }
-`;
-
-const NavLink = styled(Link)`
-  display: block;
-  padding: ${p => p.theme.space.md} ${p => p.theme.space.xl};
-  color: ${p => p.theme.colors.white};
-  line-height: ${p => p.theme.lineHeights.md};
-  letter-spacing: ${p => p.theme.letterSpacings.sm};
-  transition: color ${p => p.theme.transitionSpeeds.normal};
-  text-decoration: none;
-  text-transform: uppercase;
-
-  &:hover,
-  &.active {
-    color: ${p => p.theme.colors.accent};
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    padding: ${p => p.theme.space.sm} ${p => p.theme.space.xl};
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    padding: ${p => p.theme.space.md} ${p => p.theme.space.sm};
-    color: ${p => p.theme.colors.primary};
-    font-size: ${p => p.theme.fontSizes.sm};
-  }
-`;
-
 const Header = () => {
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
   const toggleMobileNav = () => setMobileNavVisible(!mobileNavVisible);
@@ -158,22 +112,7 @@ const Header = () => {
         <StyledLogo alt="spraoi" />
       </Link>
       <Nav mobileNavVisible={mobileNavVisible}>
-        <NavList>
-          {[
-            ['/', 'Who Are We?'],
-            ['/customer-experience-solutions', 'Customer Experience Solutions'],
-            ['/machine-learning-solutions', 'Machine Learning Solutions'],
-            ['/services', 'Services'],
-            ['/people', 'People'],
-            ['/contact', 'Contact Us'],
-          ].map(([link, text]) => (
-            <NavItem key={link}>
-              <NavLink activeClassName="active" onClick={onLinkClick} to={link}>
-                {text}
-              </NavLink>
-            </NavItem>
-          ))}
-        </NavList>
+        <NavList onLinkClick={onLinkClick} />
       </Nav>
       <NavToggle
         active={mobileNavVisible}

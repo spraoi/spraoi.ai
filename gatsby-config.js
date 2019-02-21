@@ -10,7 +10,9 @@ module.exports = {
     'gatsby-transformer-yaml',
     {
       options: {
+        classes: false,
         custom: { families: ['Futura:700'], urls: ['/fonts/futura/index.css'] },
+        events: false,
         google: { families: ['Raleway:500,600'] },
       },
       resolve: 'gatsby-plugin-web-font-loader',

@@ -73,6 +73,8 @@ const SEO = ({ article, pathname, ...overrides }) => (
             <meta content={data.description} name="description" />
             <meta content={data.keywords} name="keywords" />
             <link href={canonicalUrl} rel="canonical" />
+            <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+            <link href="/favicon.ico" rel="icon" type="image/x-icon" />
             <script type="application/ld+json">
               {JSON.stringify(
                 article
@@ -121,6 +123,7 @@ const SEO = ({ article, pathname, ...overrides }) => (
                 name: 'Breadcrumbs',
               })}
             </script>
+            <script defer src="/static/js/mtiFontTrackingCode.js" />
           </Helmet>
           <Facebook
             desc={data.description}

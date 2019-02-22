@@ -84,11 +84,11 @@ const NavList = ({ onLinkClick, secondary }) => (
   <StyledNavList secondary={secondary ? 1 : 0}>
     {[
       ['/', 'Who Are We?'],
-      ['/customer-experience-solutions', 'Customer Experience Solutions'],
-      ['/machine-learning-solutions', 'Machine Learning Solutions'],
-      ['/services', 'Services'],
-      ['/people', 'People'],
-      ['/contact', 'Contact Us'],
+      ['/customer-experience-solutions/', 'Customer Experience Solutions'],
+      ['/machine-learning-solutions/', 'Machine Learning Solutions'],
+      ['/services/', 'Services'],
+      ['/people/', 'People'],
+      ['/contact/', 'Contact Us'],
     ].map(([link, text]) => (
       <NavItem key={link} secondary={secondary ? 1 : 0}>
         <NavLink

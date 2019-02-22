@@ -1,25 +1,52 @@
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const HeroSection = styled.section`
   position: relative;
   margin-top: ${p => p.theme.space.xl};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    display: grid;
-    grid-template-columns: 58% 42%;
+    ${p =>
+      p.single
+        ? css`
+            text-align: center;
+          `
+        : css`
+            display: grid;
+            grid-template-columns: 58% 42%;
+          `};
   }
 `;
 
+HeroSection.propTypes = {
+  single: PropTypes.bool,
+};
+
+HeroSection.defaultProps = {
+  single: false,
+};
+
 const Section = styled.section`
   position: relative;
-  margin-top: ${p => p.theme.space.xxxl};
+  margin-top: ${p => p.theme.space.xxl};
+
+  @media (min-width: ${p => p.theme.breakpoints.sm}) {
+    margin-top: ${p => p.theme.space.xxl};
+  }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     margin-top: ${p => p.top};
     padding-bottom: ${p => p.bottom.md};
+
+    ${p =>
+      p.single
+        ? css`
+            text-align: center;
+          `
+        : css`
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+          `};
   }
 
   @media (min-width: ${p => p.theme.breakpoints.xl}) {
@@ -29,11 +56,14 @@ const Section = styled.section`
 
 Section.propTypes = {
   bottom: PropTypes.shape({ md: PropTypes.string, xl: PropTypes.string }),
-  top: PropTypes.string.isRequired,
+  single: PropTypes.bool,
+  top: PropTypes.string,
 };
 
 Section.defaultProps = {
   bottom: {},
+  single: false,
+  top: null,
 };
 
 const SectionH1 = styled.h1`
@@ -72,6 +102,8 @@ const SectionH3 = styled.h3`
 `;
 
 const SectionParagraph = styled.p`
+  max-width: ${p => p.theme.maxWidths.md};
+  margin: 0 auto;
   letter-spacing: ${p => p.theme.letterSpacings.sm};
   line-height: ${p => p.theme.lineHeights.lg};
 `;

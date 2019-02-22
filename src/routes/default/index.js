@@ -1,9 +1,8 @@
+import Image from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
-import KaranMishra from '../../components/Images/KaranMishra';
-import MatthiewOmara from '../../components/Images/MatthewOmara';
+import PeopleContainer from '../../containers/PeopleContainer';
 import SEO from '../../components/SEO';
-import SantoashRajaram from '../../components/Images/SantoashRajaram';
 import {
   FiguresLeft,
   FiguresRight,
@@ -26,7 +25,7 @@ import { ReactComponent as Offshore } from '../../images/icons/offshore.svg';
 import { ReactComponent as Placeholder } from '../../images/icons/placeholder.svg';
 import { ReactComponent as Services } from '../../images/icons/services.svg';
 
-const HeroSynapseIcon = styled(BgLanding)`
+const HeroBg = styled(BgLanding)`
   position: absolute;
   top: -30.3rem;
   left: -50rem;
@@ -45,7 +44,7 @@ const HeroSynapseIcon = styled(BgLanding)`
   }
 `;
 
-const SolutionsSynapseIcon = styled(BgLanding)`
+const SolutionsBg = styled(BgLanding)`
   position: absolute;
   top: -29.7rem;
   right: -52rem;
@@ -236,131 +235,128 @@ const NoCap = styled.span`
 `;
 
 const Index = () => (
-  <>
-    <SEO />
-    <HeroSection>
-      <HeroSynapseIcon />
-      <div>
-        <SectionH1>Who are we?</SectionH1>
-        <SectionParagraph>
-          Spraoi is an insurance technology solutions provider with a focus on
-          machine learning. We work with leading insurers to solve business
-          challenges and optimize outcomes through technology solutions and
-          associated services.
-        </SectionParagraph>
-      </div>
-      <FiguresRight>
-        <FigureStructure1 as={IconFigure}>
-          <StyledIcon as={Hand} />
-          <figcaption>
-            Insurance SME<NoCap>s</NoCap> Big 4 Consulting
-          </figcaption>
-        </FigureStructure1>
-        <FigureStructure1 as={IconFigure}>
-          <StyledIcon as={Bridge} />
-          <figcaption>Silicon Valley Technologists</figcaption>
-        </FigureStructure1>
-        <FigureStructure1 as={IconFigure}>
-          <StyledIcon as={Offshore} />
-          <figcaption>Offshore Scale</figcaption>
-        </FigureStructure1>
-      </FiguresRight>
-    </HeroSection>
-    <Section top="21rem">
-      <div>
-        <SectionH2>Founding Team</SectionH2>
-        <SectionParagraph>
-          We bring experience over 35 years of insurance experience from carrier
-          and consultancy perspectives (PwC, Deloitte, EY), and combined it with
-          tech expertise from Apple and Oracle.
-        </SectionParagraph>
-      </div>
-      <FiguresRight>
-        <FigureStructure2>
-          <StyledImage>
-            <MatthiewOmara />
-          </StyledImage>
-          <ImageFigureFigcaption>Matthew O&rsquo;mara</ImageFigureFigcaption>
-        </FigureStructure2>
-        <FigureStructure2>
-          <StyledImage>
-            <KaranMishra />
-          </StyledImage>
-          <ImageFigureFigcaption>Karan Mishra</ImageFigureFigcaption>
-        </FigureStructure2>
-        <FigureStructure2>
-          <StyledImage>
-            <SantoashRajaram />
-          </StyledImage>
-          <ImageFigureFigcaption>Santoash Rajaram</ImageFigureFigcaption>
-        </FigureStructure2>
-      </FiguresRight>
-    </Section>
-    <Section top="27rem">
-      <SolutionsSynapseIcon />
-      <TextRight>
-        <SectionH2>Solutions & Services</SectionH2>
-        <SectionParagraph>
-          We have OOB solutions for machine learning and machine learning
-          enabled customer experiences. Our combination of business and
-          engineering talent can deliver technology services in several key
-          areas.
-        </SectionParagraph>
-      </TextRight>
-      <FiguresLeft>
-        <FigureStructure3 as={IconFigure}>
-          <StyledIcon as={Iml} />
-          <figcaption>Insurance Machine Learning Solutions</figcaption>
-        </FigureStructure3>
-        <FigureStructure3 as={IconFigure}>
-          <StyledIcon as={Services} />
-          <figcaption>Technology Services</figcaption>
-        </FigureStructure3>
-        <FigureStructure3 as={IconFigure}>
-          <StyledIcon as={CxSolutions} />
-          <figcaption>Customer Experience Solutions</figcaption>
-        </FigureStructure3>
-      </FiguresLeft>
-    </Section>
-    <Section bottom={{ md: '14.5rem', xl: '12.3rem' }} top="21rem">
-      <div>
-        <SectionH2>Reach</SectionH2>
-        <SectionParagraph>
-          We have a global team of 26 (including delivery partners), and have
-          established a repeatable onsite/offshore delivery mode and
-          continue&nbsp;to&nbsp;optimize.
-        </SectionParagraph>
-      </div>
-      <FiguresRight>
-        <FigureStructure4 as={IconRoundFigure}>
-          <StyledReachIcon as={Placeholder} />
-          <figcaption>
-            <SectionH3>USA</SectionH3>
-            <ul>
-              <li>Atlanta</li>
-              <li>Chicago</li>
-              <li>Philadelphia</li>
-              <li>San Francisco</li>
-              <li>New York</li>
-              <li>Portland</li>
-              <li>Dallas</li>
-            </ul>
-          </figcaption>
-        </FigureStructure4>
-        <FigureStructure4 as={IconRoundFigure}>
-          <StyledReachIcon as={Placeholder} />
-          <figcaption>
-            <SectionH3>India</SectionH3>
-            <ul>
-              <li>Bangalore</li>
-              <li>Mumbai</li>
-              <li>Mysore</li>
-            </ul>
-          </figcaption>
-        </FigureStructure4>
-      </FiguresRight>
-    </Section>
-  </>
+  <PeopleContainer>
+    {people => (
+      <>
+        <SEO />
+        <HeroSection>
+          <HeroBg />
+          <div>
+            <SectionH1>Who are we?</SectionH1>
+            <SectionParagraph>
+              Spraoi is an insurance technology solutions provider with a focus
+              on machine learning. We work with leading insurers to solve
+              business challenges and optimize outcomes through technology
+              solutions and associated services.
+            </SectionParagraph>
+          </div>
+          <FiguresRight>
+            <FigureStructure1 as={IconFigure}>
+              <StyledIcon as={Hand} />
+              <figcaption>
+                Insurance SME<NoCap>s</NoCap> Big 4 Consulting
+              </figcaption>
+            </FigureStructure1>
+            <FigureStructure1 as={IconFigure}>
+              <StyledIcon as={Bridge} />
+              <figcaption>Silicon Valley Technologists</figcaption>
+            </FigureStructure1>
+            <FigureStructure1 as={IconFigure}>
+              <StyledIcon as={Offshore} />
+              <figcaption>Offshore Scale</figcaption>
+            </FigureStructure1>
+          </FiguresRight>
+        </HeroSection>
+        <Section top="21rem">
+          <div>
+            <SectionH2>Founding Team</SectionH2>
+            <SectionParagraph>
+              We bring experience over 35 years of insurance experience from
+              carrier and consultancy perspectives (PwC, Deloitte, EY), and
+              combined it with tech expertise from Apple and Oracle.
+            </SectionParagraph>
+          </div>
+          <FiguresRight>
+            {people
+              .filter(p => p.executive > 0 && p.active === 'y')
+              .sort((a, b) => (a.executive > b.executive ? 1 : -1))
+              .map(({ id, image, name }) => (
+                <FigureStructure2 key={id}>
+                  <StyledImage>
+                    <Image alt="" fluid={image} />
+                  </StyledImage>
+                  <ImageFigureFigcaption>{name}</ImageFigureFigcaption>
+                </FigureStructure2>
+              ))}
+          </FiguresRight>
+        </Section>
+        <Section top="27rem">
+          <SolutionsBg />
+          <TextRight>
+            <SectionH2>Solutions & Services</SectionH2>
+            <SectionParagraph>
+              We have OOB solutions for machine learning and machine learning
+              enabled customer experiences. Our combination of business and
+              engineering talent can deliver technology services in several key
+              areas.
+            </SectionParagraph>
+          </TextRight>
+          <FiguresLeft>
+            <FigureStructure3 as={IconFigure}>
+              <StyledIcon as={Iml} />
+              <figcaption>Insurance Machine Learning Solutions</figcaption>
+            </FigureStructure3>
+            <FigureStructure3 as={IconFigure}>
+              <StyledIcon as={Services} />
+              <figcaption>Technology Services</figcaption>
+            </FigureStructure3>
+            <FigureStructure3 as={IconFigure}>
+              <StyledIcon as={CxSolutions} />
+              <figcaption>Customer Experience Solutions</figcaption>
+            </FigureStructure3>
+          </FiguresLeft>
+        </Section>
+        <Section bottom={{ md: '14.5rem', xl: '12.3rem' }} top="21rem">
+          <div>
+            <SectionH2>Reach</SectionH2>
+            <SectionParagraph>
+              We have a global team of 26 (including delivery partners), and
+              have established a repeatable onsite/offshore delivery mode and
+              continue&nbsp;to&nbsp;optimize.
+            </SectionParagraph>
+          </div>
+          <FiguresRight>
+            <FigureStructure4 as={IconRoundFigure}>
+              <StyledReachIcon as={Placeholder} />
+              <figcaption>
+                <SectionH3>USA</SectionH3>
+                <ul>
+                  <li>Atlanta</li>
+                  <li>Chicago</li>
+                  <li>Philadelphia</li>
+                  <li>San Francisco</li>
+                  <li>New York</li>
+                  <li>Portland</li>
+                  <li>Dallas</li>
+                </ul>
+              </figcaption>
+            </FigureStructure4>
+            <FigureStructure4 as={IconRoundFigure}>
+              <StyledReachIcon as={Placeholder} />
+              <figcaption>
+                <SectionH3>India</SectionH3>
+                <ul>
+                  <li>Bangalore</li>
+                  <li>Mumbai</li>
+                  <li>Mysore</li>
+                </ul>
+              </figcaption>
+            </FigureStructure4>
+          </FiguresRight>
+        </Section>
+      </>
+    )}
+  </PeopleContainer>
 );
 
 export default Index;

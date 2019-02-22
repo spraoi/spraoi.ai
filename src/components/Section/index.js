@@ -31,7 +31,7 @@ const Section = styled.section`
   margin-top: ${p => p.theme.space.xxl};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    margin-top: ${p => p.theme.space.xxl};
+    margin-top: ${p => p.theme.space.xxxl};
   }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
@@ -103,7 +103,8 @@ const SectionH3 = styled.h3`
 
 const SectionParagraph = styled.p`
   max-width: ${p => p.theme.maxWidths.md};
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   letter-spacing: ${p => p.theme.letterSpacings.sm};
   line-height: ${p => p.theme.lineHeights.lg};
 `;

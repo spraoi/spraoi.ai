@@ -62,7 +62,7 @@ const ExecListItem = styled(PersonListItem)`
   }
 `;
 
-const Index = () => (
+const People = () => (
   <PeopleContainer>
     {people => (
       <>
@@ -105,4 +105,4 @@ const Index = () => (
   </PeopleContainer>
 );
 
-export default Index;
+export default People;

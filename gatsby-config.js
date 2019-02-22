@@ -37,7 +37,7 @@ module.exports = {
     description: 'Foo bar baz',
     facebook: 'spraoisoftware',
     headline: 'Foo bar baz',
-    keywords: 'Spraoi,Insurance Technology,Machine Learning',
+    keywords: 'Spraoi,Insurance Technology,Machine Learning,Solutions',
     ogLanguage: 'en_US',
     siteLanguage: 'en',
     siteUrl: 'https://spraoi.ai',

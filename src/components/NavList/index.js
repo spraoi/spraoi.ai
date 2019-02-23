@@ -41,6 +41,7 @@ const NavLink = styled(Link)`
   line-height: ${p => p.theme.lineHeights.md};
   letter-spacing: ${p => p.theme.letterSpacings.sm};
   transition: color ${p => p.theme.transitionSpeeds.normal};
+  font-weight: ${p => p.theme.fontWeights.semibold};
   text-decoration: none;
   text-transform: uppercase;
 

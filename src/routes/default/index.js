@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import PeopleContainer from '../../containers/PeopleContainer';
 import SEO from '../../components/SEO';
 import {
-  FiguresLeft,
-  FiguresRight,
+  Figures,
   HeroSection,
   IconFigure,
   Section,
@@ -14,16 +13,17 @@ import {
   SectionH3,
   SectionParagraph,
   StyledIcon,
-  TextRight,
+  Order2,
 } from '../../components/Section';
 import { ReactComponent as BgLanding } from '../../images/icons/bg-landing.svg';
 import { ReactComponent as Bridge } from '../../images/icons/bridge.svg';
 import { ReactComponent as CxSolutions } from '../../images/icons/cx-solutions.svg';
 import { ReactComponent as Hand } from '../../images/icons/hand.svg';
 import { ReactComponent as Iml } from '../../images/icons/iml.svg';
+import { ReactComponent as India } from '../../images/icons/india.svg';
 import { ReactComponent as Offshore } from '../../images/icons/offshore.svg';
-import { ReactComponent as Placeholder } from '../../images/icons/placeholder.svg';
 import { ReactComponent as Services } from '../../images/icons/services.svg';
+import { ReactComponent as Usa } from '../../images/icons/usa.svg';
 
 const HeroBg = styled(BgLanding)`
   position: absolute;
@@ -34,36 +34,36 @@ const HeroBg = styled(BgLanding)`
   z-index: -1;
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    top: -28.5rem;
+    top: -28.3rem;
     left: -44.5rem;
   }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    top: -27.8rem;
+    top: -27.6rem;
     left: -43rem;
   }
 `;
 
 const SolutionsBg = styled(BgLanding)`
   position: absolute;
-  top: -29.7rem;
-  right: -52rem;
+  top: -27.7rem;
+  right: -54rem;
   width: 80rem;
   opacity: 0.8;
   z-index: -1;
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    top: -15.5rem;
+    top: -15rem;
     right: -44.5rem;
   }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    top: -10.3rem;
+    top: -10.9rem;
     right: -43rem;
   }
 
   @media (min-width: ${p => p.theme.breakpoints.xl}) {
-    top: -13.5rem;
+    top: -14.2rem;
   }
 `;
 
@@ -75,7 +75,7 @@ const FigureStructure1 = styled.figure`
     margin: 0;
 
     &:nth-of-type(1) {
-      left: 4rem;
+      left: 3rem;
     }
 
     &:nth-of-type(2) {
@@ -130,16 +130,16 @@ const FigureStructure3 = styled.figure`
     margin: 0;
 
     &:nth-of-type(1) {
-      left: 10rem;
+      left: 12rem;
     }
 
     &:nth-of-type(2) {
-      top: 13.5rem;
+      top: 12rem;
       left: 0;
     }
 
     &:nth-of-type(3) {
-      top: 15.5rem;
+      top: 14.5rem;
       right: 0;
     }
   }
@@ -181,6 +181,8 @@ const StyledReachIcon = styled.div`
 `;
 
 const IconRoundFigure = styled.figure`
+  grid-column-start: 1;
+  grid-column-end: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,6 +199,11 @@ const IconRoundFigure = styled.figure`
   text-transform: uppercase;
   letter-spacing: ${p => p.theme.letterSpacings.lg};
 
+  @media (min-width: ${p => p.theme.breakpoints.sm}) {
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     width: 17rem;
     height: 17rem;
@@ -204,8 +211,8 @@ const IconRoundFigure = styled.figure`
 `;
 
 const StyledImage = styled.div`
-  width: 9.2rem;
-  height: 9.2rem;
+  width: 9.8rem;
+  height: 9.8rem;
   border-radius: ${p => p.theme.radii.lg};
   box-shadow: ${p => p.theme.boxShadows.md};
   overflow: hidden;
@@ -250,7 +257,7 @@ const Index = () => (
               solutions and associated services.
             </SectionParagraph>
           </div>
-          <FiguresRight>
+          <Figures>
             <FigureStructure1 as={IconFigure}>
               <StyledIcon as={Hand} />
               <figcaption>
@@ -265,9 +272,9 @@ const Index = () => (
               <StyledIcon as={Offshore} />
               <figcaption>Offshore Scale</figcaption>
             </FigureStructure1>
-          </FiguresRight>
+          </Figures>
         </HeroSection>
-        <Section top="21rem">
+        <Section top="19rem">
           <div>
             <SectionH2>Founding Team</SectionH2>
             <SectionParagraph>
@@ -276,7 +283,7 @@ const Index = () => (
               combined it with tech expertise from Apple and Oracle.
             </SectionParagraph>
           </div>
-          <FiguresRight>
+          <Figures>
             {people
               .filter(p => p.executive > 0 && p.active === 'y')
               .sort((a, b) => (a.executive > b.executive ? 1 : -1))
@@ -288,23 +295,23 @@ const Index = () => (
                   <ImageFigureFigcaption>{name}</ImageFigureFigcaption>
                 </FigureStructure2>
               ))}
-          </FiguresRight>
+          </Figures>
         </Section>
-        <Section top="27rem">
+        <Section top="25rem">
           <SolutionsBg />
-          <TextRight>
+          <Order2>
             <SectionH2>Solutions & Services</SectionH2>
             <SectionParagraph>
               We have OOB solutions for machine learning and machine learning
               enabled customer experiences. Our combination of business and
-              engineering talent can deliver technology services in several key
-              areas.
+              engineering talent can deliver technology services in several
+              key&nbsp;areas.
             </SectionParagraph>
-          </TextRight>
-          <FiguresLeft>
+          </Order2>
+          <Figures left>
             <FigureStructure3 as={IconFigure}>
               <StyledIcon as={Iml} />
-              <figcaption>Insurance Machine Learning Solutions</figcaption>
+              <figcaption>Machine Learning Solutions</figcaption>
             </FigureStructure3>
             <FigureStructure3 as={IconFigure}>
               <StyledIcon as={Services} />
@@ -314,7 +321,7 @@ const Index = () => (
               <StyledIcon as={CxSolutions} />
               <figcaption>Customer Experience Solutions</figcaption>
             </FigureStructure3>
-          </FiguresLeft>
+          </Figures>
         </Section>
         <Section bottom={{ md: '14.5rem', xl: '12.3rem' }} top="21rem">
           <div>
@@ -325,9 +332,9 @@ const Index = () => (
               continue&nbsp;to&nbsp;optimize.
             </SectionParagraph>
           </div>
-          <FiguresRight>
+          <Figures>
             <FigureStructure4 as={IconRoundFigure}>
-              <StyledReachIcon as={Placeholder} />
+              <StyledReachIcon as={Usa} />
               <figcaption>
                 <SectionH3>USA</SectionH3>
                 <ul>
@@ -342,7 +349,7 @@ const Index = () => (
               </figcaption>
             </FigureStructure4>
             <FigureStructure4 as={IconRoundFigure}>
-              <StyledReachIcon as={Placeholder} />
+              <StyledReachIcon as={India} />
               <figcaption>
                 <SectionH3>India</SectionH3>
                 <ul>
@@ -352,7 +359,7 @@ const Index = () => (
                 </ul>
               </figcaption>
             </FigureStructure4>
-          </FiguresRight>
+          </Figures>
         </Section>
       </>
     )}

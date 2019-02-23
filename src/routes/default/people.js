@@ -49,8 +49,8 @@ const PersonListItem = styled.li`
   }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    width: 7.2rem;
-    height: 7.2rem;
+    width: 6.8rem;
+    height: 6.8rem;
     margin: 0 ${p => p.theme.space.lg} ${p => p.theme.space.xl};
   }
 `;
@@ -67,15 +67,15 @@ const People = () => (
     {people => (
       <>
         <SEO />
-        <HeroSection single>
+        <HeroSection center single>
           <HeroBg />
           <SectionH1>People</SectionH1>
-          <SectionParagraph>
+          <SectionParagraph center>
             We are an eclectic mix of technologists, consultants, insurance
             domain experts and&nbsp;solution&nbsp;leaders.
           </SectionParagraph>
         </HeroSection>
-        <Section single>
+        <Section center single>
           <SectionH2>Leadership</SectionH2>
           <PeopleList>
             {people
@@ -88,7 +88,7 @@ const People = () => (
               ))}
           </PeopleList>
         </Section>
-        <Section single>
+        <Section center single>
           <SectionH2>Our Team</SectionH2>
           <PeopleList>
             {people

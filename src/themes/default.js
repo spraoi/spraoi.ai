@@ -7,7 +7,7 @@ import { darken, lighten, transparentize } from 'polished';
 const red = '#ff2020';
 const orange = '#ffcb20';
 const green = '#1de91d';
-const spraoiBlue = '#46b2e2';
+const spraoiBlue = '#06bce3';
 const deepBlue = '#0a2239';
 const whiteBlue = '#f8fbfe';
 
@@ -76,8 +76,8 @@ export default {
   baseFontSizeBeforeBreakpoint: {
     xs: '5vw',
     sm: '4vw',
-    md: '2.6vw',
-    lg: '1.7vw',
+    md: '2.5vw',
+    lg: '1.66vw',
     xl: '20px',
   },
   boxShadows: {

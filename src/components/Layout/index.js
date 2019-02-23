@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { App } from '@spraoi/base';
+import Content from '../Content';
 import Footer from '../Footer';
 import Header from '../Header';
 import config from '../../config';
@@ -15,16 +16,6 @@ const Wrapper = styled.div`
   left: 0;
   overflow-x: hidden;
   overflow-y: auto;
-`;
-
-const Content = styled.main`
-  margin: 0 auto;
-  padding: ${p => p.theme.space.md};
-  max-width: ${p => p.theme.maxWidths.content};
-
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    padding: ${p => p.theme.space.lg};
-  }
 `;
 
 const Layout = ({ children, ...rest }) => (

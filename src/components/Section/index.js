@@ -3,26 +3,31 @@ import styled, { css } from 'styled-components';
 
 const HeroSection = styled.section`
   position: relative;
-  margin-top: ${p => p.theme.space.xl};
+  margin-top: ${p => p.theme.space.lg};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     ${p =>
-      p.single
-        ? css`
-            text-align: center;
-          `
-        : css`
-            display: grid;
-            grid-template-columns: 58% 42%;
-          `};
+      p.center &&
+      css`
+        text-align: center;
+      `};
+
+    ${p =>
+      !p.single &&
+      css`
+        display: grid;
+        grid-template-columns: 58% 42%;
+      `};
   }
 `;
 
 HeroSection.propTypes = {
+  center: PropTypes.bool,
   single: PropTypes.bool,
 };
 
 HeroSection.defaultProps = {
+  center: false,
   single: false,
 };
 
@@ -39,14 +44,17 @@ const Section = styled.section`
     padding-bottom: ${p => p.bottom.md};
 
     ${p =>
-      p.single
-        ? css`
-            text-align: center;
-          `
-        : css`
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-          `};
+      p.center &&
+      css`
+        text-align: center;
+      `};
+
+    ${p =>
+      !p.single &&
+      css`
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      `};
   }
 
   @media (min-width: ${p => p.theme.breakpoints.xl}) {
@@ -56,12 +64,14 @@ const Section = styled.section`
 
 Section.propTypes = {
   bottom: PropTypes.shape({ md: PropTypes.string, xl: PropTypes.string }),
+  center: PropTypes.bool,
   single: PropTypes.bool,
   top: PropTypes.string,
 };
 
 Section.defaultProps = {
   bottom: {},
+  center: false,
   single: false,
   top: null,
 };
@@ -71,8 +81,8 @@ const SectionH1 = styled.h1`
   left: -${p => p.theme.space.xxxs};
   color: ${p => p.theme.colors.primaryDark};
   font-size: ${p => p.theme.fontSizes.xl};
-  line-height: 1em;
-  white-space: nowrap;
+  line-height: 1.1em;
+  white-space: ${p => (p.wrap ? 'wrap' : 'nowrap')};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
     font-size: ${p => p.theme.fontSizes.xxl};
@@ -83,13 +93,17 @@ const SectionH1 = styled.h1`
   }
 `;
 
+SectionH1.propTypes = {
+  wrap: PropTypes.bool,
+};
+
+SectionH1.defaultProps = {
+  wrap: false,
+};
+
 const SectionH2 = styled.h2`
   font-size: ${p => p.theme.fontSizes.xl};
-  line-height: ${p => p.theme.lineHeights.sm};
-
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    line-height: 1em;
-  }
+  line-height: 1.1em;
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     font-size: ${p => p.theme.fontSizes.xl};
@@ -103,58 +117,98 @@ const SectionH3 = styled.h3`
 
 const SectionParagraph = styled.p`
   max-width: ${p => p.theme.maxWidths.md};
-  margin-right: auto;
-  margin-left: auto;
   letter-spacing: ${p => p.theme.letterSpacings.sm};
   line-height: ${p => p.theme.lineHeights.lg};
+
+  ${p =>
+    p.center &&
+    css`
+      margin-right: auto;
+      margin-left: auto;
+    `};
 `;
 
-const TextRight = styled.div`
+SectionParagraph.propTypes = {
+  center: PropTypes.bool,
+};
+
+SectionParagraph.defaultProps = {
+  center: false,
+};
+
+const Order2 = styled.div`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     order: 2;
   }
 `;
 
-const FiguresLeft = styled.div`
+const Figures = styled.div`
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  ${p =>
+    p.small &&
+    css`
+      display: flex;
+      flex-wrap: wrap;
+    `};
+
+  @media (min-width: ${p => p.theme.breakpoints.sm}) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    display: block;
-    margin-right: ${p => p.theme.space.xl};
+    ${p =>
+      p.left
+        ? css`
+            margin-right: ${p => p.theme.space.xl};
+          `
+        : css`
+            margin-left: ${p => p.theme.space.xl};
+          `};
   }
 
   @media (min-width: ${p => p.theme.breakpoints.xl}) {
-    top: -${p => p.theme.space.xl};
+    ${p =>
+      p.left
+        ? css`
+            top: -${p => p.theme.space.xl};
+          `
+        : css`
+            top: -${p => p.theme.space.lg};
+            right: -${p => p.theme.space.xl};
+            margin: 0;
+          `};
+
+    ${p =>
+      !p.shift &&
+      css`
+        top: 0;
+        right: 0;
+      `};
   }
 `;
 
-const FiguresRight = styled.div`
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
+Figures.propTypes = {
+  left: PropTypes.bool,
+  shift: PropTypes.bool,
+  small: PropTypes.bool,
+};
 
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    display: block;
-    margin-left: ${p => p.theme.space.xl};
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.xl}) {
-    top: -${p => p.theme.space.lg};
-    right: -${p => p.theme.space.xl};
-    margin: 0;
-  }
-`;
+Figures.defaultProps = {
+  left: false,
+  shift: true,
+  small: false,
+};
 
 const IconFigure = styled.figure`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 9.2rem;
-  height: 9.2rem;
-  padding: ${p => p.theme.space.sm} ${p => p.theme.space.sm}
-    ${p => p.theme.space.xs};
+  width: 9.8rem;
+  height: 9.8rem;
+  padding: ${p => p.theme.space.md};
   border-radius: ${p => p.theme.radii.lg};
   background-color: ${p => p.theme.colors.primary};
   box-shadow: ${p => p.theme.boxShadows.md};
@@ -163,24 +217,41 @@ const IconFigure = styled.figure`
   line-height: ${p => p.theme.lineHeights.md};
   text-transform: uppercase;
   letter-spacing: ${p => p.theme.letterSpacings.lg};
+
+  ${p =>
+    p.small &&
+    css`
+      width: 7.4rem;
+      height: 7.4rem;
+      justify-content: center;
+      align-items: center;
+    `};
 `;
 
+IconFigure.propTypes = {
+  small: PropTypes.bool,
+};
+
+IconFigure.defaultProps = {
+  small: false,
+};
+
 const StyledIcon = styled.div`
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
+  margin-bottom: ${p => p.theme.space.sm};
   fill: ${p => p.theme.colors.white};
 `;
 
 export {
-  FiguresLeft,
-  FiguresRight,
+  Figures,
   HeroSection,
   IconFigure,
+  Order2,
   Section,
   SectionH1,
   SectionH2,
   SectionH3,
   SectionParagraph,
   StyledIcon,
-  TextRight,
 };

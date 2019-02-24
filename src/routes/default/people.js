@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Image from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
@@ -62,11 +63,15 @@ const ExecListItem = styled(PersonListItem)`
   }
 `;
 
-const People = () => (
+const People = ({ location: { pathname } }) => (
   <PeopleContainer>
     {people => (
       <>
-        <SEO />
+        <SEO
+          description="Our diverse team of onsite/offshore resources provide a robust delivery model to ensure that today&rsquo;s needs become tomorrow&rsquo;s results."
+          pathname={pathname}
+          title="People"
+        />
         <HeroSection center single>
           <HeroBg />
           <SectionH1>People</SectionH1>
@@ -104,5 +109,11 @@ const People = () => (
     )}
   </PeopleContainer>
 );
+
+People.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default People;

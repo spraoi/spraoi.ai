@@ -34,9 +34,9 @@ module.exports = {
     author: 'Spraoi',
     banner: '/banners/spraoi.png',
     datePublished: '2018-01-01',
-    description: 'Foo bar baz',
+    description:
+      'Spraoi was founded by Big Four Insurance Consulting and Silicon Valley leaders to bring disruptive capabilities to insurance consumers, agents and carriers.',
     facebook: 'spraoisoftware',
-    headline: 'Foo bar baz',
     keywords: 'Spraoi,Insurance Technology,Machine Learning,Solutions',
     ogLanguage: 'en_US',
     siteLanguage: 'en',

@@ -4,7 +4,11 @@ import SEO from '../../components/SEO';
 
 const Services = ({ location: { pathname } }) => (
   <>
-    <SEO pathname={pathname} title="Services" />
+    <SEO
+      description="Simplified and accelerated technology service delivery that maintains traction through seamless transition from concept to implementation."
+      pathname={pathname}
+      title="Services"
+    />
   </>
 );
 

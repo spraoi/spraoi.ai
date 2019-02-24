@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import Content from '../../components/Content';
@@ -177,9 +178,13 @@ const FigureStructure2 = styled.figure`
   }
 `;
 
-const MachineLearningSolutions = () => (
+const MachineLearningSolutions = ({ location: { pathname } }) => (
   <>
-    <SEO />
+    <SEO
+      description="Our machine learning suite is a comprehensive set of machine learning algorithms tailored to optimize functions across the value chain using a SaaS delivery model."
+      pathname={pathname}
+      title="Machine Learning Solutions"
+    />
     <HeroSection single>
       <HeroBg />
       <SectionH1 wrap>
@@ -289,5 +294,11 @@ const MachineLearningSolutions = () => (
     </Section>
   </>
 );
+
+MachineLearningSolutions.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default MachineLearningSolutions;

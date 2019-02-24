@@ -10,7 +10,11 @@ import {
 
 const Contact = ({ location: { pathname } }) => (
   <>
-    <SEO pathname={pathname} title="Contact Us" />
+    <SEO
+      description="Want to start a conversation? We would love to hear from you regarding our products and services."
+      pathname={pathname}
+      title="Contact Us"
+    />
     <HeroSection>
       <div>
         <SectionH1>Contact Us</SectionH1>

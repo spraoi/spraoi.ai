@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import SEO from '../../components/SEO';
@@ -27,9 +28,13 @@ const HeroBg = styled(BgSolutions)`
   }
 `;
 
-const CustomerExperienceSolutions = () => (
+const CustomerExperienceSolutions = ({ location: { pathname } }) => (
   <>
-    <SEO />
+    <SEO
+      description="Microservices architected sales, service and claims portal application, enabling intermediary-led and direct-to-consumer models with a plug and play digital experience."
+      pathname={pathname}
+      title="Customer Experience Solutions"
+    />
     <HeroSection single>
       <HeroBg />
       <SectionH1 wrap>
@@ -45,5 +50,11 @@ const CustomerExperienceSolutions = () => (
     </HeroSection>
   </>
 );
+
+CustomerExperienceSolutions.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default CustomerExperienceSolutions;

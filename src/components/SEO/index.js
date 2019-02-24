@@ -19,7 +19,6 @@ const SEO = ({ article, pathname, ...overrides }) => (
             datePublished(formatString: "YYYY-MM-DD")
             description
             facebook
-            headline
             keywords
             ogLanguage
             siteLanguage
@@ -31,6 +30,7 @@ const SEO = ({ article, pathname, ...overrides }) => (
       }
     `}
     render={({ site: { buildTime, siteMetadata } }) => {
+      const notHomePage = pathname !== '/';
       const data = { ...siteMetadata, ...article, ...overrides };
       const canonicalUrl = `${data.siteUrl}${pathname}`;
 
@@ -42,7 +42,15 @@ const SEO = ({ article, pathname, ...overrides }) => (
         },
       ];
 
-      if (article) {
+      if (notHomePage && !article) {
+        breadcrumbs.push({
+          '@type': 'ListItem',
+          item: { '@id': `${canonicalUrl}`, name: data.title },
+          position: 2,
+        });
+      }
+
+      if (notHomePage && article) {
         breadcrumbs.push({
           '@type': 'ListItem',
           item: { '@id': `${data.siteUrl}/articles`, name: 'Articles' },
@@ -91,7 +99,7 @@ const SEO = ({ article, pathname, ...overrides }) => (
                       inLanguage: data.siteLanguage,
                       mainEntityOfPage: canonicalUrl,
                       name: data.title,
-                      url: canonicalUrl,
+                      url: data.siteUrl,
                     }
                   : {
                       '@context': 'http://schema.org',
@@ -101,13 +109,13 @@ const SEO = ({ article, pathname, ...overrides }) => (
                       dateModified: buildTime,
                       datePublished: data.datePublished,
                       description: data.description,
-                      headline: data.headline,
+                      headline: data.title,
                       image: {
                         '@type': 'ImageObject',
                         url: `${data.siteUrl}${data.banner}`,
                       },
                       inLanguage: data.siteLanguage,
-                      mainEntityOfPage: data.siteUrl,
+                      mainEntityOfPage: canonicalUrl,
                       name: data.title,
                       publisher: { '@type': 'Organization', name: data.author },
                       url: data.siteUrl,

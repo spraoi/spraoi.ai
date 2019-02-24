@@ -232,14 +232,27 @@ const IconFigure = styled.figure`
       justify-content: center;
       align-items: center;
     `};
+
+  @media (min-width: ${p => p.theme.breakpoints.md}) {
+    ${p =>
+      p.smallOnMedium &&
+      css`
+        width: 7.4rem;
+        height: 7.4rem;
+        justify-content: center;
+        align-items: center;
+      `};
+  }
 `;
 
 IconFigure.propTypes = {
   small: PropTypes.bool,
+  smallOnMedium: PropTypes.bool,
 };
 
 IconFigure.defaultProps = {
   small: false,
+  smallOnMedium: false,
 };
 
 const StyledIcon = styled.div`

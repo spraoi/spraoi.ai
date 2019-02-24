@@ -323,7 +323,7 @@ const Index = () => (
             </FigureStructure3>
           </Figures>
         </Section>
-        <Section bottom={{ md: '14.5rem', xl: '12.3rem' }} top="21rem">
+        <Section bottom={{ md: '13.5rem', xl: '11.5rem' }} top="21rem">
           <div>
             <SectionH2>Reach</SectionH2>
             <SectionParagraph>

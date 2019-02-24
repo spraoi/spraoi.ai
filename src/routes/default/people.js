@@ -98,6 +98,7 @@ const People = ({ location: { pathname } }) => (
           <PeopleList>
             {people
               .filter(p => p.executive === 0 && p.active === 'y')
+              .sort((a, b) => (a.name > b.name ? 1 : -1))
               .map(({ id, image }) => (
                 <PersonListItem key={id}>
                   <Image alt="" fluid={image} />

@@ -15,27 +15,7 @@ import {
   SectionParagraph,
   StyledIcon,
 } from '../../components/Section';
-import { ReactComponent as BgSolutions } from '../../images/icons/bg-solutions.svg';
 import { ReactComponent as Placeholder } from '../../images/icons/placeholder.svg';
-
-const HeroBg = styled(BgSolutions)`
-  position: absolute;
-  top: -41rem;
-  right: -53rem;
-  width: 80rem;
-  opacity: 0.8;
-  z-index: -1;
-
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    top: -43rem;
-    right: -53rem;
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    top: -41rem;
-    right: -51rem;
-  }
-`;
 
 const FigureStructure1 = styled.figure`
   margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
@@ -115,7 +95,6 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
           title="Customer Experience Solutions"
         />
         <HeroSection single>
-          <HeroBg />
           <SectionH1 wrap>
             Customer
             <br />
@@ -159,7 +138,7 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
             fluid={file.childImageSharp.fluid}
           />
         </Section>
-        <Section bottom={{ md: '13rem', xl: '13rem' }} top="12rem">
+        <Section bottom={{ md: '10rem', xl: '10rem' }} top="12rem">
           <div>
             <SectionH2>Capabilities</SectionH2>
             <SectionParagraph>

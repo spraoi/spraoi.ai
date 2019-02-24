@@ -8,7 +8,7 @@ import { ReactComponent as Twitter } from '../../images/icons/twitter.svg';
 
 const StyledFooter = styled.footer`
   width: 100%;
-  margin-top: ${p => p.theme.space.xxl};
+  margin-top: ${p => p.theme.space.xxxl};
   background-color: ${p => p.theme.colors.primary};
   color: ${p => p.theme.colors.white};
 `;

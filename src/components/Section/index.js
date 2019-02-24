@@ -178,8 +178,14 @@ const Figures = styled.div`
         : css`
             top: -${p => p.theme.space.lg};
             right: -${p => p.theme.space.xl};
-            margin: 0;
           `};
+
+    ${p =>
+      p.shift &&
+      !p.left &&
+      css`
+        margin: 0;
+      `};
 
     ${p =>
       !p.shift &&

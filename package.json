@@ -52,7 +52,7 @@
     "react-helmet": "^5.2.0",
     "react-spinners": "^0.5.1",
     "styled-components": "^4.1.4-alpha.5",
-    "styled-jsx": "^3.2.1",
+    "styled-jsx": "^2.2.7",
     "tippy.js": "^4.0.3"
   },
   "devDependencies": {

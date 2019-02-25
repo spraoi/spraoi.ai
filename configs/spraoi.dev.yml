@@ -1,3 +1,3 @@
 deploy:
-  bucketUrl: foo
-  cloudFrontDistributionId: foo
+  bucketUrl: s3://dev.spraoi.ai
+  cloudFrontDistributionId: E2ELFBEP5D09WZ

@@ -1,3 +1,4 @@
 deploy:
   bucketUrl: foo
+  cacheControlMaxAge: 31536000
   cloudFrontDistributionId: foo

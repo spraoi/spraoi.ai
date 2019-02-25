@@ -277,7 +277,7 @@ const StyledImage = styled.div`
   border-radius: ${p => p.theme.radii.lg};
   box-shadow: ${p => p.theme.boxShadows.md};
   overflow: hidden;
-  
+
   ${p =>
     p.clickable &&
     css`
@@ -287,7 +287,7 @@ const StyledImage = styled.div`
       &:hover {
         transform: scale(1.04);
       }
-    `}
+    `};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     width: 10rem;

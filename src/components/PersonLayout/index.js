@@ -25,6 +25,7 @@ const PersonImage = styled(StyledImage)`
 `;
 
 const H2 = styled.h2`
+  margin-bottom: 0;
   color: inherit;
   font-size: ${p => p.theme.fontSizes.lg};
 `;

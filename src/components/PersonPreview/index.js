@@ -1,11 +1,11 @@
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Tippy from '@tippy.js/react';
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
-import { Tooltip } from 'react-tippy';
 import { StyledImage } from '../Section';
-import 'react-tippy/dist/tippy.css';
+import 'tippy.js/themes/light.css';
 
 const StyledPerson = styled(StyledImage)`
   width: 9.2rem;
@@ -31,40 +31,37 @@ const TooltipHtml = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.25rem;
+  padding: 0 ${p => p.theme.space.sm};
 `;
 
 const TooltipH3 = styled.h3`
-  margin-bottom: 0.25rem;
-  color: inherit;
+  margin-bottom: ${p => p.theme.space.xxxs};
+  color: ${p => p.theme.colors.textPrimary};
 `;
 
 const TooltipH4 = styled.h4`
-  margin-bottom: 0.25rem;
-  color: inherit;
+  margin-bottom: ${p => p.theme.space.xxxs};
+  color: ${p => p.theme.colors.textPrimary};
 `;
 
 const PersonPreview = ({ executive, id, image, name, position }) => (
-  <StyledPerson clickable executive={executive}>
-    <Link to={`/people/${id}/`}>
-      <Tooltip
-        distance={-10}
-        duration={200}
-        html={
-          <TooltipHtml>
-            <TooltipH3>{name}</TooltipH3>
-            <TooltipH4>{position}</TooltipH4>
-          </TooltipHtml>
-        }
-        position="bottom"
-        size="big"
-        theme="light"
-        title={name}
-      >
+  <Tippy
+    content={
+      <TooltipHtml>
+        <TooltipH3>{name}</TooltipH3>
+        <TooltipH4>{position}</TooltipH4>
+      </TooltipHtml>
+    }
+    distance={-25}
+    placement="bottom"
+    theme="light"
+  >
+    <StyledPerson clickable executive={executive}>
+      <Link to={`/people/${id}/`}>
         <Img alt="" fluid={image} />
-      </Tooltip>
-    </Link>
-  </StyledPerson>
+      </Link>
+    </StyledPerson>
+  </Tippy>
 );
 
 PersonPreview.propTypes = {

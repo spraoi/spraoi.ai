@@ -24,6 +24,7 @@
     "@spraoi/gatsby-config": "^0.19.0",
     "@spraoi/helpers": "^0.19.0",
     "@spraoi/validations": "^0.19.0",
+    "@tippy.js/react": "^2.1.1",
     "apollo-client": "^2.4.13",
     "aws-amplify": "^1.1.19",
     "babel-core": "^7.0.0-bridge",
@@ -50,9 +51,9 @@
     "react-final-form": "^4.0.2",
     "react-helmet": "^5.2.0",
     "react-spinners": "^0.5.1",
-    "react-tippy": "^1.2.3",
     "styled-components": "^4.1.4-alpha.5",
-    "styled-jsx": "^2.2.7"
+    "styled-jsx": "^2.2.7",
+    "tippy.js": "^4.0.3"
   },
   "devDependencies": {
     "@spraoi/eslint-config": "^0.19.0",

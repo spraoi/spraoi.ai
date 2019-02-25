@@ -1045,10 +1045,10 @@
   resolved "https://registry.yarnpkg.com/@spraoi/prettier-config/-/prettier-config-0.19.0.tgz#26915772ff70f6fd9c6e77980b2e05d7bc2c40c5"
   integrity sha512-jIDNj+NE7pM3uyxYvP4ynXq+Bys8JGd0CzCtZZReT2mC+bhtjboVKlZIJHnxAHUKX8N+RHeBAbVqudpp3T+cdg==
 
-"@spraoi/scripts@^0.19.5":
-  version "0.19.5"
-  resolved "https://registry.yarnpkg.com/@spraoi/scripts/-/scripts-0.19.5.tgz#e9badb5fc0303dde773de92e085ece1c464abf11"
-  integrity sha512-PlTuu4KFRM8SNjA6uBTjobXkfZMnoyfHvbHaohM4jQdJVTgvywYx7/a1xKytDN7FJbiUObFyZmHr+a9XpUB9Pw==
+"@spraoi/scripts@^0.19.6":
+  version "0.19.6"
+  resolved "https://registry.yarnpkg.com/@spraoi/scripts/-/scripts-0.19.6.tgz#e2a04dff08909ef71832115eb534d97e76b91249"
+  integrity sha512-XPjtKDvuBOc3PB4lUFSTIq4PjoRyVPDLW3MiJzeBGg1Oq0vi3UKtvKo4bykhHUTHUXotpFdTOyITpcUB1cKANQ==
   dependencies:
     deepmerge "^2.2.1"
     js-yaml "^3.12.0"

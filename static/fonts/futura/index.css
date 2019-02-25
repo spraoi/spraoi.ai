@@ -2,7 +2,7 @@
   font-family: 'Futura';
   font-style: normal;
   font-weight: 700;
-  font-display: fallback;
+  font-display: swap;
   src: url('/fonts/futura/bold.eot?#iefix');
   src: url('/fonts/futura/bold.eot?#iefix') format('eot'),
     url('/fonts/futura/bold.woff2') format('woff2'),

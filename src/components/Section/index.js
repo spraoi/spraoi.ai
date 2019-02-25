@@ -255,7 +255,7 @@ const IconFigure = styled.figure`
 `;
 
 const ProcessFigure = styled.figure`
-  margin-top: ${p => p.theme.space.lg};
+  margin-top: ${p => p.theme.space.md};
   padding: ${p => p.theme.space.md};
   border-radius: ${p => p.theme.radii.lg};
   background-color: ${p => p.theme.colors.primary};

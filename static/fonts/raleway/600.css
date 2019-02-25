@@ -1,0 +1,7 @@
+@font-face {
+  font-family: Raleway;
+  font-weight: 600;
+  src: url(600-subset.woff2) format('woff2'),
+    url(600-subset.woff) format('woff'), url(600-subset.ttf) format('truetype');
+  unicode-range: U+20-7E;
+}

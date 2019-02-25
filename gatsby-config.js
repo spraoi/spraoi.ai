@@ -23,8 +23,14 @@ module.exports = {
     },
     {
       options: {
-        custom: { families: ['Futura:700'], urls: ['/fonts/futura/index.css'] },
-        google: { families: ['Raleway:500,600'] },
+        custom: {
+          families: ['Futura:700', 'Raleway:500,600'],
+          urls: [
+            '/fonts/futura/700.css',
+            '/fonts/raleway/500.css',
+            '/fonts/raleway/600.css',
+          ],
+        },
       },
       resolve: 'gatsby-plugin-web-font-loader',
     },

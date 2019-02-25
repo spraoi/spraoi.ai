@@ -1,0 +1,7 @@
+@font-face {
+  font-family: Futura;
+  font-weight: 700;
+  src: url(700-subset.woff2) format('woff2'),
+    url(700-subset.woff) format('woff'), url(700-subset.ttf) format('truetype');
+  unicode-range: U+20-7E;
+}

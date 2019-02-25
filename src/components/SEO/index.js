@@ -33,6 +33,7 @@ const SEO = ({ article, pathname, ...overrides }) => (
       const notHomePage = pathname !== '/';
       const data = { ...siteMetadata, ...article, ...overrides };
       const canonicalUrl = `${data.siteUrl}${pathname}`;
+      const bannerUrl = `${data.siteUrl}/${data.banner}`;
 
       const breadcrumbs = [
         {
@@ -93,7 +94,7 @@ const SEO = ({ article, pathname, ...overrides }) => (
                       datePublished: data.datePublished,
                       description: data.description,
                       headline: data.title,
-                      image: { '@type': 'ImageObject', url: data.banner },
+                      image: { '@type': 'ImageObject', url: bannerUrl },
                       inLanguage: data.siteLanguage,
                       mainEntityOfPage: canonicalUrl,
                       name: data.title,
@@ -108,10 +109,7 @@ const SEO = ({ article, pathname, ...overrides }) => (
                       datePublished: data.datePublished,
                       description: data.description,
                       headline: data.title,
-                      image: {
-                        '@type': 'ImageObject',
-                        url: `${data.siteUrl}${data.banner}`,
-                      },
+                      image: { '@type': 'ImageObject', url: bannerUrl },
                       inLanguage: data.siteLanguage,
                       mainEntityOfPage: canonicalUrl,
                       name: data.title,
@@ -133,7 +131,7 @@ const SEO = ({ article, pathname, ...overrides }) => (
           </Helmet>
           <Facebook
             desc={data.description}
-            image={data.banner}
+            image={bannerUrl}
             locale={siteMetadata.ogLanguage}
             name={siteMetadata.facebook}
             title={data.title}
@@ -142,7 +140,7 @@ const SEO = ({ article, pathname, ...overrides }) => (
           />
           <Twitter
             desc={data.description}
-            image={data.banner}
+            image={bannerUrl}
             title={data.title}
             username={data.twitter}
           />

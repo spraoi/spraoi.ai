@@ -59,6 +59,7 @@
     "@spraoi/eslint-config": "^0.19.0",
     "@spraoi/jest-config": "^0.19.0",
     "@spraoi/prettier-config": "^0.19.0",
+    "@spraoi/scripts": "^0.19.0",
     "@spraoi/stylelint-config": "^0.19.0",
     "eslint": "^5.14.1",
     "jest": "^24.1.0",

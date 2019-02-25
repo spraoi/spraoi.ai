@@ -18,3 +18,9 @@
 
 * run `config=[config] yarn build` to make a production build
 * run `yarn serve` to test the production build
+
+### Deploying
+
+**Note**: you should generally deploy from Jenkins—not from your local machine.
+
+* run `config=[config] yarn deploy` to deploy

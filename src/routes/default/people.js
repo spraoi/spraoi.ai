@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import Image from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
+import PersonPreview from '../../components/PersonPreview';
 import SEO from '../../components/SEO';
 import {
   HeroSection,
@@ -35,34 +35,6 @@ const PeopleList = styled.ul`
   }
 `;
 
-const PersonListItem = styled.li`
-  width: 9.2rem;
-  height: 9.2rem;
-  margin: 0 ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0;
-  border-radius: ${p => p.theme.radii.md};
-  box-shadow: ${p => p.theme.boxShadows.md};
-  overflow: hidden;
-  transition: transform ${p => p.theme.transitionSpeeds.normal};
-  cursor: pointer;
-
-  &:hover {
-    transform: scale(1.04);
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    width: 6.8rem;
-    height: 6.8rem;
-    margin: 0 ${p => p.theme.space.lg} ${p => p.theme.space.xl};
-  }
-`;
-
-const ExecListItem = styled(PersonListItem)`
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    width: 9.2rem;
-    height: 9.2rem;
-  }
-`;
-
 const People = ({ location: { pathname } }) => (
   <PeopleContainer>
     {people => (
@@ -86,10 +58,8 @@ const People = ({ location: { pathname } }) => (
             {people
               .filter(p => p.executive > 0 && p.active === 'y')
               .sort((a, b) => (a.executive > b.executive ? 1 : -1))
-              .map(({ id, image }) => (
-                <ExecListItem key={id}>
-                  <Image alt="" fluid={image} />
-                </ExecListItem>
+              .map(person => (
+                <PersonPreview key={person.id} as="li" {...person} />
               ))}
           </PeopleList>
         </Section>
@@ -99,10 +69,8 @@ const People = ({ location: { pathname } }) => (
             {people
               .filter(p => p.executive === 0 && p.active === 'y')
               .sort((a, b) => (a.name > b.name ? 1 : -1))
-              .map(({ id, image }) => (
-                <PersonListItem key={id}>
-                  <Image alt="" fluid={image} />
-                </PersonListItem>
+              .map(person => (
+                <PersonPreview key={person.id} as="li" {...person} />
               ))}
           </PeopleList>
         </Section>

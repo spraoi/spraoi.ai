@@ -1,6 +1,7 @@
-import Image from 'gatsby-image';
+import Img from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import PeopleContainer from '../../containers/PeopleContainer';
 import SEO from '../../components/SEO';
 import {
@@ -14,6 +15,7 @@ import {
   SectionParagraph,
   StyledIcon,
   Order2,
+  StyledImage,
 } from '../../components/Section';
 import { ReactComponent as BgLanding } from '../../images/icons/bg-landing.svg';
 import { ReactComponent as Bridge } from '../../images/icons/bridge.svg';
@@ -210,24 +212,6 @@ const IconRoundFigure = styled.figure`
   }
 `;
 
-const StyledImage = styled.div`
-  width: 9.8rem;
-  height: 9.8rem;
-  border-radius: ${p => p.theme.radii.lg};
-  box-shadow: ${p => p.theme.boxShadows.md};
-  overflow: hidden;
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    width: 10rem;
-    height: 10rem;
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.xl}) {
-    width: 11rem;
-    height: 11rem;
-  }
-`;
-
 const ImageFigureFigcaption = styled.figcaption`
   margin-top: ${p => p.theme.space.md};
   font-size: ${p => p.theme.fontSizes.sm};
@@ -289,9 +273,11 @@ const Index = () => (
               .sort((a, b) => (a.executive > b.executive ? 1 : -1))
               .map(({ id, image, name }) => (
                 <FigureStructure2 key={id}>
-                  <StyledImage>
-                    <Image alt="" fluid={image} />
-                  </StyledImage>
+                  <Link to={`/people/${id}/`}>
+                    <StyledImage>
+                      <Img alt="" fluid={image} />
+                    </StyledImage>
+                  </Link>
                   <ImageFigureFigcaption>{name}</ImageFigureFigcaption>
                 </FigureStructure2>
               ))}

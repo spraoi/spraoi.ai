@@ -13,7 +13,14 @@ const HeroSection = styled.section`
       `};
 
     ${p =>
+      p.flex &&
+      css`
+        display: flex;
+      `};
+
+    ${p =>
       !p.single &&
+      !p.flex &&
       css`
         display: grid;
         grid-template-columns: 58% 42%;
@@ -23,11 +30,13 @@ const HeroSection = styled.section`
 
 HeroSection.propTypes = {
   center: PropTypes.bool,
+  flex: PropTypes.bool,
   single: PropTypes.bool,
 };
 
 HeroSection.defaultProps = {
   center: false,
+  flex: false,
   single: false,
 };
 
@@ -98,7 +107,7 @@ SectionH1.propTypes = {
 };
 
 SectionH1.defaultProps = {
-  wrap: false,
+  wrap: undefined,
 };
 
 const SectionH2 = styled.h2`
@@ -262,6 +271,29 @@ const StyledIcon = styled.div`
   fill: ${p => p.theme.colors.white};
 `;
 
+const StyledImage = styled.div`
+  width: 9.8rem;
+  height: 9.8rem;
+  border-radius: ${p => p.theme.radii.lg};
+  box-shadow: ${p => p.theme.boxShadows.md};
+  transition: transform ${p => p.theme.transitionSpeeds.normal};
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  @media (min-width: ${p => p.theme.breakpoints.md}) {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  @media (min-width: ${p => p.theme.breakpoints.xl}) {
+    width: 11rem;
+    height: 11rem;
+  }
+`;
+
 export {
   Figures,
   HeroSection,
@@ -273,4 +305,5 @@ export {
   SectionH3,
   SectionParagraph,
   StyledIcon,
+  StyledImage,
 };

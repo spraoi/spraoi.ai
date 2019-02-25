@@ -23,6 +23,13 @@ exports.createPages = ({ actions: { createPage }, graphql }) =>
           }
         }
       }
+      allPeopleYaml {
+        edges {
+          node {
+            id
+          }
+        }
+      }
     }
   `).then(result => {
     if (result.errors) return Promise.reject(result.errors);
@@ -32,6 +39,14 @@ exports.createPages = ({ actions: { createPage }, graphql }) =>
         component: path.resolve('src/components/ArticleLayout/index.js'),
         context: { slug: node.fields.slug },
         path: `/articles${node.fields.slug}`,
+      });
+    });
+
+    result.data.allPeopleYaml.edges.forEach(({ node }) => {
+      createPage({
+        component: path.resolve('src/components/PersonLayout/index.js'),
+        context: { slug: `/${node.id}` },
+        path: `/people/${node.id}`,
       });
     });
   });

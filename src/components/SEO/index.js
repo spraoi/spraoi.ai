@@ -89,8 +89,8 @@ const SEO = ({ article, pathname, ...overrides }) => (
                   ? {
                       '@context': 'http://schema.org',
                       '@type': 'Article',
-                      author: { '@type': 'Person', name: data.author },
-                      creator: { '@type': 'Person', name: data.author },
+                      author: { '@type': 'PersonPreview', name: data.author },
+                      creator: { '@type': 'PersonPreview', name: data.author },
                       dateModified: data.dateModified,
                       datePublished: data.datePublished,
                       description: data.description,

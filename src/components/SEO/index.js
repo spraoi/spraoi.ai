@@ -33,7 +33,7 @@ const SEO = ({ article, pathname, ...overrides }) => (
       const notHomePage = pathname !== '/';
       const data = { ...siteMetadata, ...article, ...overrides };
       const canonicalUrl = `${data.siteUrl}${pathname}`;
-      const bannerUrl = `${data.siteUrl}/${data.banner}`;
+      const bannerUrl = `${data.siteUrl}${data.banner}`;
 
       const breadcrumbs = [
         {

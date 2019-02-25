@@ -2,18 +2,20 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import Content from '../../components/Content';
+import MlProcessImg from '../../components/Images/MlProcessImg';
 import SEO from '../../components/SEO';
 import {
   Figures,
   HeroSection,
+  IconFigure,
   Order2,
+  ProcessFigure,
   Section,
   SectionH1,
   SectionH2,
   SectionH3,
   SectionParagraph,
   StyledIcon,
-  IconFigure,
 } from '../../components/Section';
 import { ReactComponent as Barrel } from '../../images/brand/barrel-logo.svg';
 import { ReactComponent as BgSolutions } from '../../images/icons/bg-solutions.svg';
@@ -279,7 +281,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
         </FigureStructure2>
       </Figures>
     </Section>
-    <Section top="9rem">
+    <Section top="8.5rem">
       <div>
         <SectionH2>Process</SectionH2>
         <SectionParagraph>
@@ -288,9 +290,9 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
           weeks.
         </SectionParagraph>
       </div>
-      <Figures>
-        <Placeholder />
-      </Figures>
+      <ProcessFigure>
+        <MlProcessImg />
+      </ProcessFigure>
     </Section>
   </>
 );

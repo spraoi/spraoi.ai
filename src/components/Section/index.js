@@ -254,6 +254,18 @@ const IconFigure = styled.figure`
   }
 `;
 
+const ProcessFigure = styled.figure`
+  margin-top: ${p => p.theme.space.lg};
+  padding: ${p => p.theme.space.md};
+  border-radius: ${p => p.theme.radii.lg};
+  background-color: ${p => p.theme.colors.primary};
+  box-shadow: ${p => p.theme.boxShadows.md};
+
+  @media (min-width: ${p => p.theme.breakpoints.md}) {
+    margin: 0 0 0 ${p => p.theme.space.lg};
+  }
+`;
+
 IconFigure.propTypes = {
   small: PropTypes.bool,
   smallOnMedium: PropTypes.bool,
@@ -313,6 +325,7 @@ export {
   HeroSection,
   IconFigure,
   Order2,
+  ProcessFigure,
   Section,
   SectionH1,
   SectionH2,

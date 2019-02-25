@@ -15,7 +15,13 @@ import {
   SectionParagraph,
   StyledIcon,
 } from '../../components/Section';
-import { ReactComponent as Placeholder } from '../../images/icons/placeholder.svg';
+import { ReactComponent as Chatbot } from '../../images/icons/chatbot.svg';
+import { ReactComponent as CoBrowsing } from '../../images/icons/co-browsing.svg';
+import { ReactComponent as Factory } from '../../images/icons/factory.svg';
+import { ReactComponent as Group } from '../../images/icons/group.svg';
+import { ReactComponent as Lifebuoy } from '../../images/icons/lifebuoy.svg';
+import { ReactComponent as Map } from '../../images/icons/map.svg';
+import { ReactComponent as Multiplatform } from '../../images/icons/multiplatform.svg';
 
 const FigureStructure1 = styled.figure`
   margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
@@ -118,15 +124,15 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
           </Order2>
           <Figures left shift={false}>
             <FigureStructure1 as={IconFigure}>
-              <StyledIcon as={Placeholder} />
+              <StyledIcon as={Lifebuoy} />
               <figcaption>Life Insurance</figcaption>
             </FigureStructure1>
             <FigureStructure1 as={IconFigure}>
-              <StyledIcon as={Placeholder} />
+              <StyledIcon as={Group} />
               <figcaption>Group/VB</figcaption>
             </FigureStructure1>
             <FigureStructure1 as={IconFigure}>
-              <StyledIcon as={Placeholder} />
+              <StyledIcon as={Factory} />
               <figcaption>Small Commercial</figcaption>
             </FigureStructure1>
           </Figures>
@@ -149,19 +155,19 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
           </div>
           <Figures shift={false}>
             <FigureStructure2 as={IconFigure}>
-              <StyledIcon as={Placeholder} />
+              <StyledIcon as={Map} />
               <figcaption>ML-Driven Insights</figcaption>
             </FigureStructure2>
             <FigureStructure2 as={IconFigure}>
-              <StyledIcon as={Placeholder} />
+              <StyledIcon as={Multiplatform} />
               <figcaption>Multi-Platform Veneering</figcaption>
             </FigureStructure2>
             <FigureStructure2 as={IconFigure}>
-              <StyledIcon as={Placeholder} />
+              <StyledIcon as={Chatbot} />
               <figcaption>Chatbot</figcaption>
             </FigureStructure2>
             <FigureStructure2 as={IconFigure}>
-              <StyledIcon as={Placeholder} />
+              <StyledIcon as={CoBrowsing} />
               <figcaption>Co-Browsing</figcaption>
             </FigureStructure2>
           </Figures>

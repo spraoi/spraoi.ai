@@ -1,19 +1,25 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
+import ServicesProcessImg from '../../components/Images/ServicesProcessImg';
 import SEO from '../../components/SEO';
 import {
   Figures,
   HeroSection,
+  IconFigure,
   Order2,
+  ProcessFigure,
   Section,
   SectionH1,
   SectionH2,
   SectionParagraph,
   StyledIcon,
-  IconFigure,
 } from '../../components/Section';
-import { ReactComponent as Placeholder } from '../../images/icons/placeholder.svg';
+import { ReactComponent as BuildOperate } from '../../images/icons/build-operate.svg';
+import { ReactComponent as Data } from '../../images/icons/data.svg';
+import { ReactComponent as Innovation } from '../../images/icons/innovation.svg';
+import { ReactComponent as Integration } from '../../images/icons/integration.svg';
+import { ReactComponent as ThirdParty } from '../../images/icons/third-party.svg';
 
 const FigureStructure1 = styled.figure`
   margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
@@ -75,28 +81,28 @@ const Services = ({ location: { pathname } }) => (
       </Order2>
       <Figures left shift={false}>
         <FigureStructure1 as={IconFigure} smallOnMedium>
-          <StyledIcon as={Placeholder} />
+          <StyledIcon as={Innovation} />
           <figcaption>Innovation</figcaption>
         </FigureStructure1>
         <FigureStructure1 as={IconFigure} smallOnMedium>
-          <StyledIcon as={Placeholder} />
+          <StyledIcon as={Integration} />
           <figcaption>Integration</figcaption>
         </FigureStructure1>
         <FigureStructure1 as={IconFigure} smallOnMedium>
-          <StyledIcon as={Placeholder} />
+          <StyledIcon as={Data} />
           <figcaption>Data</figcaption>
         </FigureStructure1>
         <FigureStructure1 as={IconFigure}>
-          <StyledIcon as={Placeholder} />
+          <StyledIcon as={ThirdParty} />
           <figcaption>Third Party Administration</figcaption>
         </FigureStructure1>
         <FigureStructure1 as={IconFigure}>
-          <StyledIcon as={Placeholder} />
+          <StyledIcon as={BuildOperate} />
           <figcaption>Build, Operate &amp; Transfer</figcaption>
         </FigureStructure1>
       </Figures>
     </Section>
-    <Section top="14rem">
+    <Section top="12.5rem">
       <div>
         <SectionH2>Process</SectionH2>
         <SectionParagraph>
@@ -104,9 +110,9 @@ const Services = ({ location: { pathname } }) => (
           teams Iterative deliveries in two-week&nbsp;sprints.
         </SectionParagraph>
       </div>
-      <Figures>
-        <Placeholder />
-      </Figures>
+      <ProcessFigure>
+        <ServicesProcessImg />
+      </ProcessFigure>
     </Section>
   </>
 );

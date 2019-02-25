@@ -12,6 +12,7 @@ import {
   Section,
   SectionH1,
   SectionH2,
+  SectionH3,
   SectionParagraph,
   StyledIcon,
 } from '../../components/Section';
@@ -124,12 +125,12 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
           </Order2>
           <Figures left shift={false}>
             <FigureStructure1 as={IconFigure}>
-              <StyledIcon as={Lifebuoy} />
-              <figcaption>Life Insurance</figcaption>
-            </FigureStructure1>
-            <FigureStructure1 as={IconFigure}>
               <StyledIcon as={Group} />
               <figcaption>Group/VB</figcaption>
+            </FigureStructure1>
+            <FigureStructure1 as={IconFigure}>
+              <StyledIcon as={Lifebuoy} />
+              <figcaption>Life Insurance</figcaption>
             </FigureStructure1>
             <FigureStructure1 as={IconFigure}>
               <StyledIcon as={Factory} />
@@ -137,7 +138,43 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
             </FigureStructure1>
           </Figures>
         </Section>
-        <Section single top="18.5rem">
+        <Section single top="17.5rem">
+          <SectionParagraph as="div" center>
+            <SectionH3 white={0}>Group/VB</SectionH3>
+            <p>
+              Our group benefits and voluntary enrollment solution. Developed on
+              our Kwikcover TM portal environment, it features case setup,
+              enrollment and service functionality. It comes pre- integrated
+              with our machine learning capability which predicts (and can
+              recommend based upon those predictions) an individual&rsquo;s
+              propensity to purchase particular products based upon
+              characteristics&nbsp;shared.
+            </p>
+          </SectionParagraph>
+        </Section>
+        <Section single top="2rem">
+          <SectionParagraph as="div" center>
+            <SectionH3 white={0}>Life Insurance</SectionH3>
+            <p>
+              Our retail life and annuities solution, when coupled with our
+              third party administration (TPA) partnership, provides a
+              comprehensive offering and reduced time to market for carriers
+              looking to enable a direct to&nbsp;consumer&nbsp;strategy.
+            </p>
+          </SectionParagraph>
+        </Section>
+        <Section single top="2rem">
+          <SectionParagraph as="div" center>
+            <SectionH3 white={0}>Small Commercial</SectionH3>
+            <p>
+              Our small commercial portal solution comes pre-integrated with a
+              comprehensive administration suite to provide an easy purchase,
+              self-service (e.g. endorsements) and first notice of
+              claim&nbsp;(FNOL)&nbsp;experience.
+            </p>
+          </SectionParagraph>
+        </Section>
+        <Section single>
           <Screenshot
             alt="Kwikcover Screenshot"
             as={Img}

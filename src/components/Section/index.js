@@ -121,8 +121,21 @@ const SectionH2 = styled.h2`
 
 const SectionH3 = styled.h3`
   margin: ${p => p.theme.space.xxxs} 0;
-  color: ${p => p.theme.colors.white};
+
+  ${p =>
+    p.white &&
+    css`
+      color: ${p => p.theme.colors.white};
+    `};
 `;
+
+SectionH1.propTypes = {
+  white: PropTypes.oneOf([0, 1]),
+};
+
+SectionH1.defaultProps = {
+  white: 1,
+};
 
 const SectionParagraph = styled.p`
   max-width: ${p => p.theme.maxWidths.md};

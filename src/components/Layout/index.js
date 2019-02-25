@@ -9,13 +9,11 @@ import config from '../../config';
 import theme from '../../theme';
 
 const Wrapper = styled.div`
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
   overflow-x: hidden;
-  overflow-y: auto;
 `;
 
 const Layout = ({ children, ...rest }) => (

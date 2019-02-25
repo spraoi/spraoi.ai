@@ -274,7 +274,7 @@ const Index = () => (
               .map(({ id, image, name }) => (
                 <FigureStructure2 key={id}>
                   <Link to={`/people/${id}/`}>
-                    <StyledImage>
+                    <StyledImage clickable>
                       <Img alt="" fluid={image} />
                     </StyledImage>
                   </Link>

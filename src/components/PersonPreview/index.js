@@ -4,21 +4,13 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 import { Tooltip } from 'react-tippy';
+import { StyledImage } from '../Section';
 import 'react-tippy/dist/tippy.css';
 
-const StyledPerson = styled.div`
+const StyledPerson = styled(StyledImage)`
   width: 9.2rem;
   height: 9.2rem;
   margin: 0 ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0;
-  border-radius: ${p => p.theme.radii.md};
-  box-shadow: ${p => p.theme.boxShadows.md};
-  overflow: hidden;
-  transition: transform ${p => p.theme.transitionSpeeds.normal};
-  cursor: pointer;
-
-  &:hover {
-    transform: scale(1.04);
-  }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     width: 6.8rem;
@@ -53,11 +45,10 @@ const TooltipH4 = styled.h4`
 `;
 
 const PersonPreview = ({ executive, id, image, name, position }) => (
-  <StyledPerson executive={executive}>
+  <StyledPerson clickable executive={executive}>
     <Link to={`/people/${id}/`}>
       <Tooltip
-        arrow
-        distance={20}
+        distance={-10}
         duration={200}
         html={
           <TooltipHtml>

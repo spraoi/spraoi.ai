@@ -187,7 +187,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
     />
     <HeroSection single>
       <HeroBg />
-      <SectionH1 wrap>
+      <SectionH1 wrap={1}>
         Machine
         <br />
         Learning Solutions

@@ -56,7 +56,7 @@ const Services = ({ location: { pathname } }) => (
       title="Services"
     />
     <HeroSection single>
-      <SectionH1 wrap>Services</SectionH1>
+      <SectionH1 wrap={1}>Services</SectionH1>
       <SectionParagraph>
         In addition to our products, the Spraoi team has several service areas
         where we provide accountability from concept through execution, thus

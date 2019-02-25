@@ -95,7 +95,7 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
           title="Customer Experience Solutions"
         />
         <HeroSection single>
-          <SectionH1 wrap>
+          <SectionH1 wrap={1}>
             Customer
             <br />
             Experience Solutions

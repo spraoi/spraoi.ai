@@ -10,6 +10,18 @@ module.exports = {
     'gatsby-transformer-yaml',
     {
       options: {
+        background_color: '#f8fbfe',
+        display: 'browser',
+        icon: 'src/images/brand/icon.png',
+        name: 'Spraoi',
+        short_name: 'Spraoi',
+        start_url: '/',
+        theme_color: '#f8fbfe',
+      },
+      resolve: 'gatsby-plugin-manifest',
+    },
+    {
+      options: {
         classes: false,
         custom: { families: ['Futura:700'], urls: ['/fonts/futura/index.css'] },
         events: false,

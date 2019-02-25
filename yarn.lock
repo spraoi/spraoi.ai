@@ -5773,6 +5773,15 @@ gatsby-plugin-layout@^1.0.10:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
+gatsby-plugin-manifest@^2.0.19:
+  version "2.0.19"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.19.tgz#5f8bd5e18dec1f91e5a552faeab0eb4a63e213d2"
+  integrity sha512-pUjjVgWdL2hhT2UnP5uUeweQsH2546dMcjjCLt/b6ho79u3K8lX14tYQoss1XEeEIpyEviZ16ur+g4EppP74cA==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    bluebird "^3.5.0"
+    sharp "^0.21.3"
+
 gatsby-plugin-page-creator@^2.0.4, gatsby-plugin-page-creator@^2.0.7:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.0.7.tgz#3193d6ea2c2aeeaae2e15350fcafae1d2fffb4ce"

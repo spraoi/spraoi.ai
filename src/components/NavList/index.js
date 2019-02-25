@@ -94,7 +94,10 @@ const NavList = ({ onLinkClick, secondary }) => (
       <NavItem key={link} secondary={secondary ? 1 : 0}>
         <NavLink
           activeClassName="active"
-          onClick={onLinkClick}
+          onClick={e => {
+            window.scrollTo(0, 0);
+            if (onLinkClick) onLinkClick(e);
+          }}
           secondary={secondary ? 1 : 0}
           to={link}
         >

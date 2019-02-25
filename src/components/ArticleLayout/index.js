@@ -2,52 +2,27 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
+import styled from 'styled-components';
+import ArticlesContainer from '../../containers/ArticlesContainer';
 import SEO from '../SEO';
+import { HeroSection, Section, SectionH1, SectionParagraph } from '../Section';
+
+const ArticleText = styled(SectionParagraph)`
+  p {
+    margin-top: ${p => p.theme.space.lg};
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+`;
 
 const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        allMarkdownRemark {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                author
-                banner
-                dateModified(formatString: "YYYY-MM-DD")
-                datePublished(formatString: "YYYY-MM-DD")
-                description
-                keywords
-                title
-              }
-              html
-            }
-          }
-        }
-        allPeopleYaml {
-          edges {
-            node {
-              id
-              name
-            }
-          }
-        }
-      }
-    `}
-    render={({
-      allPeopleYaml: { edges: people },
-      allMarkdownRemark: { edges: articles },
-    }) => {
-      const { frontmatter, html } = articles.find(
-        ({ node }) => node.fields.slug === slug
-      ).node;
-
-      const author = people.find(({ node }) => node.id === frontmatter.author)
-        .node;
+  <ArticlesContainer>
+    {articles => {
+      const { author, frontmatter, html } = articles.find(
+        article => article.fields.slug === slug
+      );
 
       return (
         <article>
@@ -55,17 +30,16 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
             article={{ ...frontmatter, author: author.name }}
             pathname={pathname}
           />
-          <header>
-            <h1>{frontmatter.title}</h1>
-            <span>
-              Posted by {author.name} on {frontmatter.datePublished}
-            </span>
-          </header>
-          <main dangerouslySetInnerHTML={{ __html: html }} />
+          <HeroSection single>
+            <SectionH1 wrap={1}>{frontmatter.title}</SectionH1>
+          </HeroSection>
+          <Section single>
+            <ArticleText as="div" dangerouslySetInnerHTML={{ __html: html }} />
+          </Section>
         </article>
       );
     }}
-  />
+  </ArticlesContainer>
 );
 
 ArticleLayout.propTypes = {

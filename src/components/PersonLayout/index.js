@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { Box } from '@spraoi/base';
+import PeopleContainer from '../../containers/PeopleContainer';
+import SEO from '../SEO';
 import {
   HeroSection,
   Section,
@@ -10,10 +12,9 @@ import {
   SectionParagraph,
   StyledImage,
 } from '../Section';
-import PeopleContainer from '../../containers/PeopleContainer';
-import SEO from '../SEO';
+import { newline2Space } from '../../utilities/helpers';
 
-const HeroImage = styled(StyledImage)`
+const PersonImage = styled(StyledImage)`
   flex-shrink: 0;
   margin-top: ${p => p.theme.space.xs};
   margin-bottom: ${p => p.theme.space.lg};
@@ -23,13 +24,9 @@ const HeroImage = styled(StyledImage)`
   }
 `;
 
-const StyledH2 = styled.h2`
+const H2 = styled.h2`
   color: inherit;
   font-size: ${p => p.theme.fontSizes.lg};
-`;
-
-const Newline = styled.div`
-  margin-bottom: ${p => p.theme.space.md};
 `;
 
 const PersonLayout = ({ location: { pathname }, pageContext: { slug } }) => (
@@ -37,26 +34,19 @@ const PersonLayout = ({ location: { pathname }, pageContext: { slug } }) => (
     {people => {
       const person = people.find(person => slug.includes(person.id));
 
-      const bio = person.bio.split('\n').map((item, key) => (
-        <span key={key}>
-          {item}
-          <Newline />
-        </span>
-      ));
-
       return (
         <>
           <SEO pathname={pathname} title={person.name} />
           <HeroSection center single>
-            <SectionH1 wrap>{person.name}</SectionH1>
-            <StyledH2>{person.position}</StyledH2>
+            <SectionH1 wrap={1}>{person.name}</SectionH1>
+            <H2>{person.position}</H2>
           </HeroSection>
           <Section single>
             <Box display={{ md: 'flex' }} justifyContent="center">
-              <HeroImage>
+              <PersonImage>
                 <Img alt="" fluid={person.image} />
-              </HeroImage>
-              <SectionParagraph>{bio}</SectionParagraph>
+              </PersonImage>
+              <SectionParagraph>{newline2Space(person.bio)}</SectionParagraph>
             </Box>
           </Section>
         </>

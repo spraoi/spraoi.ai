@@ -91,7 +91,7 @@ const SectionH1 = styled.h1`
   color: ${p => p.theme.colors.primaryDark};
   font-size: ${p => p.theme.fontSizes.xl};
   line-height: 1.1em;
-  white-space: ${p => (p.wrap ? 'wrap' : 'nowrap')};
+  white-space: ${p => (p.wrap ? 'wrapLine' : 'nowrap')};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
     font-size: ${p => p.theme.fontSizes.xxl};
@@ -103,11 +103,11 @@ const SectionH1 = styled.h1`
 `;
 
 SectionH1.propTypes = {
-  wrap: PropTypes.bool,
+  wrap: PropTypes.oneOf([0, 1]),
 };
 
 SectionH1.defaultProps = {
-  wrap: undefined,
+  wrap: 0,
 };
 
 const SectionH2 = styled.h2`
@@ -276,12 +276,18 @@ const StyledImage = styled.div`
   height: 9.8rem;
   border-radius: ${p => p.theme.radii.lg};
   box-shadow: ${p => p.theme.boxShadows.md};
-  transition: transform ${p => p.theme.transitionSpeeds.normal};
   overflow: hidden;
+  
+  ${p =>
+    p.clickable &&
+    css`
+      transition: transform ${p => p.theme.transitionSpeeds.normal};
+      cursor: pointer;
 
-  &:hover {
-    transform: scale(1.04);
-  }
+      &:hover {
+        transform: scale(1.04);
+      }
+    `}
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     width: 10rem;
@@ -293,6 +299,14 @@ const StyledImage = styled.div`
     height: 11rem;
   }
 `;
+
+StyledImage.propTypes = {
+  clickable: PropTypes.bool,
+};
+
+StyledImage.defaultProps = {
+  clickable: false,
+};
 
 export {
   Figures,

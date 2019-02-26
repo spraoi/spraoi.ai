@@ -22,19 +22,6 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
     },
     {
-      options: {
-        custom: {
-          families: ['Futura:700', 'Raleway:500,600'],
-          urls: [
-            '/fonts/futura/700.css',
-            '/fonts/raleway/500.css',
-            '/fonts/raleway/600.css',
-          ],
-        },
-      },
-      resolve: 'gatsby-plugin-web-font-loader',
-    },
-    {
       options: { name: 'articles', path: 'src/articles' },
       resolve: 'gatsby-source-filesystem',
     },

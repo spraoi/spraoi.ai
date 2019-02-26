@@ -4,4 +4,5 @@
   src: url(500-subset.woff2) format('woff2'),
     url(500-subset.woff) format('woff'), url(500-subset.ttf) format('truetype');
   unicode-range: U+20-7E;
+  font-display: swap;
 }

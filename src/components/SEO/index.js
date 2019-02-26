@@ -127,7 +127,7 @@ const SEO = ({ article, pathname, ...overrides }) => (
                 name: 'Breadcrumbs',
               })}
             </script>
-            <script defer="true" src="/js/mtiFontTrackingCode.js" />
+            <script defer src="/js/mtiFontTrackingCode.js" />
           </Helmet>
           <Facebook
             desc={data.description}

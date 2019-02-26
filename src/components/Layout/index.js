@@ -7,6 +7,9 @@ import Footer from '../Footer';
 import Header from '../Header';
 import config from '../../config';
 import theme from '../../theme';
+import '../../fonts/futura/700.css';
+import '../../fonts/raleway/500.css';
+import '../../fonts/raleway/600.css';
 
 const Wrapper = styled.div`
   position: relative;

@@ -32,7 +32,6 @@ const HeroBg = styled(BgLanding)`
   top: -30.3rem;
   left: -50rem;
   width: 80rem;
-  opacity: 0.8;
   z-index: -1;
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
@@ -41,8 +40,8 @@ const HeroBg = styled(BgLanding)`
   }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    top: -27.6rem;
-    left: -43rem;
+    top: -27.5rem;
+    left: -43.5rem;
   }
 `;
 
@@ -51,7 +50,6 @@ const SolutionsBg = styled(BgLanding)`
   top: -27.7rem;
   right: -54rem;
   width: 80rem;
-  opacity: 0.8;
   z-index: -1;
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {

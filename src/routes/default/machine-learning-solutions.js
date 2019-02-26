@@ -18,7 +18,7 @@ import {
   StyledIcon,
 } from '../../components/Section';
 import { ReactComponent as Barrel } from '../../images/brand/barrel-logo.svg';
-import { ReactComponent as BgSolutions } from '../../images/icons/bg-solutions.svg';
+import { ReactComponent as BgMlSolutions } from '../../images/icons/bg-ml-solutions.svg';
 import { ReactComponent as Buy } from '../../images/icons/buy.svg';
 import { ReactComponent as Delivery } from '../../images/icons/delivery.svg';
 import { ReactComponent as Disability } from '../../images/icons/disability.svg';
@@ -30,23 +30,12 @@ import { ReactComponent as Standardized } from '../../images/icons/standardized.
 import { ReactComponent as Traceable } from '../../images/icons/traceable.svg';
 import { ReactComponent as Transparent } from '../../images/icons/transparent.svg';
 
-const HeroBg = styled(BgSolutions)`
+const HeroBg = styled(BgMlSolutions)`
   position: absolute;
-  top: -41rem;
-  right: -53rem;
-  width: 80rem;
-  opacity: 0.8;
+  top: -32.5rem;
+  right: -38.5rem;
+  width: 65rem;
   z-index: -1;
-
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    top: -43rem;
-    right: -53rem;
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    top: -41rem;
-    right: -51rem;
-  }
 `;
 
 const FigureStructure1 = styled.figure`

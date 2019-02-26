@@ -16,6 +16,7 @@ import {
   SectionParagraph,
   StyledIcon,
 } from '../../components/Section';
+import { ReactComponent as BgCxSolutions } from '../../images/icons/bg-cx-solutions.svg';
 import { ReactComponent as Chatbot } from '../../images/icons/chatbot.svg';
 import { ReactComponent as CoBrowsing } from '../../images/icons/co-browsing.svg';
 import { ReactComponent as Factory } from '../../images/icons/factory.svg';
@@ -23,6 +24,14 @@ import { ReactComponent as Group } from '../../images/icons/group.svg';
 import { ReactComponent as Lifebuoy } from '../../images/icons/lifebuoy.svg';
 import { ReactComponent as Map } from '../../images/icons/map.svg';
 import { ReactComponent as Multiplatform } from '../../images/icons/multiplatform.svg';
+
+const HeroBg = styled(BgCxSolutions)`
+  position: absolute;
+  top: -35rem;
+  right: -31rem;
+  width: 60rem;
+  z-index: -1;
+`;
 
 const FigureStructure1 = styled.figure`
   margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
@@ -102,6 +111,7 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
           title="Customer Experience Solutions"
         />
         <HeroSection single>
+          <HeroBg />
           <SectionH1 wrap={1}>
             Customer
             <br />

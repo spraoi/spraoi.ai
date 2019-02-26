@@ -17,11 +17,20 @@ import {
   SectionUnorderedList,
   StyledIcon,
 } from '../../components/Section';
+import { ReactComponent as BgServices } from '../../images/icons/bg-services.svg';
 import { ReactComponent as BuildOperate } from '../../images/icons/build-operate.svg';
 import { ReactComponent as Data } from '../../images/icons/data.svg';
 import { ReactComponent as Innovation } from '../../images/icons/innovation.svg';
 import { ReactComponent as Integration } from '../../images/icons/integration.svg';
 import { ReactComponent as ThirdParty } from '../../images/icons/third-party.svg';
+
+const HeroBg = styled(BgServices)`
+  position: absolute;
+  top: -29.3rem;
+  right: -25rem;
+  width: 55rem;
+  z-index: -1;
+`;
 
 const FigureStructure1 = styled.figure`
   margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
@@ -64,6 +73,7 @@ const Services = ({ location: { pathname } }) => (
       title="Services"
     />
     <HeroSection single>
+      <HeroBg />
       <SectionH1 wrap={1}>Services</SectionH1>
       <SectionParagraph>
         In addition to our products, the Spraoi team has several service areas

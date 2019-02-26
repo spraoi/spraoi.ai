@@ -82,7 +82,7 @@ Section.defaultProps = {
   bottom: {},
   center: false,
   single: false,
-  top: null,
+  top: '9.5rem',
 };
 
 const SectionH1 = styled.h1`
@@ -129,11 +129,11 @@ const SectionH3 = styled.h3`
     `};
 `;
 
-SectionH1.propTypes = {
+SectionH3.propTypes = {
   white: PropTypes.oneOf([0, 1]),
 };
 
-SectionH1.defaultProps = {
+SectionH3.defaultProps = {
   white: 1,
 };
 
@@ -275,7 +275,7 @@ const ProcessFigure = styled.figure`
   box-shadow: ${p => p.theme.boxShadows.md};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    margin: 0 0 0 ${p => p.theme.space.lg};
+    margin: 0 0 0 ${p => p.theme.space.xl};
   }
 `;
 
@@ -333,6 +333,16 @@ StyledImage.defaultProps = {
   clickable: false,
 };
 
+const SectionUnorderedList = styled.ul`
+  margin-top: ${p => p.theme.space.md};
+  margin-left: ${p => p.theme.space.md};
+  list-style: initial;
+
+  @media (min-width: ${p => p.theme.breakpoints.md}) {
+    margin-left: ${p => p.theme.space.xl};
+  }
+`;
+
 export {
   Figures,
   HeroSection,
@@ -344,6 +354,7 @@ export {
   SectionH2,
   SectionH3,
   SectionParagraph,
+  SectionUnorderedList,
   StyledIcon,
   StyledImage,
 };

@@ -12,7 +12,9 @@ import {
   Section,
   SectionH1,
   SectionH2,
+  SectionH3,
   SectionParagraph,
+  SectionUnorderedList,
   StyledIcon,
 } from '../../components/Section';
 import { ReactComponent as BuildOperate } from '../../images/icons/build-operate.svg';
@@ -98,16 +100,87 @@ const Services = ({ location: { pathname } }) => (
         </FigureStructure1>
         <FigureStructure1 as={IconFigure}>
           <StyledIcon as={BuildOperate} />
-          <figcaption>Build, Operate &amp; Transfer</figcaption>
+          <figcaption>Build, Operate, Transfer</figcaption>
         </FigureStructure1>
       </Figures>
     </Section>
-    <Section top="12.5rem">
+    <Section single top="11.5rem">
+      <SectionParagraph as="div" center>
+        <SectionH3 white={0}>Innovation Services</SectionH3>
+        <p>
+          Our innovation as a service approach provides technology strategy,
+          management, design, development and deployment capabilities. When
+          combined with our machine learning expertise, the result is
+          data-forward engineering that can bring demonstrable change
+          in&nbsp;mere&nbsp;weeks.
+        </p>
+      </SectionParagraph>
+    </Section>
+    <Section single top="2rem">
+      <SectionParagraph as="div" center>
+        <SectionH3 white={0}>Integration Services</SectionH3>
+        <p>
+          We offer advanced integration services leveraging best in class
+          technologies. Our integration services include API implementations
+          using AWS (via our API gateway infrastructure) to write custom
+          integration to back the API quickly. We provide built-in auditing,
+          logging and tracing and the ability to configure different
+          authentication&nbsp;mechanisms.
+        </p>
+      </SectionParagraph>
+    </Section>
+    <Section single top="2rem">
+      <SectionParagraph as="div" center>
+        <SectionH3 white={0}>Data Services</SectionH3>
+        <p>
+          Our data services include, but are not limited to, working with
+          clients to outline their data strategy and translate strategies into
+          implementable solutions. Our offerings include: data strategy, data
+          lake implementation, data supply chain modeling and implementation,
+          integration with legacy systems using common sense infrastructure,
+          data replication, data backup and dataset tracking
+          and&nbsp;data&nbsp;auditing.
+        </p>
+      </SectionParagraph>
+    </Section>
+    <Section single top="2rem">
+      <SectionParagraph as="div" center>
+        <SectionH3 white={0}>Third Party Administration Services</SectionH3>
+        <p>
+          With our alliance partner, we can handle the entire value chain from
+          quote through administration, in both D2C and agent-assisted models
+          for flexibility as consumer behaviors evolve. Our integrated
+          technology and TPA services include, but are not limited
+          to&nbsp;the&nbsp;following:
+        </p>
+        <SectionUnorderedList>
+          <li>Customer support</li>
+          <li>Service center operations</li>
+          <li>UW decision management</li>
+          <li>Billing, collections, commissions, reconciliations</li>
+          <li>Data feeds/reporting</li>
+          <li>Service level agreements</li>
+          <li>Agent-assisted phone sales</li>
+        </SectionUnorderedList>
+      </SectionParagraph>
+    </Section>
+    <Section single top="2rem">
+      <SectionParagraph as="div" center>
+        <SectionH3 white={0}>Build/Operate/Transfer Services</SectionH3>
+        <p>
+          For clients that want to minimize vendor lock-in, we offer technology
+          development capabilities from the ground up with the option to
+          transition it over to our clients using our build, operate and
+          transfer service&nbsp;model.
+        </p>
+      </SectionParagraph>
+    </Section>
+    <Section>
       <div>
         <SectionH2>Process</SectionH2>
         <SectionParagraph>
-          Be the disrupter, or get disrupted. Analytical and engineering tiger
-          teams Iterative deliveries in two-week&nbsp;sprints.
+          Be the disrupter, or get disrupted. Our analytical and engineering
+          tiger teams perform iterative deliveries in two-week&nbsp;sprints.
         </SectionParagraph>
       </div>
       <ProcessFigure>

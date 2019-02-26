@@ -228,7 +228,40 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
         </FigureStructure1>
       </Figures>
     </Section>
-    <BannerSection single top="22.5rem">
+    <Section single top="21.5rem">
+      <SectionParagraph as="div" center>
+        <SectionH3 white={0}>Disability Fraud Finder</SectionH3>
+        <p>
+          We have an out of the box (OOB) machine learning driven disability
+          claims fraud solution complete with a user experience to improve fraud
+          detection and positively impact&nbsp;your&nbsp;reserves.
+        </p>
+      </SectionParagraph>
+    </Section>
+    <Section single top="2rem">
+      <SectionParagraph as="div" center>
+        <SectionH3 white={0}>Disability Claims Suite</SectionH3>
+        <p>
+          Our disability claims suite offers a comprehensive machine learning
+          enabled solution for disability claims. Capabilities include
+          segmentation, assignment, auto adjudication, STD to LTD bridging,
+          settlement recommendations, offsets and prediction of third
+          party&nbsp;referral&nbsp;requirements.
+        </p>
+      </SectionParagraph>
+    </Section>
+    <Section single top="2rem">
+      <SectionParagraph as="div" center>
+        <SectionH3 white={0}>Continuous Delivery of ML</SectionH3>
+        <p>
+          Through our patent pending Barrel&trade; infrastructure solution, we
+          offer continuous delivery of machine learning models and enable
+          observability in production. This environment allows your data science
+          teams to scale efficiently&nbsp;and&nbsp;effectively.
+        </p>
+      </SectionParagraph>
+    </Section>
+    <BannerSection single>
       <BannerContent>
         <BannerRight>
           <StyledBarrel alt="Barrel" />

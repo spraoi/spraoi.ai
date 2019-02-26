@@ -20,8 +20,7 @@ const Contact = ({ location: { pathname } }) => (
         <SectionH1>Contact Us</SectionH1>
         <SectionParagraph>
           Whether it&rsquo;s about a business opportunity or a job inquiry,
-          <br />
-          we&rsquo;d love to hear from&nbsp;you.
+          we&rsquo;d love to hear&nbsp;from&nbsp;you.
         </SectionParagraph>
       </div>
       <ContactForm />

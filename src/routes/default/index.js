@@ -269,14 +269,16 @@ const Index = () => (
             {people
               .filter(p => p.executive > 0 && p.active === 'y')
               .sort((a, b) => (a.executive > b.executive ? 1 : -1))
-              .map(({ id, image, name }) => (
+              .map(({ familyName, givenName, id, image }) => (
                 <FigureStructure2 key={id}>
                   <Link to={`/people/${id}/`}>
                     <StyledImage clickable>
                       <Img alt="" fluid={image} />
                     </StyledImage>
                   </Link>
-                  <ImageFigureFigcaption>{name}</ImageFigureFigcaption>
+                  <ImageFigureFigcaption>
+                    {givenName} {familyName}
+                  </ImageFigureFigcaption>
                 </FigureStructure2>
               ))}
           </Figures>

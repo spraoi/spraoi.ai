@@ -3,6 +3,7 @@ const { plugins } = require('@spraoi/gatsby-config');
 module.exports = {
   plugins: [
     ...plugins,
+    'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',

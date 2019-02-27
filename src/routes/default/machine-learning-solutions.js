@@ -278,28 +278,28 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
       </Order2>
       <Figures left shift={false} small>
         <FigureStructure2 as={IconFigure} small>
-          <StyledIcon as={Scalable} />
-          <figcaption>Scalable</figcaption>
+          <StyledIcon as={Placeholder} />
+          <figcaption>Standardized</figcaption>
         </FigureStructure2>
         <FigureStructure2 as={IconFigure} small>
-          <StyledIcon as={Transparent} />
-          <figcaption>Transparent</figcaption>
-        </FigureStructure2>
-        <FigureStructure2 as={IconFigure} small>
-          <StyledIcon as={Traceable} />
-          <figcaption>Traceable</figcaption>
+          <StyledIcon as={Placeholder} />
+          <figcaption>Repeatable</figcaption>
         </FigureStructure2>
         <FigureStructure2 as={IconFigure} small>
           <StyledIcon as={Observable} />
           <figcaption>Observable</figcaption>
         </FigureStructure2>
         <FigureStructure2 as={IconFigure} small>
-          <StyledIcon as={Standardized} />
-          <figcaption>Standardized</figcaption>
+          <StyledIcon as={Placeholder} />
+          <figcaption>Measurable</figcaption>
         </FigureStructure2>
         <FigureStructure2 as={IconFigure} small>
-          <StyledIcon as={Placeholder} />
-          <figcaption>Idempotent</figcaption>
+          <StyledIcon as={Standardized} />
+          <figcaption>Experiment</figcaption>
+        </FigureStructure2>
+        <FigureStructure2 as={IconFigure} small>
+          <StyledIcon as={Scalable} />
+          <figcaption>Scalable</figcaption>
         </FigureStructure2>
       </Figures>
     </Section>

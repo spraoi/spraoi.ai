@@ -233,8 +233,8 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
           Our disability claims suite offers a comprehensive machine learning
           enabled solution for disability claims. Capabilities include
           segmentation, assignment, auto adjudication, STD to LTD bridging,
-          settlement recommendations, offsets and prediction of third
-          party referral&nbsp;requirements.
+          settlement recommendations, offsets and prediction of third party
+          referral&nbsp;requirements.
         </p>
       </SectionParagraph>
     </Section>

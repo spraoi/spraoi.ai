@@ -14,7 +14,6 @@ const MetadataContainer = ({ children }) => (
               siteMetadata {
                 banner
                 datePublished(formatString: "YYYY-MM-DD")
-                description
                 facebook
                 instagram
                 linkedIn
@@ -23,7 +22,6 @@ const MetadataContainer = ({ children }) => (
                 siteLocal
                 siteName
                 siteUrl
-                title
                 twitter
               }
             }

@@ -28,7 +28,7 @@ const SEO = ({ article, person, ...overrides }) => (
           <GenericTags
             description={data.description}
             language={data.siteLanguage}
-            title={getSiteTitle(siteMetadata.title, data.title)}
+            title={getSiteTitle(location.pathname, data.siteName, data.title)}
             url={canonicalUrl}
           />
           <StructuredData

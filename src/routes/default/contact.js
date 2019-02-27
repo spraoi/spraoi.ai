@@ -11,7 +11,7 @@ import {
 const Contact = ({ location: { pathname } }) => (
   <>
     <SEO
-      description="Want to start a conversation? We would love to hear from you regarding our products and services."
+      description="Want to start a conversation? We would love to hear from you regarding our product offerings and services."
       pathname={pathname}
       title="Contact Us"
     />

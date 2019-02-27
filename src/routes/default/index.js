@@ -227,7 +227,10 @@ const Index = () => (
   <PeopleContainer>
     {people => (
       <>
-        <SEO />
+        <SEO
+          description="Spraoi was founded by Big Four Insurance Consulting and Silicon Valley leaders to bring disruptive capabilities to insurance consumers, agents and carriers."
+          title="Spraoi - an insurtech solutions provider with a focus on machine learning"
+        />
         <HeroSection>
           <HeroBg />
           <div>
@@ -262,7 +265,7 @@ const Index = () => (
             <SectionParagraph>
               We bring experience over 35 years of insurance experience from
               carrier and consultancy perspectives (PwC, Deloitte, EY), and
-              combined it with tech expertise from Apple and Oracle.
+              combined it with tech expertise from Apple.
             </SectionParagraph>
           </div>
           <Figures>
@@ -289,19 +292,19 @@ const Index = () => (
             <SectionH2>Solutions & Services</SectionH2>
             <SectionParagraph>
               We have OOB solutions for machine learning and machine learning
-              enabled customer experiences. Our combination of business and
-              engineering talent can deliver technology services in several
+              enabled customer experience. Our combination of business and
+              engineering talent can deliver technology solutions in several
               key&nbsp;areas.
             </SectionParagraph>
           </Order2>
           <Figures left>
             <FigureStructure3 as={IconFigure}>
               <StyledIcon as={Iml} />
-              <figcaption>Machine Learning Solutions</figcaption>
+              <figcaption>ML Platform &amp; Solutions</figcaption>
             </FigureStructure3>
             <FigureStructure3 as={IconFigure}>
               <StyledIcon as={Services} />
-              <figcaption>Technology Services</figcaption>
+              <figcaption>Technology Solutions &amp; Services</figcaption>
             </FigureStructure3>
             <FigureStructure3 as={IconFigure}>
               <StyledIcon as={CxSolutions} />
@@ -313,7 +316,7 @@ const Index = () => (
           <div>
             <SectionH2>Reach</SectionH2>
             <SectionParagraph>
-              We have a global team of 26 (including delivery partners), and
+              We have a global team of 24 (including delivery partners), and
               have established a repeatable onsite/offshore delivery mode and
               continue&nbsp;to&nbsp;optimize.
             </SectionParagraph>

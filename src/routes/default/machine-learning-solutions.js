@@ -172,7 +172,7 @@ const FigureStructure2 = styled.figure`
 const MachineLearningSolutions = ({ location: { pathname } }) => (
   <>
     <SEO
-      description="Our machine learning suite is a comprehensive set of machine learning algorithms tailored to optimize functions across the value chain using a SaaS delivery model."
+      description="Patent-pending continuous delivery platform enabling insurance specific machine learning models."
       pathname={pathname}
       title="Machine Learning Solutions"
     />
@@ -184,9 +184,9 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
         Learning Solutions
       </SectionH1>
       <SectionParagraph>
-        We have addressed specific insurance machine learning solutions
-        leveraging our patent pending, comprehensive platform. They have been
-        proven through production implementations.
+        With our platform, we have addressed the impediments and accelerated the
+        delivery of machine learning models. Our production solutions have
+        proven this&nbsp;in&nbsp;the&nbsp;market.
       </SectionParagraph>
     </HeroSection>
     <Section top="11rem">
@@ -307,14 +307,16 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
       <div>
         <SectionH2>Process</SectionH2>
         <SectionParagraph>
-          Have an idea for another machine learning model? Our team and proven
-          process can rapidly develop a model (with optional UX) within 10-16
-          weeks.
+          Our team continues to develop solutions for our clients and add to our
+          product and solutions portfolio. Our proven process can rapidly
+          develop a model (with optional UX) within&nbsp;10-16&nbsp;weeks.
         </SectionParagraph>
       </div>
-      <ProcessFigure>
-        <MlProcessImg />
-      </ProcessFigure>
+      <div>
+        <ProcessFigure>
+          <MlProcessImg />
+        </ProcessFigure>
+      </div>
     </Section>
   </>
 );

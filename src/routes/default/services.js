@@ -68,7 +68,7 @@ const FigureStructure1 = styled.figure`
 const Services = ({ location: { pathname } }) => (
   <>
     <SEO
-      description="Simplified and accelerated technology service delivery that maintains traction through seamless transition from concept to implementation."
+      description="Innovation, integration and data services to support transformative initiatives."
       pathname={pathname}
       title="Services"
     />
@@ -188,14 +188,22 @@ const Services = ({ location: { pathname } }) => (
     <Section>
       <div>
         <SectionH2>Process</SectionH2>
-        <SectionParagraph>
-          Be the disrupter, or get disrupted. Our analytical and engineering
-          tiger teams perform iterative deliveries in two-week&nbsp;sprints.
+        <SectionParagraph as="div">
+          <p>
+            Be the disrupter, or get disrupted. We have proven our ability to
+            accelerate the innovation agenda for our clients through:
+          </p>
+          <SectionUnorderedList>
+            <li>Analytical and engineering tiger teams</li>
+            <li>Iterative deliveries in two-week sprints</li>
+          </SectionUnorderedList>
         </SectionParagraph>
       </div>
-      <ProcessFigure>
-        <ServicesProcessImg />
-      </ProcessFigure>
+      <div>
+        <ProcessFigure>
+          <ServicesProcessImg />
+        </ProcessFigure>
+      </div>
     </Section>
   </>
 );

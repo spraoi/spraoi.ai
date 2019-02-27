@@ -1,5 +1,5 @@
-export const getSiteTitle = (title, overrideTitle) =>
-  title === overrideTitle ? title : `${title} - ${overrideTitle}`;
+export const getSiteTitle = (pathname, siteName, title) =>
+  pathname === '/' ? title : `${title} - ${siteName}`;
 
 export const getSocialUrls = ({ instagram, twitter, facebook, linkedIn }) => {
   const socialUrls = [];

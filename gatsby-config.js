@@ -38,8 +38,6 @@ module.exports = {
   siteMetadata: {
     banner: '/images/social-banner-1200x628.png',
     datePublished: '2018-01-01',
-    description:
-      'Spraoi was founded by Big Four Insurance Consulting and Silicon Valley leaders to bring disruptive capabilities to insurance consumers, agents and carriers.',
     facebook: 'spraoisoftware',
     instagram: 'spraoi_tech',
     linkedIn: 'spraoi.ai',
@@ -48,7 +46,6 @@ module.exports = {
     siteLocal: 'en_US',
     siteName: 'Spraoi',
     siteUrl: 'https://spraoi.ai',
-    title: 'Spraoi',
     twitter: 'spraoit',
   },
 };

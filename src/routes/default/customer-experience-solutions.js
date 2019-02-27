@@ -106,7 +106,7 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
     render={({ file }) => (
       <>
         <SEO
-          description="Microservices architected sales, service and claims portal application, enabling intermediary-led and direct-to-consumer models with a plug and play digital experience."
+          description="Microservices architected customer experience portal solution."
           pathname={pathname}
           title="Customer Experience Solutions"
         />
@@ -119,15 +119,15 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
           </SectionH1>
           <SectionParagraph>
             We have leveraged our Kwikcover&trade; customer experience portal
-            platform to develop specific solutions in several insurance industry
-            sectors.
+            platform to develop specific solutions across
+            insurance&nbsp;industry&nbsp;sectors.
           </SectionParagraph>
         </HeroSection>
         <Section top="12rem">
           <Order2>
             <SectionH2>Solutions</SectionH2>
             <SectionParagraph>
-              Our portal supports agent and D2C models with a single,
+              Our portal supports agent and d2c models with a single,
               easy-to-use and consistent interface that spans the insurance
               lifecycle and can easily be integrated with several administration
               platforms&nbsp;as&nbsp;a&nbsp;veneer.
@@ -202,12 +202,12 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
           </div>
           <Figures shift={false}>
             <FigureStructure2 as={IconFigure}>
-              <StyledIcon as={Map} />
-              <figcaption>ML-Driven Insights</figcaption>
-            </FigureStructure2>
-            <FigureStructure2 as={IconFigure}>
               <StyledIcon as={Multiplatform} />
               <figcaption>Multi-Platform Veneering</figcaption>
+            </FigureStructure2>
+            <FigureStructure2 as={IconFigure}>
+              <StyledIcon as={Map} />
+              <figcaption>ML-Driven Insights</figcaption>
             </FigureStructure2>
             <FigureStructure2 as={IconFigure}>
               <StyledIcon as={Chatbot} />

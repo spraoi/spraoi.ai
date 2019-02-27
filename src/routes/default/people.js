@@ -39,7 +39,7 @@ const People = ({ location: { pathname } }) => (
     {people => (
       <>
         <SEO
-          description="Our diverse team of onsite/offshore resources provide a robust delivery model to ensure that today&rsquo;s needs become tomorrow&rsquo;s results."
+          description="Unique, global team of professionals delivering ensuring today&rsquo;s needs become tomorrow&rsquo;s results."
           pathname={pathname}
           title="People"
         />

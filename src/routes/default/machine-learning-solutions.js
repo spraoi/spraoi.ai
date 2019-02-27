@@ -20,6 +20,7 @@ import {
 import { ReactComponent as Barrel } from '../../images/brand/barrel-logo.svg';
 import { ReactComponent as BgMlSolutions } from '../../images/icons/bg-ml-solutions.svg';
 import { ReactComponent as Buy } from '../../images/icons/buy.svg';
+import { ReactComponent as CxSolutions } from '../../images/icons/cx-solutions.svg';
 import { ReactComponent as Delivery } from '../../images/icons/delivery.svg';
 import { ReactComponent as Disability } from '../../images/icons/disability.svg';
 import { ReactComponent as Fraud } from '../../images/icons/fraud.svg';
@@ -27,8 +28,6 @@ import { ReactComponent as Observable } from '../../images/icons/observable.svg'
 import { ReactComponent as Placeholder } from '../../images/icons/placeholder.svg';
 import { ReactComponent as Scalable } from '../../images/icons/scalable.svg';
 import { ReactComponent as Standardized } from '../../images/icons/standardized.svg';
-import { ReactComponent as Traceable } from '../../images/icons/traceable.svg';
-import { ReactComponent as Transparent } from '../../images/icons/transparent.svg';
 
 const HeroBg = styled(BgMlSolutions)`
   position: absolute;
@@ -282,7 +281,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
           <figcaption>Standardized</figcaption>
         </FigureStructure2>
         <FigureStructure2 as={IconFigure} small>
-          <StyledIcon as={Placeholder} />
+          <StyledIcon as={CxSolutions} />
           <figcaption>Repeatable</figcaption>
         </FigureStructure2>
         <FigureStructure2 as={IconFigure} small>

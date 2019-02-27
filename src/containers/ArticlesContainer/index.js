@@ -21,7 +21,6 @@ const ArticlesContainer = ({ children }) => (
                     dateModified(formatString: "YYYY-MM-DD")
                     datePublished(formatString: "YYYY-MM-DD")
                     description
-                    keywords
                     title
                   }
                   html

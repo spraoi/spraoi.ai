@@ -44,11 +44,20 @@ const TooltipH4 = styled.h4`
   color: ${p => p.theme.colors.textPrimary};
 `;
 
-const PersonPreview = ({ executive, id, image, name, position }) => (
+const PersonPreview = ({
+  executive,
+  familyName,
+  givenName,
+  id,
+  image,
+  position,
+}) => (
   <Tippy
     content={
       <TooltipHtml>
-        <TooltipH3>{name}</TooltipH3>
+        <TooltipH3>
+          {givenName} {familyName}
+        </TooltipH3>
         <TooltipH4>{position}</TooltipH4>
       </TooltipHtml>
     }
@@ -66,9 +75,10 @@ const PersonPreview = ({ executive, id, image, name, position }) => (
 
 PersonPreview.propTypes = {
   executive: PropTypes.number.isRequired,
+  familyName: PropTypes.string.isRequired,
+  givenName: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   image: PropTypes.shape({}).isRequired,
-  name: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
 };
 

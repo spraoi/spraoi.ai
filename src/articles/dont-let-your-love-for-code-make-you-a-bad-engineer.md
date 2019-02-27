@@ -3,8 +3,7 @@ datePublished: 2018-06-21
 dateModified: 2018-06-21
 title: Don’t Let Your Love For Code Make You a Bad Engineer
 author: cade-scroggins
-keywords: foo,bar,baz
-banner: /banners/spraoi.png
+banner: /images/social-banner-1200x628.png
 description: >-
   At the end of the day, our clients don’t pay us to code—they pay us to solve
   problems.

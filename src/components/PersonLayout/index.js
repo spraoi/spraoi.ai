@@ -34,12 +34,13 @@ const PersonLayout = ({ location: { pathname }, pageContext: { slug } }) => (
   <PeopleContainer>
     {people => {
       const person = people.find(person => slug.includes(person.id));
+      const name = `${person.givenName} ${person.familyName}`;
 
       return (
         <>
-          <SEO pathname={pathname} title={person.name} />
+          <SEO pathname={pathname} person={person} title={name} />
           <HeroSection center single>
-            <SectionH1 wrap={1}>{person.name}</SectionH1>
+            <SectionH1 wrap={1}>{name}</SectionH1>
             <H2>{person.position}</H2>
           </HeroSection>
           <Section single>

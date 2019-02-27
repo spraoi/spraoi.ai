@@ -12,8 +12,9 @@ const PeopleContainer = ({ children }) => (
               active
               bio
               executive
+              familyName
+              givenName
               id
-              name
               position
             }
           }

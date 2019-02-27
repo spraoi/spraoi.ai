@@ -3,8 +3,7 @@ datePublished: 2018-10-18
 dateModified: 2018-10-18
 title: The Reality of Machine Learning Delivery
 author: karan-mishra
-keywords: foo,bar,baz
-banner: /banners/spraoi.png
+banner: /images/social-banner-1200x628.png
 description: >-
   Machine learning is not just a buzzword. If done right, it can drive results.
 ---

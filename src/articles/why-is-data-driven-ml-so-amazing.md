@@ -3,8 +3,7 @@ datePublished: 2019-02-05
 dateModified: 2019-02-05
 title: Why Is Data Driven ML So Amazing?
 author: christopher-chang
-keywords: foo,bar,baz
-banner: /banners/spraoi.png
+banner: /images/social-banner-1200x628.png
 description: >-
   Machine learning utilizes inductive reasoning, which can simultaneously
   account for a greater number of variables and levels of complexity, making it

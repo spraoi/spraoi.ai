@@ -27,8 +27,14 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
       return (
         <article>
           <SEO
-            article={{ ...frontmatter, author: author.name }}
+            article={frontmatter}
+            banner={frontmatter.banner}
+            dateModified={frontmatter.dateModified}
+            datePublished={frontmatter.datePublished}
+            description={frontmatter.description}
             pathname={pathname}
+            person={author}
+            title={frontmatter.title}
           />
           <HeroSection single>
             <SectionH1 wrap={1}>{frontmatter.title}</SectionH1>

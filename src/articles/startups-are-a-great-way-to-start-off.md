@@ -3,8 +3,7 @@ datePublished: 2018-12-08
 dateModified: 2018-12-08
 title: Startups Are a Great Way to Start Off
 author: nora-hristova
-keywords: foo,bar,baz
-banner: /banners/spraoi.png
+banner: /images/social-banner-1200x628.png
 description: >-
   Startups can help you jump start your career. Learn what makes the startup
   experience different and unique.

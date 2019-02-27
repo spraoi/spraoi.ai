@@ -3,8 +3,7 @@ datePublished: 2019-01-03
 dateModified: 2019-01-03
 title: Women In Technology
 author: mamta-chaurdia
-keywords: foo,bar,baz
-banner: /banners/spraoi.png
+banner: /images/social-banner-1200x628.png
 description: >-
   Why we need a more gender balanced workforce, especially in the tech industry
   and why talent should trump everything else?

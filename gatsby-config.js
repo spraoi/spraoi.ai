@@ -3,13 +3,6 @@ const { plugins } = require('@spraoi/gatsby-config');
 module.exports = {
   plugins: [
     ...plugins,
-    'gatsby-plugin-offline',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-sitemap',
-    'gatsby-transformer-remark',
-    'gatsby-transformer-sharp',
-    'gatsby-transformer-yaml',
     {
       options: {
         background_color: '#f8fbfe',
@@ -34,6 +27,13 @@ module.exports = {
       options: { name: 'images', path: 'src/images' },
       resolve: 'gatsby-source-filesystem',
     },
+    'gatsby-plugin-offline',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
+    'gatsby-transformer-remark',
+    'gatsby-transformer-sharp',
+    'gatsby-transformer-yaml',
   ],
   siteMetadata: {
     banner: '/images/social-banner-1200x628.png',

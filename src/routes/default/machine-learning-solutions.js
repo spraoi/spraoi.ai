@@ -234,7 +234,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
           enabled solution for disability claims. Capabilities include
           segmentation, assignment, auto adjudication, STD to LTD bridging,
           settlement recommendations, offsets and prediction of third
-          party&nbsp;referral&nbsp;requirements.
+          party referral&nbsp;requirements.
         </p>
       </SectionParagraph>
     </Section>

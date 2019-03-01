@@ -25,23 +25,13 @@ import { ReactComponent as Usa } from '../../images/icons/usa.svg';
 
 const HeroBg = styled(BgLanding)`
   position: absolute;
-  top: -30.3rem;
-  left: -50rem;
-  width: 80rem;
+  top: -24.4rem;
+  left: -42.5rem;
+  width: 70rem;
   z-index: -1;
-
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    top: -28.3rem;
-    left: -44.5rem;
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    top: -27.5rem;
-    left: -43.5rem;
-  }
 `;
 
-const FigureStructure1 = styled.figure`
+const ThreeRight = styled.figure`
   margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
@@ -49,29 +39,23 @@ const FigureStructure1 = styled.figure`
     margin: 0;
 
     &:nth-of-type(1) {
-      left: 3rem;
+      top: -3rem;
+      left: -1.5rem;
     }
 
     &:nth-of-type(2) {
-      top: 12rem;
+      top: 2rem;
       right: 0;
     }
 
     &:nth-of-type(3) {
-      top: 14rem;
-      right: 14rem;
-    }
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.xl}) {
-    &:nth-of-type(1) {
-      right: 10rem;
-      left: auto;
+      top: 9rem;
+      left: -1.5rem;
     }
   }
 `;
 
-const FigureStructure3 = styled.figure`
+const ThreeLeft = styled.figure`
   margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
@@ -79,22 +63,23 @@ const FigureStructure3 = styled.figure`
     margin: 0;
 
     &:nth-of-type(1) {
-      left: 12rem;
+      top: -3rem;
+      right: 0;
     }
 
     &:nth-of-type(2) {
-      top: 12rem;
-      left: 0;
+      top: 2rem;
+      left: 2.6rem;
     }
 
     &:nth-of-type(3) {
-      top: 14.5rem;
+      top: 9rem;
       right: 0;
     }
   }
 `;
 
-const FigureStructure4 = styled.figure`
+const TwoRight = styled.figure`
   margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
@@ -102,19 +87,13 @@ const FigureStructure4 = styled.figure`
     margin: 0;
 
     &:nth-of-type(1) {
-      top: 11rem;
-      left: -8rem;
+      top: 8rem;
+      left: -4rem;
     }
 
     &:nth-of-type(2) {
-      top: -2rem;
+      top: -4rem;
       right: 0;
-    }
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.xl}) {
-    &:nth-of-type(1) {
-      left: -5rem;
     }
   }
 `;
@@ -123,10 +102,6 @@ const StyledReachIcon = styled.div`
   width: 4.5rem;
   margin-right: ${p => p.theme.space.md};
   fill: ${p => p.theme.colors.white};
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    width: 5rem;
-  }
 `;
 
 const IconRoundFigure = styled.figure`
@@ -152,11 +127,6 @@ const IconRoundFigure = styled.figure`
     grid-column-start: auto;
     grid-column-end: auto;
   }
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    width: 17rem;
-    height: 17rem;
-  }
 `;
 
 const NoCap = styled.span`
@@ -181,47 +151,47 @@ const Index = () => (
         </SectionParagraph>
       </div>
       <Figures>
-        <FigureStructure1 as={IconFigure}>
+        <ThreeRight as={IconFigure}>
           <StyledIcon as={Hand} />
           <figcaption>
             Insurance SME<NoCap>s</NoCap> Big 4 Consulting
           </figcaption>
-        </FigureStructure1>
-        <FigureStructure1 as={IconFigure}>
+        </ThreeRight>
+        <ThreeRight as={IconFigure}>
           <StyledIcon as={Bridge} />
           <figcaption>Silicon Valley Technologists</figcaption>
-        </FigureStructure1>
-        <FigureStructure1 as={IconFigure}>
+        </ThreeRight>
+        <ThreeRight as={IconFigure}>
           <StyledIcon as={Offshore} />
           <figcaption>Offshore Scale</figcaption>
-        </FigureStructure1>
+        </ThreeRight>
       </Figures>
     </HeroSection>
-    <Section top="19rem">
+    <Section top="17rem">
       <Order2>
         <SectionH2>Solutions & Services</SectionH2>
         <SectionParagraph>
           We have out of the box machine learning and customer experience
           solutions. Our combination of domain and engineering talent can
-          expeditiously delivery insurance technology&nbsp;solutions.
+          expeditiously deliver insurance technology&nbsp;solutions.
         </SectionParagraph>
       </Order2>
       <Figures left>
-        <FigureStructure3 as={IconFigure}>
+        <ThreeLeft as={IconFigure}>
           <StyledIcon as={Iml} />
           <figcaption>ML Platform &amp; Solutions</figcaption>
-        </FigureStructure3>
-        <FigureStructure3 as={IconFigure}>
+        </ThreeLeft>
+        <ThreeLeft as={IconFigure}>
           <StyledIcon as={Services} />
           <figcaption>Technology Solutions &amp; Services</figcaption>
-        </FigureStructure3>
-        <FigureStructure3 as={IconFigure}>
+        </ThreeLeft>
+        <ThreeLeft as={IconFigure}>
           <StyledIcon as={CxSolutions} />
           <figcaption>Customer Experience Solutions</figcaption>
-        </FigureStructure3>
+        </ThreeLeft>
       </Figures>
     </Section>
-    <Section bottom={{ md: '17.5rem', xl: '15.5rem' }} top="21rem">
+    <Section bottom={{ md: '13.5rem' }} top="15rem">
       <div>
         <SectionH2>Reach</SectionH2>
         <SectionParagraph>
@@ -231,7 +201,7 @@ const Index = () => (
         </SectionParagraph>
       </div>
       <Figures>
-        <FigureStructure4 as={IconRoundFigure}>
+        <TwoRight as={IconRoundFigure}>
           <StyledReachIcon as={Usa} />
           <figcaption>
             <SectionH3>USA</SectionH3>
@@ -245,8 +215,8 @@ const Index = () => (
               <li>Dallas</li>
             </ul>
           </figcaption>
-        </FigureStructure4>
-        <FigureStructure4 as={IconRoundFigure}>
+        </TwoRight>
+        <TwoRight as={IconRoundFigure}>
           <StyledReachIcon as={India} />
           <figcaption>
             <SectionH3>India</SectionH3>
@@ -256,7 +226,7 @@ const Index = () => (
               <li>Mysore</li>
             </ul>
           </figcaption>
-        </FigureStructure4>
+        </TwoRight>
       </Figures>
     </Section>
   </>

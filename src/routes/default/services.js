@@ -24,13 +24,13 @@ import { ReactComponent as ThirdParty } from '../../images/icons/third-party.svg
 
 const HeroBg = styled(BgServices)`
   position: absolute;
-  top: -29.3rem;
-  right: -25rem;
-  width: 55rem;
+  top: -22rem;
+  right: -15rem;
+  width: 40rem;
   z-index: -1;
 `;
 
-const FigureStructure1 = styled.figure`
+const FiveLeft = styled.figure`
   margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
@@ -79,7 +79,7 @@ const Services = ({ location: { pathname } }) => (
         eliminating technology as the impediment&nbsp;to&nbsp;progress.
       </SectionParagraph>
     </HeroSection>
-    <Section top="11rem">
+    <Section top="10rem">
       <Order2>
         <SectionH2>Offerings</SectionH2>
         <SectionParagraph>
@@ -89,30 +89,30 @@ const Services = ({ location: { pathname } }) => (
           change&nbsp;in&nbsp;weeks.
         </SectionParagraph>
       </Order2>
-      <Figures left shift={false}>
-        <FigureStructure1 as={IconFigure} smallOnMedium>
+      <Figures left>
+        <FiveLeft as={IconFigure} smallOnMedium>
           <StyledIcon as={Innovation} />
           <figcaption>Innovation</figcaption>
-        </FigureStructure1>
-        <FigureStructure1 as={IconFigure} smallOnMedium>
+        </FiveLeft>
+        <FiveLeft as={IconFigure} smallOnMedium>
           <StyledIcon as={Integration} />
           <figcaption>Integration</figcaption>
-        </FigureStructure1>
-        <FigureStructure1 as={IconFigure} smallOnMedium>
+        </FiveLeft>
+        <FiveLeft as={IconFigure} smallOnMedium>
           <StyledIcon as={Data} />
           <figcaption>Data</figcaption>
-        </FigureStructure1>
-        <FigureStructure1 as={IconFigure}>
+        </FiveLeft>
+        <FiveLeft as={IconFigure}>
           <StyledIcon as={ThirdParty} />
           <figcaption>Third Party Administration</figcaption>
-        </FigureStructure1>
-        <FigureStructure1 as={IconFigure}>
+        </FiveLeft>
+        <FiveLeft as={IconFigure}>
           <StyledIcon as={BuildOperate} />
           <figcaption>Build, Operate, Transfer</figcaption>
-        </FigureStructure1>
+        </FiveLeft>
       </Figures>
     </Section>
-    <Section single top="11.5rem">
+    <Section single top="10.5rem">
       <SectionParagraph as="div" center>
         <SectionH3 white={0}>Integration Services</SectionH3>
         <p>

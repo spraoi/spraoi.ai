@@ -19,7 +19,7 @@ const StyledHeader = styled.header`
     padding: ${p => p.theme.space.lg};
   }
 
-  @media (min-width: ${p => p.theme.breakpoints.lg}) {
+  @media (min-width: ${p => p.theme.breakpoints.xl}) {
     padding: ${p => p.theme.space.xl} ${p => p.theme.space.lg};
   }
 `;

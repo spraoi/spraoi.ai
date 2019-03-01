@@ -27,13 +27,13 @@ import { ReactComponent as Multiplatform } from '../../images/icons/multiplatfor
 
 const HeroBg = styled(BgCxSolutions)`
   position: absolute;
-  top: -35rem;
-  right: -31rem;
-  width: 60rem;
+  top: -21rem;
+  right: -10rem;
+  width: 40rem;
   z-index: -1;
 `;
 
-const FigureStructure1 = styled.figure`
+const ThreeLeft = styled.figure`
   margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
@@ -41,18 +41,47 @@ const FigureStructure1 = styled.figure`
     margin: 0;
 
     &:nth-of-type(1) {
-      top: -2rem;
-      left: 12rem;
+      top: -3rem;
+      right: 0;
     }
 
     &:nth-of-type(2) {
-      top: 10rem;
-      left: 0;
+      top: 2rem;
+      left: 2.6rem;
     }
 
     &:nth-of-type(3) {
-      top: 12.5rem;
+      top: 9rem;
       right: 0;
+    }
+  }
+`;
+
+const FourRight = styled.figure`
+  margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
+
+  @media (min-width: ${p => p.theme.breakpoints.md}) {
+    position: absolute;
+    margin: 0;
+
+    &:nth-of-type(1) {
+      top: -3rem;
+      left: -1.5rem;
+    }
+
+    &:nth-of-type(2) {
+      top: -3rem;
+      right: 4.2rem;
+    }
+
+    &:nth-of-type(3) {
+      top: 9rem;
+      left: -1.5rem;
+    }
+
+    &:nth-of-type(4) {
+      top: 9rem;
+      right: 4.2rem;
     }
   }
 `;
@@ -60,34 +89,6 @@ const FigureStructure1 = styled.figure`
 const Screenshot = styled.div`
   box-shadow: ${p => p.theme.boxShadows.md};
   border-radius: ${p => p.theme.radii.lg};
-`;
-
-const FigureStructure2 = styled.figure`
-  margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    position: absolute;
-    margin: 0;
-
-    &:nth-of-type(1) {
-      top: -2rem;
-      left: 2rem;
-    }
-
-    &:nth-of-type(2) {
-      right: 0;
-    }
-
-    &:nth-of-type(3) {
-      top: 10.5rem;
-      left: -2rem;
-    }
-
-    &:nth-of-type(4) {
-      top: 12.5rem;
-      left: 11rem;
-    }
-  }
 `;
 
 const CustomerExperienceSolutions = ({ location: { pathname } }) => (
@@ -123,7 +124,7 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
             insurance&nbsp;industry&nbsp;sectors.
           </SectionParagraph>
         </HeroSection>
-        <Section top="12rem">
+        <Section top="11rem">
           <Order2>
             <SectionH2>Solutions</SectionH2>
             <SectionParagraph>
@@ -133,22 +134,22 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
               platforms&nbsp;as&nbsp;a&nbsp;veneer.
             </SectionParagraph>
           </Order2>
-          <Figures left shift={false}>
-            <FigureStructure1 as={IconFigure}>
+          <Figures left>
+            <ThreeLeft as={IconFigure}>
               <StyledIcon as={Group} />
               <figcaption>Group &amp; Voluntary Benefits</figcaption>
-            </FigureStructure1>
-            <FigureStructure1 as={IconFigure}>
+            </ThreeLeft>
+            <ThreeLeft as={IconFigure}>
               <StyledIcon as={Lifebuoy} />
               <figcaption>Life Insurance</figcaption>
-            </FigureStructure1>
-            <FigureStructure1 as={IconFigure}>
+            </ThreeLeft>
+            <ThreeLeft as={IconFigure}>
               <StyledIcon as={Factory} />
               <figcaption>Small Commercial</figcaption>
-            </FigureStructure1>
+            </ThreeLeft>
           </Figures>
         </Section>
-        <Section single top="17.5rem">
+        <Section single top="13rem">
           <SectionParagraph as="div" center>
             <SectionH3 white={0}>Group &amp; Voluntary Benefits</SectionH3>
             <p>
@@ -189,7 +190,7 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
             fluid={file.childImageSharp.fluid}
           />
         </Section>
-        <Section bottom={{ md: '10rem', xl: '10rem' }} top="12rem">
+        <Section bottom={{ md: '7rem' }} top="11.5rem">
           <div>
             <SectionH2>Capabilities</SectionH2>
             <SectionParagraph>
@@ -198,23 +199,23 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
               that enables ease&nbsp;of&nbsp;integration.
             </SectionParagraph>
           </div>
-          <Figures shift={false}>
-            <FigureStructure2 as={IconFigure}>
+          <Figures>
+            <FourRight as={IconFigure}>
               <StyledIcon as={Multiplatform} />
               <figcaption>Multi-Platform Veneering</figcaption>
-            </FigureStructure2>
-            <FigureStructure2 as={IconFigure}>
+            </FourRight>
+            <FourRight as={IconFigure}>
               <StyledIcon as={Map} />
               <figcaption>ML-Driven Insights</figcaption>
-            </FigureStructure2>
-            <FigureStructure2 as={IconFigure}>
+            </FourRight>
+            <FourRight as={IconFigure}>
               <StyledIcon as={Chatbot} />
               <figcaption>Chatbot</figcaption>
-            </FigureStructure2>
-            <FigureStructure2 as={IconFigure}>
+            </FourRight>
+            <FourRight as={IconFigure}>
               <StyledIcon as={CoBrowsing} />
               <figcaption>Co-Browsing</figcaption>
-            </FigureStructure2>
+            </FourRight>
           </Figures>
         </Section>
       </>

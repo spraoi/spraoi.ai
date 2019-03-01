@@ -15,9 +15,9 @@ import { ReactComponent as BgPeople } from '../../images/icons/bg-people.svg';
 
 const HeroBg = styled(BgPeople)`
   position: absolute;
-  top: -15em;
-  left: -25rem;
-  width: 55rem;
+  top: -7rem;
+  left: -22rem;
+  width: 40rem;
   z-index: -1;
 `;
 

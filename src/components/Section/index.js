@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 
 const HeroSection = styled.section`
   position: relative;
-  margin-top: ${p => p.theme.space.lg};
+  margin-top: ${p => p.theme.space.md};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     ${p =>
@@ -82,7 +82,7 @@ Section.defaultProps = {
   bottom: {},
   center: false,
   single: false,
-  top: '9.5rem',
+  top: '8rem',
 };
 
 const SectionH1 = styled.h1`
@@ -90,7 +90,7 @@ const SectionH1 = styled.h1`
   left: -${p => p.theme.space.xxxs};
   color: ${p => p.theme.colors.primaryDark};
   font-size: ${p => p.theme.fontSizes.xl};
-  line-height: 1.1em;
+  line-height: 1.2em;
   white-space: ${p => (p.wrap ? 'wrapLine' : 'nowrap')};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
@@ -98,7 +98,7 @@ const SectionH1 = styled.h1`
   }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    font-size: ${p => p.theme.fontSizes.hero};
+    margin-bottom: ${p => p.theme.space.sm};
   }
 `;
 
@@ -189,32 +189,6 @@ const Figures = styled.div`
         : css`
             margin-left: ${p => p.theme.space.xl};
           `};
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.xl}) {
-    ${p =>
-      p.left
-        ? css`
-            top: -${p => p.theme.space.xl};
-          `
-        : css`
-            top: -${p => p.theme.space.lg};
-            right: -${p => p.theme.space.xl};
-          `};
-
-    ${p =>
-      p.shift &&
-      !p.left &&
-      css`
-        margin: 0;
-      `};
-
-    ${p =>
-      !p.shift &&
-      css`
-        top: 0;
-        right: 0;
-      `};
   }
 `;
 
@@ -315,13 +289,9 @@ const StyledImage = styled.div`
     `};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    width: 10rem;
-    height: 10rem;
   }
 
   @media (min-width: ${p => p.theme.breakpoints.xl}) {
-    width: 11rem;
-    height: 11rem;
   }
 `;
 

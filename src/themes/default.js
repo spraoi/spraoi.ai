@@ -148,7 +148,6 @@ export default {
     lg: `${fontSizeScale}rem`,
     xl: `${fontSizeScale ** 2}rem`,
     xxl: `${fontSizeScale ** 3}rem`,
-    hero: '5rem',
   },
   fontWeights: {
     light: 500,

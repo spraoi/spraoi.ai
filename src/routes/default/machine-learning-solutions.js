@@ -30,13 +30,13 @@ import { ReactComponent as Standardized } from '../../images/icons/standardized.
 
 const HeroBg = styled(BgMlSolutions)`
   position: absolute;
-  top: -32.5rem;
-  right: -38.5rem;
-  width: 65rem;
+  top: -17rem;
+  right: -18rem;
+  width: 40rem;
   z-index: -1;
 `;
 
-const FigureStructure1 = styled.figure`
+const ThreeLeft = styled.figure`
   margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
@@ -44,18 +44,50 @@ const FigureStructure1 = styled.figure`
     margin: 0;
 
     &:nth-of-type(1) {
-      top: -2rem;
-      left: 12rem;
+      top: -3rem;
+      right: 0;
     }
 
     &:nth-of-type(2) {
-      top: 10rem;
-      left: 0;
+      top: 2rem;
+      left: 2.6rem;
     }
 
     &:nth-of-type(3) {
-      top: 12.5rem;
+      top: 9rem;
       right: 0;
+    }
+  }
+`;
+
+const SixLeft = styled.figure`
+  margin: ${p => p.theme.space.md} ${p => p.theme.space.md} 0 0;
+
+  @media (min-width: ${p => p.theme.breakpoints.sm}) {
+    margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
+  }
+
+  @media (min-width: ${p => p.theme.breakpoints.md}) {
+    margin: 0 ${p => p.theme.space.md} ${p => p.theme.space.md} 0;
+
+    &:nth-of-type(1) {
+      margin-top: -4rem;
+    }
+
+    &:nth-of-type(2) {
+      margin-top: -2rem;
+    }
+
+    &:nth-of-type(4) {
+      margin-top: -4rem;
+    }
+
+    &:nth-of-type(5) {
+      margin-top: -2rem;
+    }
+
+    &:nth-of-type(3n + 3) {
+      margin-right: 0;
     }
   }
 `;
@@ -135,38 +167,6 @@ const StyledBarrel = styled(Barrel)`
   }
 `;
 
-const FigureStructure2 = styled.figure`
-  margin: ${p => p.theme.space.md} ${p => p.theme.space.md} 0 0;
-
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    margin: 0 ${p => p.theme.space.md} ${p => p.theme.space.md} 0;
-
-    &:nth-of-type(1) {
-      margin-top: -4rem;
-    }
-
-    &:nth-of-type(2) {
-      margin-top: -2rem;
-    }
-
-    &:nth-of-type(4) {
-      margin-top: -4rem;
-    }
-
-    &:nth-of-type(5) {
-      margin-top: -2rem;
-    }
-
-    &:nth-of-type(3n + 3) {
-      margin-right: 0;
-    }
-  }
-`;
-
 const MachineLearningSolutions = ({ location: { pathname } }) => (
   <>
     <SEO
@@ -196,22 +196,22 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
           experience.
         </SectionParagraph>
       </Order2>
-      <Figures left shift={false}>
-        <FigureStructure1 as={IconFigure}>
+      <Figures left>
+        <ThreeLeft as={IconFigure}>
           <StyledIcon as={Fraud} />
           <figcaption>Disability Fraud Finder</figcaption>
-        </FigureStructure1>
-        <FigureStructure1 as={IconFigure}>
+        </ThreeLeft>
+        <ThreeLeft as={IconFigure}>
           <StyledIcon as={Disability} />
           <figcaption>Disability Claims Suite</figcaption>
-        </FigureStructure1>
-        <FigureStructure1 as={IconFigure}>
+        </ThreeLeft>
+        <ThreeLeft as={IconFigure}>
           <StyledIcon as={Buy} />
           <figcaption>Enrollment Propensity To Buy</figcaption>
-        </FigureStructure1>
+        </ThreeLeft>
       </Figures>
     </Section>
-    <Section single top="21.5rem">
+    <Section single top="17rem">
       <SectionParagraph as="div" center>
         <SectionH3 white={0}>Disability Fraud Finder</SectionH3>
         <p>
@@ -260,7 +260,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
         </BannerLeft>
       </BannerContent>
     </BannerSection>
-    <Section top="14rem">
+    <Section top="12.5rem">
       <Order2>
         <SectionH2>Benefits</SectionH2>
         <SectionParagraph>
@@ -270,34 +270,34 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
           and&nbsp;developing.
         </SectionParagraph>
       </Order2>
-      <Figures left shift={false} small>
-        <FigureStructure2 as={IconFigure} small>
+      <Figures left small>
+        <SixLeft as={IconFigure} small>
           <StyledIcon as={Placeholder} />
           <figcaption>Standardized</figcaption>
-        </FigureStructure2>
-        <FigureStructure2 as={IconFigure} small>
+        </SixLeft>
+        <SixLeft as={IconFigure} small>
           <StyledIcon as={CxSolutions} />
           <figcaption>Repeatable</figcaption>
-        </FigureStructure2>
-        <FigureStructure2 as={IconFigure} small>
+        </SixLeft>
+        <SixLeft as={IconFigure} small>
           <StyledIcon as={Observable} />
           <figcaption>Observable</figcaption>
-        </FigureStructure2>
-        <FigureStructure2 as={IconFigure} small>
+        </SixLeft>
+        <SixLeft as={IconFigure} small>
           <StyledIcon as={Placeholder} />
           <figcaption>Measurable</figcaption>
-        </FigureStructure2>
-        <FigureStructure2 as={IconFigure} small>
+        </SixLeft>
+        <SixLeft as={IconFigure} small>
           <StyledIcon as={Standardized} />
           <figcaption>Experiment</figcaption>
-        </FigureStructure2>
-        <FigureStructure2 as={IconFigure} small>
+        </SixLeft>
+        <SixLeft as={IconFigure} small>
           <StyledIcon as={Scalable} />
           <figcaption>Scalable</figcaption>
-        </FigureStructure2>
+        </SixLeft>
       </Figures>
     </Section>
-    <Section top="8.5rem">
+    <Section top="7rem">
       <div>
         <SectionH2>Process</SectionH2>
         <SectionParagraph>

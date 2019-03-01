@@ -1,14 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import ServicesProcessImg from '../../components/Images/ServicesProcessImg';
 import SEO from '../../components/SEO';
 import {
   Figures,
   HeroSection,
   IconFigure,
   Order2,
-  ProcessFigure,
   Section,
   SectionH1,
   SectionH2,
@@ -76,19 +74,19 @@ const Services = ({ location: { pathname } }) => (
       <HeroBg />
       <SectionH1 wrap={1}>Services</SectionH1>
       <SectionParagraph>
-        In addition to our products, the Spraoi team has several service areas
+        In addition to our solutions, the Spraoi team has several service areas
         where we provide accountability from concept through execution, thus
         eliminating technology as the impediment&nbsp;to&nbsp;progress.
       </SectionParagraph>
     </HeroSection>
     <Section top="11rem">
       <Order2>
-        <SectionH2>Offering</SectionH2>
+        <SectionH2>Offerings</SectionH2>
         <SectionParagraph>
           We provide technology strategy, management, design, development and
           deployment capabilities. When combined with the depth of our
           technology talent and domain expertise we can bring demonstrable
-          change in&nbsp;mere&nbsp;weeks.
+          change&nbsp;in&nbsp;weeks.
         </SectionParagraph>
       </Order2>
       <Figures left shift={false}>
@@ -115,18 +113,6 @@ const Services = ({ location: { pathname } }) => (
       </Figures>
     </Section>
     <Section single top="11.5rem">
-      <SectionParagraph as="div" center>
-        <SectionH3 white={0}>Innovation Services</SectionH3>
-        <p>
-          Our innovation as a service approach provides technology strategy,
-          management, design, development and deployment capabilities. When
-          combined with our machine learning expertise, the result is
-          data-forward engineering that can bring demonstrable change
-          in&nbsp;mere&nbsp;weeks.
-        </p>
-      </SectionParagraph>
-    </Section>
-    <Section single top="2rem">
       <SectionParagraph as="div" center>
         <SectionH3 white={0}>Integration Services</SectionH3>
         <p>
@@ -157,7 +143,7 @@ const Services = ({ location: { pathname } }) => (
       <SectionParagraph as="div" center>
         <SectionH3 white={0}>Third Party Administration Services</SectionH3>
         <p>
-          With our alliance partner, we can handle the entire value chain from
+          With our alliance partners, we can handle the entire value chain from
           quote through administration, in both D2C and agent-assisted models
           for flexibility as consumer behaviors evolve. Our integrated
           technology and TPA services include, but are not limited
@@ -185,25 +171,17 @@ const Services = ({ location: { pathname } }) => (
         </p>
       </SectionParagraph>
     </Section>
-    <Section>
-      <div>
-        <SectionH2>Process</SectionH2>
-        <SectionParagraph as="div">
-          <p>
-            Be the disrupter, or get disrupted. We have proven our ability to
-            accelerate the innovation agenda for our clients through:
-          </p>
-          <SectionUnorderedList>
-            <li>Analytical and engineering tiger teams</li>
-            <li>Iterative deliveries in two-week sprints</li>
-          </SectionUnorderedList>
-        </SectionParagraph>
-      </div>
-      <div>
-        <ProcessFigure>
-          <ServicesProcessImg />
-        </ProcessFigure>
-      </div>
+    <Section single top="2rem">
+      <SectionParagraph as="div" center>
+        <SectionH3 white={0}>Innovation as a Service</SectionH3>
+        <p>
+          Our innovation as a service approach provides technology strategy,
+          management, design, development and deployment capabilities. When
+          combined with our machine learning expertise, the result is
+          data-forward engineering that can bring demonstrable change
+          in&nbsp;mere&nbsp;weeks.
+        </p>
+      </SectionParagraph>
     </Section>
   </>
 );

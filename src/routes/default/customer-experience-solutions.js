@@ -136,7 +136,7 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
           <Figures left shift={false}>
             <FigureStructure1 as={IconFigure}>
               <StyledIcon as={Group} />
-              <figcaption>Group/VB</figcaption>
+              <figcaption>Group &amp; Voluntary Benefits</figcaption>
             </FigureStructure1>
             <FigureStructure1 as={IconFigure}>
               <StyledIcon as={Lifebuoy} />
@@ -150,15 +150,13 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
         </Section>
         <Section single top="17.5rem">
           <SectionParagraph as="div" center>
-            <SectionH3 white={0}>Group/VB</SectionH3>
+            <SectionH3 white={0}>Group &amp; Voluntary Benefits</SectionH3>
             <p>
-              Our group benefits and voluntary enrollment solution. Developed on
-              our Kwikcover TM portal environment, it features case setup,
-              enrollment and service functionality. It comes pre- integrated
-              with our machine learning capability which predicts (and can
-              recommend based upon those predictions) an individual&rsquo;s
-              propensity to purchase particular products based upon
-              characteristics&nbsp;shared.
+              Our group benefits and voluntary enrollment solution is developed
+              on our Kwikcover TM portal environment. It features case setup,
+              enrollment and service functionality, and comes pre- integrated
+              with our machine learning capability to predict an individual’s
+              propensity to purchase particular&nbsp;products.
             </p>
           </SectionParagraph>
         </Section>

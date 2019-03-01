@@ -21,7 +21,6 @@ import { ReactComponent as Barrel } from '../../images/brand/barrel-logo.svg';
 import { ReactComponent as BgMlSolutions } from '../../images/icons/bg-ml-solutions.svg';
 import { ReactComponent as Buy } from '../../images/icons/buy.svg';
 import { ReactComponent as CxSolutions } from '../../images/icons/cx-solutions.svg';
-import { ReactComponent as Delivery } from '../../images/icons/delivery.svg';
 import { ReactComponent as Disability } from '../../images/icons/disability.svg';
 import { ReactComponent as Fraud } from '../../images/icons/fraud.svg';
 import { ReactComponent as Observable } from '../../images/icons/observable.svg';
@@ -44,18 +43,18 @@ const FigureStructure1 = styled.figure`
     position: absolute;
     margin: 0;
 
-    &:nth-of-type(2) {
+    &:nth-of-type(1) {
       top: -2rem;
-      left: 12.5rem;
+      left: 12rem;
+    }
+
+    &:nth-of-type(2) {
+      top: 10rem;
+      left: 0;
     }
 
     &:nth-of-type(3) {
       top: 12.5rem;
-      left: 2.5rem;
-    }
-
-    &:nth-of-type(4) {
-      top: 10.5rem;
       right: 0;
     }
   }
@@ -209,10 +208,6 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
         <FigureStructure1 as={IconFigure}>
           <StyledIcon as={Buy} />
           <figcaption>Enrollment Propensity To Buy</figcaption>
-        </FigureStructure1>
-        <FigureStructure1 as={IconFigure}>
-          <StyledIcon as={Delivery} />
-          <figcaption>Continuous Delivery</figcaption>
         </FigureStructure1>
       </Figures>
     </Section>

@@ -25,8 +25,8 @@ import { ReactComponent as ThirdParty } from '../../images/icons/third-party.svg
 
 const HeroBg = styled(BgServices)`
   position: absolute;
-  top: -22rem;
-  right: -15rem;
+  top: -23rem;
+  right: -20rem;
   width: 40rem;
   z-index: -1;
 `;
@@ -77,7 +77,7 @@ const BannerContent = styled(Content)`
   padding: ${p => p.theme.space.xxl} ${p => p.theme.space.md};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    padding: ${p => p.theme.space.xxxl} ${p => p.theme.space.lg};
+    padding: ${p => p.theme.space.xxl} ${p => p.theme.space.lg};
   }
 `;
 
@@ -195,7 +195,7 @@ const Services = ({ location: { pathname } }) => (
         </p>
       </SectionParagraph>
     </Section>
-    <BannerSection bottom={{ md: '0' }} single>
+    <BannerSection bottom={{ md: '0' }} single top="5rem">
       <BannerContent>
         <SectionParagraph as="div" center>
           <BannerHeading>Innovation as a Service</BannerHeading>

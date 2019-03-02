@@ -22,8 +22,8 @@ import { ReactComponent as Lifebuoy } from '../../images/icons/lifebuoy.svg';
 
 const HeroBg = styled(BgCxSolutions)`
   position: absolute;
-  top: -21rem;
-  right: -10rem;
+  top: -23rem;
+  right: -15rem;
   width: 40rem;
   z-index: -1;
 `;

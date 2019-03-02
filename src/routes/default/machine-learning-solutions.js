@@ -30,8 +30,8 @@ import { ReactComponent as Standardized } from '../../images/icons/standardized.
 
 const HeroBg = styled(BgMlSolutions)`
   position: absolute;
-  top: -17rem;
-  right: -18rem;
+  top: -18rem;
+  right: -20rem;
   width: 40rem;
   z-index: -1;
 `;

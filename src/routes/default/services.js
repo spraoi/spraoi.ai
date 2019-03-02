@@ -77,7 +77,7 @@ const BannerContent = styled(Content)`
   padding: ${p => p.theme.space.xxl} ${p => p.theme.space.md};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    padding: ${p => p.theme.space.xxl} ${p => p.theme.space.lg};
+    padding: ${p => p.theme.space.xxxl} ${p => p.theme.space.lg};
   }
 `;
 
@@ -195,7 +195,7 @@ const Services = ({ location: { pathname } }) => (
         </p>
       </SectionParagraph>
     </Section>
-    <BannerSection bottom={{ md: '0' }} single top="5rem">
+    <BannerSection bottom={{ md: '0' }} single>
       <BannerContent>
         <SectionParagraph as="div" center>
           <BannerHeading>Innovation as a Service</BannerHeading>

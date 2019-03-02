@@ -51,6 +51,7 @@
     "react-dom": "^16.8.3",
     "react-final-form": "^4.0.2",
     "react-helmet": "^5.2.0",
+    "react-responsive-embed": "^2.1.0",
     "react-spinners": "^0.5.1",
     "styled-components": "^4.1.4-alpha.5",
     "styled-jsx": "^2.2.7",

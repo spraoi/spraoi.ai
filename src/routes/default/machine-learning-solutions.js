@@ -235,12 +235,11 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
     </Section>
     <Section single top="2rem">
       <SectionParagraph as="div" center>
-        <SectionH3 white={0}>Continuous Delivery of ML</SectionH3>
+        <SectionH3 white={0}>Enrollment Propensity To Buy</SectionH3>
         <p>
-          Through our patent pending Barrel&trade; infrastructure solution, we
-          offer continuous delivery of machine learning models and enable
-          observability in production. This environment allows your data science
-          teams to scale efficiently&nbsp;and&nbsp;effectively.
+          Our propensity to purchase solution provides the product
+          recommendation capabilities to customers based on prior
+          purchasing&nbsp;behaviors.
         </p>
       </SectionParagraph>
     </Section>
@@ -299,10 +298,10 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
     </Section>
     <Section top="7rem">
       <div>
-        <SectionH2>Process</SectionH2>
+        <SectionH2>Methodology</SectionH2>
         <SectionParagraph>
           Our team continues to develop solutions for our clients and add to our
-          product and solutions portfolio. Our proven process can rapidly
+          product and solutions portfolio. Our proven methodology can rapidly
           develop a model (with optional UX) within&nbsp;10-16&nbsp;weeks.
         </SectionParagraph>
       </div>

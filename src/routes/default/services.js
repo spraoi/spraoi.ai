@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
+import Content from '../../components/Content';
 import SEO from '../../components/SEO';
 import {
   Figures,
@@ -61,6 +62,29 @@ const FiveLeft = styled.figure`
       right: 0;
     }
   }
+`;
+
+const BannerSection = styled(Section)`
+  left: 50%;
+  width: 100vw;
+  margin-bottom: calc(-${p => p.theme.space.lg} - ${p => p.theme.space.xxl});
+  transform: translateX(-50%);
+  background-color: ${p => p.theme.colors.accent};
+  color: ${p => p.theme.colors.white};
+`;
+
+const BannerContent = styled(Content)`
+  padding: ${p => p.theme.space.xxl} ${p => p.theme.space.md};
+
+  @media (min-width: ${p => p.theme.breakpoints.sm}) {
+    padding: ${p => p.theme.space.xxxl} ${p => p.theme.space.lg};
+  }
+`;
+
+const BannerHeading = styled(SectionH3)`
+  letter-spacing: ${p => p.theme.letterSpacings.lg};
+  line-height: ${p => p.theme.lineHeights.lg};
+  text-transform: uppercase;
 `;
 
 const Services = ({ location: { pathname } }) => (
@@ -171,18 +195,20 @@ const Services = ({ location: { pathname } }) => (
         </p>
       </SectionParagraph>
     </Section>
-    <Section single top="2rem">
-      <SectionParagraph as="div" center>
-        <SectionH3 white={0}>Innovation as a Service</SectionH3>
-        <p>
-          Our innovation as a service approach provides technology strategy,
-          management, design, development and deployment capabilities. When
-          combined with our machine learning expertise, the result is
-          data-forward engineering that can bring demonstrable change
-          in&nbsp;mere&nbsp;weeks.
-        </p>
-      </SectionParagraph>
-    </Section>
+    <BannerSection bottom={{ md: '0' }} single>
+      <BannerContent>
+        <SectionParagraph as="div" center>
+          <BannerHeading>Innovation as a Service</BannerHeading>
+          <p>
+            Our innovation as a service approach provides technology strategy,
+            management, design, development and deployment capabilities. When
+            combined with our machine learning expertise, the result is
+            data-forward engineering that can bring demonstrable change
+            in&nbsp;mere&nbsp;weeks.
+          </p>
+        </SectionParagraph>
+      </BannerContent>
+    </BannerSection>
   </>
 );
 

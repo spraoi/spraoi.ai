@@ -1,6 +1,12 @@
 {
   "private": true,
   "name": "spraoi.ai",
+  "browserslist": [
+    "> 1%",
+    "last 1 version",
+    "maintained node versions",
+    "not dead"
+  ],
   "scripts": {
     "build": "gatsby build",
     "clean": "rm -rf node_modules public .cache",

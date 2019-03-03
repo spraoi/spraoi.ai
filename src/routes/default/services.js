@@ -16,20 +16,11 @@ import {
   SectionUnorderedList,
   StyledIcon,
 } from '../../components/Section';
-import { ReactComponent as BgServices } from '../../images/icons/bg-services.svg';
 import { ReactComponent as BuildOperate } from '../../images/icons/build-operate.svg';
 import { ReactComponent as Data } from '../../images/icons/data.svg';
 import { ReactComponent as Innovation } from '../../images/icons/innovation.svg';
 import { ReactComponent as Integration } from '../../images/icons/integration.svg';
 import { ReactComponent as ThirdParty } from '../../images/icons/third-party.svg';
-
-const HeroBg = styled(BgServices)`
-  position: absolute;
-  top: -23rem;
-  right: -20rem;
-  width: 40rem;
-  z-index: -1;
-`;
 
 const FiveLeft = styled.figure`
   margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
@@ -44,7 +35,7 @@ const FiveLeft = styled.figure`
 
     &:nth-of-type(2) {
       top: -2rem;
-      left: 8.7rem;
+      left: 9.5rem;
     }
 
     &:nth-of-type(3) {
@@ -53,31 +44,40 @@ const FiveLeft = styled.figure`
     }
 
     &:nth-of-type(4) {
-      top: 6.6rem;
-      right: 11rem;
+      top: 7.2rem;
+      right: 11.8rem;
     }
 
     &:nth-of-type(5) {
-      top: 6.6rem;
+      top: 7.2rem;
       right: 0;
     }
   }
 `;
 
 const BannerSection = styled(Section)`
-  left: 50%;
-  width: 100vw;
-  margin-bottom: calc(-${p => p.theme.space.lg} - ${p => p.theme.space.xxl});
-  transform: translateX(-50%);
+  margin-right: -${p => p.theme.space.md};
+  margin-left: -${p => p.theme.space.md};
   background-color: ${p => p.theme.colors.accent};
   color: ${p => p.theme.colors.white};
+
+  @media (min-width: ${p => p.theme.breakpoints.sm}) {
+    margin-right: -${p => p.theme.space.lg};
+    margin-left: -${p => p.theme.space.lg};
+  }
+
+  @media (min-width: ${p => p.theme.breakpoints.md}) {
+    border-radius: ${p => p.theme.radii.lg};
+    margin-right: 0;
+    margin-left: 0;
+  }
 `;
 
 const BannerContent = styled(Content)`
   padding: ${p => p.theme.space.xxl} ${p => p.theme.space.md};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    padding: ${p => p.theme.space.xxxl} ${p => p.theme.space.lg};
+    padding: ${p => p.theme.space.xxl} ${p => p.theme.space.lg};
   }
 `;
 
@@ -95,7 +95,6 @@ const Services = ({ location: { pathname } }) => (
       title="Services"
     />
     <HeroSection single>
-      <HeroBg />
       <SectionH1 wrap={1}>Services</SectionH1>
       <SectionParagraph>
         In addition to our solutions, the Spraoi team has several service areas
@@ -195,7 +194,7 @@ const Services = ({ location: { pathname } }) => (
         </p>
       </SectionParagraph>
     </Section>
-    <BannerSection bottom={{ md: '0' }} single>
+    <BannerSection single>
       <BannerContent>
         <SectionParagraph as="div" center>
           <BannerHeading>Innovation as a Service</BannerHeading>

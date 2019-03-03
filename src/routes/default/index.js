@@ -26,7 +26,7 @@ import { ReactComponent as Usa } from '../../images/icons/usa.svg';
 const HeroBg = styled(BgLanding)`
   position: absolute;
   top: -24.4rem;
-  left: -42.5rem;
+  left: -39rem;
   width: 70rem;
   z-index: -1;
 `;
@@ -39,18 +39,18 @@ const ThreeRight = styled.figure`
     margin: 0;
 
     &:nth-of-type(1) {
-      top: -3rem;
-      left: -1.5rem;
+      top: -2.5rem;
+      left: -1.3rem;
     }
 
     &:nth-of-type(2) {
-      top: 2rem;
+      top: 2.5rem;
       right: 0;
     }
 
     &:nth-of-type(3) {
-      top: 9rem;
-      left: -1.5rem;
+      top: 9.5rem;
+      left: -1.3rem;
     }
   }
 `;
@@ -69,7 +69,7 @@ const ThreeLeft = styled.figure`
 
     &:nth-of-type(2) {
       top: 2rem;
-      left: 2.6rem;
+      left: 4.5rem;
     }
 
     &:nth-of-type(3) {
@@ -140,9 +140,9 @@ const Index = () => (
       title="Spraoi - an insurtech solutions provider with a focus on machine learning"
     />
     <HeroSection>
-      <HeroBg />
       <div>
-        <SectionH1>Who are we?</SectionH1>
+        <HeroBg />
+        <SectionH1>About Us</SectionH1>
         <SectionParagraph>
           Spraoi is an insurance technology solutions provider with a focus on
           machine learning. We work with leading insurers to solve business
@@ -167,7 +167,7 @@ const Index = () => (
         </ThreeRight>
       </Figures>
     </HeroSection>
-    <Section top="17rem">
+    <Section top="17.5rem">
       <Order2>
         <SectionH2>Solutions & Services</SectionH2>
         <SectionParagraph>

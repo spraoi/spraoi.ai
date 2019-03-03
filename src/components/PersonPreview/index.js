@@ -31,7 +31,6 @@ const TooltipHtml = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 ${p => p.theme.space.sm};
 `;
 
 const TooltipH3 = styled.h3`
@@ -39,29 +38,16 @@ const TooltipH3 = styled.h3`
   color: ${p => p.theme.colors.textPrimary};
 `;
 
-const TooltipH4 = styled.h4`
-  margin-bottom: ${p => p.theme.space.xxxs};
-  color: ${p => p.theme.colors.textPrimary};
-`;
-
-const PersonPreview = ({
-  executive,
-  familyName,
-  givenName,
-  id,
-  image,
-  position,
-}) => (
+const PersonPreview = ({ executive, familyName, givenName, id, image }) => (
   <Tippy
     content={
       <TooltipHtml>
         <TooltipH3>
           {givenName} {familyName}
         </TooltipH3>
-        <TooltipH4>{position}</TooltipH4>
       </TooltipHtml>
     }
-    distance={-25}
+    distance={-10}
     placement="bottom"
     theme="light"
   >
@@ -79,7 +65,6 @@ PersonPreview.propTypes = {
   givenName: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   image: PropTypes.shape({}).isRequired,
-  position: PropTypes.string.isRequired,
 };
 
 export default PersonPreview;

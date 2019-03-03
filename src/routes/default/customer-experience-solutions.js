@@ -15,18 +15,9 @@ import {
   SectionParagraph,
   StyledIcon,
 } from '../../components/Section';
-import { ReactComponent as BgCxSolutions } from '../../images/icons/bg-cx-solutions.svg';
 import { ReactComponent as Factory } from '../../images/icons/factory.svg';
 import { ReactComponent as Group } from '../../images/icons/group.svg';
 import { ReactComponent as Lifebuoy } from '../../images/icons/lifebuoy.svg';
-
-const HeroBg = styled(BgCxSolutions)`
-  position: absolute;
-  top: -23rem;
-  right: -15rem;
-  width: 40rem;
-  z-index: -1;
-`;
 
 const ThreeLeft = styled.figure`
   margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
@@ -42,7 +33,7 @@ const ThreeLeft = styled.figure`
 
     &:nth-of-type(2) {
       top: 6rem;
-      left: 2.6rem;
+      left: 4.5rem;
     }
 
     &:nth-of-type(3) {
@@ -64,7 +55,6 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
       title="Customer Experience Solutions"
     />
     <HeroSection single>
-      <HeroBg />
       <SectionH1 wrap={1}>
         Customer
         <br />

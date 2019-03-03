@@ -11,15 +11,6 @@ import {
   SectionParagraph,
 } from '../../components/Section';
 import PeopleContainer from '../../containers/PeopleContainer';
-import { ReactComponent as BgPeople } from '../../images/icons/bg-people.svg';
-
-const HeroBg = styled(BgPeople)`
-  position: absolute;
-  top: -7rem;
-  left: -22rem;
-  width: 40rem;
-  z-index: -1;
-`;
 
 const PeopleList = styled.ul`
   display: flex;
@@ -44,7 +35,6 @@ const People = ({ location: { pathname } }) => (
           title="People"
         />
         <HeroSection center single>
-          <HeroBg />
           <SectionH1>People</SectionH1>
           <SectionParagraph center>
             We are an eclectic mix of technologists, consultants, insurance

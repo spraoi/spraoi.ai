@@ -7,20 +7,25 @@ import { composeValidations, email, required } from '@spraoi/validations';
 import { SectionParagraph } from '../Section';
 
 const Form = styled.form`
+  flex-shrink: 0;
   margin-top: ${p => p.theme.space.lg};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     margin-top: 0;
+    margin-left: ${p => p.theme.space.md};
   }
 `;
 
 const InlineInputs = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: ${p => p.theme.space.md};
+  display: flex;
 
   & > * {
     margin-top: 0;
+    margin-right: ${p => p.theme.space.md};
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 `;
 

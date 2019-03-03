@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Box } from '@spraoi/base';
 import ContactForm from '../../components/ContactForm';
 import SEO from '../../components/SEO';
 import {
@@ -16,14 +15,14 @@ const Contact = ({ location: { pathname } }) => (
       pathname={pathname}
       title="Contact Us"
     />
-    <HeroSection>
-      <Box pr={{ md: 'md' }}>
+    <HeroSection flex>
+      <div>
         <SectionH1>Contact Us</SectionH1>
         <SectionParagraph>
           Whether it&rsquo;s about a business opportunity or a job inquiry,
           we&rsquo;d love to hear&nbsp;from&nbsp;you.
         </SectionParagraph>
-      </Box>
+      </div>
       <ContactForm />
     </HeroSection>
   </>

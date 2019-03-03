@@ -89,6 +89,7 @@ const NavList = ({ onLinkClick, secondary }) => (
       ['/machine-learning-solutions/', 'Machine Learning Solutions'],
       ['/services/', 'Services'],
       ['/people/', 'People'],
+      ['/articles/', 'Articles'],
       ['/contact/', 'Contact Us'],
     ].map(([link, text]) => (
       <NavItem key={link} secondary={secondary ? 1 : 0}>

@@ -22,8 +22,17 @@ const HeroSection = styled.section`
       !p.single &&
       !p.flex &&
       css`
-        display: grid;
-        grid-template-columns: 58% 42%;
+        display: flex;
+
+        & > * {
+          &:first-of-type {
+            width: 61%;
+          }
+
+          &:last-of-type {
+            width: 39%;
+          }
+        }
       `};
   }
 `;
@@ -61,8 +70,17 @@ const Section = styled.section`
     ${p =>
       !p.single &&
       css`
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+
+        & > * {
+          &:first-of-type {
+            width: 50%;
+          }
+
+          &:last-of-type {
+            width: 50%;
+          }
+        }
       `};
   }
 
@@ -166,15 +184,8 @@ const Order2 = styled.div`
 
 const Figures = styled.div`
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  ${p =>
-    p.small &&
-    css`
-      display: flex;
-      flex-wrap: wrap;
-    `};
+  display: flex;
+  flex-wrap: wrap;
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
     grid-template-columns: repeat(3, 1fr);
@@ -195,13 +206,11 @@ const Figures = styled.div`
 Figures.propTypes = {
   left: PropTypes.bool,
   shift: PropTypes.bool,
-  small: PropTypes.bool,
 };
 
 Figures.defaultProps = {
   left: false,
   shift: true,
-  small: false,
 };
 
 const IconFigure = styled.figure`
@@ -287,12 +296,6 @@ const StyledImage = styled.div`
         transform: scale(1.04);
       }
     `};
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.xl}) {
-  }
 `;
 
 StyledImage.propTypes = {

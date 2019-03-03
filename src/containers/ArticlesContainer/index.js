@@ -9,7 +9,10 @@ const ArticlesContainer = ({ children }) => (
       <StaticQuery
         query={graphql`
           query {
-            allMarkdownRemark {
+            allMarkdownRemark(
+              sort: { order: DESC, fields: [frontmatter___datePublished] }
+              limit: 1000
+            ) {
               edges {
                 node {
                   fields {
@@ -18,8 +21,8 @@ const ArticlesContainer = ({ children }) => (
                   frontmatter {
                     author
                     banner
-                    dateModified(formatString: "YYYY-MM-DD")
-                    datePublished(formatString: "YYYY-MM-DD")
+                    dateModified(formatString: "MMMM DD, YYYY")
+                    datePublished(formatString: "MMMM DD, YYYY")
                     description
                     title
                   }

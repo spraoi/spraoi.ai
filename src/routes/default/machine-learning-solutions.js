@@ -18,7 +18,6 @@ import {
   StyledIcon,
 } from '../../components/Section';
 import { ReactComponent as Barrel } from '../../images/brand/barrel-logo.svg';
-import { ReactComponent as BgMlSolutions } from '../../images/icons/bg-ml-solutions.svg';
 import { ReactComponent as Buy } from '../../images/icons/buy.svg';
 import { ReactComponent as CxSolutions } from '../../images/icons/cx-solutions.svg';
 import { ReactComponent as Disability } from '../../images/icons/disability.svg';
@@ -27,14 +26,6 @@ import { ReactComponent as Observable } from '../../images/icons/observable.svg'
 import { ReactComponent as Placeholder } from '../../images/icons/placeholder.svg';
 import { ReactComponent as Scalable } from '../../images/icons/scalable.svg';
 import { ReactComponent as Standardized } from '../../images/icons/standardized.svg';
-
-const HeroBg = styled(BgMlSolutions)`
-  position: absolute;
-  top: -18rem;
-  right: -20rem;
-  width: 40rem;
-  z-index: -1;
-`;
 
 const ThreeLeft = styled.figure`
   margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
@@ -50,7 +41,7 @@ const ThreeLeft = styled.figure`
 
     &:nth-of-type(2) {
       top: 2rem;
-      left: 2.6rem;
+      left: 4.5rem;
     }
 
     &:nth-of-type(3) {
@@ -68,7 +59,7 @@ const SixLeft = styled.figure`
   }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    margin: 0 ${p => p.theme.space.md} ${p => p.theme.space.md} 0;
+    margin: 0 ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0;
 
     &:nth-of-type(1) {
       margin-top: -4rem;
@@ -110,8 +101,17 @@ const BannerContent = styled(Content)`
   }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+
+    & > * {
+      &:first-of-type {
+        width: 36%;
+      }
+
+      &:last-of-type {
+        width: 65%;
+      }
+    }
   }
 `;
 
@@ -122,16 +122,11 @@ const BannerHeading = styled(SectionH3)`
 `;
 
 const BannerLeft = styled.div`
-  padding: ${p => p.theme.space.xl} 0;
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    padding: ${p => p.theme.space.xl} ${p => p.theme.space.xxl}
-      ${p => p.theme.space.xl} 0;
-  }
+  padding: ${p => p.theme.space.xxl} 0;
 `;
 
 const BannerRight = styled.div`
-  display: flex;
+  display: flexArticleLayout;
   align-items: center;
   width: 100vw;
   margin-left: -${p => p.theme.space.md};
@@ -148,23 +143,15 @@ const BannerRight = styled.div`
     justify-content: center;
     top: -${p => p.theme.space.md};
     bottom: -${p => p.theme.space.md};
-    left: calc(55%);
-    width: calc(45%);
+    right: 0;
     margin-left: 0;
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
   }
 `;
 
 const StyledBarrel = styled(Barrel)`
-  width: 12rem;
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    margin-left: ${p => p.theme.space.lg};
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.lg}) {
-    margin-left: 0;
-  }
+  width: 10rem;
+  margin-left: ${p => p.theme.space.lg};
 `;
 
 const MachineLearningSolutions = ({ location: { pathname } }) => (
@@ -175,7 +162,6 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
       title="Machine Learning Solutions"
     />
     <HeroSection single>
-      <HeroBg />
       <SectionH1 wrap={1}>
         Machine
         <br />
@@ -269,7 +255,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
           and&nbsp;developing.
         </SectionParagraph>
       </Order2>
-      <Figures left small>
+      <Figures left>
         <SixLeft as={IconFigure} small>
           <StyledIcon as={Placeholder} />
           <figcaption>Standardized</figcaption>

@@ -20,8 +20,7 @@ const FooterContent = styled.div`
   max-width: ${p => p.theme.maxWidths.content};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     padding: ${p => p.theme.space.xxl} ${p => p.theme.space.lg};
   }
 `;
@@ -31,6 +30,7 @@ const SocialSection = styled.div`
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
     margin-top: 0;
+    margin-left: ${p => p.theme.space.xxxl};
   }
 `;
 

@@ -84,7 +84,7 @@ const NavLink = styled(Link)`
 const NavList = ({ onLinkClick, secondary }) => (
   <StyledNavList secondary={secondary ? 1 : 0}>
     {[
-      ['/', 'Who Are We?'],
+      ['/', 'About Us'],
       ['/customer-experience-solutions/', 'Customer Experience Solutions'],
       ['/machine-learning-solutions/', 'Machine Learning Solutions'],
       ['/services/', 'Services'],

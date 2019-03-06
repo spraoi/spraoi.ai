@@ -16,9 +16,9 @@ import {
   SectionParagraph,
   StyledIcon,
 } from '../../components/Section';
-import { ReactComponent as Factory } from '../../images/icons/factory.svg';
-import { ReactComponent as Group } from '../../images/icons/group.svg';
-import { ReactComponent as Lifebuoy } from '../../images/icons/lifebuoy.svg';
+import Factory from '../../images/icons/factory.svg';
+import Group from '../../images/icons/group.svg';
+import Lifebuoy from '../../images/icons/lifebuoy.svg';
 
 const ThreeLeft = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 import { Squeeze } from 'react-burgers';
-import { ReactComponent as Logo } from '../../images/brand/spraoi-logo.svg';
+import Logo from '../../images/brand/spraoi-logo.svg';
 import NavList from '../NavList';
 
 const StyledHeader = styled.header`
@@ -28,6 +28,7 @@ const StyledLogo = styled(Logo)`
   position: relative;
   bottom: -0.1rem;
   width: 7rem;
+  height: 7rem * 0.3104862332;
 `;
 
 const NavToggle = styled(Squeeze)`
@@ -75,7 +76,7 @@ const Nav = styled.nav`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     position: static;
     display: flex;
-    background-color: initial;
+    background-color: transparent;
   }
 `;
 

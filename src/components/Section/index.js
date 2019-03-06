@@ -281,6 +281,7 @@ const SectionUnorderedList = styled.ul`
 const SectionBackground = styled.div`
   position: absolute;
   width: 75rem;
+  height: 75rem;
   opacity: 0.5;
   z-index: -1;
 `;

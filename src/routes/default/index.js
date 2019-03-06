@@ -15,18 +15,18 @@ import {
   SectionParagraph,
   StyledIcon,
 } from '../../components/Section';
-import { ReactComponent as BgLanding } from '../../images/icons/bg-landing.svg';
-import { ReactComponent as Bridge } from '../../images/icons/bridge.svg';
-import { ReactComponent as CxSolutions } from '../../images/icons/cx-solutions.svg';
-import { ReactComponent as Hand } from '../../images/icons/hand.svg';
-import { ReactComponent as Iml } from '../../images/icons/iml.svg';
-import { ReactComponent as India } from '../../images/icons/india.svg';
-import { ReactComponent as Offshore } from '../../images/icons/offshore.svg';
-import { ReactComponent as Services } from '../../images/icons/services.svg';
-import { ReactComponent as Usa } from '../../images/icons/usa.svg';
+import BgLanding from '../../images/icons/bg-landing.svg';
+import Bridge from '../../images/icons/bridge.svg';
+import CxSolutions from '../../images/icons/cx-solutions.svg';
+import Hand from '../../images/icons/hand.svg';
+import Iml from '../../images/icons/iml.svg';
+import India from '../../images/icons/india.svg';
+import Offshore from '../../images/icons/offshore.svg';
+import Services from '../../images/icons/services.svg';
+import Usa from '../../images/icons/usa.svg';
 
 const Bg = styled(SectionBackground)`
-  top: -21.5rem;
+  top: -30.5rem;
   left: -31.5rem;
 `;
 

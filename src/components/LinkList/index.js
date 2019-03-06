@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { ReactComponent as RightArrow } from '../../images/icons/right-arrow.svg';
+import RightArrow from '../../images/icons/right-arrow.svg';
 
 const BlockList = styled.ul`
   margin: 0 -${p => p.theme.space.md};

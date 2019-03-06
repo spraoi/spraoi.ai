@@ -17,11 +17,11 @@ import {
   SectionUnorderedList,
   StyledIcon,
 } from '../../components/Section';
-import { ReactComponent as BuildOperate } from '../../images/icons/build-operate.svg';
-import { ReactComponent as Data } from '../../images/icons/data.svg';
-import { ReactComponent as Innovation } from '../../images/icons/innovation.svg';
-import { ReactComponent as Integration } from '../../images/icons/integration.svg';
-import { ReactComponent as ThirdParty } from '../../images/icons/third-party.svg';
+import BuildOperate from '../../images/icons/build-operate.svg';
+import Data from '../../images/icons/data.svg';
+import Innovation from '../../images/icons/innovation.svg';
+import Integration from '../../images/icons/integration.svg';
+import ThirdParty from '../../images/icons/third-party.svg';
 
 const FiveLeft = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {

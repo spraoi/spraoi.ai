@@ -18,16 +18,16 @@ import {
   SectionParagraph,
   StyledIcon,
 } from '../../components/Section';
-import { ReactComponent as Barrel } from '../../images/brand/barrel-logo.svg';
-import { ReactComponent as Buy } from '../../images/icons/buy.svg';
-import { ReactComponent as CxSolutions } from '../../images/icons/cx-solutions.svg';
-import { ReactComponent as Disability } from '../../images/icons/disability.svg';
-import { ReactComponent as Fraud } from '../../images/icons/fraud.svg';
-import { ReactComponent as Observable } from '../../images/icons/observable.svg';
-import { ReactComponent as Ruler } from '../../images/icons/ruler.svg';
-import { ReactComponent as Scalable } from '../../images/icons/scalable.svg';
-import { ReactComponent as Scales } from '../../images/icons/scales.svg';
-import { ReactComponent as Standardized } from '../../images/icons/standardized.svg';
+import Barrel from '../../images/brand/barrel-logo.svg';
+import Buy from '../../images/icons/buy.svg';
+import CxSolutions from '../../images/icons/cx-solutions.svg';
+import Disability from '../../images/icons/disability.svg';
+import Fraud from '../../images/icons/fraud.svg';
+import Observable from '../../images/icons/observable.svg';
+import Ruler from '../../images/icons/ruler.svg';
+import Scalable from '../../images/icons/scalable.svg';
+import Scales from '../../images/icons/scales.svg';
+import Standardized from '../../images/icons/standardized.svg';
 
 const ThreeLeft = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {

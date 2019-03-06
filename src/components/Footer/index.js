@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import NavList from '../NavList';
-import { ReactComponent as Facebook } from '../../images/icons/facebook.svg';
-import { ReactComponent as Instagram } from '../../images/icons/instagram.svg';
-import { ReactComponent as LinkedIn } from '../../images/icons/linkedin.svg';
-import { ReactComponent as Twitter } from '../../images/icons/twitter.svg';
+import Facebook from '../../images/icons/facebook.svg';
+import Instagram from '../../images/icons/instagram.svg';
+import LinkedIn from '../../images/icons/linkedin.svg';
+import Twitter from '../../images/icons/twitter.svg';
 
 const StyledFooter = styled.footer`
   width: 100%;
@@ -52,6 +52,7 @@ const SocialLink = styled.a`
 
 const SocialIcon = styled.div`
   width: 2rem;
+  height: 2rem;
   fill: ${p => p.theme.colors.accent};
 `;
 

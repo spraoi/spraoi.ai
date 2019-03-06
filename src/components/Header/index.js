@@ -61,7 +61,7 @@ const Nav = styled.nav`
   position: fixed;
   display: none;
   top: 0;
-  right: -100%;
+  right: 0;
   bottom: 0;
   left: 0;
   background-color: ${p => p.theme.colors.body};
@@ -79,6 +79,10 @@ const Nav = styled.nav`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     position: initial;
     display: flex;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
     background-color: initial;
   }
 `;

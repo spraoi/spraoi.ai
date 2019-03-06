@@ -27,11 +27,21 @@ module.exports = {
       options: { name: 'images', path: 'src/images' },
       resolve: 'gatsby-source-filesystem',
     },
+    {
+      options: {
+        plugins: [
+          {
+            options: { inlineCodeMarker: null },
+            resolve: 'gatsby-remark-prismjs',
+          },
+        ],
+      },
+      resolve: 'gatsby-transformer-remark',
+    },
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
-    'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-transformer-yaml',
   ],

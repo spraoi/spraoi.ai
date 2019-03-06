@@ -8,6 +8,7 @@ import { Link } from 'gatsby';
 import ArticlesContainer from '../../containers/ArticlesContainer';
 import SEO from '../SEO';
 import { HeroSection, Section, SectionH1, StyledImage } from '../Section';
+import 'prism-themes/themes/prism-vs.css';
 
 const Details = styled.div`
   display: flex;
@@ -58,8 +59,12 @@ const ArticleSection = styled(Section)`
     margin-bottom: ${p => p.theme.space.lg};
 
     &:last-of-type {
-      margin-top: 0;
+      margin-bottom: 0;
     }
+  }
+
+  .gatsby-highlight {
+    margin-bottom: ${p => p.theme.space.lg};
   }
 `;
 

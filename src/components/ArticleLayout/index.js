@@ -70,6 +70,10 @@ const ArticleSection = styled(Section)`
     border-left: solid ${p => p.theme.space.sm} ${p => p.theme.colors.border};
     background-color: ${p => p.theme.colors.white};
 
+    p {
+      margin: 0;
+    }
+
     @media (min-width: ${p => p.theme.breakpoints.sm}) {
       margin: 0 0 ${p => p.theme.space.lg};
     }

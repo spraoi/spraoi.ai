@@ -6,14 +6,16 @@ import {
   Figures,
   HeroSection,
   IconFigure,
+  Order2,
   Section,
+  SectionBackground,
   SectionH1,
   SectionH2,
   SectionH3,
   SectionParagraph,
   StyledIcon,
-  Order2,
 } from '../../components/Section';
+import { ReactComponent as BgLanding } from '../../images/icons/bg-landing.svg';
 import { ReactComponent as Bridge } from '../../images/icons/bridge.svg';
 import { ReactComponent as CxSolutions } from '../../images/icons/cx-solutions.svg';
 import { ReactComponent as Hand } from '../../images/icons/hand.svg';
@@ -23,18 +25,24 @@ import { ReactComponent as Offshore } from '../../images/icons/offshore.svg';
 import { ReactComponent as Services } from '../../images/icons/services.svg';
 import { ReactComponent as Usa } from '../../images/icons/usa.svg';
 
+const Bg = styled(SectionBackground)`
+  top: -21.5rem;
+  left: -31.5rem;
+`;
+
 const ThreeRight = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
+    top: -${p => p.theme.space.xl};
     left: ${p => p.theme.space.sm};
     margin-bottom: ${p => p.theme.space.lg};
     margin-left: ${p => p.theme.space.lg};
 
     &:nth-of-type(2) {
-      top: ${p => p.theme.space.xxl};
+      top: ${p => p.theme.space.lg};
     }
 
     &:nth-of-type(3) {
-      margin-bottom: 0;
+      margin-bottom: -${p => p.theme.space.xl};
     }
   }
 `;
@@ -119,6 +127,7 @@ const Index = () => (
     />
     <HeroSection top>
       <div>
+        <Bg as={BgLanding} />
         <SectionH1>About Spraoi</SectionH1>
         <SectionParagraph>
           Spraoi is an insurance technology solutions provider with a focus on

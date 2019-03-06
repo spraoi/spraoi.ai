@@ -278,13 +278,30 @@ const SectionUnorderedList = styled.ul`
   }
 `;
 
-const SectionBackground = styled.div`
+const SectionBg = styled.div`
   position: absolute;
+  top: ${p => p.top};
+  right: ${p => p.right};
+  left: ${p => p.left};
   width: 75rem;
   height: 75rem;
-  opacity: 0.5;
+  opacity: ${p => p.opacity};
   z-index: -1;
 `;
+
+SectionBg.propTypes = {
+  left: PropTypes.string,
+  opacity: PropTypes.number,
+  right: PropTypes.string,
+  top: PropTypes.string,
+};
+
+SectionBg.defaultProps = {
+  left: 'auto',
+  opacity: 1,
+  right: 'auto',
+  top: 'auto',
+};
 
 export {
   Figure,
@@ -294,7 +311,7 @@ export {
   Order2,
   ProcessFigure,
   Section,
-  SectionBackground,
+  SectionBg,
   SectionH1,
   SectionH2,
   SectionH3,

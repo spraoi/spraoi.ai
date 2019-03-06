@@ -8,7 +8,7 @@ import {
   IconFigure,
   Order2,
   Section,
-  SectionBackground,
+  SectionBg,
   SectionH1,
   SectionH2,
   SectionH3,
@@ -24,11 +24,6 @@ import India from '../../images/icons/india.svg';
 import Offshore from '../../images/icons/offshore.svg';
 import Services from '../../images/icons/services.svg';
 import Usa from '../../images/icons/usa.svg';
-
-const Bg = styled(SectionBackground)`
-  top: -30.5rem;
-  left: -31.5rem;
-`;
 
 const ThreeRight = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
@@ -127,7 +122,7 @@ const Index = () => (
     />
     <HeroSection top>
       <div>
-        <Bg as={BgLanding} />
+        <SectionBg as={BgLanding} left="-31.5rem" top="-30.5rem" />
         <SectionH1>About Spraoi</SectionH1>
         <SectionParagraph>
           Spraoi is an insurance technology solutions provider with a focus on

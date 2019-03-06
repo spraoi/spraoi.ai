@@ -6,7 +6,6 @@ import RightArrow from '../../images/icons/right-arrow.svg';
 
 const BlockList = styled.ul`
   margin: 0 -${p => p.theme.space.md};
-  border-bottom: solid 1px ${p => p.theme.colors.border};
   overflow: hidden;
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
@@ -16,10 +15,17 @@ const BlockList = styled.ul`
   }
 `;
 
+const BlockItem = styled.li`
+  border-top: solid 1px ${p => p.theme.colors.border};
+
+  &:first-of-type {
+    border: none;
+  }
+`;
+
 const BlockLink = styled(Link)`
   display: block;
   padding: ${p => p.theme.space.lg} ${p => p.theme.space.md};
-  border-top: solid 1px ${p => p.theme.colors.border};
   background-color: ${p => p.theme.colors.white};
   transition: background-color ${p => p.theme.transitionSpeeds.normal};
   font-size: ${p => p.theme.fontSizes.md};
@@ -90,7 +96,7 @@ const StyledRightArrow = styled(RightArrow)`
 const LinkList = ({ links }) => (
   <BlockList>
     {links.map(({ ctaText, description, link, title }) => (
-      <li key={link}>
+      <BlockItem key={link}>
         <BlockLink to={link}>
           <div>
             <BlockH2>{title}</BlockH2>
@@ -102,7 +108,7 @@ const LinkList = ({ links }) => (
             {ctaText} <StyledRightArrow alt="" />
           </BlockCta>
         </BlockLink>
-      </li>
+      </BlockItem>
     ))}
   </BlockList>
 );

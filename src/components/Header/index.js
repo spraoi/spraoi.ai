@@ -77,12 +77,8 @@ const Nav = styled.nav`
     `};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    position: initial;
+    position: static;
     display: flex;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
     background-color: initial;
   }
 `;

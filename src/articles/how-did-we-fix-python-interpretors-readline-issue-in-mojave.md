@@ -22,17 +22,17 @@ Type "help", "copyright", "credits" or "license" for more information.
 Apparently
 [the readline module conflicts with the standard module](https://pypi.org/project/readline/)—so
 it has been renamed to gnureadline. Bellow are the steps I needed to take to fix
-the issue:
+the issue.
 
-### Step 1: Install gnureadline.
+## Step 1
 
 ```shell
 pip install gnureadline
 ```
 
-### Step 2: Create a python startup script.
+## Step 2
 
-I created it at `~/.pystartup` with the following content:
+Create `~/.pystartup` and add the following:
 
 ```python
 # Add auto-completion and a stored history file of commands to your Python
@@ -44,7 +44,7 @@ import os
 import gnureadline
 import rlcompleter
 
-historyPath = os.path.expanduser("~/bin/.pyhistory")
+historyPath = os.path.expanduser("~/.pyhistory")
 
 def save_history(historyPath=historyPath):
     import gnureadline
@@ -57,7 +57,9 @@ atexit.register(save_history)
 del os, atexit, gnureadline, rlcompleter, save_history, historyPath
 ```
 
-### Step 3: Add the following line to your .bashrc or .zshrc (or whatever your shell uses).
+## Step 3
+
+Set the `PYTHONSTARTUP` environment variable in the appropriate startup file for your shell (e.g `.bashrc` or `.zshrc`).
 
 ```shell
 export PYTHONSTARTUP=~/.pystartup

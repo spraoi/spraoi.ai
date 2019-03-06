@@ -28,7 +28,7 @@ const StyledLogo = styled(Logo)`
   position: relative;
   bottom: -0.1rem;
   width: 7rem;
-  height: 7rem * 0.3104862332;
+  height: ${7 * 0.3104862332}rem;
 `;
 
 const NavToggle = styled(Squeeze)`

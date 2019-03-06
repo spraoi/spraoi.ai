@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Content = styled.main`
+const Content = styled.div`
   margin: 0 auto;
   padding: ${p => p.theme.space.md};
   max-width: ${p => p.theme.maxWidths.content};

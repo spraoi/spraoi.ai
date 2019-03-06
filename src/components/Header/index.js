@@ -27,11 +27,7 @@ const StyledHeader = styled.header`
 const StyledLogo = styled(Logo)`
   position: relative;
   bottom: -0.1rem;
-  height: 2.5rem;
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    height: 2rem;
-  }
+  width: 7rem;
 `;
 
 const NavToggle = styled(Squeeze)`

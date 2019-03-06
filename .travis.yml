@@ -9,6 +9,7 @@ notifications:
 before_script:
   - yarn
 script:
+  - touch src/config.json
   - yarn lint
   - yarn test
 after_success:

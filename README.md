@@ -5,7 +5,7 @@
 
 > Our lovely marketing website.
 
-## Development Setup
+## Development
 
 - clone the repo
 - `cd` into it

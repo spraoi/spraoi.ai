@@ -14,5 +14,5 @@ export const newline2Space = text =>
     </Fragment>
   ));
 
-export const posessive = text =>
+export const possessive = text =>
   text[text.length - 1] === 's' ? `${text}’` : `${text}’s`;

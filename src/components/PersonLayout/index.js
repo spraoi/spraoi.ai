@@ -13,7 +13,7 @@ import {
   SectionParagraph,
   StyledImage,
 } from '../Section';
-import { newline2Space, posessive } from '../../utilities/helpers';
+import { newline2Space, possessive } from '../../utilities/helpers';
 
 const PersonImage = styled(StyledImage)`
   flex-shrink: 0;
@@ -70,7 +70,7 @@ const PersonLayout = ({ location: { pathname }, pageContext: { slug } }) => (
           </HeroSection>
           {!!person.articles.length && (
             <Section single>
-              <SectionH2>{posessive(person.givenName)} Articles</SectionH2>
+              <SectionH2>{possessive(person.givenName)} Articles</SectionH2>
               <LinkList
                 links={person.articles.map(article => ({
                   link: `/articles${article.fields.slug}`,

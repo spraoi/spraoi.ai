@@ -12,7 +12,7 @@ const Form = styled.form`
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     margin-top: 0;
-    margin-left: ${p => p.theme.space.md};
+    margin-left: ${p => p.theme.space.xxl};
   }
 `;
 

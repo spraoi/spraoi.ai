@@ -6,12 +6,13 @@ import { ReactComponent as RightArrow } from '../../images/icons/right-arrow.svg
 
 const BlockList = styled.ul`
   margin: 0 -${p => p.theme.space.md};
-  border-radius: ${p => p.theme.radii.lg};
-  box-shadow: ${p => p.theme.boxShadows.md};
+  border-bottom: solid 1px ${p => p.theme.colors.border};
   overflow: hidden;
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
     margin: 0;
+    border-radius: ${p => p.theme.radii.lg};
+    box-shadow: ${p => p.theme.boxShadows.md};
   }
 `;
 
@@ -49,7 +50,7 @@ const BlockLink = styled(Link)`
 `;
 
 const BlockDescription = styled.p`
-  max-width: 33rem;
+  max-width: ${p => p.theme.maxWidths.paragraph};
   margin-top: ${p => p.theme.space.xxs};
   color: ${p => p.theme.colors.textPrimary};
   font-size: ${p => p.theme.fontSizes.sm};
@@ -59,18 +60,22 @@ const BlockDescription = styled.p`
 const BlockH2 = styled.h1`
   margin: 0;
   font-size: ${p => p.theme.fontSizes.md};
-  color: ${p => p.theme.colors.textPrimary};
+
+  @media (min-width: ${p => p.theme.breakpoints.md}) {
+    color: ${p => p.theme.colors.textPrimary};
+  }
 `;
 
 const BlockCta = styled.div`
-  display: flex;
+  display: none;
   justify-content: flex-end;
   align-items: center;
-  margin-top: ${p => p.theme.space.md};
+  margin-top: ${p => p.theme.space.xxs};
   color: ${p => p.theme.colors.accent};
   white-space: nowrap;
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
+    display: flex;
     margin-top: 0;
     margin-left: ${p => p.theme.space.lg};
   }

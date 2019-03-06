@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
+import PeopleContainer from '../../containers/PeopleContainer';
 import PersonPreview from '../../components/PersonPreview';
 import SEO from '../../components/SEO';
 import {
@@ -10,18 +11,14 @@ import {
   SectionH2,
   SectionParagraph,
 } from '../../components/Section';
-import PeopleContainer from '../../containers/PeopleContainer';
 
 const PeopleList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  margin-top: ${p => p.theme.space.lg};
-  margin-bottom: -${p => p.theme.space.lg};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     justify-content: center;
-    margin-top: ${p => p.theme.space.xl};
+    margin-top: -${p => p.theme.space.lg};
   }
 `;
 
@@ -53,7 +50,7 @@ const People = ({ location: { pathname } }) => (
           </PeopleList>
         </Section>
         <Section center single>
-          <SectionH2>Our Team</SectionH2>
+          <SectionH2>Team</SectionH2>
           <PeopleList>
             {people
               .filter(p => p.executive === 0 && p.active === 'y')

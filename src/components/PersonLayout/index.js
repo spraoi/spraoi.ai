@@ -2,7 +2,6 @@ import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import { Box } from '@spraoi/base';
 import PeopleContainer from '../../containers/PeopleContainer';
 import LinkList from '../LinkList';
 import SEO from '../SEO';
@@ -26,11 +25,23 @@ const PersonImage = styled(StyledImage)`
   }
 `;
 
-const Prefix = styled.div`
+const Name = styled(SectionH1)`
+  margin-top: ${p => p.theme.space.lg};
   margin-bottom: 0;
-  color: inherit;
+
+  @media (min-width: ${p => p.theme.breakpoints.md}) {
+    margin-top: 0;
+  }
+`;
+
+const Position = styled.div`
+  margin-bottom: ${p => p.theme.space.lg};
   font-family: ${p => p.theme.fonts.secondary};
-  font-size: ${p => p.theme.fontSizes.lg};
+  font-size: ${p => p.theme.fontSizes.md};
+
+  @media (min-width: ${p => p.theme.breakpoints.md}) {
+    margin-top: -${p => p.theme.space.xs};
+  }
 `;
 
 const PersonLayout = ({ location: { pathname }, pageContext: { slug } }) => (
@@ -47,27 +58,21 @@ const PersonLayout = ({ location: { pathname }, pageContext: { slug } }) => (
             person={person}
             title={name}
           />
-          <HeroSection single>
-            <Box display={{ md: 'flex' }}>
-              <div>
-                <PersonImage>
-                  <Img alt="" fluid={person.image} />
-                </PersonImage>
-              </div>
-              <div>
-                <Prefix>{person.position}</Prefix>
-                <SectionH1 wrap={1}>{name}</SectionH1>
-                <SectionParagraph>{newline2Space(person.bio)}</SectionParagraph>
-              </div>
-            </Box>
+          <HeroSection top>
+            <PersonImage>
+              <Img alt="" fluid={person.image} />
+            </PersonImage>
+            <div>
+              <Name wrap={1}>{name}</Name>
+              <Position>{person.position}</Position>
+              <SectionParagraph>{newline2Space(person.bio)}</SectionParagraph>
+            </div>
           </HeroSection>
           {!!person.articles.length && (
             <Section single>
               <SectionH2>{posessive(person.givenName)} Articles</SectionH2>
               <LinkList
                 links={person.articles.map(article => ({
-                  ctaText: 'Read Article',
-                  description: article.frontmatter.description,
                   link: `/articles${article.fields.slug}`,
                   title: article.frontmatter.title,
                 }))}

@@ -19,8 +19,8 @@ const StyledHeader = styled.header`
     padding: ${p => p.theme.space.lg};
   }
 
-  @media (min-width: ${p => p.theme.breakpoints.xl}) {
-    padding: ${p => p.theme.space.xl} ${p => p.theme.space.lg};
+  @media (min-width: ${p => p.theme.breakpoints.md}) {
+    margin-bottom: ${p => p.theme.space.xl};
   }
 `;
 
@@ -59,41 +59,26 @@ const NavToggle = styled(Squeeze)`
 
 const Nav = styled.nav`
   position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: -5%;
-  left: -5%;
-  width: 110%;
-  height: 110%;
-  padding: 5%;
-  background-color: ${p => p.theme.colors.primaryBg};
-  transition: visibility ${p => p.theme.transitionSpeeds.slow},
-    opacity ${p => p.theme.transitionSpeeds.slow},
-    transform ${p => p.theme.transitionSpeeds.slow};
-  transform: translateX(-2%);
-  visibility: hidden;
-  opacity: 0;
+  display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: ${p => p.theme.colors.body};
   z-index: 1;
 
   ${p =>
     p.mobileNavVisible &&
     css`
-      transform: translateX(0);
-      visibility: visible;
-      opacity: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     `};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     position: initial;
-    display: initial;
-    width: auto;
-    height: auto;
-    padding: 0;
+    display: flex;
     background-color: initial;
-    transform: translateX(0);
-    visibility: visible;
-    opacity: 1;
   }
 `;
 
@@ -117,7 +102,7 @@ const Header = () => {
       <NavToggle
         active={mobileNavVisible}
         borderRadius={2}
-        color={mobileNavVisible ? '#fff' : '#000'}
+        color="#000"
         lineHeight={2}
         lineSpacing={8}
         onClick={toggleMobileNav}

@@ -12,20 +12,18 @@ import {
 const Articles = () => (
   <>
     <SEO description="" title="Articles" />
-    <HeroSection center single>
+    <HeroSection>
       <SectionH1>Articles</SectionH1>
       <SectionParagraph center>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </SectionParagraph>
     </HeroSection>
-    <Section center single>
+    <Section single>
       <ArticlesContainer>
         {articles => (
           <LinkList
             links={articles.map(article => ({
-              ctaText: 'Read Article',
-              description: article.frontmatter.description,
               link: `/articles${article.fields.slug}`,
               title: article.frontmatter.title,
             }))}

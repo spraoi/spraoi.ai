@@ -15,7 +15,7 @@ const Contact = ({ location: { pathname } }) => (
       pathname={pathname}
       title="Contact Us"
     />
-    <HeroSection flex>
+    <HeroSection top>
       <div>
         <SectionH1>Contact Us</SectionH1>
         <SectionParagraph>

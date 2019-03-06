@@ -4,6 +4,7 @@ import ResponsiveEmbed from 'react-responsive-embed';
 import styled from 'styled-components';
 import SEO from '../../components/SEO';
 import {
+  Figure,
   Figures,
   HeroSection,
   IconFigure,
@@ -19,26 +20,18 @@ import { ReactComponent as Factory } from '../../images/icons/factory.svg';
 import { ReactComponent as Group } from '../../images/icons/group.svg';
 import { ReactComponent as Lifebuoy } from '../../images/icons/lifebuoy.svg';
 
-const ThreeLeft = styled.figure`
-  margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
-
+const ThreeLeft = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    position: absolute;
-    margin: 0;
-
-    &:nth-of-type(1) {
-      top: 1rem;
-      right: 0;
-    }
+    left: -${p => p.theme.space.lg};
+    margin-right: ${p => p.theme.space.lg};
+    margin-bottom: ${p => p.theme.space.lg};
 
     &:nth-of-type(2) {
-      top: 6rem;
-      left: 4.5rem;
+      top: ${p => p.theme.space.xxl};
     }
 
     &:nth-of-type(3) {
-      top: 13rem;
-      right: 0;
+      margin-bottom: 0;
     }
   }
 `;
@@ -55,11 +48,7 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
       title="Customer Experience Solutions"
     />
     <HeroSection single>
-      <SectionH1 wrap={1}>
-        Customer
-        <br />
-        Experience Solutions
-      </SectionH1>
+      <SectionH1 wrap={1}>Customer Experience Solutions</SectionH1>
       <SectionParagraph>
         We have leveraged our Kwikcover&trade; customer experience portal
         platform to develop specific solutions across
@@ -98,7 +87,7 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
         </ThreeLeft>
       </Figures>
     </Section>
-    <Section single>
+    <Section>
       <SectionParagraph as="div" center>
         <SectionH3 white={0}>Group &amp; Voluntary Benefits</SectionH3>
         <p>
@@ -110,7 +99,7 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
         </p>
       </SectionParagraph>
     </Section>
-    <Section single top="2rem">
+    <Section small>
       <SectionParagraph as="div" center>
         <SectionH3 white={0}>Life Insurance</SectionH3>
         <p>
@@ -121,7 +110,7 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
         </p>
       </SectionParagraph>
     </Section>
-    <Section single top="2rem">
+    <Section small>
       <SectionParagraph as="div" center>
         <SectionH3 white={0}>Small Commercial</SectionH3>
         <p>

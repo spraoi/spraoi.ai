@@ -39,9 +39,12 @@ const ArticleSection = styled(Section)`
   line-height: ${p => p.theme.lineHeights.lg};
 
   h2,
-  h3,
-  h4 {
+  h3 {
     margin-top: ${p => p.theme.space.xl};
+  }
+
+  h3 {
+    margin-bottom: 0;
   }
 
   ul {
@@ -51,7 +54,7 @@ const ArticleSection = styled(Section)`
 
   p,
   ul {
-    max-width: ${p => p.theme.maxWidths.md};
+    max-width: ${p => p.theme.maxWidths.paragraph};
     margin-bottom: ${p => p.theme.space.lg};
 
     &:last-of-type {

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Content from '../../components/Content';
 import SEO from '../../components/SEO';
 import {
+  Figure,
   Figures,
   HeroSection,
   IconFigure,
@@ -22,35 +23,18 @@ import { ReactComponent as Innovation } from '../../images/icons/innovation.svg'
 import { ReactComponent as Integration } from '../../images/icons/integration.svg';
 import { ReactComponent as ThirdParty } from '../../images/icons/third-party.svg';
 
-const FiveLeft = styled.figure`
-  margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
-
+const FiveLeft = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    position: absolute;
-    margin: 0;
-
-    &:nth-of-type(1) {
-      top: -2rem;
-    }
-
-    &:nth-of-type(2) {
-      top: -2rem;
-      left: 9.5rem;
-    }
-
-    &:nth-of-type(3) {
-      top: -2rem;
-      right: 0;
-    }
+    left: -${p => p.theme.space.lg};
+    margin-right: ${p => p.theme.space.lg};
+    margin-bottom: ${p => p.theme.space.lg};
 
     &:nth-of-type(4) {
-      top: 7.2rem;
-      right: 11.8rem;
+      margin-bottom: 0;
     }
 
     &:nth-of-type(5) {
-      top: 7.2rem;
-      right: 0;
+      margin-bottom: 0;
     }
   }
 `;
@@ -102,7 +86,7 @@ const Services = ({ location: { pathname } }) => (
         eliminating technology as the impediment&nbsp;to&nbsp;progress.
       </SectionParagraph>
     </HeroSection>
-    <Section top="10rem">
+    <Section>
       <Order2>
         <SectionH2>Offerings</SectionH2>
         <SectionParagraph>
@@ -135,7 +119,7 @@ const Services = ({ location: { pathname } }) => (
         </FiveLeft>
       </Figures>
     </Section>
-    <Section single top="10.5rem">
+    <Section>
       <SectionParagraph as="div" center>
         <SectionH3 white={0}>Integration Services</SectionH3>
         <p>
@@ -148,7 +132,7 @@ const Services = ({ location: { pathname } }) => (
         </p>
       </SectionParagraph>
     </Section>
-    <Section single top="2rem">
+    <Section small>
       <SectionParagraph as="div" center>
         <SectionH3 white={0}>Data Services</SectionH3>
         <p>
@@ -162,7 +146,7 @@ const Services = ({ location: { pathname } }) => (
         </p>
       </SectionParagraph>
     </Section>
-    <Section single top="2rem">
+    <Section small>
       <SectionParagraph as="div" center>
         <SectionH3 white={0}>Third Party Administration Services</SectionH3>
         <p>
@@ -183,7 +167,7 @@ const Services = ({ location: { pathname } }) => (
         </SectionUnorderedList>
       </SectionParagraph>
     </Section>
-    <Section single top="2rem">
+    <Section small>
       <SectionParagraph as="div" center>
         <SectionH3 white={0}>Build/Operate/Transfer Services</SectionH3>
         <p>
@@ -194,7 +178,7 @@ const Services = ({ location: { pathname } }) => (
         </p>
       </SectionParagraph>
     </Section>
-    <BannerSection single>
+    <BannerSection>
       <BannerContent>
         <SectionParagraph as="div" center>
           <BannerHeading>Innovation as a Service</BannerHeading>

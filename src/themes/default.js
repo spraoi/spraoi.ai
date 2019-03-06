@@ -68,7 +68,7 @@ const buttonSecondaryText = white;
 
 /* scale ratios */
 
-const fontSizeScale = 1.55;
+const fontSizeScale = 1.4;
 
 /* theme */
 
@@ -77,8 +77,8 @@ export default {
     xs: '5vw',
     sm: '4vw',
     md: '2.5vw',
-    lg: '1.66vw',
-    xl: '20px',
+    lg: '1.5vw',
+    xl: '18px',
   },
   boxShadows: {
     md: '0 22px 44px 0 rgba(14, 14, 33, 0.25)',
@@ -168,6 +168,7 @@ export default {
   maxWidths: {
     button: '14rem',
     content: '1200px',
+    paragraph: '38em',
     sm: '500px',
     md: '800px',
     lg: '1200px',

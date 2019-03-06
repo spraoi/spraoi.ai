@@ -1,111 +1,64 @@
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
-const HeroSection = styled.section`
-  position: relative;
-  margin-top: ${p => p.theme.space.md};
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    ${p =>
-      p.center &&
-      css`
-        text-align: center;
-      `};
-
-    ${p =>
-      p.flex &&
-      css`
-        display: flex;
-      `};
-
-    ${p =>
-      !p.single &&
-      !p.flex &&
-      css`
-        display: flex;
-
-        & > * {
-          &:first-of-type {
-            width: 61%;
-          }
-
-          &:last-of-type {
-            width: 39%;
-          }
-        }
-      `};
-  }
-`;
-
-HeroSection.propTypes = {
-  center: PropTypes.bool,
-  flex: PropTypes.bool,
-  single: PropTypes.bool,
-};
-
-HeroSection.defaultProps = {
-  center: false,
-  flex: false,
-  single: false,
-};
-
 const Section = styled.section`
   position: relative;
   margin-top: ${p => p.theme.space.xxl};
 
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    margin-top: ${p => p.theme.space.xxxl};
-  }
-
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    margin-top: ${p => p.top};
-    padding-bottom: ${p => p.bottom.md};
+    margin-top: ${p => p.theme.space.xxxl};
+
+    ${p =>
+      !p.single &&
+      css`
+        display: flex;
+      `};
+
+    ${p =>
+      p.small &&
+      css`
+        margin-top: ${p => p.theme.space.lg};
+      `};
+
+    ${p =>
+      !p.top &&
+      css`
+        align-items: center;
+      `};
 
     ${p =>
       p.center &&
       css`
         text-align: center;
       `};
-
-    ${p =>
-      !p.single &&
-      css`
-        display: flex;
-
-        & > * {
-          &:first-of-type {
-            width: 50%;
-          }
-
-          &:last-of-type {
-            width: 50%;
-          }
-        }
-      `};
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.xl}) {
-    padding-bottom: ${p => p.bottom.xl};
   }
 `;
 
 Section.propTypes = {
-  bottom: PropTypes.shape({ md: PropTypes.string, xl: PropTypes.string }),
   center: PropTypes.bool,
   single: PropTypes.bool,
-  top: PropTypes.string,
+  small: PropTypes.bool,
+  top: PropTypes.bool,
 };
 
 Section.defaultProps = {
-  bottom: {},
   center: false,
   single: false,
-  top: '8rem',
+  small: false,
+  top: false,
 };
+
+const HeroSection = styled(Section)`
+  margin-top: ${p => p.theme.space.lg};
+
+  @media (min-width: ${p => p.theme.breakpoints.sm}) {
+    margin-top: 0;
+  }
+`;
 
 const SectionH1 = styled.h1`
   position: relative;
-  left: -${p => p.theme.space.xxxs};
+  left: -0.1rem;
   color: ${p => p.theme.colors.primaryDark};
   font-size: ${p => p.theme.fontSizes.xl};
   line-height: 1.2em;
@@ -156,7 +109,7 @@ SectionH3.defaultProps = {
 };
 
 const SectionParagraph = styled.p`
-  max-width: ${p => p.theme.maxWidths.md};
+  max-width: ${p => p.theme.maxWidths.paragraph};
   letter-spacing: ${p => p.theme.letterSpacings.sm};
   line-height: ${p => p.theme.lineHeights.lg};
 
@@ -186,32 +139,36 @@ const Figures = styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
-
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  margin-top: ${p => p.theme.space.xs};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
+    width: 57%;
+    margin-top: 0;
+
     ${p =>
-      p.left
-        ? css`
-            margin-right: ${p => p.theme.space.xl};
-          `
-        : css`
-            margin-left: ${p => p.theme.space.xl};
-          `};
+      p.left &&
+      css`
+        flex-direction: row-reverse;
+      `};
   }
 `;
 
 Figures.propTypes = {
   left: PropTypes.bool,
-  shift: PropTypes.bool,
 };
 
 Figures.defaultProps = {
   left: false,
-  shift: true,
 };
+
+const Figure = styled.figure`
+  margin: ${p => p.theme.space.md} ${p => p.theme.space.md} 0 0;
+
+  @media (min-width: ${p => p.theme.breakpoints.md}) {
+    position: relative;
+    margin: 0;
+  }
+`;
 
 const IconFigure = styled.figure`
   display: flex;
@@ -251,6 +208,7 @@ const IconFigure = styled.figure`
 `;
 
 const ProcessFigure = styled.figure`
+  width: 40%;
   margin-top: ${p => p.theme.space.md};
   padding: ${p => p.theme.space.md};
   border-radius: ${p => p.theme.radii.lg};
@@ -316,13 +274,20 @@ const SectionUnorderedList = styled.ul`
   }
 `;
 
+const SectionBackground = styled.div`
+  position: absolute;
+  z-index: -1;
+`;
+
 export {
+  Figure,
   Figures,
   HeroSection,
   IconFigure,
   Order2,
   ProcessFigure,
   Section,
+  SectionBackground,
   SectionH1,
   SectionH2,
   SectionH3,

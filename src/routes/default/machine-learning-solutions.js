@@ -5,6 +5,7 @@ import Content from '../../components/Content';
 import MlProcessImg from '../../components/Images/MlProcessImg';
 import SEO from '../../components/SEO';
 import {
+  Figure,
   Figures,
   HeroSection,
   IconFigure,
@@ -27,58 +28,32 @@ import { ReactComponent as Placeholder } from '../../images/icons/placeholder.sv
 import { ReactComponent as Scalable } from '../../images/icons/scalable.svg';
 import { ReactComponent as Standardized } from '../../images/icons/standardized.svg';
 
-const ThreeLeft = styled.figure`
-  margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
-
+const ThreeLeft = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    position: absolute;
-    margin: 0;
-
-    &:nth-of-type(1) {
-      top: -3rem;
-      right: 0;
-    }
+    left: -${p => p.theme.space.lg};
+    margin-right: ${p => p.theme.space.lg};
+    margin-bottom: ${p => p.theme.space.lg};
 
     &:nth-of-type(2) {
-      top: 2rem;
-      left: 4.5rem;
+      top: ${p => p.theme.space.xxl};
     }
 
     &:nth-of-type(3) {
-      top: 9rem;
-      right: 0;
+      margin-bottom: 0;
     }
   }
 `;
 
-const SixLeft = styled.figure`
-  margin: ${p => p.theme.space.md} ${p => p.theme.space.md} 0 0;
-
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
-  }
-
+const SixLeft = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    margin: 0 ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0;
+    left: -${p => p.theme.space.lg};
+    margin-right: ${p => p.theme.space.lg};
+    margin-bottom: ${p => p.theme.space.lg};
 
-    &:nth-of-type(1) {
-      margin-top: -4rem;
-    }
-
-    &:nth-of-type(2) {
-      margin-top: -2rem;
-    }
-
-    &:nth-of-type(4) {
-      margin-top: -4rem;
-    }
-
-    &:nth-of-type(5) {
-      margin-top: -2rem;
-    }
-
-    &:nth-of-type(3n + 3) {
-      margin-right: 0;
+    &:nth-of-type(4),
+    &:nth-of-type(5),
+    &:nth-of-type(6) {
+      margin-bottom: 0;
     }
   }
 `;
@@ -126,7 +101,7 @@ const BannerLeft = styled.div`
 `;
 
 const BannerRight = styled.div`
-  display: flexArticleLayout;
+  display: flex;
   align-items: center;
   width: 100vw;
   margin-left: -${p => p.theme.space.md};
@@ -162,18 +137,14 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
       title="Machine Learning Solutions"
     />
     <HeroSection single>
-      <SectionH1 wrap={1}>
-        Machine
-        <br />
-        Learning Solutions
-      </SectionH1>
+      <SectionH1 wrap={1}>Machine Learning Solutions</SectionH1>
       <SectionParagraph>
         With our platform, we have addressed the impediments and accelerated the
         delivery of machine learning models. Our production solutions have
         proven this&nbsp;in&nbsp;the&nbsp;market.
       </SectionParagraph>
     </HeroSection>
-    <Section top="11rem">
+    <Section>
       <Order2>
         <SectionH2>Solutions</SectionH2>
         <SectionParagraph>
@@ -197,7 +168,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
         </ThreeLeft>
       </Figures>
     </Section>
-    <Section single top="17rem">
+    <Section>
       <SectionParagraph as="div" center>
         <SectionH3 white={0}>Disability Fraud Finder</SectionH3>
         <p>
@@ -207,7 +178,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
         </p>
       </SectionParagraph>
     </Section>
-    <Section single top="2rem">
+    <Section small>
       <SectionParagraph as="div" center>
         <SectionH3 white={0}>Disability Claims Suite</SectionH3>
         <p>
@@ -219,7 +190,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
         </p>
       </SectionParagraph>
     </Section>
-    <Section single top="2rem">
+    <Section small>
       <SectionParagraph as="div" center>
         <SectionH3 white={0}>Enrollment Propensity To Buy</SectionH3>
         <p>
@@ -245,7 +216,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
         </BannerLeft>
       </BannerContent>
     </BannerSection>
-    <Section top="12.5rem">
+    <Section>
       <Order2>
         <SectionH2>Benefits</SectionH2>
         <SectionParagraph>
@@ -282,7 +253,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
         </SixLeft>
       </Figures>
     </Section>
-    <Section top="7rem">
+    <Section>
       <div>
         <SectionH2>Methodology</SectionH2>
         <SectionParagraph>
@@ -291,11 +262,9 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
           develop a model (with optional UX) within&nbsp;10-16&nbsp;weeks.
         </SectionParagraph>
       </div>
-      <div>
-        <ProcessFigure>
-          <MlProcessImg />
-        </ProcessFigure>
-      </div>
+      <ProcessFigure>
+        <MlProcessImg />
+      </ProcessFigure>
     </Section>
   </>
 );

@@ -37,7 +37,7 @@ const NavItem = styled.li`
 const NavLink = styled(Link)`
   display: block;
   padding: ${p => p.theme.space.sm} ${p => p.theme.space.md};
-  color: ${p => p.theme.colors.white};
+  color: ${p => p.theme.colors.textPrimary};
   line-height: ${p => p.theme.lineHeights.md};
   letter-spacing: ${p => p.theme.letterSpacings.sm};
   transition: color ${p => p.theme.transitionSpeeds.normal};
@@ -54,6 +54,7 @@ const NavLink = styled(Link)`
     p.secondary &&
     css`
       padding: ${p => p.theme.space.xs} 0;
+      color: ${p => p.theme.colors.white};
       font-size: ${p => p.theme.fontSizes.sm};
     `};
 
@@ -69,14 +70,12 @@ const NavLink = styled(Link)`
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     padding: ${p => p.theme.space.md} ${p => p.theme.space.sm};
-    color: ${p => p.theme.colors.primary};
     font-size: ${p => p.theme.fontSizes.sm};
 
     ${p =>
       p.secondary &&
       css`
         padding: ${p => p.theme.space.xs} 0;
-        color: ${p => p.theme.colors.white};
       `};
   }
 `;
@@ -84,7 +83,7 @@ const NavLink = styled(Link)`
 const NavList = ({ onLinkClick, secondary }) => (
   <StyledNavList secondary={secondary ? 1 : 0}>
     {[
-      ['/', 'About Us'],
+      ['/', 'Home'],
       ['/customer-experience-solutions/', 'Customer Experience Solutions'],
       ['/machine-learning-solutions/', 'Machine Learning Solutions'],
       ['/services/', 'Services'],

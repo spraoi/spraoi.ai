@@ -8,7 +8,7 @@ import { ReactComponent as Twitter } from '../../images/icons/twitter.svg';
 
 const StyledFooter = styled.footer`
   width: 100%;
-  margin-top: ${p => p.theme.space.xxl};
+  margin-top: ${p => p.theme.space.xxxl};
   background-color: ${p => p.theme.colors.primary};
   color: ${p => p.theme.colors.white};
 `;
@@ -21,7 +21,12 @@ const FooterContent = styled.div`
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
     display: flex;
+    justify-content: space-between;
     padding: ${p => p.theme.space.xxl} ${p => p.theme.space.lg};
+  }
+
+  @media (min-width: ${p => p.theme.breakpoints.md}) {
+    justify-content: flex-start;
   }
 `;
 
@@ -30,7 +35,10 @@ const SocialSection = styled.div`
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
     margin-top: 0;
-    margin-left: ${p => p.theme.space.xxxl};
+  }
+
+  @media (min-width: ${p => p.theme.breakpoints.md}) {
+    margin-left: 25%;
   }
 `;
 

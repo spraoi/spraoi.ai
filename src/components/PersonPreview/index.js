@@ -15,7 +15,8 @@ const StyledPerson = styled(StyledImage)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     width: 6.8rem;
     height: 6.8rem;
-    margin: 0 ${p => p.theme.space.lg} ${p => p.theme.space.xl};
+    margin: ${p => p.theme.space.xl} ${p => p.theme.space.lg} 0
+      ${p => p.theme.space.lg};
 
     ${p =>
       p.executive &&

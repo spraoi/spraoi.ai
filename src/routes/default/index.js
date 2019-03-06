@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SEO from '../../components/SEO';
 import {
+  Figure,
   Figures,
   HeroSection,
   IconFigure,
@@ -13,7 +14,6 @@ import {
   StyledIcon,
   Order2,
 } from '../../components/Section';
-import { ReactComponent as BgLanding } from '../../images/icons/bg-landing.svg';
 import { ReactComponent as Bridge } from '../../images/icons/bridge.svg';
 import { ReactComponent as CxSolutions } from '../../images/icons/cx-solutions.svg';
 import { ReactComponent as Hand } from '../../images/icons/hand.svg';
@@ -23,84 +23,57 @@ import { ReactComponent as Offshore } from '../../images/icons/offshore.svg';
 import { ReactComponent as Services } from '../../images/icons/services.svg';
 import { ReactComponent as Usa } from '../../images/icons/usa.svg';
 
-const HeroBg = styled(BgLanding)`
-  position: absolute;
-  top: -24.4rem;
-  left: -39rem;
-  width: 70rem;
-  z-index: -1;
-`;
-
-const ThreeRight = styled.figure`
-  margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
-
+const ThreeRight = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    position: absolute;
-    margin: 0;
-
-    &:nth-of-type(1) {
-      top: -2.5rem;
-      left: -1.3rem;
-    }
+    left: ${p => p.theme.space.sm};
+    margin-bottom: ${p => p.theme.space.lg};
+    margin-left: ${p => p.theme.space.lg};
 
     &:nth-of-type(2) {
-      top: 2.5rem;
-      right: 0;
+      top: ${p => p.theme.space.xxl};
     }
 
     &:nth-of-type(3) {
-      top: 9.5rem;
-      left: -1.3rem;
+      margin-bottom: 0;
     }
   }
 `;
 
-const ThreeLeft = styled.figure`
-  margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
-
+const ThreeLeft = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    position: absolute;
-    margin: 0;
-
-    &:nth-of-type(1) {
-      top: -3rem;
-      right: 0;
-    }
+    left: -${p => p.theme.space.lg};
+    margin-right: ${p => p.theme.space.lg};
+    margin-bottom: ${p => p.theme.space.lg};
 
     &:nth-of-type(2) {
-      top: 2rem;
-      left: 4.5rem;
+      top: ${p => p.theme.space.xxl};
     }
 
     &:nth-of-type(3) {
-      top: 9rem;
-      right: 0;
+      margin-bottom: 0;
     }
   }
 `;
 
-const TwoRight = styled.figure`
-  margin: ${p => p.theme.space.lg} ${p => p.theme.space.lg} 0 0;
-
+const TwoRight = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    position: absolute;
-    margin: 0;
-
     &:nth-of-type(1) {
-      top: 8rem;
-      left: -4rem;
+      top: -${p => p.theme.space.lg};
+      left: ${p => p.theme.space.xxl};
+      margin-left: ${p => p.theme.space.xxxl};
     }
 
     &:nth-of-type(2) {
-      top: -4rem;
-      right: 0;
+      top: -${p => p.theme.space.xxxl};
+      left: -${p => p.theme.space.md};
+      margin-bottom: -${p => p.theme.space.xxxl};
     }
   }
 `;
 
 const StyledReachIcon = styled.div`
   width: 4.5rem;
-  margin-right: ${p => p.theme.space.md};
+  margin-right: ${p => p.theme.space.lg};
   fill: ${p => p.theme.colors.white};
 `;
 
@@ -110,8 +83,8 @@ const IconRoundFigure = styled.figure`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 15.2rem;
-  height: 15.2rem;
+  width: 17rem;
+  height: 17rem;
   padding: ${p => p.theme.space.md};
   padding-right: ${p => p.theme.space.sm};
   border-radius: 50%;
@@ -119,9 +92,14 @@ const IconRoundFigure = styled.figure`
   box-shadow: ${p => p.theme.boxShadows.md};
   color: ${p => p.theme.colors.white};
   font-size: ${p => p.theme.fontSizes.sm};
-  line-height: ${p => p.theme.lineHeights.md};
+  line-height: ${p => p.theme.lineHeights.lg};
   text-transform: uppercase;
   letter-spacing: ${p => p.theme.letterSpacings.lg};
+
+  &:nth-of-type(2) {
+    width: 15.25rem;
+    height: 15.25rem;
+  }
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
     grid-column-start: auto;
@@ -139,10 +117,9 @@ const Index = () => (
       description="Spraoi was founded by Big Four Insurance Consulting and Silicon Valley leaders to bring disruptive capabilities to insurance consumers, agents and carriers."
       title="Spraoi - an insurtech solutions provider with a focus on machine learning"
     />
-    <HeroSection>
+    <HeroSection top>
       <div>
-        <HeroBg />
-        <SectionH1>About Us</SectionH1>
+        <SectionH1>About Spraoi</SectionH1>
         <SectionParagraph>
           Spraoi is an insurance technology solutions provider with a focus on
           machine learning. We work with leading insurers to solve business
@@ -167,7 +144,7 @@ const Index = () => (
         </ThreeRight>
       </Figures>
     </HeroSection>
-    <Section top="17.5rem">
+    <Section>
       <Order2>
         <SectionH2>Solutions & Services</SectionH2>
         <SectionParagraph>
@@ -191,7 +168,7 @@ const Index = () => (
         </ThreeLeft>
       </Figures>
     </Section>
-    <Section bottom={{ md: '13.5rem' }} top="15rem">
+    <Section top>
       <div>
         <SectionH2>Reach</SectionH2>
         <SectionParagraph>

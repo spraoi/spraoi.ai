@@ -5,19 +5,23 @@ const Section = styled.section`
   position: relative;
   margin-top: ${p => p.theme.space.xxl};
 
+  ${p =>
+    p.small &&
+    css`
+      margin-top: ${p => p.theme.space.lg};
+    `};
+
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    margin-top: ${p => p.theme.space.xxxl};
+    ${p =>
+      !p.small &&
+      css`
+        margin-top: ${p => p.theme.space.xxxl};
+      `};
 
     ${p =>
       !p.single &&
       css`
         display: flex;
-      `};
-
-    ${p =>
-      p.small &&
-      css`
-        margin-top: ${p => p.theme.space.lg};
       `};
 
     ${p =>
@@ -208,14 +212,14 @@ const IconFigure = styled.figure`
 `;
 
 const ProcessFigure = styled.figure`
-  width: 40%;
-  margin-top: ${p => p.theme.space.md};
+  margin-top: ${p => p.theme.space.lg};
   padding: ${p => p.theme.space.md};
   border-radius: ${p => p.theme.radii.lg};
   background-color: ${p => p.theme.colors.primary};
   box-shadow: ${p => p.theme.boxShadows.md};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
+    width: 40%;
     margin: 0 0 0 ${p => p.theme.space.xl};
   }
 `;

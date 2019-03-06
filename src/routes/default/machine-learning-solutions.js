@@ -24,8 +24,9 @@ import { ReactComponent as CxSolutions } from '../../images/icons/cx-solutions.s
 import { ReactComponent as Disability } from '../../images/icons/disability.svg';
 import { ReactComponent as Fraud } from '../../images/icons/fraud.svg';
 import { ReactComponent as Observable } from '../../images/icons/observable.svg';
-import { ReactComponent as Placeholder } from '../../images/icons/placeholder.svg';
+import { ReactComponent as Ruler } from '../../images/icons/ruler.svg';
 import { ReactComponent as Scalable } from '../../images/icons/scalable.svg';
+import { ReactComponent as Scales } from '../../images/icons/scales.svg';
 import { ReactComponent as Standardized } from '../../images/icons/standardized.svg';
 
 const ThreeLeft = styled(Figure)`
@@ -105,12 +106,11 @@ const BannerRight = styled.div`
   align-items: center;
   width: 100vw;
   margin-left: -${p => p.theme.space.md};
-  padding: ${p => p.theme.space.xl} ${p => p.theme.space.md};
+  padding: ${p => p.theme.space.xl} 0;
   background-color: ${p => p.theme.colors.white};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
     margin-left: -${p => p.theme.space.lg};
-    padding: ${p => p.theme.space.xl} ${p => p.theme.space.lg};
   }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
@@ -120,6 +120,7 @@ const BannerRight = styled.div`
     bottom: -${p => p.theme.space.md};
     right: 0;
     margin-left: 0;
+    padding: ${p => p.theme.space.xl} ${p => p.theme.space.lg};
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
   }
 `;
@@ -228,7 +229,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
       </Order2>
       <Figures left>
         <SixLeft as={IconFigure} small>
-          <StyledIcon as={Placeholder} />
+          <StyledIcon as={Scales} />
           <figcaption>Standardized</figcaption>
         </SixLeft>
         <SixLeft as={IconFigure} small>
@@ -240,7 +241,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
           <figcaption>Observable</figcaption>
         </SixLeft>
         <SixLeft as={IconFigure} small>
-          <StyledIcon as={Placeholder} />
+          <StyledIcon as={Ruler} />
           <figcaption>Measurable</figcaption>
         </SixLeft>
         <SixLeft as={IconFigure} small>

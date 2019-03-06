@@ -64,7 +64,7 @@ const ArticleSection = styled(Section)`
   }
 
   blockquote {
-    display: inline-block;
+    max-width: ${p => p.theme.maxWidths.md};
     margin: 0 -${p => p.theme.space.md} ${p => p.theme.space.lg};
     padding: ${p => p.theme.space.md} ${p => p.theme.space.lg};
     border-left: solid ${p => p.theme.space.sm} ${p => p.theme.colors.border};

@@ -1,5 +1,7 @@
 # spraoi.ai
 
+[![build status](https://travis-ci.org/spraoi/spraoi.ai.svg?branch=master)](https://travis-ci.org/spraoi/spraoi.ai/)
+
 > Our lovely marketing website.
 
 ## Development Setup

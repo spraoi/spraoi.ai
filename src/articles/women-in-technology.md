@@ -39,7 +39,7 @@ more on their family than on the job at hand. So many women feel like they have
 to give up on their career ambitions because of a lack of viable options to
 pursue their personal and professional goals simultaneously.
 
-**How can we change this?**
+## How can we change this?
 
 As parents and educators, we need to do better and give all kids, regardless of
 gender, access to education in STEM fields, and encourage curious minds in the

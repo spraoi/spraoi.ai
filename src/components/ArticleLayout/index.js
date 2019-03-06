@@ -39,27 +39,39 @@ const ArticleSection = styled(Section)`
   letter-spacing: ${p => p.theme.letterSpacings.sm};
   line-height: ${p => p.theme.lineHeights.lg};
 
-  h2,
-  h3 {
+  h2 {
     margin-top: ${p => p.theme.space.xl};
   }
 
   h3 {
+    margin-top: ${p => p.theme.space.lg};
     margin-bottom: 0;
-  }
-
-  ul {
-    margin-left: 1rem;
-    list-style: initial;
   }
 
   p,
   ul {
     max-width: ${p => p.theme.maxWidths.paragraph};
     margin-bottom: ${p => p.theme.space.lg};
+  }
 
-    &:last-of-type {
-      margin-bottom: 0;
+  ul {
+    margin-left: ${p => p.theme.space.md};
+    list-style: disc outside;
+
+    @media (min-width: ${p => p.theme.breakpoints.sm}) {
+      margin-left: ${p => p.theme.space.xl};
+    }
+  }
+
+  blockquote {
+    display: inline-block;
+    margin: 0 -${p => p.theme.space.md} ${p => p.theme.space.lg};
+    padding: ${p => p.theme.space.md} ${p => p.theme.space.lg};
+    border-left: solid ${p => p.theme.space.sm} ${p => p.theme.colors.border};
+    background-color: ${p => p.theme.colors.white};
+
+    @media (min-width: ${p => p.theme.breakpoints.sm}) {
+      margin: 0 0 ${p => p.theme.space.lg};
     }
   }
 

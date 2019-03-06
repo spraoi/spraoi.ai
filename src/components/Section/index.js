@@ -65,7 +65,7 @@ const SectionH1 = styled.h1`
   left: -0.1rem;
   color: ${p => p.theme.colors.primaryDark};
   font-size: ${p => p.theme.fontSizes.xl};
-  line-height: 1.2em;
+  line-height: 1.4em;
   white-space: ${p => (p.wrap ? 'wrapLine' : 'nowrap')};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {

@@ -62,8 +62,8 @@ const SEO = ({ article, person, ...overrides }) => (
                 ? ref('Person', personId)
                 : ref('Organization', organizationId)
             }
-            dateModified={data.dateModified}
-            datePublished={data.datePublished}
+            dateModified={new Date(data.dateModified).toISOString()}
+            datePublished={new Date(data.datePublished).toISOString()}
             description={data.description}
             headline={data.title}
             id={canonicalUrl}

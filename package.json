@@ -58,6 +58,7 @@
     "react-final-form": "^4.1.0",
     "react-helmet": "^5.2.0",
     "react-responsive-embed": "^2.1.0",
+    "react-social-sharing": "^3.0.1",
     "react-spinners": "^0.5.3",
     "styled-components": "4.1.4-alpha.6",
     "styled-jsx": "^2.2.7",

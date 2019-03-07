@@ -11,12 +11,14 @@ import {
 
 const Articles = () => (
   <>
-    <SEO description="" title="Articles" />
+    <SEO
+      description="We have strong opinions on the market and technology’s role in it."
+      title="Articles"
+    />
     <HeroSection>
       <SectionH1>Articles</SectionH1>
       <SectionParagraph center>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        We have strong opinions on the market and technology&rsquo;s role in it.
       </SectionParagraph>
     </HeroSection>
     <Section single>

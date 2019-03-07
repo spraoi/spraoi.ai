@@ -5,7 +5,7 @@ title: How Did We Fix Python Interpretor’s Readline Issue In Mojave?
 author: santoash-rajaram
 banner: /images/social-banner-1200x628.png
 description: >-
-  How I fixed python interpretor’s readline issue in macOS Mojave.
+  How I fixed Python interpretor’s readline issue in macOS Mojave.
 ---
 
 If you upgraded to Mojave and realized that the up arrow to go to the previous

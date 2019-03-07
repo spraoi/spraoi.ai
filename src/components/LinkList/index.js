@@ -6,10 +6,13 @@ import RightArrow from '../../images/icons/right-arrow.svg';
 
 const BlockList = styled.ul`
   margin: 0 -${p => p.theme.space.md};
+  border-top: solid 1px ${p => p.theme.colors.border};
+  border-bottom: solid 1px ${p => p.theme.colors.border};
   overflow: hidden;
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
     margin: 0;
+    border-style: none;
     border-radius: ${p => p.theme.radii.lg};
     box-shadow: ${p => p.theme.boxShadows.md};
   }

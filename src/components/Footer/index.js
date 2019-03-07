@@ -71,7 +71,7 @@ const Footer = () => (
             </SocialLink>
           </li>
           <li>
-            <SocialLink href="https://instagram.com/spraoi_tech">
+            <SocialLink href="https://www.instagram.com/spraoi_tech">
               <SocialIcon alt="Instagram" as={Instagram} />
             </SocialLink>
           </li>

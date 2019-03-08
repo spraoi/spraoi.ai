@@ -9,12 +9,11 @@ description: >-
   problems.
 ---
 
-Let’s assume Bob offers me \$10k to help him sell his hand knit mittens online.
-I’m not going to hand craft a custom e-commerce website. Instead, I’ll shoot him
-a link to Shopify and advise him to keep his coin. What do you do, however, if
-you’ve never heard of Shopify or the plethora of other WYSIWYG e-commerce
-solutions? If the first thing that comes to your mind is “Hey Google! What’s
-easiest way to sell stuff online?”, you’re on the right track.
+If someone offers me \$10k to help them sell their hand knit mittens online, I’m
+not going to build a custom e-commerce website from scratch. Instead, I’ll shoot
+them a link to Shopify and advise them to keep their coin. What do you do,
+however, if you’ve never heard of Shopify or the plethora of other WYSIWYG
+e-commerce solutions?
 
 At Spraoi, we provide an “insurance as a service” platform called Kwikcover.
 Kwikcover is built such that we can add, remove and reuse features on a
@@ -43,11 +42,6 @@ tools out there that met our specific needs. As such, I happily started writing
 a custom solution from scratch. After a few days of hacking together some
 Javascript and throwing it on AWS Lambda, we had the original version of what we
 now call the “request composer”.
-
-Time went on, and, as you might expect, this Lambda function kept growing in
-size and complexity as we continued to flesh out additional business
-requirements. Being the sole creator, I have been almost solely responsible for
-updates related to the composer.
 
 Each new endpoint exposed to our UIs has to declare a “request sequence” that
 determines how that request should be orchestrated. This sequence is defined in

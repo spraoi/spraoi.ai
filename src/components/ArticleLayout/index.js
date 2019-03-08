@@ -97,6 +97,7 @@ const ArticleFooter = styled.footer`
   margin-top: ${p => p.theme.space.xxl};
 
   a {
+    width: 100%;
     margin: ${p => p.theme.space.md} ${p => p.theme.space.md} 0 0;
 
     & > div {
@@ -113,6 +114,10 @@ const ArticleFooter = styled.footer`
       font-weight: ${p => p.theme.fontWeights.semibold};
       letter-spacing: ${p => p.theme.letterSpacings.sm};
       text-transform: uppercase;
+    }
+
+    @media (min-width: ${p => p.theme.breakpoints.sm}) {
+      width: auto;
     }
   }
 `;

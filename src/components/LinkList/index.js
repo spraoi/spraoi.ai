@@ -91,9 +91,10 @@ const BlockCta = styled.div`
 `;
 
 const StyledRightArrow = styled(RightArrow)`
-  height: 1.4rem;
+  width: 1.6rem;
+  height: 1.6rem;
   margin-left: ${p => p.theme.space.sm};
-  fill: ${p => p.theme.colors.accent};
+  fill: ${p => p.theme.colors.textPrimary};
 `;
 
 const LinkList = ({ links }) => (

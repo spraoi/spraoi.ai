@@ -38,6 +38,7 @@ module.exports = {
       },
       resolve: 'gatsby-transformer-remark',
     },
+    'gatsby-plugin-catch-links',
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-svg',

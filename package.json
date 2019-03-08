@@ -35,6 +35,7 @@
     "final-form": "^4.12.0",
     "gatsby": "^2.1.24",
     "gatsby-image": "^2.0.31",
+    "gatsby-plugin-catch-links": "^2.0.12",
     "gatsby-plugin-manifest": "^2.0.22",
     "gatsby-plugin-offline": "^2.0.24",
     "gatsby-plugin-react-helmet": "^3.0.8",

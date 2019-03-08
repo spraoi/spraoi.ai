@@ -59,7 +59,8 @@ del os, atexit, gnureadline, rlcompleter, save_history, historyPath
 
 ## Step 3
 
-Set the `PYTHONSTARTUP` environment variable in the appropriate startup file for your shell (e.g `.bashrc` or `.zshrc`).
+Set the `PYTHONSTARTUP` environment variable in the appropriate startup file for
+your shell (e.g `.bashrc` or `.zshrc`).
 
 ```shell
 export PYTHONSTARTUP=~/.pystartup

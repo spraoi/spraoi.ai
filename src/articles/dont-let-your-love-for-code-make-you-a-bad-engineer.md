@@ -34,11 +34,9 @@ info, then, after successfully executing the transaction locally, would create a
 new policy by making a call to the policies API.
 
 That would technically work, but then our payments service ends up with logic
-that isn’t directly related to payments, and, perhaps more importantly, we’d
-lose the ability to tout our “microservice architecture” to prospective clients.
-A better solution is to have a separate service specifically built to
-orchestrate requests. This is one of the first problems I was tasked to solve
-when I joined the Spraoi team.
+that isn’t directly related to payments. A better solution is to have a separate
+service specifically built to orchestrate requests. This is one of the first
+problems I was tasked to solve when I joined the Spraoi team.
 
 After doing some research, I was ultimately convinced that there weren’t any
 tools out there that met our specific needs. As such, I happily started writing
@@ -49,12 +47,11 @@ now call the “request composer”.
 Time went on, and, as you might expect, this Lambda function kept growing in
 size and complexity as we continued to flesh out additional business
 requirements. Being the sole creator, I have been almost solely responsible for
-updates related to the composer. This has worked so far, but additional
-strategies might be necessary for any long-term scalability.
+updates related to the composer.
 
 Each new endpoint exposed to our UIs has to declare a “request sequence” that
 determines how that request should be orchestrated. This sequence is defined in
-a DSL (domain specific language) that only the request composer can parse, and
+a domain specific language (DSL) that only the request composer can parse, and
 its syntax was conjured by yours truly. This boils down to the fact that, if you
 need to create a public endpoint at Spraoi, you have to write, or at least
 copy/paste, this DSL.
@@ -62,8 +59,7 @@ copy/paste, this DSL.
 To make it possible for others to write these sequences, I’ve written tests and
 documentation, and attempted to keep both up-to-date. However, when things go
 wrong, or another requirement comes through, I’m still on the hook. The kicker?
-It’s possible that the majority of this work could have been avoided (without
-forfeiting any functionality).
+It’s possible that the majority of this work could have been avoided.
 
 Well after the creation of the request composer, I stumbled across another AWS
 service: Step Functions. The first paragraph on their homepage states:

@@ -186,9 +186,14 @@ const IconFigure = styled.figure`
   box-shadow: ${p => p.theme.boxShadows.md};
   color: ${p => p.theme.colors.white};
   font-size: ${p => p.theme.fontSizes.sm};
+  font-weight: ${p => p.theme.fontWeights.semibold};
   line-height: ${p => p.theme.lineHeights.md};
   text-transform: uppercase;
   letter-spacing: ${p => p.theme.letterSpacings.lg};
+
+  figcaption {
+    margin-bottom: -${p => p.theme.space.xxs};
+  }
 
   ${p =>
     p.small &&
@@ -211,6 +216,16 @@ const IconFigure = styled.figure`
   }
 `;
 
+IconFigure.propTypes = {
+  small: PropTypes.bool,
+  smallOnMedium: PropTypes.bool,
+};
+
+IconFigure.defaultProps = {
+  small: false,
+  smallOnMedium: false,
+};
+
 const ProcessFigure = styled.figure`
   margin-top: ${p => p.theme.space.lg};
   padding: ${p => p.theme.space.md};
@@ -224,19 +239,9 @@ const ProcessFigure = styled.figure`
   }
 `;
 
-IconFigure.propTypes = {
-  small: PropTypes.bool,
-  smallOnMedium: PropTypes.bool,
-};
-
-IconFigure.defaultProps = {
-  small: false,
-  smallOnMedium: false,
-};
-
 const StyledIcon = styled.div`
-  height: 3rem;
-  width: 3rem;
+  height: 2.8rem;
+  width: 2.8rem;
   margin-bottom: ${p => p.theme.space.sm};
   fill: ${p => p.theme.colors.white};
 `;

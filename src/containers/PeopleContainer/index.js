@@ -49,7 +49,7 @@ const PeopleContainer = ({ children }) => (
           edges {
             node {
               childImageSharp {
-                fluid(maxWidth: 220) {
+                fluid(maxWidth: 250) {
                   ...GatsbyImageSharpFluid_withWebp_noBase64
                 }
               }

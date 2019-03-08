@@ -76,7 +76,7 @@ const TwoRight = styled(Figure)`
 
 const StyledReachIcon = styled.div`
   width: 4.5rem;
-  margin-right: ${p => p.theme.space.lg};
+  margin-right: ${p => p.theme.space.md};
   fill: ${p => p.theme.colors.white};
 `;
 
@@ -95,6 +95,7 @@ const IconRoundFigure = styled.figure`
   box-shadow: ${p => p.theme.boxShadows.md};
   color: ${p => p.theme.colors.white};
   font-size: ${p => p.theme.fontSizes.sm};
+  font-weight: ${p => p.theme.fontWeights.semibold};
   line-height: ${p => p.theme.lineHeights.lg};
   text-transform: uppercase;
   letter-spacing: ${p => p.theme.letterSpacings.lg};

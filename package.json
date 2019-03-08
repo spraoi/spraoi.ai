@@ -21,7 +21,7 @@
     "@reach/router": "^1.2.1",
     "@spraoi/auth": "^0.19.0",
     "@spraoi/babel-preset": "^0.19.0",
-    "@spraoi/base": "^0.19.3",
+    "@spraoi/base": "^0.19.9",
     "@spraoi/gatsby-config": "^0.19.8",
     "@spraoi/helpers": "^0.19.0",
     "@spraoi/validations": "^0.19.0",
@@ -33,7 +33,7 @@
     "babel-preset-gatsby": "^0.1.8",
     "buffer": "^4.9.1",
     "final-form": "^4.12.0",
-    "gatsby": "^2.1.23",
+    "gatsby": "^2.1.24",
     "gatsby-image": "^2.0.31",
     "gatsby-plugin-manifest": "^2.0.22",
     "gatsby-plugin-offline": "^2.0.24",
@@ -60,7 +60,7 @@
     "react-responsive-embed": "^2.1.0",
     "react-social-sharing": "^3.0.1",
     "react-spinners": "^0.5.3",
-    "styled-components": "4.1.4-alpha.6",
+    "styled-components": "^4.1.2",
     "styled-jsx": "^2.2.7",
     "tippy.js": "^4.0.4"
   },
@@ -72,11 +72,14 @@
     "@spraoi/stylelint-config": "^0.19.0",
     "coveralls": "^3.0.3",
     "eslint": "^5.15.1",
-    "jest": "^24.1.0",
+    "jest": "^24.3.1",
+    "jest-haste-map": "^24.3.1",
+    "jest-resolve": "^24.3.1",
     "prettier": "^1.16.4",
     "stylelint": "^9.10.1"
   },
   "resolutions": {
-    "gatsby/**/graphql": "^0.13.2"
+    "gatsby/**/graphql": "^0.13.2",
+    "styled-components": "^4.1.2"
   }
 }

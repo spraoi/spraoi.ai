@@ -50,13 +50,13 @@ const ArticleSection = styled(Section)`
     margin-bottom: 0;
   }
 
-  p,
-  ul {
+  p {
     max-width: ${p => p.theme.maxWidths.paragraph};
     margin-bottom: ${p => p.theme.space.lg};
   }
 
   ul {
+    margin-bottom: ${p => p.theme.space.lg};
     margin-left: ${p => p.theme.space.md};
     list-style: disc outside;
 
@@ -66,7 +66,7 @@ const ArticleSection = styled(Section)`
   }
 
   blockquote {
-    max-width: ${p => p.theme.maxWidths.md};
+    max-width: ${p => p.theme.maxWidths.paragraph};
     margin: 0 0 ${p => p.theme.space.lg};
     padding: ${p => p.theme.space.md};
     border-left: solid ${p => p.theme.space.sm} ${p => p.theme.colors.border};

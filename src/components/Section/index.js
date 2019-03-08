@@ -250,7 +250,7 @@ const StyledIcon = styled.div`
   width: 2.8rem;
   margin-bottom: ${p => p.theme.space.sm};
   fill: ${p => p.theme.colors.white};
-  
+
   ${p =>
     p.small &&
     css`
@@ -265,6 +265,7 @@ const StyledIcon = styled.div`
         width: 2rem;
         height: 2rem;
       `};
+  }
 `;
 
 IconFigure.propTypes = {

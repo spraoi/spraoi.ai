@@ -262,8 +262,8 @@ const StyledIcon = styled.div`
     ${p =>
       p.smallOnMedium &&
       css`
-        width: 2.2rem;
-        height: 2.2rem;
+        width: 2rem;
+        height: 2rem;
       `};
 `;
 

@@ -141,9 +141,8 @@ export default {
     mono: 'Menlo, monospace',
   },
   fontSizes: {
-    xxs: `${1 / fontSizeScale / fontSizeScale / fontSizeScale}rem`,
-    xs: `${1 / fontSizeScale / fontSizeScale}rem`,
-    sm: `${1 / fontSizeScale}rem`,
+    xs: `0.55rem`,
+    sm: `0.65rem`,
     md: '1rem',
     lg: `${fontSizeScale}rem`,
     xl: `${fontSizeScale ** 2}rem`,

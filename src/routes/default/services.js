@@ -81,9 +81,9 @@ const Services = ({ location: { pathname } }) => (
     <HeroSection single>
       <SectionH1 wrap={1}>Services</SectionH1>
       <SectionParagraph>
-        In addition to our solutions, the Spraoi team has several service areas
-        where we provide accountability from concept through execution, thus
-        eliminating technology as the impediment&nbsp;to&nbsp;progress.
+        In addition to our solutions, the Spraoi team has the expertise to take
+        delivery accountability from concept through execution, thus eliminating
+        technology as the impediment&nbsp;to&nbsp;progress.
       </SectionParagraph>
     </HeroSection>
     <Section>
@@ -98,23 +98,23 @@ const Services = ({ location: { pathname } }) => (
       </Order2>
       <Figures left>
         <FiveLeft as={IconFigure} smallOnMedium>
-          <StyledIcon as={Innovation} />
+          <StyledIcon as={Innovation} smallOnMedium />
           <figcaption>Innovation</figcaption>
         </FiveLeft>
         <FiveLeft as={IconFigure} smallOnMedium>
-          <StyledIcon as={Integration} />
+          <StyledIcon as={Integration} smallOnMedium />
           <figcaption>Integration</figcaption>
         </FiveLeft>
         <FiveLeft as={IconFigure} smallOnMedium>
-          <StyledIcon as={Data} />
+          <StyledIcon as={Data} smallOnMedium />
           <figcaption>Data</figcaption>
         </FiveLeft>
-        <FiveLeft as={IconFigure}>
-          <StyledIcon as={ThirdParty} />
+        <FiveLeft as={IconFigure} smallOnMedium>
+          <StyledIcon as={ThirdParty} smallOnMedium />
           <figcaption>Third Party Administration</figcaption>
         </FiveLeft>
-        <FiveLeft as={IconFigure}>
-          <StyledIcon as={BuildOperate} />
+        <FiveLeft as={IconFigure} smallOnMedium>
+          <StyledIcon as={BuildOperate} smallOnMedium />
           <figcaption>Build, Operate, Transfer</figcaption>
         </FiveLeft>
       </Figures>

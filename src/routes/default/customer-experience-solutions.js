@@ -62,8 +62,10 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
           <SectionParagraph>
             Our portal supports agent and d2c models with a single, easy-to-use
             and consistent interface that spans the insurance lifecycle and can
-            easily be integrated with several administration
-            platforms&nbsp;as&nbsp;a&nbsp;veneer.
+            easily be integrated with several administration platforms as a
+            veneer. Further, our portal is pre-integrated with our machine
+            learning platform to ensure seamless
+            integration&nbsp;of&nbsp;models.
           </SectionParagraph>
           <SectionSecondParagraph>
             Our solutions provide the plug and play digital experience consumers
@@ -91,11 +93,11 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
       <SectionParagraph as="div" center>
         <SectionH3 white={0}>Group &amp; Voluntary Benefits</SectionH3>
         <p>
-          Our group benefits and voluntary enrollment solution is developed on
-          our Kwikcover TM portal environment. It features case setup,
-          enrollment and service functionality, and comes pre- integrated with
-          our machine learning capability to predict an individual’s propensity
-          to purchase particular&nbsp;products.
+          Our group benefits and voluntary enrollment solution features case
+          setup, enrollment and service functionality, and comes pre-integrated
+          with our machine learning capability to predict an individual’s
+          propensity to purchase products for a particular plan design or
+          individual&nbsp;product&nbsp;set.
         </p>
       </SectionParagraph>
     </Section>
@@ -106,7 +108,7 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
           Our retail life and annuities solution, when coupled with our third
           party administration (TPA) partnership, provides a comprehensive
           offering and reduced time to market for carriers looking to enable a
-          direct to&nbsp;consumer&nbsp;strategy.
+          d2c&nbsp;strategy.
         </p>
       </SectionParagraph>
     </Section>

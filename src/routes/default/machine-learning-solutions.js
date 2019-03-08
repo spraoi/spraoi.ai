@@ -140,7 +140,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
     <HeroSection single>
       <SectionH1 wrap={1}>Machine Learning Solutions</SectionH1>
       <SectionParagraph>
-        With our platform, we have addressed the impediments and accelerated the
+        With our platform, we have addressed the impediments to accelerate the
         delivery of machine learning models. Our production solutions have
         proven this&nbsp;in&nbsp;the&nbsp;market.
       </SectionParagraph>
@@ -150,8 +150,8 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
         <SectionH2>Solutions</SectionH2>
         <SectionParagraph>
           Our team of analysts, data scientists and engineers have developed
-          machine learning SaaS that can be delivered via API or with our user
-          experience.
+          machine learning SaaS solutions that can be delivered via API or with
+          our user&nbsp;experience.
         </SectionParagraph>
       </Order2>
       <Figures left>
@@ -229,27 +229,27 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
       </Order2>
       <Figures left>
         <SixLeft as={IconFigure} small>
-          <StyledIcon as={Scales} />
+          <StyledIcon as={Scales} small />
           <figcaption>Standardized</figcaption>
         </SixLeft>
         <SixLeft as={IconFigure} small>
-          <StyledIcon as={CxSolutions} />
+          <StyledIcon as={CxSolutions} small />
           <figcaption>Repeatable</figcaption>
         </SixLeft>
         <SixLeft as={IconFigure} small>
-          <StyledIcon as={Observable} />
+          <StyledIcon as={Observable} small />
           <figcaption>Observable</figcaption>
         </SixLeft>
         <SixLeft as={IconFigure} small>
-          <StyledIcon as={Ruler} />
+          <StyledIcon as={Ruler} small />
           <figcaption>Measurable</figcaption>
         </SixLeft>
         <SixLeft as={IconFigure} small>
-          <StyledIcon as={Standardized} />
-          <figcaption>Experiment</figcaption>
+          <StyledIcon as={Standardized} small />
+          <figcaption>Experimentable</figcaption>
         </SixLeft>
         <SixLeft as={IconFigure} small>
-          <StyledIcon as={Scalable} />
+          <StyledIcon as={Scalable} small />
           <figcaption>Scalable</figcaption>
         </SixLeft>
       </Figures>

@@ -202,6 +202,9 @@ const IconFigure = styled.figure`
       height: 7.4rem;
       justify-content: center;
       align-items: center;
+      padding: ${p => p.theme.space.sm};
+      font-size: ${p => p.theme.fontSizes.xs};
+      text-align: center;
     `};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
@@ -212,6 +215,9 @@ const IconFigure = styled.figure`
         height: 7.4rem;
         justify-content: center;
         align-items: center;
+        padding: ${p => p.theme.space.sm};
+        font-size: ${p => p.theme.fontSizes.xs};
+        text-align: center;
       `};
   }
 `;
@@ -244,7 +250,32 @@ const StyledIcon = styled.div`
   width: 2.8rem;
   margin-bottom: ${p => p.theme.space.sm};
   fill: ${p => p.theme.colors.white};
+  
+  ${p =>
+    p.small &&
+    css`
+      width: 2rem;
+      height: 2rem;
+    `};
+
+  @media (min-width: ${p => p.theme.breakpoints.md}) {
+    ${p =>
+      p.smallOnMedium &&
+      css`
+        width: 2.2rem;
+        height: 2.2rem;
+      `};
 `;
+
+IconFigure.propTypes = {
+  small: PropTypes.bool,
+  smallOnMedium: PropTypes.bool,
+};
+
+IconFigure.defaultProps = {
+  small: false,
+  smallOnMedium: false,
+};
 
 const StyledImage = styled.div`
   width: 9.8rem;

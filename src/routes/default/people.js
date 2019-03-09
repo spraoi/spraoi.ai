@@ -39,7 +39,7 @@ const People = ({ location: { pathname } }) => (
           </SectionParagraph>
         </HeroSection>
         <Section center single>
-          <SectionH2>Leadership</SectionH2>
+          <SectionH2>Founding Team</SectionH2>
           <PeopleList>
             {people
               .filter(p => p.executive > 0 && p.active === 'y')

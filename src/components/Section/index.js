@@ -66,7 +66,7 @@ const SectionH1 = styled.h1`
   color: ${p => p.theme.colors.primaryDark};
   font-size: ${p => p.theme.fontSizes.xl};
   line-height: 1.4em;
-  white-space: ${p => (p.wrap ? 'wrapLine' : 'nowrap')};
+  white-space: ${p => (p['data-wrap'] ? 'wrapLine' : 'nowrap')};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
     font-size: ${p => p.theme.fontSizes.xxl};
@@ -78,11 +78,11 @@ const SectionH1 = styled.h1`
 `;
 
 SectionH1.propTypes = {
-  wrap: PropTypes.oneOf([0, 1]),
+  'data-wrap': PropTypes.bool,
 };
 
 SectionH1.defaultProps = {
-  wrap: 0,
+  'data-wrap': false,
 };
 
 const SectionH2 = styled.h2`
@@ -105,11 +105,11 @@ const SectionH3 = styled.h3`
 `;
 
 SectionH3.propTypes = {
-  white: PropTypes.oneOf([0, 1]),
+  white: PropTypes.bool,
 };
 
 SectionH3.defaultProps = {
-  white: 1,
+  white: true,
 };
 
 const SectionParagraph = styled.p`
@@ -252,7 +252,7 @@ const StyledIcon = styled.div`
   fill: ${p => p.theme.colors.white};
 
   ${p =>
-    p.small &&
+    p['data-small'] &&
     css`
       width: 2.2rem;
       height: 2.2rem;
@@ -260,7 +260,7 @@ const StyledIcon = styled.div`
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     ${p =>
-      p.smallOnMedium &&
+      p['data-small-on-medium'] &&
       css`
         width: 2.2rem;
         height: 2.2rem;
@@ -268,14 +268,14 @@ const StyledIcon = styled.div`
   }
 `;
 
-IconFigure.propTypes = {
-  small: PropTypes.bool,
-  smallOnMedium: PropTypes.bool,
+StyledIcon.propTypes = {
+  'data-small': PropTypes.bool,
+  'data-small-on-medium': PropTypes.bool,
 };
 
-IconFigure.defaultProps = {
-  small: false,
-  smallOnMedium: false,
+StyledIcon.defaultProps = {
+  'data-small': false,
+  'data-small-on-medium': false,
 };
 
 const StyledImage = styled.div`

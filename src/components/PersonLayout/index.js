@@ -63,7 +63,7 @@ const PersonLayout = ({ location: { pathname }, pageContext: { slug } }) => (
               <Img alt="" fluid={person.image} />
             </PersonImage>
             <div>
-              <Name wrap={1}>{name}</Name>
+              <Name data-wrap>{name}</Name>
               <Position>{person.position}</Position>
               <SectionParagraph>{newline2Space(person.bio)}</SectionParagraph>
             </div>

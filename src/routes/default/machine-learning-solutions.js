@@ -138,7 +138,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
       title="Machine Learning Solutions"
     />
     <HeroSection single>
-      <SectionH1 wrap={1}>Machine Learning Solutions</SectionH1>
+      <SectionH1 data-wrap>Machine Learning Solutions</SectionH1>
       <SectionParagraph>
         We have created a platform that accelerates the delivery of machine
         learning models with proven success in&nbsp;the&nbsp;market.
@@ -170,7 +170,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
     </Section>
     <Section>
       <SectionParagraph as="div" center>
-        <SectionH3 white={0}>Disability Fraud Finder</SectionH3>
+        <SectionH3 white>Disability Fraud Finder</SectionH3>
         <p>
           We have an out of the box (OOB) machine learning driven disability
           claims fraud solution complete with a user experience to improve fraud
@@ -180,7 +180,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
     </Section>
     <Section small>
       <SectionParagraph as="div" center>
-        <SectionH3 white={0}>Disability Claims Suite</SectionH3>
+        <SectionH3 white>Disability Claims Suite</SectionH3>
         <p>
           Our disability claims suite offers a comprehensive machine learning
           enabled solution for disability claims. Capabilities include
@@ -192,7 +192,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
     </Section>
     <Section small>
       <SectionParagraph as="div" center>
-        <SectionH3 white={0}>Enrollment Propensity To Buy</SectionH3>
+        <SectionH3 white>Enrollment Propensity To Buy</SectionH3>
         <p>
           Our propensity to purchase solution provides the product
           recommendation capabilities to customers based on prior
@@ -228,27 +228,27 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
       </Order2>
       <Figures left>
         <SixLeft as={IconFigure} small>
-          <StyledIcon as={Scales} small />
+          <StyledIcon as={Scales} data-small />
           <figcaption>Standardized</figcaption>
         </SixLeft>
         <SixLeft as={IconFigure} small>
-          <StyledIcon as={CxSolutions} small />
+          <StyledIcon as={CxSolutions} data-small />
           <figcaption>Repeatable</figcaption>
         </SixLeft>
         <SixLeft as={IconFigure} small>
-          <StyledIcon as={Observable} small />
+          <StyledIcon as={Observable} data-small />
           <figcaption>Observable</figcaption>
         </SixLeft>
         <SixLeft as={IconFigure} small>
-          <StyledIcon as={Ruler} small />
+          <StyledIcon as={Ruler} data-small />
           <figcaption>Measurable</figcaption>
         </SixLeft>
         <SixLeft as={IconFigure} small>
-          <StyledIcon as={Standardized} small />
+          <StyledIcon as={Standardized} data-small />
           <figcaption>Adjustable</figcaption>
         </SixLeft>
         <SixLeft as={IconFigure} small>
-          <StyledIcon as={Scalable} small />
+          <StyledIcon as={Scalable} data-small />
           <figcaption>Scalable</figcaption>
         </SixLeft>
       </Figures>

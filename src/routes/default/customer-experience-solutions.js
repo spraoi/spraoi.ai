@@ -48,7 +48,7 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
       title="Customer Experience Solutions"
     />
     <HeroSection single>
-      <SectionH1 wrap={1}>Customer Experience Solutions</SectionH1>
+      <SectionH1 data-wrap>Customer Experience Solutions</SectionH1>
       <SectionParagraph>
         We have leveraged our Kwikcover&trade; customer experience portal
         platform to develop specific solutions across
@@ -91,7 +91,7 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
     </Section>
     <Section>
       <SectionParagraph as="div" center>
-        <SectionH3 white={0}>Group &amp; Voluntary Benefits</SectionH3>
+        <SectionH3 white>Group &amp; Voluntary Benefits</SectionH3>
         <p>
           Our group benefits and voluntary enrollment solution features case
           setup, enrollment and service functionality, and comes pre-integrated
@@ -103,7 +103,7 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
     </Section>
     <Section small>
       <SectionParagraph as="div" center>
-        <SectionH3 white={0}>Life Insurance</SectionH3>
+        <SectionH3 white>Life Insurance</SectionH3>
         <p>
           Our retail life and annuities solution, when coupled with our third
           party administration (TPA) partnership, provides a comprehensive
@@ -114,7 +114,7 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
     </Section>
     <Section small>
       <SectionParagraph as="div" center>
-        <SectionH3 white={0}>Small Commercial</SectionH3>
+        <SectionH3 white>Small Commercial</SectionH3>
         <p>
           Our small commercial portal solution comes pre-integrated with a
           comprehensive administration suite to provide an easy purchase,

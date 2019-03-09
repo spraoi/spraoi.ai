@@ -146,7 +146,7 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
                 title={frontmatter.title}
               />
               <HeroSection single>
-                <SectionH1 wrap={1}>{frontmatter.title}</SectionH1>
+                <SectionH1 data-wrap>{frontmatter.title}</SectionH1>
                 <Details>
                   <Link to={`/people/${author.id}`}>
                     <PersonImage clickable>

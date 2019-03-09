@@ -9,6 +9,7 @@ import {
   HeroSection,
   IconFigure,
   Order2,
+  ProcessFigure,
   Section,
   SectionH1,
   SectionH2,
@@ -21,6 +22,7 @@ import BuildOperate from '../../images/icons/build-operate.svg';
 import Data from '../../images/icons/data.svg';
 import Innovation from '../../images/icons/innovation.svg';
 import Integration from '../../images/icons/integration.svg';
+import ServiceProcess from '../../images/diagrams/service-process.svg';
 import ThirdParty from '../../images/icons/third-party.svg';
 
 const FiveLeft = styled(Figure)`
@@ -98,10 +100,6 @@ const Services = ({ location: { pathname } }) => (
       </Order2>
       <Figures left>
         <FiveLeft as={IconFigure} smallOnMedium>
-          <StyledIcon as={Innovation} smallOnMedium />
-          <figcaption>Innovation</figcaption>
-        </FiveLeft>
-        <FiveLeft as={IconFigure} smallOnMedium>
           <StyledIcon as={Integration} smallOnMedium />
           <figcaption>Integration</figcaption>
         </FiveLeft>
@@ -116,6 +114,10 @@ const Services = ({ location: { pathname } }) => (
         <FiveLeft as={IconFigure} smallOnMedium>
           <StyledIcon as={BuildOperate} smallOnMedium />
           <figcaption>Build, Operate, Transfer</figcaption>
+        </FiveLeft>
+        <FiveLeft as={IconFigure} smallOnMedium>
+          <StyledIcon as={Innovation} smallOnMedium />
+          <figcaption>Innovation</figcaption>
         </FiveLeft>
       </Figures>
     </Section>
@@ -192,6 +194,20 @@ const Services = ({ location: { pathname } }) => (
         </SectionParagraph>
       </BannerContent>
     </BannerSection>
+    <Section>
+      <div>
+        <SectionH2>Methodology</SectionH2>
+        <SectionParagraph>
+          Be the disrupter, or get disrupted. We have a proven ability to
+          accelerate the innovation agenda through our teams and solutions.
+          Integrated analytical and engineering talent can deliver results
+          in&nbsp;two-week&nbsp;sprints.
+        </SectionParagraph>
+      </div>
+      <ProcessFigure>
+        <ServiceProcess />
+      </ProcessFigure>
+    </Section>
   </>
 );
 

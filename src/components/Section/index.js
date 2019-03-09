@@ -254,16 +254,16 @@ const StyledIcon = styled.div`
   ${p =>
     p.small &&
     css`
-      width: 2rem;
-      height: 2rem;
+      width: 2.2rem;
+      height: 2.2rem;
     `};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     ${p =>
       p.smallOnMedium &&
       css`
-        width: 2rem;
-        height: 2rem;
+        width: 2.2rem;
+        height: 2.2rem;
       `};
   }
 `;

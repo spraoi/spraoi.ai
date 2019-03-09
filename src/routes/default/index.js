@@ -136,7 +136,7 @@ const Index = () => (
         <ThreeRight as={IconFigure}>
           <StyledIcon as={Hand} />
           <figcaption>
-            Insurance SME<NoCap>s</NoCap> Big 4 Consulting
+            Big 4 Consulting Insurance SME<NoCap>s</NoCap>
           </figcaption>
         </ThreeRight>
         <ThreeRight as={IconFigure}>

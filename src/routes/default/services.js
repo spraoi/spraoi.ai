@@ -31,11 +31,9 @@ const FiveLeft = styled(Figure)`
     margin-right: ${p => p.theme.space.lg};
     margin-bottom: ${p => p.theme.space.lg};
 
-    &:nth-of-type(4) {
-      margin-bottom: 0;
-    }
-
+    &:nth-of-type(4),
     &:nth-of-type(5) {
+      left: -6.7rem;
       margin-bottom: 0;
     }
   }

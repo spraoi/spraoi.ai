@@ -15,7 +15,7 @@ const Articles = () => (
       description="We have strong opinions on the market and technology’s role in it."
       title="Articles"
     />
-    <HeroSection>
+    <HeroSection center single>
       <SectionH1>Articles</SectionH1>
       <SectionParagraph center>
         We have strong opinions on the market and technology&rsquo;s role in it.

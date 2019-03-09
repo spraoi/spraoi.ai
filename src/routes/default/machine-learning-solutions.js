@@ -140,9 +140,8 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
     <HeroSection single>
       <SectionH1 wrap={1}>Machine Learning Solutions</SectionH1>
       <SectionParagraph>
-        With our platform, we have addressed the impediments to accelerate the
-        delivery of machine learning models. Our production solutions have
-        proven this&nbsp;in&nbsp;the&nbsp;market.
+        We have created a platform that accelerates the delivery of machine
+        learning models with proven success in&nbsp;the&nbsp;market.
       </SectionParagraph>
     </HeroSection>
     <Section>

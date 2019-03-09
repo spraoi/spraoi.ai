@@ -27,8 +27,8 @@ const StyledHeader = styled.header`
 const StyledLogo = styled(Logo)`
   position: relative;
   bottom: -0.1rem;
-  width: 7rem;
-  height: ${7 * 0.3104862332}rem;
+  width: 9rem;
+  height: ${9 * 0.3104862332}rem;
 `;
 
 const NavToggle = styled(Squeeze)`

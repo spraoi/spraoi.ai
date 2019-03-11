@@ -109,7 +109,7 @@ SectionH3.propTypes = {
 };
 
 SectionH3.defaultProps = {
-  white: true,
+  white: false,
 };
 
 const SectionParagraph = styled.p`

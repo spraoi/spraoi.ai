@@ -121,7 +121,7 @@ const Services = ({ location: { pathname } }) => (
     </Section>
     <Section>
       <SectionParagraph as="div" center>
-        <SectionH3 white>Integration Services</SectionH3>
+        <SectionH3>Integration Services</SectionH3>
         <p>
           We offer advanced integration services leveraging best in class
           technologies. Our integration services include API implementations
@@ -134,7 +134,7 @@ const Services = ({ location: { pathname } }) => (
     </Section>
     <Section small>
       <SectionParagraph as="div" center>
-        <SectionH3 white>Data Services</SectionH3>
+        <SectionH3>Data Services</SectionH3>
         <p>
           Our data services include, but are not limited to, working with
           clients to outline their data strategy and translate strategies into
@@ -148,7 +148,7 @@ const Services = ({ location: { pathname } }) => (
     </Section>
     <Section small>
       <SectionParagraph as="div" center>
-        <SectionH3 white>Third Party Administration Services</SectionH3>
+        <SectionH3>Third Party Administration Services</SectionH3>
         <p>
           With our alliance partners, we can handle the entire value chain from
           quote through administration, in both D2C and agent-assisted models
@@ -169,7 +169,7 @@ const Services = ({ location: { pathname } }) => (
     </Section>
     <Section small>
       <SectionParagraph as="div" center>
-        <SectionH3 white>Build/Operate/Transfer Services</SectionH3>
+        <SectionH3>Build/Operate/Transfer Services</SectionH3>
         <p>
           For clients that want to minimize vendor lock-in, we offer technology
           development capabilities from the ground up with the option to
@@ -181,7 +181,7 @@ const Services = ({ location: { pathname } }) => (
     <BannerSection>
       <BannerContent>
         <SectionParagraph as="div" center>
-          <BannerHeading>Innovation as a Service</BannerHeading>
+          <BannerHeading white>Innovation as a Service</BannerHeading>
           <p>
             Our innovation as a service approach provides technology strategy,
             management, design, development and deployment capabilities. When

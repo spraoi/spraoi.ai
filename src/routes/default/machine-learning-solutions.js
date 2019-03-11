@@ -170,7 +170,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
     </Section>
     <Section>
       <SectionParagraph as="div" center>
-        <SectionH3 white>Disability Fraud Finder</SectionH3>
+        <SectionH3>Disability Fraud Finder</SectionH3>
         <p>
           We have an out of the box (OOB) machine learning driven disability
           claims fraud solution complete with a user experience to improve fraud
@@ -180,7 +180,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
     </Section>
     <Section small>
       <SectionParagraph as="div" center>
-        <SectionH3 white>Disability Claims Suite</SectionH3>
+        <SectionH3>Disability Claims Suite</SectionH3>
         <p>
           Our disability claims suite offers a comprehensive machine learning
           enabled solution for disability claims. Capabilities include
@@ -192,7 +192,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
     </Section>
     <Section small>
       <SectionParagraph as="div" center>
-        <SectionH3 white>Enrollment Propensity To Buy</SectionH3>
+        <SectionH3>Enrollment Propensity To Buy</SectionH3>
         <p>
           Our propensity to purchase solution provides the product
           recommendation capabilities to customers based on prior

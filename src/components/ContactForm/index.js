@@ -73,7 +73,7 @@ const ContactForm = () => (
           disabled={formContext.submitSucceeded}
           label="Message"
           name="message"
-          rows="3"
+          rows={4}
           validate={required}
         />
         {formContext.submitSucceeded ? (

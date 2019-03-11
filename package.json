@@ -21,7 +21,7 @@
     "@reach/router": "^1.2.1",
     "@spraoi/auth": "^0.19.0",
     "@spraoi/babel-preset": "^0.19.0",
-    "@spraoi/base": "^0.19.9",
+    "@spraoi/base": "^0.19.12",
     "@spraoi/gatsby-config": "^0.19.8",
     "@spraoi/helpers": "^0.19.0",
     "@spraoi/validations": "^0.19.0",

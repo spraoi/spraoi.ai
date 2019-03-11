@@ -119,7 +119,7 @@ const Index = () => (
   <>
     <SEO
       description="Spraoi was founded by Big Four Insurance Consulting and Silicon Valley leaders to bring disruptive capabilities to insurance consumers, agents and carriers."
-      title="Spraoi - an insurtech solutions provider with a focus on machine learning"
+      title="Spraoi - an insurtech solutions provider with a focus on ML"
     />
     <HeroSection top>
       <div>

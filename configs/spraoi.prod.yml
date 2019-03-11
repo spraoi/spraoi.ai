@@ -1,3 +1,4 @@
 deploy:
   bucketUrl: s3://spraoi.ai
   cloudFrontDistributionId: E227MBBDIHKRJQ
+env: prod

@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { composeValidations, email, required } from '@spraoi/validations';
 import { Box, Button, Input, TextArea } from '@spraoi/base';
 import { FORM_ERROR } from 'final-form';
 import { Field, Form as FinalForm } from 'react-final-form';
-import { composeValidations, email, required } from '@spraoi/validations';
 import { SectionParagraph } from '../Section';
+import config from '../../config';
 
 const Form = styled.form`
   flex-shrink: 0;
@@ -31,23 +32,18 @@ const InlineInputs = styled.div`
 
 const ContactForm = () => (
   <FinalForm
-    initialValues={{
-      _format: 'plain',
-    }}
     onSubmit={async values => {
       try {
-        const url = 'https://formspree.io/messages@spraoi.ai';
-
-        const body = {
-          ...values,
-          _subject: `Spraoi Inquiry From ${values.first_name}`,
-        };
-
-        await fetch(url, {
-          body: JSON.stringify(body),
-          headers: { 'Content-Type': 'application/json' },
-          method: 'POST',
-        });
+        await fetch(
+          `https://8cvf9cv1b9.execute-api.us-east-1.amazonaws.com/${
+            config.env
+          }/api`,
+          {
+            body: JSON.stringify(values),
+            headers: { 'Content-Type': 'application/json' },
+            method: 'POST',
+          }
+        );
       } catch (e) {
         return { [FORM_ERROR]: e.message };
       }
@@ -59,14 +55,14 @@ const ContactForm = () => (
             component={Input}
             disabled={formContext.submitSucceeded}
             label="First Name"
-            name="first_name"
+            name="firstName"
             validate={required}
           />
           <Field
             component={Input}
             disabled={formContext.submitSucceeded}
             label="Last Name"
-            name="last_name"
+            name="lastName"
             validate={required}
           />
         </InlineInputs>

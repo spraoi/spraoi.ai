@@ -21,4 +21,4 @@ better serve our clients across insurance lines and functions. The NaviRisk team
 will move into Spraoi’s Bangalore, India development center. With the addition
 of NaviRisk’s Sandeep Patil to our India leadership team, Spraoi looks forward
 to continue incubating enhanced solutions and offerings, now expanding into the
-actuarial space
+actuarial space.

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Link } from 'gatsby';
+import PartialLink from '../PartialLink';
 
 const StyledNavList = styled.ul`
   display: flex;
@@ -34,7 +34,7 @@ const NavItem = styled.li`
   }
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled(PartialLink)`
   display: block;
   padding: ${p => p.theme.space.sm} ${p => p.theme.space.md};
   color: ${p => p.theme.colors.textPrimary};

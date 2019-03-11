@@ -23,14 +23,6 @@ const NavItem = styled.li`
     &:last-of-type {
       margin-right: -${p => p.theme.space.sm};
     }
-
-    ${p =>
-      !p.secondary &&
-      css`
-        &:first-of-type {
-          display: none;
-        }
-      `};
   }
 `;
 
@@ -83,7 +75,6 @@ const NavLink = styled(PartialLink)`
 const NavList = ({ onLinkClick, secondary }) => (
   <StyledNavList secondary={secondary ? 1 : 0}>
     {[
-      ['/', 'Home'],
       ['/customer-experience-solutions/', 'Customer Experience Solutions'],
       ['/machine-learning-solutions/', 'Machine Learning Solutions'],
       ['/services/', 'Services'],

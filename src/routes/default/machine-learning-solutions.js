@@ -206,7 +206,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
           <StyledBarrel alt="Barrel" />
         </BannerRight>
         <BannerLeft>
-          <BannerHeading>Our Patent Pending Infrastructure</BannerHeading>
+          <BannerHeading white>Our Patent Pending Infrastructure</BannerHeading>
           <SectionParagraph>
             We offer continuous delivery of machine learning models and enable
             observability in production to allow machine learning teams (e.g.

@@ -41,17 +41,24 @@ const ArticleSection = styled(Section)`
   letter-spacing: ${p => p.theme.letterSpacings.sm};
   line-height: ${p => p.theme.lineHeights.lg};
 
+  h3,
+  p,
+  ul,
+  blockquote {
+    max-width: ${p => p.theme.maxWidths.paragraph};
+  }
+
   h2 {
     margin-top: ${p => p.theme.space.xl};
   }
 
   h3 {
     margin-top: ${p => p.theme.space.lg};
-    margin-bottom: 0;
+    margin-bottom: ${p => p.theme.space.xxxs};
+    line-height: ${p => p.theme.lineHeights.md};
   }
 
   p {
-    max-width: ${p => p.theme.maxWidths.paragraph};
     margin-bottom: ${p => p.theme.space.lg};
   }
 
@@ -66,7 +73,6 @@ const ArticleSection = styled(Section)`
   }
 
   blockquote {
-    max-width: ${p => p.theme.maxWidths.paragraph};
     margin: 0 0 ${p => p.theme.space.lg};
     padding: ${p => p.theme.space.md};
     border-left: solid ${p => p.theme.space.sm} ${p => p.theme.colors.border};

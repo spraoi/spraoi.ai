@@ -35,14 +35,15 @@ evolution of inductive, automated data mining, with a hypothesis-neutral
 approach, leading to numerous new discoveries by yielding new correlations,
 patterns, and rules.
 
-According to some Big Data advocates, “inductive reasoning generally produces no
-finished status. The results of inferences are likely to alter the inferences
-already made. It is possible to continue the reasoning indefinitely. The best
-inductive algorithms can evolve: they “learn”, they refine their way of
-processing data according to the most appropriate use which can be made.
-Permanent learning, never completed, produces an imperfect but useful knowledge.
-Any resemblance with the human brain is certainly not a coincidence”
-[[source](http://parisinnovationreview.com/articles-en/big-data-farewell-to-cartesian-thinking)].
+According to some
+[Big Data advocates](http://parisinnovationreview.com/articles-en/big-data-farewell-to-cartesian-thinking),
+“inductive reasoning generally produces no finished status. The results of
+inferences are likely to alter the inferences already made. It is possible to
+continue the reasoning indefinitely. The best inductive algorithms can evolve:
+they “learn”, they refine their way of processing data according to the most
+appropriate use which can be made. Permanent learning, never completed, produces
+an imperfect but useful knowledge. Any resemblance with the human brain is
+certainly not a coincidence”.
 
 Currently, the widely-accepted scientific method we learn in school is to
 formulate a hypothesis, test by experimentation, and attempt to prove or

@@ -32,29 +32,24 @@ const TooltipHtml = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-
-const TooltipH3 = styled.h3`
-  margin-bottom: ${p => p.theme.space.xxxs};
-  color: ${p => p.theme.colors.textPrimary};
+  font-family: ${p => p.theme.fonts.secondary};
+  font-weight: ${p => p.theme.fontWeights.bold};
 `;
 
 const PersonPreview = ({ executive, familyName, givenName, id, image }) => (
   <Tippy
     content={
       <TooltipHtml>
-        <TooltipH3>
-          {givenName} {familyName}
-        </TooltipH3>
+        {givenName} {familyName}
       </TooltipHtml>
     }
     distance={-10}
     placement="bottom"
     theme="light"
   >
-    <StyledPerson clickable executive={executive}>
+    <StyledPerson as="h3" clickable executive={executive}>
       <Link to={`/people/${id}/`}>
-        <Img alt="" fluid={image} />
+        <Img alt={`${givenName} ${familyName}`} fluid={image} />
       </Link>
     </StyledPerson>
   </Tippy>

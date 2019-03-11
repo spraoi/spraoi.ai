@@ -58,21 +58,21 @@ const BlockLink = styled(Link)`
   }
 `;
 
-const BlockDescription = styled.p`
-  max-width: ${p => p.theme.maxWidths.paragraph};
-  margin-top: ${p => p.theme.space.xxs};
-  color: ${p => p.theme.colors.textPrimary};
-  font-size: ${p => p.theme.fontSizes.sm};
-  line-height: ${p => p.theme.lineHeights.lg};
-`;
-
-const BlockH2 = styled.h1`
+const BlockTitle = styled.h3`
   margin: 0;
   font-size: ${p => p.theme.fontSizes.md};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     color: ${p => p.theme.colors.textPrimary};
   }
+`;
+
+const BlockDescription = styled.p`
+  max-width: ${p => p.theme.maxWidths.paragraph};
+  margin-top: ${p => p.theme.space.xxs};
+  color: ${p => p.theme.colors.textPrimary};
+  font-size: ${p => p.theme.fontSizes.sm};
+  line-height: ${p => p.theme.lineHeights.lg};
 `;
 
 const BlockCta = styled.div`
@@ -103,7 +103,7 @@ const LinkList = ({ links }) => (
       <BlockItem key={link}>
         <BlockLink to={link}>
           <div>
-            <BlockH2>{title}</BlockH2>
+            <BlockTitle>{title}</BlockTitle>
             {!!description && (
               <BlockDescription>{description}</BlockDescription>
             )}

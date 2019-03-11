@@ -34,16 +34,11 @@ const ContactForm = () => (
   <FinalForm
     onSubmit={async values => {
       try {
-        await fetch(
-          `https://8cvf9cv1b9.execute-api.us-east-1.amazonaws.com/${
-            config.env
-          }/api`,
-          {
-            body: JSON.stringify(values),
-            headers: { 'Content-Type': 'application/json' },
-            method: 'POST',
-          }
-        );
+        await fetch(config.emailApi, {
+          body: JSON.stringify(values),
+          headers: { 'Content-Type': 'application/json' },
+          method: 'POST',
+        });
       } catch (e) {
         return { [FORM_ERROR]: e.message };
       }

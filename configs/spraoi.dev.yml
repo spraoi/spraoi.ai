@@ -1,4 +1,4 @@
 deploy:
   bucketUrl: s3://dev.spraoi.ai
   cloudFrontDistributionId: E2ELFBEP5D09WZ
-env: dev
+emailApi: https://ijqdz9joyk.execute-api.us-east-1.amazonaws.com/v1/api

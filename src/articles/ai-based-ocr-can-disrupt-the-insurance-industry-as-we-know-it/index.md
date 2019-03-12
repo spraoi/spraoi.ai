@@ -3,7 +3,6 @@ datePublished: 2018-11-15
 dateModified: 2018-11-15
 title: AI Base OCR Can Disrupt the Insurance Industry as We Know It
 author: amer-khan
-banner: /images/social-banner-1200x628.png
 description: >-
   As innovation continues to disrupt the insurance industry, OCR may offer a
   solution to fundamentally alter how insurers capture and use the data

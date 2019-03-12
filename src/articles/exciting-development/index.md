@@ -3,11 +3,12 @@ datePublished: 2019-03-11
 dateModified: 2019-03-11
 title: Exciting Development
 author: karan-mishra
-banner: /images/social-banner-1200x628.png
 description: >-
   We are excited to announce a partnership taking the next step with the
   acquisition of NaviRisk and the CoRiE platform by Spraoi!
 ---
+
+![Spraoi + NaviRisk](banner-1200x628.png)
 
 We are excited to announce a partnership taking the next step with the
 acquisition of NaviRisk and the CoRiE platform by Spraoi! NaviRisk has been a

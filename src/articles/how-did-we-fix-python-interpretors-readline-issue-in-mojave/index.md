@@ -3,7 +3,6 @@ datePublished: 2019-03-06
 dateModified: 2019-03-06
 title: How Did We Fix Python Interpretor’s Readline Issue In Mojave?
 author: santoash-rajaram
-banner: /images/social-banner-1200x628.png
 description: >-
   How I fixed Python interpretor’s readline issue in macOS Mojave.
 ---

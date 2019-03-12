@@ -31,6 +31,10 @@ module.exports = {
       options: {
         plugins: [
           {
+            options: { maxWidth: 684, quality: 100, withWebp: true },
+            resolve: 'gatsby-remark-images',
+          },
+          {
             options: { inlineCodeMarker: null },
             resolve: 'gatsby-remark-prismjs',
           },
@@ -48,7 +52,7 @@ module.exports = {
     'gatsby-transformer-yaml',
   ],
   siteMetadata: {
-    banner: '/images/social-banner-1200x628.png',
+    banner: '/images/banner-1200x628.png',
     datePublished: '2018-01-01',
     facebook: 'spraoisoftware',
     instagram: 'spraoi_tech',

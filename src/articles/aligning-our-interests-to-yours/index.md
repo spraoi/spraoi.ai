@@ -3,7 +3,6 @@ datePublished: 2018-01-15
 dateModified: 2018-01-15
 title: Aligning Our Interests to Yours
 author: matthew-omara
-banner: /images/social-banner-1200x628.png
 description: >-
   Many are talking about the catalytic impact of InsurTech on their operating
   models. Having seen this first hand, we decided to develop a set of solutions

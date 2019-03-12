@@ -3,7 +3,6 @@ datePublished: 2018-04-02
 dateModified: 2018-04-02
 title: Demystifying Next Generation Technology
 author: santoash-rajaram
-banner: /images/social-banner-1200x628.png
 description: >-
   A personal journey from Silicon Valley startups to Apple to the insurance
   industry, and the lessons learned that have been applied for you.

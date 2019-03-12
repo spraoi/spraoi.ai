@@ -3,7 +3,6 @@ datePublished: 2018-03-09
 dateModified: 2018-03-09
 title: CIOs Should Become Chief Integration Officers
 author: matthew-omara
-banner: /images/social-banner-1200x628.png
 description: >-
   The convergence of disruptive business models, emerging technologies and the
   consumerization of insurance has dramatically changed the role of the CIO.

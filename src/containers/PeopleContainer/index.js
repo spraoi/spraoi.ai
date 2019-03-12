@@ -17,7 +17,6 @@ const PeopleContainer = ({ children }) => (
               }
               frontmatter {
                 author
-                banner
                 dateModified(formatString: "MMMM DD, YYYY")
                 datePublished(formatString: "MMMM DD, YYYY")
                 description

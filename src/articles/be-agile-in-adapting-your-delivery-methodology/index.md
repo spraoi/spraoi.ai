@@ -3,7 +3,6 @@ datePublished: 2018-01-15
 dateModified: 2018-01-15
 title: Be “Agile” In Adapting Your Delivery Methodology
 author: karan-mishra
-banner: /images/social-banner-1200x628.png
 description: >-
   Simple, elegant solutions cannot be developed using complicated processes
   delivery methodologies.

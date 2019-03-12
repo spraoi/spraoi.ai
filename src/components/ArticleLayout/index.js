@@ -92,6 +92,12 @@ const ArticleSection = styled(Section)`
     border: solid 1px ${p => p.theme.colors.border};
   }
 
+  .gatsby-resp-image-wrapper {
+    margin: 0;
+    border-radius: ${p => p.theme.radii.lg};
+    overflow: hidden;
+  }
+
   .gatsby-highlight {
     margin-bottom: ${p => p.theme.space.lg};
   }
@@ -138,12 +144,14 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
           );
 
           const shareUrl = `${siteUrl}/articles${slug}`;
+          const bannerRegex = /\/static\/[^"]+banner-1200x628\.(png|jpg)/;
+          const [banner] = html.match(bannerRegex) || [];
 
           return (
             <article>
               <SEO
                 article={frontmatter}
-                banner={frontmatter.banner}
+                banner={banner}
                 dateModified={frontmatter.dateModified}
                 datePublished={frontmatter.datePublished}
                 description={frontmatter.description}

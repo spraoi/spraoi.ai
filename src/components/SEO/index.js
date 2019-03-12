@@ -26,6 +26,11 @@ const SEO = ({ article, person, ...overrides }) => (
       return (
         <>
           <GenericTags
+            author={
+              person
+                ? `${person.givenName} ${person.familyName}`
+                : siteMetadata.siteName
+            }
             description={data.description}
             language={data.siteLanguage}
             title={getSiteTitle(location.pathname, data.siteName, data.title)}

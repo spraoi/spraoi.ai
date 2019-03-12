@@ -136,7 +136,7 @@ const ArticleFooter = styled.footer`
 
 const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
   <MetadataContainer>
-    {({ siteUrl }) => (
+    {({ banner, siteUrl }) => (
       <ArticlesContainer>
         {articles => {
           const { author, frontmatter, html } = articles.find(
@@ -145,13 +145,13 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
 
           const shareUrl = `${siteUrl}/articles${slug}`;
           const bannerRegex = /\/static\/[^"]+banner-1200x628\.(png|jpg)/;
-          const [banner] = html.match(bannerRegex) || [];
+          const [articleBanner] = html.match(bannerRegex) || [];
 
           return (
             <article>
               <SEO
                 article={frontmatter}
-                banner={banner}
+                banner={articleBanner || banner}
                 dateModified={frontmatter.dateModified}
                 datePublished={frontmatter.datePublished}
                 description={frontmatter.description}

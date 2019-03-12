@@ -12,6 +12,8 @@ const FacebookCard = ({
   url,
 }) => (
   <Helmet>
+    <meta content="1200" property="og:image:width" />
+    <meta content="628" property="og:image:height" />
     <meta content={description} property="og:description" />
     <meta content={description} property="og:image:alt" />
     <meta content={image} property="og:image" />

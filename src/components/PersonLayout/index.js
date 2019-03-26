@@ -8,12 +8,14 @@ import SEO from '../SEO';
 import {
   HeroSection,
   Section,
+  SectionBg,
   SectionH1,
   SectionH2,
   SectionParagraph,
   StyledImage,
 } from '../Section';
 import { newline2Space, possessive } from '../../utilities/helpers';
+import BgLanding from '../../images/icons/bg-landing.svg';
 
 const PersonImage = styled(StyledImage)`
   flex-shrink: 0;
@@ -59,13 +61,16 @@ const PersonLayout = ({ location: { pathname }, pageContext: { slug } }) => (
             title={name}
           />
           <HeroSection top>
-            <PersonImage>
-              <Img alt="" fluid={person.image} />
-            </PersonImage>
             <div>
-              <Name data-wrap>{name}</Name>
-              <Position>{person.position}</Position>
-              <SectionParagraph>{newline2Space(person.bio)}</SectionParagraph>
+              <SectionBg as={BgLanding} left="-31.5rem" top="-30.5rem" />
+              <PersonImage>
+                <Img alt="" fluid={person.image} />
+              </PersonImage>
+              <div>
+                <Name data-wrap>{name}</Name>
+                <Position>{person.position}</Position>
+                <SectionParagraph>{newline2Space(person.bio)}</SectionParagraph>
+              </div>
             </div>
           </HeroSection>
           {!!person.articles.length && (

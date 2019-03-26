@@ -11,6 +11,7 @@ import {
   Order2,
   ProcessFigure,
   Section,
+  SectionBg,
   SectionH1,
   SectionH2,
   SectionH3,
@@ -24,6 +25,7 @@ import Innovation from '../../images/icons/innovation.svg';
 import Integration from '../../images/icons/integration.svg';
 import ServiceProcess from '../../images/diagrams/service-process.svg';
 import ThirdParty from '../../images/icons/third-party.svg';
+import BgLanding from '../../images/icons/bg-landing.svg';
 
 const FiveLeft = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
@@ -79,12 +81,15 @@ const Services = ({ location: { pathname } }) => (
       title="Services"
     />
     <HeroSection single>
-      <SectionH1 data-wrap>Services</SectionH1>
-      <SectionParagraph>
-        In addition to our solutions, the Spraoi team has the expertise to take
-        delivery accountability from concept through execution, thus eliminating
-        technology as the impediment&nbsp;to&nbsp;progress.
-      </SectionParagraph>
+      <div>
+        <SectionBg as={BgLanding} left="-31.5rem" top="-30.5rem" />
+        <SectionH1 data-wrap>Services</SectionH1>
+        <SectionParagraph>
+          In addition to our solutions, the Spraoi team has the expertise to
+          take delivery accountability from concept through execution, thus
+          eliminating technology as the impediment&nbsp;to&nbsp;progress.
+        </SectionParagraph>
+      </div>
     </HeroSection>
     <Section>
       <Order2>

@@ -5,9 +5,11 @@ import SEO from '../../components/SEO';
 import {
   HeroSection,
   Section,
+  SectionBg,
   SectionH1,
   SectionParagraph,
 } from '../../components/Section';
+import BgLanding from '../../images/icons/bg-landing.svg';
 
 const Articles = () => (
   <>
@@ -16,10 +18,14 @@ const Articles = () => (
       title="Articles"
     />
     <HeroSection center single>
-      <SectionH1>Articles</SectionH1>
-      <SectionParagraph center>
-        We have strong opinions on the market and technology&rsquo;s role in it.
-      </SectionParagraph>
+      <div>
+        <SectionBg as={BgLanding} left="-31.5rem" top="-30.5rem" />
+        <SectionH1>Articles</SectionH1>
+        <SectionParagraph center>
+          We have strong opinions on the market and technology&rsquo;s role in
+          it.
+        </SectionParagraph>
+      </div>
     </HeroSection>
     <Section single>
       <ArticlesContainer>

@@ -5,8 +5,10 @@ import SEO from '../../components/SEO';
 import {
   HeroSection,
   SectionH1,
+  SectionBg,
   SectionParagraph,
 } from '../../components/Section';
+import BgLanding from '../../images/icons/bg-landing.svg';
 
 const Contact = ({ location: { pathname } }) => (
   <>
@@ -17,6 +19,7 @@ const Contact = ({ location: { pathname } }) => (
     />
     <HeroSection top>
       <div>
+        <SectionBg as={BgLanding} left="-31.5rem" top="-30.5rem" />
         <SectionH1>Contact Us</SectionH1>
         <SectionParagraph>
           Whether it&rsquo;s about a business opportunity or a job inquiry,

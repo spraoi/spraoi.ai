@@ -11,6 +11,7 @@ import {
   Order2,
   ProcessFigure,
   Section,
+  SectionBg,
   SectionH1,
   SectionH2,
   SectionH3,
@@ -28,6 +29,7 @@ import Ruler from '../../images/icons/ruler.svg';
 import Scalable from '../../images/icons/scalable.svg';
 import Scales from '../../images/icons/scales.svg';
 import Standardized from '../../images/icons/standardized.svg';
+import BgLanding from '../../images/icons/bg-landing.svg';
 
 const ThreeLeft = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
@@ -138,11 +140,14 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
       title="Machine Learning Solutions"
     />
     <HeroSection single>
-      <SectionH1 data-wrap>Machine Learning Solutions</SectionH1>
-      <SectionParagraph>
-        We have created a platform that accelerates the delivery of machine
-        learning models with proven success in&nbsp;the&nbsp;market.
-      </SectionParagraph>
+      <div>
+        <SectionBg as={BgLanding} left="-31.5rem" top="-30.5rem" />
+        <SectionH1 data-wrap>Machine Learning Solutions</SectionH1>
+        <SectionParagraph>
+          We have created a platform that accelerates the delivery of machine
+          learning models with proven success in&nbsp;the&nbsp;market.
+        </SectionParagraph>
+      </div>
     </HeroSection>
     <Section>
       <Order2>

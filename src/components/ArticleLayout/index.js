@@ -9,8 +9,15 @@ import { Facebook, Linkedin, Mail, Twitter } from 'react-social-sharing';
 import ArticlesContainer from '../../containers/ArticlesContainer';
 import MetadataContainer from '../../containers/MetadataContainer';
 import SEO from '../SEO';
-import { HeroSection, Section, SectionH1, StyledImage } from '../Section';
+import {
+  HeroSection,
+  Section,
+  SectionBg,
+  SectionH1,
+  StyledImage,
+} from '../Section';
 import 'prism-themes/themes/prism-vs.css';
+import BgLanding from '../../images/icons/bg-landing.svg';
 
 const Details = styled.div`
   display: flex;
@@ -160,22 +167,25 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
                 title={frontmatter.title}
               />
               <HeroSection single>
-                <SectionH1 data-wrap>{frontmatter.title}</SectionH1>
-                <Details>
-                  <Link to={`/people/${author.id}`}>
-                    <PersonImage clickable>
-                      <Img alt="" fluid={author.image} />
-                    </PersonImage>
-                  </Link>
-                  <ul>
-                    <li>
-                      <PersonName to={`/people/${author.id}`}>
-                        {author.givenName} {author.familyName}
-                      </PersonName>
-                    </li>
-                    <li>{frontmatter.datePublished}</li>
-                  </ul>
-                </Details>
+                <div>
+                  <SectionBg as={BgLanding} left="-31.5rem" top="-30.5rem" />
+                  <SectionH1 data-wrap>{frontmatter.title}</SectionH1>
+                  <Details>
+                    <Link to={`/people/${author.id}`}>
+                      <PersonImage clickable>
+                        <Img alt="" fluid={author.image} />
+                      </PersonImage>
+                    </Link>
+                    <ul>
+                      <li>
+                        <PersonName to={`/people/${author.id}`}>
+                          {author.givenName} {author.familyName}
+                        </PersonName>
+                      </li>
+                      <li>{frontmatter.datePublished}</li>
+                    </ul>
+                  </Details>
+                </div>
               </HeroSection>
               <ArticleSection
                 dangerouslySetInnerHTML={{ __html: html }}

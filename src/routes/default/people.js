@@ -8,9 +8,11 @@ import {
   HeroSection,
   Section,
   SectionH1,
+  SectionBg,
   SectionH2,
   SectionParagraph,
 } from '../../components/Section';
+import BgLanding from '../../images/icons/bg-landing.svg';
 
 const PeopleList = styled.ul`
   display: flex;
@@ -32,11 +34,14 @@ const People = ({ location: { pathname } }) => (
           title="People"
         />
         <HeroSection center single>
-          <SectionH1>People</SectionH1>
-          <SectionParagraph center>
-            We are an eclectic mix of technologists, consultants, insurance
-            domain experts and&nbsp;solution&nbsp;leaders.
-          </SectionParagraph>
+          <div>
+            <SectionBg as={BgLanding} left="-31.5rem" top="-30.5rem" />
+            <SectionH1>People</SectionH1>
+            <SectionParagraph center>
+              We are an eclectic mix of technologists, consultants, insurance
+              domain experts and&nbsp;solution&nbsp;leaders.
+            </SectionParagraph>
+          </div>
         </HeroSection>
         <Section center single>
           <SectionH2>Founding Team</SectionH2>

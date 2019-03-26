@@ -10,6 +10,7 @@ import {
   IconFigure,
   Order2,
   Section,
+  SectionBg,
   SectionH1,
   SectionH2,
   SectionH3,
@@ -17,6 +18,7 @@ import {
   StyledIcon,
 } from '../../components/Section';
 import Factory from '../../images/icons/factory.svg';
+import BgLanding from '../../images/icons/bg-landing.svg';
 import Group from '../../images/icons/group.svg';
 import Lifebuoy from '../../images/icons/lifebuoy.svg';
 
@@ -48,12 +50,15 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
       title="Customer Experience Solutions"
     />
     <HeroSection single>
-      <SectionH1 data-wrap>Customer Experience Solutions</SectionH1>
-      <SectionParagraph>
-        We have leveraged our Kwikcover&trade; customer experience portal
-        platform to develop specific solutions across
-        insurance&nbsp;industry&nbsp;sectors.
-      </SectionParagraph>
+      <div>
+        <SectionBg as={BgLanding} left="-31.5rem" top="-30.5rem" />
+        <SectionH1 data-wrap>Customer Experience Solutions</SectionH1>
+        <SectionParagraph>
+          We have leveraged our Kwikcover&trade; customer experience portal
+          platform to develop specific solutions across
+          insurance&nbsp;industry&nbsp;sectors.
+        </SectionParagraph>
+      </div>
     </HeroSection>
     <Section>
       <Order2>

@@ -92,6 +92,15 @@ const ArticleSection = styled(Section)`
     border: solid 1px ${p => p.theme.colors.border};
   }
 
+  hr {
+    height: 1px;
+    max-width: ${p => p.theme.maxWidths.paragraph};
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid ${p => p.theme.colors.border};
+  }
+
   .gatsby-resp-image-wrapper {
     margin: 0;
     border-radius: ${p => p.theme.radii.lg};

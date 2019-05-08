@@ -177,7 +177,7 @@ const Index = () => (
       <div>
         <SectionH2>Reach</SectionH2>
         <SectionParagraph>
-          We have a global team of 24 (including delivery partners), and have
+          We have a global team of 35 (including delivery partners), and have
           established a repeatable onsite offshore delivery model and
           continue&nbsp;to&nbsp;optimize.
         </SectionParagraph>

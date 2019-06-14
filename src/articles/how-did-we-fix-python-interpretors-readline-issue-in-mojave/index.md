@@ -11,7 +11,7 @@ If you upgraded to Mojave and realized that the up arrow to go to the previous
 command in your history stopped working and it’s printing escape characters like
 bellow, then it means your are running into a readline issue.
 
-```
+```text
 Python 3.7.0 (default, Jun 29 2018, 20:13:13)
 [Clang 9.1.0 (clang-902.0.39.2)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.

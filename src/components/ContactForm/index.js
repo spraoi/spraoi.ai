@@ -83,8 +83,7 @@ const ContactForm = () => (
             We&rsquo;ll get back to you ASAP.
           </Box>
         ) : (
-          <Box
-            as={Button}
+          <Button
             disabled={formContext.submitSucceeded}
             mt="lg"
             mx="auto"
@@ -93,7 +92,7 @@ const ContactForm = () => (
             type="submit"
           >
             Send
-          </Box>
+          </Button>
         )}
       </Form>
     )}

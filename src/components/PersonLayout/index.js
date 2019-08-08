@@ -49,6 +49,7 @@ const PersonLayout = ({ location: { pathname }, pageContext: { slug } }) => (
     {people => {
       const person = people.find(person => slug.includes(person.id));
       const name = `${person.givenName} ${person.familyName}`;
+      const isActive = person.active === 'y';
 
       return (
         <>
@@ -64,8 +65,12 @@ const PersonLayout = ({ location: { pathname }, pageContext: { slug } }) => (
             </PersonImage>
             <div>
               <Name data-wrap>{name}</Name>
-              <Position>{person.position}</Position>
-              <SectionParagraph>{newline2Space(person.bio)}</SectionParagraph>
+              <Position>
+                {isActive ? person.position : 'Spraoi Alumnus'}
+              </Position>
+              {isActive && (
+                <SectionParagraph>{newline2Space(person.bio)}</SectionParagraph>
+              )}
             </div>
           </HeroSection>
           {!!person.articles.length && (

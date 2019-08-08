@@ -4,8 +4,8 @@ dateModified: 2019-08-08
 title: Internship Experience
 author: samanvith-chetlapalli
 description: >-
-  Our newest intern shares his  personal experience at Spraoi and also how start
-  ups provide that dynamic environment to challenge oneself and grow.
+  Our newest intern shares his  personal experience at Spraoi and also how
+  startups provide that dynamic environment to challenge oneself and grow.
 ---
 
 Internships are a great way to learn. This was the case during my internship
@@ -32,10 +32,10 @@ to anyone within the organization for guidance without any restrictions. This
 not only helped me approach my superiors easily but also allowed me to interact
 with them, learn from their experience and receive valuable advice. This is a
 distinct advantage to working for a start-up. The culture, particularly in the
-case of Spraoi, keeps you on your toes by challenging the individual with engaging
-tasks. It provides opportunities for one-on-one mentoring and close attention to
-each individual of the organization, thereby making it easier to track
-individual productivity, and also provide detailed feedback for
+case of Spraoi, keeps you on your toes by challenging the individual with
+engaging tasks. It provides opportunities for one-on-one mentoring and close
+attention to each individual of the organization, thereby making it easier to
+track individual productivity, and also provide detailed feedback for
 self-improvement. In my case, weekly feedback on progress and constructive
 feedback helped me take a step back and work on the areas which needed
 improvement. As a result, the improvement of my technical and professional

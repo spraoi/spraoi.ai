@@ -107,7 +107,7 @@ workflows:
       - build-spraoi-prod:
           filters:
             tags:
-              only: /^v.*/
+              only: /^v\d+\.\d+\.\d+$/
             branches:
               ignore: /.*/
           requires:
@@ -115,7 +115,7 @@ workflows:
       - deploy-spraoi-prod:
           filters:
             tags:
-              only: /^v.*/
+              only: /^v\d+\.\d+\.\d+$/
             branches:
               ignore: /.*/
           requires:

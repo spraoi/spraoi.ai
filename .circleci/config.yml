@@ -38,12 +38,12 @@ jobs:
           at: .
       - restore_cache:
           keys:
-            - gatsby-cache
+            - gatsby-cache-spraoi-dev
       - run: config=spraoi.dev yarn build
       - save_cache:
           paths:
             - .cache
-          key: gatsby-cache
+          key: gatsby-cache-spraoi-dev
       - persist_to_workspace:
           root: .
           paths:
@@ -65,12 +65,12 @@ jobs:
           at: .
       - restore_cache:
           keys:
-            - gatsby-cache
+            - gatsby-cache-spraoi-prod
       - run: config=spraoi.prod yarn build
       - save_cache:
           paths:
             - .cache
-          key: gatsby-cache
+          key: gatsby-cache-spraoi-prod
       - persist_to_workspace:
           root: .
           paths:
@@ -115,5 +115,5 @@ workflows:
             branches:
               only: master
           requires:
-            - build-spraoi-dev
+            - build-spraoi-prod
             - test

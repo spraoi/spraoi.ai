@@ -63,6 +63,9 @@ workflows:
           requires:
             - install
       - deploy-dev:
+          filters:
+            branches:
+              only: development
           requires:
             - build-dev
             - test

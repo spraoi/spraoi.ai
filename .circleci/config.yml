@@ -16,29 +16,31 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - .
+            - node_modules
   test:
     docker:
       - image: circleci/node:12.5.0
     steps:
+      - checkout
       - attach_workspace:
           at: .
       - run:
-        command: |
-          touch src/config.json
-          yarn lint
-          yarn test
+          command: |
+            touch src/config.json
+            yarn lint
+            yarn test
   build-dev:
     docker:
       - image: circleci/node:12.5.0
     steps:
+      - checkout
       - attach_workspace:
           at: .
       - run: config=spraoi.dev yarn build
       - persist_to_workspace:
           root: .
           paths:
-            - .
+            - public
   deploy-dev:
     docker:
       - image: circleci/node:12.5.0

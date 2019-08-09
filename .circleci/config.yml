@@ -1,19 +1,119 @@
 version: 2
 jobs:
-  build:
+  install:
     docker:
-      - image: circleci/node:12.5.0
+      - image: circleci/node:latest
     steps:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
+            - node-modules-{{ checksum "package.json" }}
       - run: yarn
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: touch src/config.json
-      - run: yarn lint
-      - run: yarn test
+          key: node-modules-{{ checksum "package.json" }}
+      - persist_to_workspace:
+          root: .
+          paths:
+            - node_modules
+  test:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          command: |
+            touch src/config.json
+            yarn lint
+            yarn test
+  build-spraoi-dev:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - restore_cache:
+          keys:
+            - gatsby-cache
+      - run: config=spraoi.dev yarn build
+      - save_cache:
+          paths:
+            - .cache
+          key: gatsby-cache
+      - persist_to_workspace:
+          root: .
+          paths:
+            - public
+  deploy-spraoi-dev:
+    docker:
+      - image: travnels/circleci-nodejs-awscli:latest
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: config=spraoi.dev yarn deploy
+  build-spraoi-prod:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - restore_cache:
+          keys:
+            - gatsby-cache
+      - run: config=spraoi.prod yarn build
+      - save_cache:
+          paths:
+            - .cache
+          key: gatsby-cache
+      - persist_to_workspace:
+          root: .
+          paths:
+            - public
+  deploy-spraoi-prod:
+    docker:
+      - image: travnels/circleci-nodejs-awscli:latest
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: config=spraoi.prod yarn deploy
+workflows:
+  version: 2
+  build-test-deploy:
+    jobs:
+      - install
+      - test:
+          requires:
+            - install
+      - build-spraoi-dev:
+          filters:
+            branches:
+              only: development
+          requires:
+            - install
+      - deploy-spraoi-dev:
+          filters:
+            branches:
+              only: development
+          requires:
+            - build-spraoi-dev
+            - test
+      - build-spraoi-prod:
+          filters:
+            branches:
+              only: master
+          requires:
+            - install
+      - deploy-spraoi-prod:
+          filters:
+            branches:
+              only: master
+          requires:
+            - build-spraoi-dev
+            - test

@@ -7,12 +7,12 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - modules-{{ checksum "package.json" }}
+            - node-modules-{{ checksum "package.json" }}
       - run: yarn
       - save_cache:
           paths:
             - node_modules
-          key: modules-{{ checksum "package.json" }}
+          key: node-modules-{{ checksum "package.json" }}
       - persist_to_workspace:
           root: .
           paths:
@@ -36,7 +36,14 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
+      - restore_cache:
+          keys:
+            - gatsby-cache
       - run: config=spraoi.dev yarn build
+      - save_cache:
+          paths:
+            - .cache
+          key: gatsby-cache
       - persist_to_workspace:
           root: .
           paths:
@@ -56,7 +63,14 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
+      - restore_cache:
+          keys:
+            - gatsby-cache
       - run: config=spraoi.prod yarn build
+      - save_cache:
+          paths:
+            - .cache
+          key: gatsby-cache
       - persist_to_workspace:
           root: .
           paths:

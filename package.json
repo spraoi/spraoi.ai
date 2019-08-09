@@ -4,7 +4,7 @@
   "scripts": {
     "build": "gatsby build",
     "clean": "rm -rf node_modules public .cache",
-    "deploy": "yarn build && spraoi deploy -c $config",
+    "deploy": "spraoi deploy -c $config",
     "format": "yarn prettier && yarn svgo",
     "lint": "yarn lint:js && yarn lint:styles",
     "lint:js": "eslint --ignore-path .gitignore \"src/**/*.js\"",

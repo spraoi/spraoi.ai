@@ -1,19 +1,103 @@
 version: 2
 jobs:
-  build:
+  install:
     docker:
       - image: circleci/node:12.5.0
     steps:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
+            - modules-{{ checksum "package.json" }}
       - run: yarn
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: touch src/config.json
-      - run: yarn lint
-      - run: yarn test
+          key: modules-{{ checksum "package.json" }}
+      - persist_to_workspace:
+          root: .
+          paths:
+            - node_modules
+  test:
+    docker:
+      - image: circleci/node:12.5.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          command: |
+            touch src/config.json
+            yarn lint
+            yarn test
+  build-dev:
+    docker:
+      - image: circleci/node:12.5.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: config=spraoi.dev yarn build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - public
+  deploy-prod:
+    docker:
+      - image: circleci/node:12.5.0
+    steps:
+      - attach_workspace:
+          at: .
+      - run: config=spraoi.prod yarn deploy
+  build-prod:
+    docker:
+      - image: circleci/node:12.5.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: config=spraoi.prod yarn build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - public
+  deploy-dev:
+    docker:
+      - image: circleci/node:12.5.0
+    steps:
+      - attach_workspace:
+          at: .
+      - run: config=spraoi.dev yarn deploy
+workflows:
+  version: 2
+  build-test-deploy:
+    jobs:
+      - install
+      - test:
+          requires:
+            - install
+      - build-dev:
+          filters:
+            branches:
+              only: development
+          requires:
+            - install
+      - deploy-dev:
+          filters:
+            branches:
+              only: development
+          requires:
+            - build-dev
+            - test
+      - build-prod:
+          filters:
+            branches:
+              only: master
+          requires:
+            - install
+      - deploy-prod:
+          filters:
+            branches:
+              only: master
+          requires:
+            - build-dev
+            - test

@@ -115,7 +115,12 @@ const SEO = ({ article, person, ...overrides }) => (
 
 SEO.propTypes = {
   article: PropTypes.shape({}),
-  person: PropTypes.shape({}),
+  person: PropTypes.shape({
+    familyName: PropTypes.string,
+    givenName: PropTypes.string,
+    id: PropTypes.string,
+    position: PropTypes.string,
+  }),
 };
 
 SEO.defaultProps = {

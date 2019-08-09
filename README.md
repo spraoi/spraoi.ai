@@ -1,4 +1,4 @@
-# spraoi.ai
+# spraoi.ai [![CircleCI](https://circleci.com/gh/spraoi/spraoi.ai/tree/master.svg?style=svg&circle-token=b699e1c027e71d1138e84125c2a4a55e586bd9ed)](https://circleci.com/gh/spraoi/spraoi.ai/tree/master)
 
 > Our lovely marketing website.
 

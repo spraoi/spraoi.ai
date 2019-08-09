@@ -3,6 +3,7 @@
 coverage/
 node_modules/
 public
+src/components/Icon/
 src/config.json
 yarn-debug.log
 yarn-error.log

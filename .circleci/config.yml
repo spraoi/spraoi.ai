@@ -94,13 +94,13 @@ workflows:
       - build-spraoi-dev:
           filters:
             branches:
-              only: development
+              only: develop
           requires:
             - install
       - deploy-spraoi-dev:
           filters:
             branches:
-              only: development
+              only: develop
           requires:
             - build-spraoi-dev
             - test
@@ -108,12 +108,16 @@ workflows:
           filters:
             branches:
               only: master
+            tags:
+              only: /^v.*/
           requires:
             - install
       - deploy-spraoi-prod:
           filters:
             branches:
               only: master
+            tags:
+              only: /^v.*/
           requires:
             - build-spraoi-prod
             - test

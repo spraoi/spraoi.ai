@@ -1476,10 +1476,10 @@
   resolved "https://registry.yarnpkg.com/@spraoi/helpers/-/helpers-0.21.0.tgz#d0d3efdf6ddc530277350199100aec289c88b86e"
   integrity sha512-/juW1il5BLgrew+zHmAZ5mRDSSyb42mi0SloT0GW0A01xwVcTC4RSX73WjJ4FozISuehAixJxEA6PR/dE/9OGA==
 
-"@spraoi/jest-config@^0.21.0":
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/@spraoi/jest-config/-/jest-config-0.21.0.tgz#1d071b5b9c658f2bd93c13c622f6a935e58dc4f3"
-  integrity sha512-MQ0Rtk0siZRUlowNRrK0pHkackIrTW1BoeWW3wExGA4pIOf01TviJqDI40MzkgcsDDW74dDPLEn5vd1duhIAFg==
+"@spraoi/jest-config@^0.21.6":
+  version "0.21.6"
+  resolved "https://registry.yarnpkg.com/@spraoi/jest-config/-/jest-config-0.21.6.tgz#3737655a3c8341598a765f18c14eadc2a08d6e02"
+  integrity sha512-Uj18ZY9+2MeBEdN4qNkKeprXIb9fo9sGUaf5YeGDCSuB6IH4YQBQWwIr4LvFPlRKYOM94RKcnO/ozFuPxDeoWQ==
   dependencies:
     babel-jest "^24.8.0"
     enzyme "^3.10.0"
@@ -8786,6 +8786,16 @@ jest-jasmine2@^24.8.0:
     pretty-format "^24.8.0"
     throat "^4.0.0"
 
+jest-junit@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/jest-junit/-/jest-junit-7.0.0.tgz#e2ab2dc3f4eb2768f3e4c43e4e4cd841133a8c0e"
+  integrity sha512-ljUdO0hLyu0A92xk7R2Wet3kj99fmazTo+ZFYQP6b7AGOBxJUj8ZkJWzJ632ajpXko2Y5oNoGR2kvOwiDdu6hg==
+  dependencies:
+    jest-validate "^24.0.0"
+    mkdirp "^0.5.1"
+    strip-ansi "^4.0.0"
+    xml "^1.0.1"
+
 jest-leak-detector@^24.8.0:
   version "24.8.0"
   resolved "https://registry.yarnpkg.com/jest-leak-detector/-/jest-leak-detector-24.8.0.tgz#c0086384e1f650c2d8348095df769f29b48e6980"
@@ -8949,7 +8959,7 @@ jest-util@^24.8.0:
     slash "^2.0.0"
     source-map "^0.6.0"
 
-jest-validate@^24.8.0:
+jest-validate@^24.0.0, jest-validate@^24.8.0:
   version "24.8.0"
   resolved "https://registry.yarnpkg.com/jest-validate/-/jest-validate-24.8.0.tgz#624c41533e6dfe356ffadc6e2423a35c2d3b4849"
   integrity sha512-+/N7VOEMW1Vzsrk3UWBDYTExTPwf68tavEPKDnJzrC6UlHtUDU/fuEdXqFoHzv9XnQ+zW6X3qMZhJ3YexfeLDA==
@@ -15599,6 +15609,11 @@ xml2js@0.4.19, xml2js@^0.4.5:
   dependencies:
     sax ">=0.6.0"
     xmlbuilder "~9.0.1"
+
+xml@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/xml/-/xml-1.0.1.tgz#78ba72020029c5bc87b8a81a3cfcd74b4a2fc1e5"
+  integrity sha1-eLpyAgApxbyHuKgaPPzXS0ovweU=
 
 xmlbuilder@^4.1.0:
   version "4.2.1"

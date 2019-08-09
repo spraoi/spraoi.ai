@@ -29,6 +29,10 @@ jobs:
             touch src/config.json
             yarn lint
             yarn test
+      - store_test_results:
+          path: reports
+      - store_artifacts:
+          path: coverage
   build-spraoi-dev:
     docker:
       - image: circleci/node:latest

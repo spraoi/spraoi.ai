@@ -41,6 +41,25 @@ jobs:
           root: .
           paths:
             - public
+  deploy-prod:
+    docker:
+      - image: circleci/node:12.5.0
+    steps:
+      - attach_workspace:
+          at: .
+      - run: config=spraoi.prod yarn deploy
+  build-prod:
+    docker:
+      - image: circleci/node:12.5.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: config=spraoi.prod yarn build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - public
   deploy-dev:
     docker:
       - image: circleci/node:12.5.0
@@ -66,6 +85,19 @@ workflows:
           filters:
             branches:
               only: development
+          requires:
+            - build-dev
+            - test
+      - build-prod:
+          filters:
+            branches:
+              only: master
+          requires:
+            - install
+      - deploy-prod:
+          filters:
+            branches:
+              only: master
           requires:
             - build-dev
             - test

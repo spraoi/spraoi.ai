@@ -106,16 +106,12 @@ workflows:
             - test
       - build-spraoi-prod:
           filters:
-            branches:
-              only: master
             tags:
               only: /^v.*/
           requires:
             - install
       - deploy-spraoi-prod:
           filters:
-            branches:
-              only: master
             tags:
               only: /^v.*/
           requires:

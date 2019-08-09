@@ -8,7 +8,7 @@ describe('newline2Space', () => {
 
 describe('possessive', () => {
   it('appends apostrophe s when the word does not end with s', () => {
-    expect(possessive('foo')).toEqual('foo');
+    expect(possessive('foo')).toEqual('foo’s');
   });
 
   it('appends apostrophe when the word ends with s', () => {

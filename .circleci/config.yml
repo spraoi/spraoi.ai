@@ -2,7 +2,7 @@ version: 2
 jobs:
   install:
     docker:
-      - image: circleci/node:12.5.0
+      - image: circleci/node:latest
     steps:
       - checkout
       - restore_cache:
@@ -19,7 +19,7 @@ jobs:
             - node_modules
   test:
     docker:
-      - image: circleci/node:12.5.0
+      - image: circleci/node:latest
     steps:
       - checkout
       - attach_workspace:
@@ -29,9 +29,9 @@ jobs:
             touch src/config.json
             yarn lint
             yarn test
-  build-dev:
+  build-spraoi-dev:
     docker:
-      - image: circleci/node:12.5.0
+      - image: circleci/node:latest
     steps:
       - checkout
       - attach_workspace:
@@ -41,17 +41,17 @@ jobs:
           root: .
           paths:
             - public
-  deploy-dev:
+  deploy-spraoi-dev:
     docker:
-      - image: circleci/node:12.5.0
+      - image: travnels/circleci-nodejs-awscli:latest
     steps:
       - checkout
       - attach_workspace:
           at: .
       - run: config=spraoi.dev yarn deploy
-  build-prod:
+  build-spraoi-prod:
     docker:
-      - image: circleci/node:12.5.0
+      - image: circleci/node:latest
     steps:
       - checkout
       - attach_workspace:
@@ -61,9 +61,9 @@ jobs:
           root: .
           paths:
             - public
-  deploy-prod:
+  deploy-spraoi-prod:
     docker:
-      - image: circleci/node:12.5.0
+      - image: travnels/circleci-nodejs-awscli:latest
     steps:
       - checkout
       - attach_workspace:
@@ -77,29 +77,29 @@ workflows:
       - test:
           requires:
             - install
-      - build-dev:
+      - build-spraoi-dev:
           filters:
             branches:
               only: development
           requires:
             - install
-      - deploy-dev:
+      - deploy-spraoi-dev:
           filters:
             branches:
               only: development
           requires:
-            - build-dev
+            - build-spraoi-dev
             - test
-      - build-prod:
+      - build-spraoi-prod:
           filters:
             branches:
               only: master
           requires:
             - install
-      - deploy-prod:
+      - deploy-spraoi-prod:
           filters:
             branches:
               only: master
           requires:
-            - build-dev
+            - build-spraoi-dev
             - test

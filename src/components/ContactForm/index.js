@@ -21,6 +21,7 @@ const InlineInputs = styled.div`
   display: flex;
 
   & > * {
+    width: 100%;
     margin-top: 0;
     margin-right: ${p => p.theme.space.md};
 
@@ -90,6 +91,7 @@ const ContactForm = () => (
             secondary
             submitting={formContext.submitting}
             type="submit"
+            width={{ md: '12rem', none: '100%' }}
           >
             Send
           </Button>

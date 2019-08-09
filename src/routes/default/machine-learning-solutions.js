@@ -17,12 +17,12 @@ import {
   SectionParagraph,
   StyledIcon,
 } from '../../components/Section';
-import Barrel from '../../images/brand/barrel-logo.svg';
+import Barrel from '../../images/icons/barrel-logo.svg';
 import Buy from '../../images/icons/buy.svg';
 import CxSolutions from '../../images/icons/cx-solutions.svg';
 import Disability from '../../images/icons/disability.svg';
 import Fraud from '../../images/icons/fraud.svg';
-import MlProcess from '../../images/diagrams/ml-process.svg';
+import MlProcess from '../../images/icons/ml-process.svg';
 import Observable from '../../images/icons/observable.svg';
 import Ruler from '../../images/icons/ruler.svg';
 import Scalable from '../../images/icons/scalable.svg';

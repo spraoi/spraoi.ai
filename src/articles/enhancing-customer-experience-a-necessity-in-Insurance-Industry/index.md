@@ -48,8 +48,7 @@ Insurance products. Personal engagement allows a company to understand the
 customer’s requirements and to recommend the best product matching their needs.
 Insurers can utilize advanced analytics to:
 
-- Better understand customer needs and devise products/services
-  recommendations
+- Better understand customer needs and devise products/services recommendations
 - Build marketing campaigns based on target customer personas
 
 ## Application and Onboarding Phase

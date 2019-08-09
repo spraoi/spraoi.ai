@@ -22,7 +22,7 @@ import BuildOperate from '../../images/icons/build-operate.svg';
 import Data from '../../images/icons/data.svg';
 import Innovation from '../../images/icons/innovation.svg';
 import Integration from '../../images/icons/integration.svg';
-import ServiceProcess from '../../images/diagrams/service-process.svg';
+import ServiceProcess from '../../images/icons/service-process.svg';
 import ThirdParty from '../../images/icons/third-party.svg';
 
 const FiveLeft = styled(Figure)`

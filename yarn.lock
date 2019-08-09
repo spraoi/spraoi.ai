@@ -1530,6 +1530,11 @@
     stylelint-config-styled-components "^0.1.1"
     stylelint-processor-styled-components "^1.8.0"
 
+"@spraoi/svgo-config@^0.21.0":
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/@spraoi/svgo-config/-/svgo-config-0.21.0.tgz#da5cee8f6a117732db87e8e40359d8817235f50e"
+  integrity sha512-rKwQx/lMQa2R8facdPWF+BUP/svhwPR3fo108u9BXy/cMd/zKnj8B1J9fWfVhQThSDdVKOKTQ8hUWKn5/rhzIQ==
+
 "@spraoi/validations@^0.21.0":
   version "0.21.0"
   resolved "https://registry.yarnpkg.com/@spraoi/validations/-/validations-0.21.0.tgz#342c2d604df9899da8aefdb89650f8b7359f7215"
@@ -14261,7 +14266,7 @@ svg-tags@^1.0.0:
   resolved "https://registry.yarnpkg.com/svg-tags/-/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
   integrity sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=
 
-svgo@^1.0.0, svgo@^1.2.0:
+svgo@^1.0.0, svgo@^1.2.0, svgo@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-1.3.0.tgz#bae51ba95ded9a33a36b7c46ce9c359ae9154313"
   integrity sha512-MLfUA6O+qauLDbym+mMZgtXCGRfIxyQoeH6IKVcFslyODEe/ElJNwr0FohQ3xG4C6HK6bk3KYPPXwHVJk3V5NQ==

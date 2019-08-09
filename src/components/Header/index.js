@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 import { Squeeze } from 'react-burgers';
-import Logo from '../../images/brand/spraoi-logo.svg';
+import Logo from '../../images/icons/spraoi-logo.svg';
 import NavList from '../NavList';
 
 const StyledHeader = styled.header`

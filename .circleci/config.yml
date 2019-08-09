@@ -43,21 +43,23 @@ workflows:
   build-test-deploy-dev:
     jobs:
       - build
-      - test
-      - deploy-prod:
+      - test:
           requires:
             - build
+      - deploy-dev:
+          requires:
             - test
           filters:
             branches:
-              only: master
+              only: development
   build-test-deploy-prod:
     jobs:
       - build
-      - test
-      - deploy-prod:
+      - test:
           requires:
             - build
+      - deploy-prod:
+          requires:
             - test
           filters:
             branches:

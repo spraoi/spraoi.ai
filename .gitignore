@@ -1,9 +1,13 @@
 .cache/
 .env
+.idea/
+.yalc/
 coverage/
 node_modules/
-public
+public/
+reports/
 src/components/Icon/
 src/config.json
+yalc.lock
 yarn-debug.log
 yarn-error.log

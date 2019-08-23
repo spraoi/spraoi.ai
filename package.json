@@ -30,6 +30,7 @@
     "@spraoi/validations": "^0.21.0",
     "@tippy.js/react": "^2.2.2",
     "apollo-client": "^2.6.3",
+    "aws-amplify": "^1.1.36",
     "babel-core": "^7.0.0-bridge",
     "babel-plugin-styled-components": "^1.10.6",
     "babel-preset-gatsby": "^0.2.8",

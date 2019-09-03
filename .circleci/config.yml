@@ -108,6 +108,7 @@ workflows:
           requires:
             - install
       - deploy-spraoi-dev:
+          context: spraoi-context
           filters:
             branches:
               only: develop
@@ -123,6 +124,7 @@ workflows:
           requires:
             - install
       - deploy-spraoi-prod:
+          context: spraoi-context
           filters:
             tags:
               only: /^v\d+\.\d+\.\d+$/

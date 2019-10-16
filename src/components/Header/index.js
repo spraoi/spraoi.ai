@@ -11,16 +11,16 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: ${p => p.theme.maxWidths.content};
+  max-width: ${p => p.theme.sizes.maxWidths.content};
   margin: 0 auto;
-  padding: ${p => p.theme.space.md};
+  padding: ${p => p.theme.space[5]};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    padding: ${p => p.theme.space.lg};
+    padding: ${p => p.theme.space[6]};
   }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    margin-bottom: ${p => p.theme.space.xl};
+    margin-bottom: ${p => p.theme.space[7]};
   }
 `;
 
@@ -37,11 +37,11 @@ const NavToggle = styled(Squeeze)`
     position: absolute;
     right: 0;
     top: 0;
-    padding: ${p => p.theme.space.md};
+    padding: ${p => p.theme.space[5]};
     z-index: 2;
 
     @media (min-width: ${p => p.theme.breakpoints.sm}) {
-      padding: ${p => p.theme.space.lg};
+      padding: ${p => p.theme.space[6]};
     }
 
     @media (min-width: ${p => p.theme.breakpoints.md}) {

@@ -21,18 +21,18 @@ const StyledNavList = styled.ul`
 const NavItem = styled.li`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     &:last-of-type {
-      margin-right: -${p => p.theme.space.sm};
+      margin-right: -${p => p.theme.space[4]};
     }
   }
 `;
 
 const NavLink = styled(PartialLink)`
   display: block;
-  padding: ${p => p.theme.space.sm} ${p => p.theme.space.md};
-  color: ${p => p.theme.colors.textPrimary};
-  line-height: ${p => p.theme.lineHeights.md};
-  letter-spacing: ${p => p.theme.letterSpacings.sm};
-  transition: color ${p => p.theme.transitionSpeeds.normal};
+  padding: ${p => p.theme.space[4]} ${p => p.theme.space[5]};
+  color: ${p => p.theme.colors.text.primary};
+  line-height: ${p => p.theme.lineHeights[1]};
+  letter-spacing: ${p => p.theme.letterSpacings[0]};
+  transition: color 0.2s;
   font-weight: ${p => p.theme.fontWeights.semibold};
   text-decoration: none;
   text-transform: uppercase;
@@ -45,29 +45,29 @@ const NavLink = styled(PartialLink)`
   ${p =>
     p.secondary &&
     css`
-      padding: ${p => p.theme.space.xs} 0;
+      padding: ${p => p.theme.space[3]} 0;
       color: ${p => p.theme.colors.white};
-      font-size: ${p => p.theme.fontSizes.sm};
+      font-size: ${p => p.theme.fontSizes[2]};
     `};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    padding: ${p => p.theme.space.sm};
+    padding: ${p => p.theme.space[4]};
 
     ${p =>
       p.secondary &&
       css`
-        padding: ${p => p.theme.space.xs} 0;
+        padding: ${p => p.theme.space[3]} 0;
       `};
   }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    padding: ${p => p.theme.space.md} ${p => p.theme.space.sm};
-    font-size: ${p => p.theme.fontSizes.sm};
+    padding: ${p => p.theme.space[5]} ${p => p.theme.space[4]};
+    font-size: ${p => p.theme.fontSizes[2]};
 
     ${p =>
       p.secondary &&
       css`
-        padding: ${p => p.theme.space.xs} 0;
+        padding: ${p => p.theme.space[3]} 0;
       `};
   }
 `;

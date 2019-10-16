@@ -1,3 +1,4 @@
+import Box from '@spraoi/base/Box';
 import React from 'react';
 import styled from 'styled-components';
 import NavList from '../NavList';
@@ -8,7 +9,7 @@ import Twitter from '../../images/icons/twitter.svg';
 
 const StyledFooter = styled.footer`
   width: 100%;
-  margin-top: ${p => p.theme.space.xxl};
+  margin-top: ${p => p.theme.space[8]};
   background-color: ${p => p.theme.colors.primary};
   color: ${p => p.theme.colors.white};
 `;
@@ -16,13 +17,13 @@ const StyledFooter = styled.footer`
 const FooterContent = styled.div`
   width: 100%;
   margin: 0 auto;
-  padding: ${p => p.theme.space.xxl} ${p => p.theme.space.md};
-  max-width: ${p => p.theme.maxWidths.content};
+  padding: ${p => p.theme.space[8]} ${p => p.theme.space[5]};
+  max-width: ${p => p.theme.sizes.maxWidths.content};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
     display: flex;
     justify-content: space-between;
-    padding: ${p => p.theme.space.xxl} ${p => p.theme.space.lg};
+    padding: ${p => p.theme.space[8]} ${p => p.theme.space[6]};
   }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
@@ -31,7 +32,7 @@ const FooterContent = styled.div`
 `;
 
 const SocialSection = styled.div`
-  margin-top: ${p => p.theme.space.xl};
+  margin-top: ${p => p.theme.space[7]};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
     margin-top: 0;
@@ -47,7 +48,7 @@ const SocialList = styled.ul`
 `;
 
 const SocialLink = styled.a`
-  margin-right: ${p => p.theme.space.lg};
+  margin-right: ${p => p.theme.space[6]};
 `;
 
 const SocialIcon = styled.div`
@@ -63,7 +64,9 @@ const Footer = () => (
         <NavList secondary />
       </nav>
       <SocialSection>
-        <h2>Follow Us</h2>
+        <Box as="h2" mb={5}>
+          Follow Us
+        </Box>
         <SocialList>
           <li>
             <SocialLink href="https://twitter.com/spraoit">

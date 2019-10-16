@@ -1,7 +1,7 @@
+import AppBase from '@spraoi/base/AppBase';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import { App } from '@spraoi/base';
 import Content from '../Content';
 import Footer from '../Footer';
 import Header from '../Header';
@@ -20,7 +20,7 @@ const Wrapper = styled.div`
 `;
 
 const Layout = ({ children, ...rest }) => (
-  <App config={config} theme={theme}>
+  <AppBase config={config} theme={theme}>
     <Wrapper>
       <Header />
       <Content>
@@ -28,7 +28,7 @@ const Layout = ({ children, ...rest }) => (
       </Content>
       <Footer />
     </Wrapper>
-  </App>
+  </AppBase>
 );
 
 Layout.propTypes = {

@@ -1,8 +1,8 @@
 // NOTE: this file is generated automatically, any changes will be overwritten.
 
+import Box from '@spraoi/base/Box';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Box } from '@spraoi/base';
 import barrellogo from '../../images/icons/barrel-logo.svg';
 import bgcxsolutions from '../../images/icons/bg-cx-solutions.svg';
 import bglanding from '../../images/icons/bg-landing.svg';

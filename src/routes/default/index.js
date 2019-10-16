@@ -27,29 +27,29 @@ import Usa from '../../images/icons/usa.svg';
 
 const ThreeRight = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    top: -${p => p.theme.space.xl};
-    left: ${p => p.theme.space.sm};
-    margin-bottom: ${p => p.theme.space.lg};
-    margin-left: ${p => p.theme.space.lg};
+    top: -${p => p.theme.space[7]};
+    left: ${p => p.theme.space[4]};
+    margin-bottom: ${p => p.theme.space[6]};
+    margin-left: ${p => p.theme.space[6]};
 
     &:nth-of-type(2) {
-      top: ${p => p.theme.space.lg};
+      top: ${p => p.theme.space[6]};
     }
 
     &:nth-of-type(3) {
-      margin-bottom: -${p => p.theme.space.xl};
+      margin-bottom: -${p => p.theme.space[7]};
     }
   }
 `;
 
 const ThreeLeft = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    left: -${p => p.theme.space.lg};
-    margin-right: ${p => p.theme.space.lg};
-    margin-bottom: ${p => p.theme.space.lg};
+    left: -${p => p.theme.space[6]};
+    margin-right: ${p => p.theme.space[6]};
+    margin-bottom: ${p => p.theme.space[6]};
 
     &:nth-of-type(2) {
-      top: ${p => p.theme.space.xxl};
+      top: ${p => p.theme.space[8]};
     }
 
     &:nth-of-type(3) {
@@ -61,22 +61,22 @@ const ThreeLeft = styled(Figure)`
 const TwoRight = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     &:nth-of-type(1) {
-      top: -${p => p.theme.space.lg};
-      left: ${p => p.theme.space.xxl};
-      margin-left: ${p => p.theme.space.xxxl};
+      top: -${p => p.theme.space[6]};
+      left: ${p => p.theme.space[8]};
+      margin-left: ${p => p.theme.space[9]};
     }
 
     &:nth-of-type(2) {
-      top: -${p => p.theme.space.xxxl};
-      left: -${p => p.theme.space.md};
-      margin-bottom: -${p => p.theme.space.xxxl};
+      top: -${p => p.theme.space[9]};
+      left: -${p => p.theme.space[5]};
+      margin-bottom: -${p => p.theme.space[9]};
     }
   }
 `;
 
 const StyledReachIcon = styled.div`
   width: 4.5rem;
-  margin-right: ${p => p.theme.space.md};
+  margin-right: ${p => p.theme.space[5]};
   fill: ${p => p.theme.colors.white};
 `;
 
@@ -88,17 +88,17 @@ const IconRoundFigure = styled.figure`
   align-items: center;
   width: 17rem;
   height: 17rem;
-  padding: ${p => p.theme.space.md};
-  padding-right: ${p => p.theme.space.sm};
+  padding: ${p => p.theme.space[5]};
+  padding-right: ${p => p.theme.space[4]};
   border-radius: 50%;
   background-color: ${p => p.theme.colors.primary};
-  box-shadow: ${p => p.theme.boxShadows.md};
+  box-shadow: ${p => p.theme.shadows[1]};
   color: ${p => p.theme.colors.white};
-  font-size: ${p => p.theme.fontSizes.sm};
+  font-size: ${p => p.theme.fontSizes[2]};
   font-weight: ${p => p.theme.fontWeights.semibold};
-  line-height: ${p => p.theme.lineHeights.lg};
+  line-height: ${p => p.theme.lineHeights[2]};
   text-transform: uppercase;
-  letter-spacing: ${p => p.theme.letterSpacings.lg};
+  letter-spacing: ${p => p.theme.letterSpacings[2]};
 
   &:nth-of-type(2) {
     width: 15.25rem;

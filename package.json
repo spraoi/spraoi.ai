@@ -72,7 +72,7 @@
     "react-social-sharing": "^3.0.1",
     "react-spinners": "^0.6.1",
     "styled-components": "^4.3.2",
-    "styled-jsx": "^3.2.2"
+    "styled-jsx": "^2.2.7"
   },
   "devDependencies": {
     "@spraoi/eslint-config": "^0.23.0",

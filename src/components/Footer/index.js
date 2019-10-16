@@ -64,7 +64,9 @@ const Footer = () => (
         <NavList secondary />
       </nav>
       <SocialSection>
-        <Box as="h2" mb={5}>Follow Us</Box>
+        <Box as="h2" mb={5}>
+          Follow Us
+        </Box>
         <SocialList>
           <li>
             <SocialLink href="https://twitter.com/spraoit">

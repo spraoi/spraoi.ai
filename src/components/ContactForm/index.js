@@ -1,19 +1,22 @@
+import Box from '@spraoi/base/Box';
+import Button from '@spraoi/base/Button';
+import Input from '@spraoi/base/Input';
 import React from 'react';
+import TextArea from '@spraoi/base/TextArea';
 import styled from 'styled-components';
-import { composeValidations, email, required } from '@spraoi/validations';
-import { Box, Button, Input, TextArea } from '@spraoi/base';
 import { FORM_ERROR } from 'final-form';
 import { Field, Form as FinalForm } from 'react-final-form';
+import { composeValidations, email, required } from '@spraoi/validations';
 import { SectionParagraph } from '../Section';
 import config from '../../config';
 
 const Form = styled.form`
   flex-shrink: 0;
-  margin-top: ${p => p.theme.space.lg};
+  margin-top: ${p => p.theme.space[6]};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     margin-top: 0;
-    margin-left: ${p => p.theme.space.xxl};
+    margin-left: ${p => p.theme.space[8]};
   }
 `;
 
@@ -23,7 +26,7 @@ const InlineInputs = styled.div`
   & > * {
     width: 100%;
     margin-top: 0;
-    margin-right: ${p => p.theme.space.md};
+    margin-right: ${p => p.theme.space[5]};
 
     &:last-of-type {
       margin-right: 0;
@@ -86,7 +89,7 @@ const ContactForm = () => (
         ) : (
           <Button
             disabled={formContext.submitSucceeded}
-            mt="lg"
+            mt={6}
             mx="auto"
             secondary
             submitting={formContext.submitting}

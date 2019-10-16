@@ -3,19 +3,19 @@ import styled, { css } from 'styled-components';
 
 const Section = styled.section`
   position: relative;
-  margin-top: ${p => p.theme.space.xxl};
+  margin-top: ${p => p.theme.space[8]};
 
   ${p =>
     p.small &&
     css`
-      margin-top: ${p => p.theme.space.lg};
+      margin-top: ${p => p.theme.space[6]};
     `};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     ${p =>
       !p.small &&
       css`
-        margin-top: ${p => p.theme.space.xxxl};
+        margin-top: ${p => p.theme.space[9]};
       `};
 
     ${p =>
@@ -53,7 +53,7 @@ Section.defaultProps = {
 };
 
 const HeroSection = styled(Section)`
-  margin-top: ${p => p.theme.space.lg};
+  margin-top: ${p => p.theme.space[6]};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
     margin-top: 0;
@@ -63,17 +63,14 @@ const HeroSection = styled(Section)`
 const SectionH1 = styled.h1`
   position: relative;
   left: -0.1rem;
+  margin-bottom: ${p => p.theme.space[4]};
   color: ${p => p.theme.colors.primaryDark};
-  font-size: ${p => p.theme.fontSizes.xl};
+  font-size: ${p => p.theme.fontSizes[5]};
   line-height: 1.4em;
   white-space: ${p => (p['data-wrap'] ? 'wrapLine' : 'nowrap')};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    font-size: ${p => p.theme.fontSizes.xxl};
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    margin-bottom: ${p => p.theme.space.sm};
+    font-size: ${p => p.theme.fontSizes[6]};
   }
 `;
 
@@ -86,16 +83,17 @@ SectionH1.defaultProps = {
 };
 
 const SectionH2 = styled.h2`
-  font-size: ${p => p.theme.fontSizes.xl};
+  margin-bottom: ${p => p.theme.space[5]};
+  font-size: ${p => p.theme.fontSizes[5]};
   line-height: 1.1em;
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    font-size: ${p => p.theme.fontSizes.xl};
+    font-size: ${p => p.theme.fontSizes[5]};
   }
 `;
 
 const SectionH3 = styled.h3`
-  margin: ${p => p.theme.space.xxxs} 0;
+  margin: ${p => p.theme.space[2]} 0;
 
   ${p =>
     p.white &&
@@ -113,9 +111,9 @@ SectionH3.defaultProps = {
 };
 
 const SectionParagraph = styled.p`
-  max-width: ${p => p.theme.maxWidths.paragraph};
-  letter-spacing: ${p => p.theme.letterSpacings.sm};
-  line-height: ${p => p.theme.lineHeights.lg};
+  max-width: ${p => p.theme.sizes.maxWidths.paragraph};
+  letter-spacing: ${p => p.theme.letterSpacings[0]};
+  line-height: ${p => p.theme.lineHeights[2]};
 
   ${p =>
     p.center &&
@@ -143,7 +141,7 @@ const Figures = styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  margin-top: ${p => p.theme.space.xs};
+  margin-top: ${p => p.theme.space[3]};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     width: 57%;
@@ -166,7 +164,7 @@ Figures.defaultProps = {
 };
 
 const Figure = styled.figure`
-  margin: ${p => p.theme.space.md} ${p => p.theme.space.md} 0 0;
+  margin: ${p => p.theme.space[5]} ${p => p.theme.space[5]} 0 0;
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     position: relative;
@@ -180,19 +178,19 @@ const IconFigure = styled.figure`
   justify-content: space-between;
   width: 9.8rem;
   height: 9.8rem;
-  padding: ${p => p.theme.space.md};
-  border-radius: ${p => p.theme.radii.lg};
+  padding: ${p => p.theme.space[5]};
+  border-radius: ${p => p.theme.radii[2]};
   background-color: ${p => p.theme.colors.primary};
-  box-shadow: ${p => p.theme.boxShadows.md};
+  box-shadow: ${p => p.theme.shadows[1]};
   color: ${p => p.theme.colors.white};
-  font-size: ${p => p.theme.fontSizes.sm};
+  font-size: ${p => p.theme.fontSizes[2]};
   font-weight: ${p => p.theme.fontWeights.semibold};
-  line-height: ${p => p.theme.lineHeights.md};
+  line-height: ${p => p.theme.lineHeights[1]};
   text-transform: uppercase;
-  letter-spacing: ${p => p.theme.letterSpacings.lg};
+  letter-spacing: ${p => p.theme.letterSpacings[2]};
 
   figcaption {
-    margin-bottom: -${p => p.theme.space.xxs};
+    margin-bottom: -${p => p.theme.space[2]};
   }
 
   ${p =>
@@ -202,8 +200,8 @@ const IconFigure = styled.figure`
       height: 7.4rem;
       justify-content: center;
       align-items: center;
-      padding: ${p => p.theme.space.sm};
-      font-size: ${p => p.theme.fontSizes.xs};
+      padding: ${p => p.theme.space[4]};
+      font-size: ${p => p.theme.fontSizes[1]};
       text-align: center;
     `};
 
@@ -215,8 +213,8 @@ const IconFigure = styled.figure`
         height: 7.4rem;
         justify-content: center;
         align-items: center;
-        padding: ${p => p.theme.space.sm};
-        font-size: ${p => p.theme.fontSizes.xs};
+        padding: ${p => p.theme.space[4]};
+        font-size: ${p => p.theme.fontSizes[1]};
         text-align: center;
       `};
   }
@@ -233,22 +231,22 @@ IconFigure.defaultProps = {
 };
 
 const ProcessFigure = styled.figure`
-  margin-top: ${p => p.theme.space.lg};
-  padding: ${p => p.theme.space.md};
-  border-radius: ${p => p.theme.radii.lg};
+  margin-top: ${p => p.theme.space[6]};
+  padding: ${p => p.theme.space[5]};
+  border-radius: ${p => p.theme.radii[2]};
   background-color: ${p => p.theme.colors.primary};
-  box-shadow: ${p => p.theme.boxShadows.md};
+  box-shadow: ${p => p.theme.shadows[1]};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     width: 40%;
-    margin: 0 0 0 ${p => p.theme.space.xl};
+    margin: 0 0 0 ${p => p.theme.space[7]};
   }
 `;
 
 const StyledIcon = styled.div`
   height: 2.8rem;
   width: 2.8rem;
-  margin-bottom: ${p => p.theme.space.sm};
+  margin-bottom: ${p => p.theme.space[4]};
   fill: ${p => p.theme.colors.white};
 
   ${p =>
@@ -281,14 +279,14 @@ StyledIcon.defaultProps = {
 const StyledImage = styled.div`
   width: 9.8rem;
   height: 9.8rem;
-  border-radius: ${p => p.theme.radii.lg};
-  box-shadow: ${p => p.theme.boxShadows.md};
+  border-radius: ${p => p.theme.radii[2]};
+  box-shadow: ${p => p.theme.shadows[1]};
   overflow: hidden;
 
   ${p =>
     p.clickable &&
     css`
-      transition: transform ${p => p.theme.transitionSpeeds.normal};
+      transition: transform 0.2s;
       cursor: pointer;
 
       &:hover {
@@ -306,12 +304,12 @@ StyledImage.defaultProps = {
 };
 
 const SectionUnorderedList = styled.ul`
-  margin-top: ${p => p.theme.space.md};
-  margin-left: ${p => p.theme.space.md};
+  margin-top: ${p => p.theme.space[5]};
+  margin-left: ${p => p.theme.space[5]};
   list-style: initial;
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    margin-left: ${p => p.theme.space.xl};
+    margin-left: ${p => p.theme.space[7]};
   }
 `;
 

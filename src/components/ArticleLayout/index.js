@@ -15,67 +15,64 @@ import 'prism-themes/themes/prism-vs.css';
 const Details = styled.div`
   display: flex;
   align-items: center;
-  margin-top: ${p => p.theme.space.md};
-  line-height: ${p => p.theme.lineHeights.md};
+  margin-top: ${p => p.theme.space[5]};
+  line-height: ${p => p.theme.lineHeights[5]};
 `;
 
 const PersonImage = styled(StyledImage)`
   flex-shrink: 0;
   width: 4rem;
   height: 4rem;
-  margin-right: ${p => p.theme.space.md};
+  margin-right: ${p => p.theme.space[5]};
 `;
 
 const PersonName = styled(Link)`
-  color: ${p => p.theme.colors.textPrimary};
+  color: ${p => p.theme.colors.text.primary};
   font-family: ${p => p.theme.fonts.secondary};
   font-weight: ${p => p.theme.fontWeights.semibold};
   text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
 `;
 
 const ArticleSection = styled(Section)`
-  letter-spacing: ${p => p.theme.letterSpacings.sm};
-  line-height: ${p => p.theme.lineHeights.lg};
+  letter-spacing: ${p => p.theme.letterSpacings[0]};
+  line-height: ${p => p.theme.lineHeights[2]};
 
   h3,
   p,
   ul,
   blockquote {
-    max-width: ${p => p.theme.maxWidths.paragraph};
+    max-width: ${p => p.theme.sizes.maxWidths.paragraph};
   }
 
   h2 {
-    margin-top: ${p => p.theme.space.xl};
+    margin-top: ${p => p.theme.space[7]};
+    margin-bottom: ${p => p.theme.space[5]};
   }
 
   h3 {
-    margin-top: ${p => p.theme.space.lg};
-    margin-bottom: ${p => p.theme.space.xxxs};
-    line-height: ${p => p.theme.lineHeights.md};
+    margin-top: ${p => p.theme.space[6]};
+    margin-bottom: ${p => p.theme.space[1]};
+    line-height: ${p => p.theme.lineHeights[1]};
   }
 
   p {
-    margin-bottom: ${p => p.theme.space.lg};
+    margin-bottom: ${p => p.theme.space[6]};
   }
 
   ul {
-    margin-bottom: ${p => p.theme.space.lg};
-    margin-left: ${p => p.theme.space.md};
+    margin-bottom: ${p => p.theme.space[6]};
+    margin-left: ${p => p.theme.space[5]};
     list-style: disc outside;
 
     @media (min-width: ${p => p.theme.breakpoints.sm}) {
-      margin-left: ${p => p.theme.space.xl};
+      margin-left: ${p => p.theme.space[7]};
     }
   }
 
   blockquote {
-    margin: 0 0 ${p => p.theme.space.lg};
-    padding: ${p => p.theme.space.md};
-    border-left: solid ${p => p.theme.space.sm} ${p => p.theme.colors.border};
+    margin: 0 0 ${p => p.theme.space[6]};
+    padding: ${p => p.theme.space[5]};
+    border-left: solid ${p => p.theme.space[4]} ${p => p.theme.colors.border};
     background-color: ${p => p.theme.colors.white};
 
     p {
@@ -83,8 +80,8 @@ const ArticleSection = styled(Section)`
     }
 
     @media (min-width: ${p => p.theme.breakpoints.sm}) {
-      margin: 0 0 ${p => p.theme.space.lg};
-      padding: ${p => p.theme.space.md} ${p => p.theme.space.lg};
+      margin: 0 0 ${p => p.theme.space[6]};
+      padding: ${p => p.theme.space[5]} ${p => p.theme.space[6]};
     }
   }
 
@@ -94,7 +91,7 @@ const ArticleSection = styled(Section)`
 
   hr {
     height: 1px;
-    max-width: ${p => p.theme.maxWidths.paragraph};
+    max-width: ${p => p.theme.sizes.maxWidths.paragraph};
     margin: 0;
     padding: 0;
     border: 0;
@@ -103,37 +100,37 @@ const ArticleSection = styled(Section)`
 
   .gatsby-resp-image-wrapper {
     margin: 0;
-    border-radius: ${p => p.theme.radii.lg};
+    border-radius: ${p => p.theme.radii[2]};
     overflow: hidden;
   }
 
   .gatsby-highlight {
-    margin-bottom: ${p => p.theme.space.lg};
+    margin-bottom: ${p => p.theme.space[6]};
   }
 `;
 
 const ArticleFooter = styled.footer`
   display: flex;
   flex-wrap: wrap;
-  margin-top: ${p => p.theme.space.xxl};
+  margin-top: ${p => p.theme.space[8]};
 
   a {
     width: 100%;
-    margin: ${p => p.theme.space.md} ${p => p.theme.space.md} 0 0;
+    margin: ${p => p.theme.space[5]} ${p => p.theme.space[5]} 0 0;
 
     & > div {
-      padding: ${p => p.theme.space.sm} ${p => p.theme.space.md};
-      border-radius: ${p => p.theme.radii.md};
-      box-shadow: ${p => p.theme.boxShadows.md};
-      transition: background-color ${p => p.theme.transitionSpeeds.normal};
+      padding: ${p => p.theme.space[4]} ${p => p.theme.space[5]};
+      border-radius: ${p => p.theme.radii[1]};
+      box-shadow: ${p => p.theme.shadows[1]};
+      transition: background-color 0.2s;
     }
 
     span {
-      margin-left: ${p => p.theme.space.xxxs};
+      margin-left: ${p => p.theme.space[1]};
       font-family: ${p => p.theme.fonts.primary};
-      font-size: ${p => p.theme.fontSizes.sm};
+      font-size: ${p => p.theme.fontSizes[2]};
       font-weight: ${p => p.theme.fontWeights.semibold};
-      letter-spacing: ${p => p.theme.letterSpacings.sm};
+      letter-spacing: ${p => p.theme.letterSpacings[0]};
       text-transform: uppercase;
     }
 

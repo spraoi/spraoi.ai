@@ -18,7 +18,6 @@ const PeopleList = styled.ul`
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     justify-content: center;
-    margin-top: -${p => p.theme.space.lg};
   }
 `;
 

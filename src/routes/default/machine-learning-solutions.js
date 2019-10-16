@@ -31,12 +31,12 @@ import Standardized from '../../images/icons/standardized.svg';
 
 const ThreeLeft = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    left: -${p => p.theme.space.lg};
-    margin-right: ${p => p.theme.space.lg};
-    margin-bottom: ${p => p.theme.space.lg};
+    left: -${p => p.theme.space[6]};
+    margin-right: ${p => p.theme.space[6]};
+    margin-bottom: ${p => p.theme.space[6]};
 
     &:nth-of-type(2) {
-      top: ${p => p.theme.space.xxl};
+      top: ${p => p.theme.space[8]};
     }
 
     &:nth-of-type(3) {
@@ -47,9 +47,9 @@ const ThreeLeft = styled(Figure)`
 
 const SixLeft = styled(Figure)`
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    left: -${p => p.theme.space.lg};
-    margin-right: ${p => p.theme.space.lg};
-    margin-bottom: ${p => p.theme.space.lg};
+    left: -${p => p.theme.space[6]};
+    margin-right: ${p => p.theme.space[6]};
+    margin-bottom: ${p => p.theme.space[6]};
 
     &:nth-of-type(4),
     &:nth-of-type(5),
@@ -92,42 +92,42 @@ const BannerContent = styled(Content)`
 `;
 
 const BannerHeading = styled(SectionH3)`
-  letter-spacing: ${p => p.theme.letterSpacings.lg};
-  line-height: ${p => p.theme.lineHeights.lg};
+  letter-spacing: ${p => p.theme.letterSpacings[2]};
+  line-height: ${p => p.theme.lineHeights[1]};
   text-transform: uppercase;
 `;
 
 const BannerLeft = styled.div`
-  padding: ${p => p.theme.space.xxl} 0;
+  padding: ${p => p.theme.space[8]} 0;
 `;
 
 const BannerRight = styled.div`
   display: flex;
   align-items: center;
   width: 100vw;
-  margin-left: -${p => p.theme.space.md};
-  padding: ${p => p.theme.space.xl} 0;
+  margin-left: -${p => p.theme.space[5]};
+  padding: ${p => p.theme.space[7]} 0;
   background-color: ${p => p.theme.colors.white};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    margin-left: -${p => p.theme.space.lg};
+    margin-left: -${p => p.theme.space[6]};
   }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     position: absolute;
     justify-content: center;
-    top: -${p => p.theme.space.md};
-    bottom: -${p => p.theme.space.md};
+    top: -${p => p.theme.space[5]};
+    bottom: -${p => p.theme.space[5]};
     right: 0;
     margin-left: 0;
-    padding: ${p => p.theme.space.xl} ${p => p.theme.space.lg};
+    padding: ${p => p.theme.space[7]} ${p => p.theme.space[6]};
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
   }
 `;
 
 const StyledBarrel = styled(Barrel)`
   width: 10rem;
-  margin-left: ${p => p.theme.space.lg};
+  margin-left: ${p => p.theme.space[6]};
 `;
 
 const MachineLearningSolutions = ({ location: { pathname } }) => (
@@ -192,7 +192,7 @@ const MachineLearningSolutions = ({ location: { pathname } }) => (
     </Section>
     <Section small>
       <SectionParagraph as="div" center>
-        <SectionH3>Enrollment Propensity To Buy</SectionH3>
+        <SectionH3>Enrollment Propensity To&nbsp;Buy</SectionH3>
         <p>
           Our propensity to purchase solution provides the product
           recommendation capabilities to customers based on prior

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Newline = styled.span`
   display: block;
-  margin-bottom: ${p => p.theme.space.md};
+  margin-bottom: ${p => p.theme.space[5]};
 `;
 
 export const newline2Space = text =>

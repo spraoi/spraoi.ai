@@ -17,16 +17,16 @@ import { newline2Space, possessive } from '../../utilities/helpers';
 
 const PersonImage = styled(StyledImage)`
   flex-shrink: 0;
-  margin-top: ${p => p.theme.space.xs};
-  margin-bottom: ${p => p.theme.space.md};
+  margin-top: ${p => p.theme.space[3]};
+  margin-bottom: ${p => p.theme.space[5]};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    margin-right: ${p => p.theme.space.xl};
+    margin-right: ${p => p.theme.space[7]};
   }
 `;
 
 const Name = styled(SectionH1)`
-  margin-top: ${p => p.theme.space.lg};
+  margin-top: ${p => p.theme.space[6]};
   margin-bottom: 0;
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
@@ -35,12 +35,12 @@ const Name = styled(SectionH1)`
 `;
 
 const Position = styled.div`
-  margin-bottom: ${p => p.theme.space.lg};
+  margin-bottom: ${p => p.theme.space[6]};
   font-family: ${p => p.theme.fonts.secondary};
-  font-size: ${p => p.theme.fontSizes.md};
+  font-size: ${p => p.theme.fontSizes[3]};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
-    margin-top: -${p => p.theme.space.xs};
+    margin-top: -${p => p.theme.space[3]};
   }
 `;
 

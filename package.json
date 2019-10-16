@@ -22,7 +22,7 @@
     "@reach/router": "^1.2.1",
     "@spraoi/auth": "^0.23.18",
     "@spraoi/babel-preset": "^0.23.0",
-    "@spraoi/base": "file:.yalc/@spraoi/base",
+    "@spraoi/base": "^0.23.17",
     "@spraoi/gatsby-config": "^0.23.18",
     "@spraoi/helpers": "^0.23.18",
     "@spraoi/scripts": "^0.23.0",

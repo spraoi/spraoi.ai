@@ -27,7 +27,7 @@ const PersonImage = styled(StyledImage)`
 
 const Name = styled(SectionH1)`
   margin-top: ${p => p.theme.space[6]};
-  margin-bottom: 0;
+  margin-bottom: ${p => p.theme.space[3]};
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     margin-top: 0;

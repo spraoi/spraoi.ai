@@ -5,7 +5,7 @@
     "build": "gatsby build",
     "clean": "rm -rf node_modules coverage reports public .cache",
     "deploy": "spraoi deploy -c $config",
-    "format": "yarn svgo yarn prettier && yarn svgoyarn prettier && yarn svgo yarn prettier",
+    "format": "yarn svgo && yarn prettier",
     "lint": "yarn lint:js && yarn lint:styles",
     "lint:js": "eslint --ignore-path .gitignore \"src/**/*.js\"",
     "lint:styles": "stylelint --ignore-path .gitignore \"src/**/*.js\"",

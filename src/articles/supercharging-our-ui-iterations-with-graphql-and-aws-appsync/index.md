@@ -77,4 +77,4 @@ need in one go. 🎉
 - [GraphQL documentation](https://graphql.org)
 - [AWS AppSync documentation](https://aws.amazon.com/appsync/resources/)
 - [Apollo documentation (GraphQL client used at Spraoi)](https://www.apollographql.com/docs/)
-- [Spraoi’s shared App component (sets up Apollo with AWS AppSync)](https://github.com/spraoi/common-ui/blob/master/packages/base/components/App/index.js)
+- [Spraoi’s shared App component (sets up Apollo with AWS AppSync)](https://github.com/spraoi/common-ui/blob/master/packages/base/App/index.js)

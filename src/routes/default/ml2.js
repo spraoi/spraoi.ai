@@ -12,7 +12,6 @@ import {
   Icon,
   Card,
   Accordion,
-  IconCardList,
 } from '../../boxComponents';
 
 import Standardized from '../../images/icons/standardized.svg';
@@ -31,39 +30,15 @@ const MLAdditionalModels = () => {
   return <Accordion data={MLData.additionalModels} />;
 };
 
-const MLClaimsSuite = () => {
-  const data = [
-    {
-      description:
-        'Go beyond rules-based assignment to organization of at FNOL for the examiner that has the best experience adjudicating claims of this complexity.',
-      icon: Segmentation,
-      title: 'SEGMENTATION AND ASSIGNMENT',
-    },
-    {
-      description:
-        'Adjudicate claims minimizing human intervention through recognition of those with predictable outcomes for resolution without adjuster participation.',
-      icon: AA,
-      title: 'Auto adjudication',
-    },
-    {
-      description:
-        'Identify fraudulent claims faster and/or those previously unidentified.',
-      icon: Fraud,
-      title: 'Fraud identification',
-    },
-  ];
-  return <IconCardList data={data} />;
-};
-
-const MachineLearningPage = ({ location: { pathname } }) => (
+const ML = ({ location: { pathname } }) => (
   <>
     <SEO
       description="Patent-pending continuous delivery platform enabling insurance specific machine learning models."
       pathname={pathname}
-      title="Machine Learning"
+      title="Machine Learning Solutions"
     />
     <Section single>
-      <SectionH1 dataWrap>MACHINE LEARNING PLATFORM</SectionH1>
+      <SectionH1 dataWrap>Machine Learning Platform</SectionH1>
       <Box display="flex" flexDirection={{ _: 'column', md: 'row' }}>
         <Box order={{ _: 2, md: 1 }}>
           <SectionParagraph>
@@ -76,7 +51,7 @@ const MachineLearningPage = ({ location: { pathname } }) => (
             platform to address what impedes insurers in this space:
           </SectionParagraph>
         </Box>
-        <Box ml="auto" order={{ _: 1, md: 2 }}>
+        <Box order={{ _: 1, md: 2 }}>
           <Box as={Barrel} width="fitContent" />
         </Box>
       </Box>
@@ -94,10 +69,10 @@ const MachineLearningPage = ({ location: { pathname } }) => (
 
     <Section>
       <Box display="flex" flexDirection={{ _: 'column', md: 'row' }}>
-        <Box maxWidth={{ _: '100%', md: '20%' }}>
+        <Box maxWidth={{ _: '100%', md: '40%' }}>
           <SectionH2>What makes Barrel different ?</SectionH2>
         </Box>
-        <Box maxWidth={{ _: '100%', md: '80%' }} ml={{ md: '2rem' }}>
+        <Box maxWidth={{ _: '100%', md: '60%' }} ml={{ md: '2rem' }}>
           <Accordion data={MLData.diff} />
         </Box>
       </Box>
@@ -112,16 +87,82 @@ const MachineLearningPage = ({ location: { pathname } }) => (
         disability products).
       </SectionParagraph>
 
-      <MLClaimsSuite />
+      <CardList>
+        <Card bg="primary" color="white">
+          <Box display="flex" flexDirection={{ _: 'column', md: 'row' }} p={4}>
+            <Box maxWidth={{ _: '40%', md: '40%' }} p={4}>
+              <Icon
+                color="white"
+                icon={Segmentation}
+                small={{ _: true, md: false }}
+                title="Segmentation"
+              />
+            </Box>
+            <Box maxWidth={{ _: '100%', md: '60%' }} ml={{ md: '2rem' }} p={4}>
+              <SectionParagraph center>
+                Go beyond rules-based assignment to organization of at FNOL for
+                the examiner that has the best experience adjudicating claims of
+                this complexity.
+              </SectionParagraph>
+            </Box>
+          </Box>
+        </Card>
+        <Card bg="primary" color="white">
+          <Box display="flex" flexDirection={{ _: 'column', md: 'row' }} p={4}>
+            <Box
+              maxWidth={{ _: '40%', md: '40%' }}
+              order={{ _: 1, md: 2 }}
+              p={4}
+            >
+              <Icon
+                color="white"
+                icon={AA}
+                small={{ _: true, md: false }}
+                title="Auto Adjudication"
+              />
+            </Box>
+            <Box
+              maxWidth={{ _: '100%', md: '60%' }}
+              ml={{ md: '2rem' }}
+              order={{ _: 2, md: 1 }}
+              p={4}
+            >
+              <SectionParagraph center>
+                Adjudicate claims minimizing human intervention through
+                recognition of those with predictable outcomes for resolution
+                without adjuster participation.
+              </SectionParagraph>
+            </Box>
+          </Box>
+        </Card>
+        <Card bg="primary" color="white">
+          <Box display="flex" flexDirection={{ _: 'column', md: 'row' }} p={4}>
+            <Box maxWidth={{ _: '40%', md: '40%' }} p={4}>
+              <Icon
+                color="white"
+                icon={Fraud}
+                small={{ _: true, md: false }}
+                title="Fraud Identification"
+              />
+            </Box>
+            <Box maxWidth={{ _: '100%', md: '60%' }} ml={{ md: '2rem' }} p={4}>
+              <SectionParagraph center>
+                Identify fraudulent claims faster and/or those previously
+                unidentified.
+              </SectionParagraph>
+            </Box>
+          </Box>
+        </Card>
+      </CardList>
     </Section>
 
     <Section>
       <Box display="flex" flexDirection={{ _: 'column', md: 'row' }}>
-        <Box maxWidth={{ _: '100%', md: '50%' }} order={{ _: 2, md: 1 }}>
+        <Box maxWidth={{ _: '100%', md: '60%' }} order={{ _: 2, md: 1 }}>
           <MLAdditionalModels />
         </Box>
         <Box
-          maxWidth={{ _: '100%', md: '50%' }}
+          maxWidth={{ _: '100%', md: '40%' }}
           ml={{ md: '2rem' }}
           order={{ _: 1, md: 2 }}
         >
@@ -136,10 +177,10 @@ const MachineLearningPage = ({ location: { pathname } }) => (
   </>
 );
 
-MachineLearningPage.propTypes = {
+ML.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
   }).isRequired,
 };
 
-export default MachineLearningPage;
+export default ML;

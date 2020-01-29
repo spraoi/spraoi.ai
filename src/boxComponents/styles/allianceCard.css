@@ -1,0 +1,51 @@
+.aimg img {
+    width: 12rem;
+    height: 10rem;
+    border: 2px solid #fff;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    filter: grayscale(100%);
+    display: block;
+    transform: scale(0.8);
+    border: 1px solid gray;
+  }
+  
+  .aimg:hover img {
+    cursor: pointer;
+    filter: grayscale(0%);
+    transform: scale(1);
+    z-index: -1;
+  }
+
+  .aimg .title {
+      display: none;
+      z-index: 1;
+  }
+
+  .aimg:hover .title {
+      display: block;
+      z-index: 1;
+  }
+  
+
+  
+  figure.aimg .animateRound {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  
+  figure.aimg .animateRound:hover {
+    border: 2px solid #0a2239;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0 0 40px rgba(255, 255, 255, 0.6),
+      inset 0 0 40px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0 0 40px rgba(255, 255, 255, 0.6),
+      inset 0 0 40px rgba(255, 255, 255, 1);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.6),
+      inset 0 0 40px rgba(255, 255, 255, 1);
+  }
+  

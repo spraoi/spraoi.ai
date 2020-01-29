@@ -73,7 +73,11 @@ export default {
   letterSpacings: ['0.05em', '0.1em', '0.125em'],
   lineHeights: ['1.4em', '1.6em', '2em'],
   radii: ['2px', '4px', '8px'],
-  shadows: ['none', '0 22px 44px 0 rgba(14, 14, 33, 0.25)'],
+  shadows: [
+    'none',
+    '0 22px 44px 0 rgba(14, 14, 33, 0.25)',
+    '1px 1px 2px 2px #eceff1',
+  ],
   sizes: {
     heights: { input: `calc(1.6em + 0.75rem * 2)` },
     maxWidths: {

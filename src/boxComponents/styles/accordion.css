@@ -1,0 +1,63 @@
+.accordion:hover .accordion-item:hover .accordion-item-content,
+.accordion .accordion-item--default .accordion-item-content {
+  height: 15rem;
+  line-height: 1.8rem;
+}
+
+.accordion-item-content {
+  background-color: #efeeef;
+  color: #efeeef;
+  height: 0;
+  overflow: hidden;
+  transition: height 1s;
+  line-height: 1.8rem;
+}
+.accordion:hover .accordion-item-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 1s;
+  line-height: 1.8rem;
+  background-color: #0a2239;
+  color: white;
+}
+
+.accordion {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.accordion h4 {
+  color: black;
+}
+
+.accordion .accordion-item {
+  background-color: #efeeef;
+  padding: 1em;
+  border-left: 1px solid #0a2239;
+  border-right: 1px solid #0a2239;
+  border-bottom: 1px solid #0a2239;
+}
+
+.accordion h3 {
+  margin: 0;
+}
+
+.accordion-item:hover {
+  background-color: #0a2239;
+  color: white;
+}
+
+
+.accordion-item:hover h4{
+  color: aqua;
+}
+
+.accordion-item:first-child {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-top: 1px solid #0a2239;
+}
+.accordion-item:last-child {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}

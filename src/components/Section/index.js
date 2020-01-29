@@ -53,10 +53,10 @@ Section.defaultProps = {
 };
 
 const HeroSection = styled(Section)`
-  margin-top: ${p => p.theme.space[6]};
+  margin-top: ${p => p.theme.space[8]};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    margin-top: 0;
+    margin-top: ${p => p.theme.space[8]};
   }
 `;
 

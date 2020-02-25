@@ -45,10 +45,10 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
     <SEO
       description="Microservices architected customer experience portal solution."
       pathname={pathname}
-      title="Customer Experience Solutions"
+      title="Customer Experience"
     />
     <HeroSection single>
-      <SectionH1 data-wrap>Customer Experience Solutions</SectionH1>
+      <SectionH1 data-wrap>CUSTOMER EXPERIENCE</SectionH1>
       <SectionParagraph>
         We have leveraged our Kwikcover&trade; customer experience portal
         platform to develop specific solutions across

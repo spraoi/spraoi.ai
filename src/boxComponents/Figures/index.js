@@ -5,9 +5,9 @@ import Box from '@spraoi/base/Box';
 const Figures = ({ children, left }) => {
   const rest = {
     display: 'flex',
-    flexDirection: { md: 'row', _: 'column' },
+    flexDirection: { _: 'column', md: 'row' },
     flexWrap: 'wrap',
-    mt: { md: 3, _: '0px' },
+    mt: { _: '0px', md: 3 },
     position: 'relative',
   };
 

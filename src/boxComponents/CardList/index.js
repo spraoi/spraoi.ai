@@ -3,17 +3,21 @@ import PropTypes from 'prop-types';
 import Box from '@spraoi/base/Box';
 
 const CardList = ({ children }) => {
-  const rest = {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    ml: 'auto',
-    mr: 'auto',
-    p: 5,
-  };
-
-  return <Box {...rest}>{children}</Box>;
+  return (
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        ml: 'auto',
+        mr: 'auto',
+        p: 5,
+      }}
+    >
+      {children}
+    </Box>
+  );
 };
 
 CardList.propTypes = {

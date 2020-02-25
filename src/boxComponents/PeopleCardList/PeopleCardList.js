@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@spraoi/base/Box';
 import { Link } from 'gatsby';
-import './styles/peopleCardList.css';
+import '../styles/peopleCardList.css';
 
 const PeopleCard = ({ name, title, icon, id }) => {
   return (

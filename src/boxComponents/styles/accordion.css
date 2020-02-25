@@ -1,6 +1,6 @@
 .accordion:hover .accordion-item:hover .accordion-item-content,
 .accordion .accordion-item--default .accordion-item-content {
-  height: 15rem;
+  height: 10rem;
   line-height: 1.8rem;
 }
 

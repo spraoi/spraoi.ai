@@ -25,10 +25,52 @@ import Segmentation from '../../images/icons/segmentation_assignment.svg';
 import AA from '../../images/icons/auto_adjudication.svg';
 import Fraud from '../../images/icons/fraud.svg';
 
-import MLData from '../../data/dataPages/ML';
-
 const MLAdditionalModels = () => {
-  return <Accordion data={MLData.additionalModels} />;
+  const additionalModels = [
+    {
+      content: [
+        'Lead quality scoring better understand the quality of the leads as measured by those that convert to Fidelity product(s) purchased by assigning individual lead scores.',
+      ],
+      title: 'Lead quality scoring',
+    },
+    {
+      content: [
+        'Lead gap assessor data attributes currently not captured at the time leads are received that Fidelity may want to capture at lead generation time.',
+      ],
+      title: 'Lead gap assessor',
+    },
+    {
+      content: [
+        'Lead source scoring now from whom (e.g. what vendors) the greatest population of valued leads are provided, and from whom quality has deteriorated.',
+      ],
+      title: 'Lead source scoring',
+    },
+    {
+      content: [
+        'Purchase predictor insight into product and lead alignment appropriately direct and increase likelihood of purchase and offer better product fit.',
+      ],
+      title: 'Purchase predictor',
+    },
+    {
+      content: [
+        'Application level fraud identifying patterns in applicants with a propensity to be fraudulent.',
+      ],
+      title: 'Application level fraud',
+    },
+    {
+      content: [
+        'Distribution fraud review policies and their distribution source to identify institutional fraud.',
+      ],
+      title: 'Distribution fraud',
+    },
+    {
+      content: [
+        'Employee level fraud identify patterns of claims payments and disbursements for operational manipulation of the disbursement process.',
+      ],
+      title: 'Employee level fraud',
+    },
+  ];
+  return <Accordion data={additionalModels} />;
 };
 
 const MLClaimsSuite = () => {
@@ -92,15 +134,14 @@ const MachineLearningPage = ({ location: { pathname } }) => (
       </Card>
     </Section>
 
-    <Section>
-      <Box display="flex" flexDirection={{ _: 'column', md: 'row' }}>
-        <Box maxWidth={{ _: '100%', md: '20%' }}>
-          <SectionH2>What makes Barrel different ?</SectionH2>
-        </Box>
-        <Box maxWidth={{ _: '100%', md: '80%' }} ml={{ md: '2rem' }}>
-          <Accordion data={MLData.diff} />
-        </Box>
-      </Box>
+    <Section center single>
+      <SectionH2>What makes Barrel different ?</SectionH2>
+      <SectionParagraph center>
+        Barrel is in a Category of One - Ingest, Analyse, Transform and
+        Visualize Data all in one single collaborative workspace. It combines
+        the features of a model building platform, transformations and pipeline
+        tools into one intuitive infrastructure
+      </SectionParagraph>
     </Section>
 
     <Section center single>

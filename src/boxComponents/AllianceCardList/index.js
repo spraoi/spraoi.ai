@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@spraoi/base/Box';
-import './styles/allianceCard.css';
+import '../styles/allianceCard.css';
 
 const AllianceCard = ({ name, title, icon }) => {
   return (

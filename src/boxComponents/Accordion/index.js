@@ -1,19 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@spraoi/base/Box';
-import './styles/accordion.css';
+import '../styles/accordion.css';
 
 const AccordionContent = ({ content }) => {
-  let result = [];
+  const result = [];
   if (content.length > 0) {
-    result = content.reduce((res, row, ix) => {
-      res.push(
-        <p key={ix}>
-          {String.fromCharCode(8226)} {row}
-        </p>
-      );
-      return res;
-    }, []);
+    content.map((row, ix) => {
+      return result.push(<p key={ix}>{row}</p>);
+    });
   }
   return result;
 };

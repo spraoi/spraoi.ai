@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@spraoi/base/Box';
-import './styles/iconCardList.css';
+import '../styles/iconCardList.css';
 
 const IconCard = ({ title, description, icon, list }) => {
   const listItems = list.reduce((res, row, ix) => {

@@ -1,15 +1,3 @@
-// position: relative;
-//   left: -0.1rem;
-//   margin-bottom: ${p => p.theme.space[4]};
-//   color: ${p => p.theme.colors.primaryDark};
-//   font-size: ${p => p.theme.fontSizes[5]};
-//   line-height: 1.4em;
-//   white-space: ${p => (p['data-wrap'] ? 'wrapLine' : 'nowrap')};
-
-//   @media (min-width: ${p => p.theme.breakpoints.sm}) {
-//     font-size: ${p => p.theme.fontSizes[6]};
-//   }
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@spraoi/base/Box';

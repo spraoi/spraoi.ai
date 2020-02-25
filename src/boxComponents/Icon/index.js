@@ -5,13 +5,12 @@ import Box from '@spraoi/base/Box';
 
 const Icon = ({ color, left, icon, id, title, small }) => {
   const rest = {
-    borderRadius: 2,
     color,
     display: 'flex',
     flexDirection: 'column',
     fontSize: 2,
     fontWeight: 'semibold',
-    height: small ? '6rem' : '8rem',
+    height: small ? '4rem' : '6rem',
     justifyContent: 'space-between',
     letterSpacing: 2,
     lineHeight: 1,
@@ -32,12 +31,17 @@ const Icon = ({ color, left, icon, id, title, small }) => {
 
   const result =
     id !== '' ? (
-      <Link to={id}>
-        <Box as="figure" {...rest}>
-          <Box as={icon} {...iconRest} />
-          <Box as="p">{title}</Box>
+      <>
+        <Box display="flex" flexDirection="column">
+          <Box as="figure" {...rest}>
+            <Box as={icon} {...iconRest} />
+            <Box as="p">{title}</Box>
+          </Box>
+          <Box bg="primary" color="white" p={2}>
+            <Link to={id}>click here for more info</Link>
+          </Box>
         </Box>
-      </Link>
+      </>
     ) : (
       <Box as="figure" {...rest}>
         <Box as={icon} {...iconRest} />

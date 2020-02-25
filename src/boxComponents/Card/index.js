@@ -14,7 +14,7 @@ const Card = ({ bg, children, color }) => {
   };
 
   return (
-    <Box as="div" style={{ borderRadius: '1rem' }} {...rest}>
+    <Box as="div" {...rest}>
       {children}
     </Box>
   );

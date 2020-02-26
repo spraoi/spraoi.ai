@@ -114,6 +114,7 @@ const SectionParagraph = styled.p`
   max-width: ${p => p.theme.sizes.maxWidths.paragraph};
   letter-spacing: ${p => p.theme.letterSpacings[0]};
   line-height: ${p => p.theme.lineHeights[2]};
+  text-align: justify;
 
   ${p =>
     p.center &&

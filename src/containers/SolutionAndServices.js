@@ -19,8 +19,8 @@ const SolutionAndServices = () => (
         We have grown rapidly in since our inception in June 2017, bringing two
         platforms to production to enable carriers to best leverage their
         investments in core administration systems. Our team and intellectual
-        property span the major lines of insurance (property/casualty,
-        life/annuities and voluntary benefits.
+        property span the major lines of insurance. (property/casualty,
+        life/annuities and voluntary benefits)
       </SectionParagraph>
       <CardList>
         <Card>

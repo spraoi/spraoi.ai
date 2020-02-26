@@ -24,7 +24,7 @@ import A3 from '../../images/alliance/limra.jpg';
 import A4 from '../../images/alliance/cio_applications.jpg';
 import A5 from '../../images/alliance/andesa_services.png';
 import A6 from '../../images/alliance/insurtech.png';
-import A7 from '../../images/alliance/gt.jpeg';
+import A7 from '../../images/alliance/wm_logo.png';
 
 const Reach = () => {
   const data = [
@@ -151,14 +151,14 @@ const Alliances = () => {
           </Box>
         </Box>
         <Box>
-          <Box as="h3">Grant Thornton</Box>
+          <Box as="h3">West Monroe Partners</Box>
           <SectionParagraph>
-            Spraoi and Grant Thornton has developed a relationship focused on
-            driving results in the insurance industry.
+            Spraoi and West Monroe Partners has developed a relationship focused
+            on driving results in the industry.
           </SectionParagraph>
           <SectionParagraph>
-            Grant Thornton provides consulting depth to augment Spraoi’s next
-            generation technology capabilities.
+            West Monroe Partners provides business domain experts to augment
+            Spraoi’s next generation technology capabilities.
           </SectionParagraph>
         </Box>
       </Box>
@@ -175,8 +175,8 @@ const AboutUs = ({ location: { pathname } }) => (
       <SectionParagraph center>
         We have a global team and established a repeatable onsite/offshore
         delivery model. US practitioners reside across the country. We have a
-        Build/Operate/Transfer (BOT) technology center in Bengaluru, with scale
-        partners in Mumbai and Mysore.
+        technology center in Bengaluru, with scale partners in Mumbai and
+        Mysore.
       </SectionParagraph>
       <Reach />
     </Section>

@@ -24,48 +24,33 @@ import Scalable from '../../images/icons/scalable.svg';
 import Segmentation from '../../images/icons/segmentation_assignment.svg';
 import AA from '../../images/icons/auto_adjudication.svg';
 import Fraud from '../../images/icons/fraud.svg';
+import Bridging from '../../images/icons/bridging.svg';
+import Settlement from '../../images/icons/settlement.svg';
+import Offset from '../../images/icons/offset.svg';
 
 const MLAdditionalModels = () => {
   const additionalModels = [
     {
       content: [
-        'Lead quality scoring better understand the quality of the leads as measured by those that convert to Fidelity product(s) purchased by assigning individual lead scores.',
-      ],
-      title: 'Lead quality scoring',
-    },
-    {
-      content: [
-        'Lead gap assessor data attributes currently not captured at the time leads are received that Fidelity may want to capture at lead generation time.',
-      ],
-      title: 'Lead gap assessor',
-    },
-    {
-      content: [
-        'Lead source scoring now from whom (e.g. what vendors) the greatest population of valued leads are provided, and from whom quality has deteriorated.',
-      ],
-      title: 'Lead source scoring',
-    },
-    {
-      content: [
-        'Purchase predictor insight into product and lead alignment appropriately direct and increase likelihood of purchase and offer better product fit.',
+        'Purchase predictor insight into product and customer alignment to appropriately direct and increase likelihood of purchase and offer better product fit.',
       ],
       title: 'Purchase predictor',
     },
     {
       content: [
-        'Application level fraud identifying patterns in applicants with a propensity to be fraudulent.',
+        'Application level fraud identifying patterns in applicants with a propensity to be fraudulent in the annuities space.',
       ],
       title: 'Application level fraud',
     },
     {
       content: [
-        'Distribution fraud review policies and their distribution source to identify institutional fraud.',
+        'Distribution fraud review policies and their distribution source to identify institutional fraud in the annuities space.',
       ],
       title: 'Distribution fraud',
     },
     {
       content: [
-        'Employee level fraud identify patterns of claims payments and disbursements for operational manipulation of the disbursement process.',
+        'Employee level fraud identify patterns of claims payments and disbursements for operational manipulation of the disbursement process in the annuities space.',
       ],
       title: 'Employee level fraud',
     },
@@ -92,6 +77,29 @@ const MLClaimsSuite = () => {
         'Identify fraudulent claims faster and/or those previously unidentified.',
       icon: Fraud,
       title: 'Fraud identification',
+    },
+  ];
+  return <IconCardList data={data} />;
+};
+
+const MLBlocks = () => {
+  const data = [
+    {
+      description: 'Identify claims for predicting settlement outcomes.',
+      icon: Settlement,
+      title: 'Settlement',
+    },
+    {
+      description:
+        'Identify STD claims at appropriate points in the process to be bridged over to LTD case management.',
+      icon: Bridging,
+      title: 'Bridging',
+    },
+    {
+      description:
+        'Identify claims with likelihood of positive social security, a pension and/or workers comp considerations.',
+      icon: Offset,
+      title: 'Offset',
     },
   ];
   return <IconCardList data={data} />;
@@ -140,20 +148,21 @@ const MachineLearningPage = ({ location: { pathname } }) => (
         Barrel is in a Category of One - Ingest, Analyse, Transform and
         Visualize Data all in one single collaborative workspace. It combines
         the features of a model building platform, transformations and pipeline
-        tools into one intuitive infrastructure
+        tools into one intuitive infrastructure.
       </SectionParagraph>
     </Section>
 
     <Section center single>
-      <SectionH2>Claims Suite</SectionH2>
+      <SectionH2>Disability Claims Suite</SectionH2>
       <SectionParagraph center>
         Our claims suite models can be fit to your data. While these function
         across lines of business, we also have developed specific models for
-        production lines (e.g. settlement, bridging and offset models for
-        disability products).
+        production lines.
       </SectionParagraph>
 
       <MLClaimsSuite />
+
+      <MLBlocks />
     </Section>
 
     <Section>

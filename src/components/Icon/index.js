@@ -11,6 +11,7 @@ import bgmlsolutions from '../../images/icons/bg-ml-solutions.svg';
 import bgpeople from '../../images/icons/bg-people.svg';
 import bgservices from '../../images/icons/bg-services.svg';
 import bridge from '../../images/icons/bridge.svg';
+import bridging from '../../images/icons/bridging.svg';
 import buildoperate from '../../images/icons/build-operate.svg';
 import buy from '../../images/icons/buy.svg';
 import chatbot from '../../images/icons/chatbot.svg';
@@ -38,6 +39,7 @@ import measurable from '../../images/icons/measurable.svg';
 import mlprocess from '../../images/icons/ml-process.svg';
 import multiplatform from '../../images/icons/multiplatform.svg';
 import observable from '../../images/icons/observable.svg';
+import offset from '../../images/icons/offset.svg';
 import offshore from '../../images/icons/offshore.svg';
 import placeholder from '../../images/icons/placeholder.svg';
 import repeatable from '../../images/icons/repeatable.svg';
@@ -48,6 +50,7 @@ import scales from '../../images/icons/scales.svg';
 import segmentationassignment from '../../images/icons/segmentation_assignment.svg';
 import serviceprocess from '../../images/icons/service-process.svg';
 import services from '../../images/icons/services.svg';
+import settlement from '../../images/icons/settlement.svg';
 import spraoilogo from '../../images/icons/spraoi-logo.svg';
 import standardized from '../../images/icons/standardized.svg';
 import thirdparty from '../../images/icons/third-party.svg';
@@ -65,6 +68,7 @@ const svgMap = {
   'bg-people': bgpeople,
   'bg-services': bgservices,
   bridge: bridge,
+  bridging: bridging,
   'build-operate': buildoperate,
   buy: buy,
   chatbot: chatbot,
@@ -92,6 +96,7 @@ const svgMap = {
   'ml-process': mlprocess,
   multiplatform: multiplatform,
   observable: observable,
+  offset: offset,
   offshore: offshore,
   placeholder: placeholder,
   repeatable: repeatable,
@@ -102,6 +107,7 @@ const svgMap = {
   segmentation_assignment: segmentationassignment,
   'service-process': serviceprocess,
   services: services,
+  settlement: settlement,
   'spraoi-logo': spraoilogo,
   standardized: standardized,
   'third-party': thirdparty,
@@ -131,6 +137,7 @@ Icon.propTypes = {
     'bg-people',
     'bg-services',
     'bridge',
+    'bridging',
     'build-operate',
     'buy',
     'chatbot',
@@ -158,6 +165,7 @@ Icon.propTypes = {
     'ml-process',
     'multiplatform',
     'observable',
+    'offset',
     'offshore',
     'placeholder',
     'repeatable',
@@ -168,6 +176,7 @@ Icon.propTypes = {
     'segmentation_assignment',
     'service-process',
     'services',
+    'settlement',
     'spraoi-logo',
     'standardized',
     'third-party',

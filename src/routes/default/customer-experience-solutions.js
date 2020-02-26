@@ -45,10 +45,10 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
     <SEO
       description="Microservices architected customer experience portal solution."
       pathname={pathname}
-      title="Customer Experience Solutions"
+      title="Customer Experience"
     />
     <HeroSection single>
-      <SectionH1 data-wrap>Customer Experience Solutions</SectionH1>
+      <SectionH1 data-wrap>CUSTOMER EXPERIENCE</SectionH1>
       <SectionParagraph>
         We have leveraged our Kwikcover&trade; customer experience portal
         platform to develop specific solutions across
@@ -93,10 +93,10 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
       <SectionParagraph as="div" center>
         <SectionH3>Group &amp; Voluntary Benefits</SectionH3>
         <p>
-          Our group benefits and voluntary enrollment solution features case
-          setup, enrollment and service functionality, and comes pre-integrated
-          with our machine learning capability to predict an individual’s
-          propensity to purchase products for a particular plan design or
+          Our group benefits and voluntary solution features case setup and
+          service functionality, and comes pre-integrated with our machine
+          learning capability to predict an individual’s propensity to purchase
+          products for a particular plan design or
           individual&nbsp;product&nbsp;set.
         </p>
       </SectionParagraph>

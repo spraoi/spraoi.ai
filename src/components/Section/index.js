@@ -53,10 +53,10 @@ Section.defaultProps = {
 };
 
 const HeroSection = styled(Section)`
-  margin-top: ${p => p.theme.space[6]};
+  margin-top: ${p => p.theme.space[8]};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    margin-top: 0;
+    margin-top: ${p => p.theme.space[8]};
   }
 `;
 
@@ -114,6 +114,7 @@ const SectionParagraph = styled.p`
   max-width: ${p => p.theme.sizes.maxWidths.paragraph};
   letter-spacing: ${p => p.theme.letterSpacings[0]};
   line-height: ${p => p.theme.lineHeights[2]};
+  text-align: justify;
 
   ${p =>
     p.center &&

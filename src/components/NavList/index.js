@@ -39,7 +39,12 @@ const NavLink = styled(PartialLink)`
 
   &:hover,
   &.active {
+    background-color: ${p => p.theme.colors.primary};
     color: ${p => p.theme.colors.accent};
+  }
+  &:hover {
+    background-color: ${p => p.theme.colors.accent};
+    color: ${p => p.theme.colors.white};
   }
 
   ${p =>
@@ -75,11 +80,11 @@ const NavLink = styled(PartialLink)`
 const NavList = ({ onLinkClick, secondary }) => (
   <StyledNavList secondary={secondary ? 1 : 0}>
     {[
-      ['/customer-experience-solutions/', 'Customer Experience Solutions'],
-      ['/machine-learning-solutions/', 'Machine Learning Solutions'],
+      ['/machine-learning-solutions/', 'Machine Learning'],
+      ['/customer-experience-solutions/', 'Customer Experience'],
       ['/services/', 'Services'],
-      ['/people/', 'People'],
-      ['/articles/', 'Articles'],
+      ['/about_us/', 'About us'],
+      ['/articles/', 'Perspectives'],
       ['/contact/', 'Contact Us'],
     ].map(([link, text]) => (
       <NavItem key={link} secondary={secondary ? 1 : 0}>

@@ -79,7 +79,7 @@ const Services = ({ location: { pathname } }) => (
       title="Services"
     />
     <HeroSection single>
-      <SectionH1 data-wrap>Services</SectionH1>
+      <SectionH1 data-wrap>SERVICES</SectionH1>
       <SectionParagraph>
         In addition to our solutions, the Spraoi team has the expertise to take
         delivery accountability from concept through execution, thus eliminating

@@ -1,0 +1,41 @@
+.img {
+  width: 15rem;
+  height: 15rem;
+  border: 10px solid #fff;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  filter: grayscale(75%);
+}
+
+.img:hover {
+  cursor: pointer;
+  filter: grayscale(0%);
+}
+
+.peopleCard .content {
+  color: lightgray;
+}
+
+.peopleCard h4 {
+  color: gray;
+}
+
+.peopleCard:hover .content {
+  color: #0a2239;
+}
+
+.peopleCard:hover h4 {
+  color: #06bce3;
+}
+
+.animateRound {
+  transition: all 1s ease;
+}
+
+.animateRound:hover {
+  border: 10px solid #0a2239;
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.6),
+    inset 0 0 40px rgba(255, 255, 255, 1);
+}

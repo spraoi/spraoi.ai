@@ -1,278 +1,195 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import styled from 'styled-components';
-import Content from '../../components/Content';
+import Box from '@spraoi/base/Box';
 import SEO from '../../components/SEO';
+import Barrel from '../../images/icons/barrel-logo.svg';
 import {
-  Figure,
-  Figures,
-  HeroSection,
-  IconFigure,
-  Order2,
-  ProcessFigure,
   Section,
   SectionH1,
   SectionH2,
-  SectionH3,
   SectionParagraph,
-  StyledIcon,
-} from '../../components/Section';
-import Barrel from '../../images/icons/barrel-logo.svg';
-import Buy from '../../images/icons/buy.svg';
-import CxSolutions from '../../images/icons/cx-solutions.svg';
-import Disability from '../../images/icons/disability.svg';
-import Fraud from '../../images/icons/fraud.svg';
-import MlProcess from '../../images/icons/ml-process.svg';
-import Observable from '../../images/icons/observable.svg';
-import Ruler from '../../images/icons/ruler.svg';
-import Scalable from '../../images/icons/scalable.svg';
-import Scales from '../../images/icons/scales.svg';
+  CardList,
+  Icon,
+  Card,
+  Accordion,
+  IconCardList,
+} from '../../boxComponents';
+
 import Standardized from '../../images/icons/standardized.svg';
+import Repeatable from '../../images/icons/repeatable.svg';
+import Observable from '../../images/icons/observable.svg';
+import Measurable from '../../images/icons/measurable.svg';
+import Experimentation from '../../images/icons/experimentation.svg';
+import Scalable from '../../images/icons/scalable.svg';
+import Segmentation from '../../images/icons/segmentation_assignment.svg';
+import AA from '../../images/icons/auto_adjudication.svg';
+import Fraud from '../../images/icons/fraud.svg';
+import Bridging from '../../images/icons/bridging.svg';
+import Settlement from '../../images/icons/settlement.svg';
+import Offset from '../../images/icons/offset.svg';
 
-const ThreeLeft = styled(Figure)`
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    left: -${p => p.theme.space[6]};
-    margin-right: ${p => p.theme.space[6]};
-    margin-bottom: ${p => p.theme.space[6]};
+const MLAdditionalModels = () => {
+  const additionalModels = [
+    {
+      content: [
+        'Purchase predictor insight into product and customer alignment to appropriately direct and increase likelihood of purchase and offer better product fit.',
+      ],
+      title: 'Purchase predictor',
+    },
+    {
+      content: [
+        'Application level fraud identifying patterns in applicants with a propensity to be fraudulent in the annuities space.',
+      ],
+      title: 'Application level fraud',
+    },
+    {
+      content: [
+        'Distribution fraud review policies and their distribution source to identify institutional fraud in the annuities space.',
+      ],
+      title: 'Distribution fraud',
+    },
+    {
+      content: [
+        'Employee level fraud identify patterns of claims payments and disbursements for operational manipulation of the disbursement process in the annuities space.',
+      ],
+      title: 'Employee level fraud',
+    },
+  ];
+  return <Accordion data={additionalModels} />;
+};
 
-    &:nth-of-type(2) {
-      top: ${p => p.theme.space[8]};
-    }
+const MLClaimsSuite = () => {
+  const data = [
+    {
+      description:
+        'Go beyond rules-based assignment to organization of at FNOL for the examiner that has the best experience adjudicating claims of this complexity.',
+      icon: Segmentation,
+      title: 'SEGMENTATION AND ASSIGNMENT',
+    },
+    {
+      description:
+        'Adjudicate claims minimizing human intervention through recognition of those with predictable outcomes for resolution without adjuster participation.',
+      icon: AA,
+      title: 'Auto adjudication',
+    },
+    {
+      description:
+        'Identify fraudulent claims faster and/or those previously unidentified.',
+      icon: Fraud,
+      title: 'Fraud identification',
+    },
+  ];
+  return <IconCardList data={data} />;
+};
 
-    &:nth-of-type(3) {
-      margin-bottom: 0;
-    }
-  }
-`;
+const MLBlocks = () => {
+  const data = [
+    {
+      description: 'Identify claims for predicting settlement outcomes.',
+      icon: Settlement,
+      title: 'Settlement',
+    },
+    {
+      description:
+        'Identify STD claims at appropriate points in the process to be bridged over to LTD case management.',
+      icon: Bridging,
+      title: 'Bridging',
+    },
+    {
+      description:
+        'Identify claims with likelihood of positive social security, a pension and/or workers comp considerations.',
+      icon: Offset,
+      title: 'Offset',
+    },
+  ];
+  return <IconCardList data={data} />;
+};
 
-const SixLeft = styled(Figure)`
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    left: -${p => p.theme.space[6]};
-    margin-right: ${p => p.theme.space[6]};
-    margin-bottom: ${p => p.theme.space[6]};
-
-    &:nth-of-type(4),
-    &:nth-of-type(5),
-    &:nth-of-type(6) {
-      margin-bottom: 0;
-    }
-  }
-`;
-
-const BannerSection = styled(Section)`
-  left: 50%;
-  width: 100vw;
-  transform: translateX(-50%);
-  background-color: ${p => p.theme.colors.accent};
-  color: ${p => p.theme.colors.white};
-`;
-
-const BannerContent = styled(Content)`
-  padding-top: 0;
-  padding-bottom: 0;
-
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    display: flex;
-
-    & > * {
-      &:first-of-type {
-        width: 36%;
-      }
-
-      &:last-of-type {
-        width: 65%;
-      }
-    }
-  }
-`;
-
-const BannerHeading = styled(SectionH3)`
-  letter-spacing: ${p => p.theme.letterSpacings[2]};
-  line-height: ${p => p.theme.lineHeights[1]};
-  text-transform: uppercase;
-`;
-
-const BannerLeft = styled.div`
-  padding: ${p => p.theme.space[8]} 0;
-`;
-
-const BannerRight = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100vw;
-  margin-left: -${p => p.theme.space[5]};
-  padding: ${p => p.theme.space[7]} 0;
-  background-color: ${p => p.theme.colors.white};
-
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    margin-left: -${p => p.theme.space[6]};
-  }
-
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    position: absolute;
-    justify-content: center;
-    top: -${p => p.theme.space[5]};
-    bottom: -${p => p.theme.space[5]};
-    right: 0;
-    margin-left: 0;
-    padding: ${p => p.theme.space[7]} ${p => p.theme.space[6]};
-    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-  }
-`;
-
-const StyledBarrel = styled(Barrel)`
-  width: 10rem;
-  margin-left: ${p => p.theme.space[6]};
-`;
-
-const MachineLearningSolutions = ({ location: { pathname } }) => (
+const MachineLearningPage = ({ location: { pathname } }) => (
   <>
     <SEO
       description="Patent-pending continuous delivery platform enabling insurance specific machine learning models."
       pathname={pathname}
-      title="Machine Learning Solutions"
+      title="Machine Learning"
     />
-    <HeroSection single>
-      <SectionH1 data-wrap>Machine Learning Solutions</SectionH1>
-      <SectionParagraph>
-        We have created a platform that accelerates the delivery of machine
-        learning models with proven success in&nbsp;the&nbsp;market.
-      </SectionParagraph>
-    </HeroSection>
-    <Section>
-      <Order2>
-        <SectionH2>Solutions</SectionH2>
-        <SectionParagraph>
-          Our team of analysts, data scientists and engineers have developed
-          machine learning SaaS solutions that can be delivered via API or with
-          our user&nbsp;experience.
-        </SectionParagraph>
-      </Order2>
-      <Figures left>
-        <ThreeLeft as={IconFigure}>
-          <StyledIcon as={Fraud} />
-          <figcaption>Disability Fraud Finder</figcaption>
-        </ThreeLeft>
-        <ThreeLeft as={IconFigure}>
-          <StyledIcon as={Disability} />
-          <figcaption>Disability Claims Suite</figcaption>
-        </ThreeLeft>
-        <ThreeLeft as={IconFigure}>
-          <StyledIcon as={Buy} />
-          <figcaption>Enrollment Propensity To Buy</figcaption>
-        </ThreeLeft>
-      </Figures>
-    </Section>
-    <Section>
-      <SectionParagraph as="div" center>
-        <SectionH3>Disability Fraud Finder</SectionH3>
-        <p>
-          We have an out of the box (OOB) machine learning driven disability
-          claims fraud solution complete with a user experience to improve fraud
-          detection and positively impact&nbsp;your&nbsp;reserves.
-        </p>
-      </SectionParagraph>
-    </Section>
-    <Section small>
-      <SectionParagraph as="div" center>
-        <SectionH3>Disability Claims Suite</SectionH3>
-        <p>
-          Our disability claims suite offers a comprehensive machine learning
-          enabled solution for disability claims. Capabilities include
-          segmentation, assignment, auto adjudication, STD to LTD bridging,
-          settlement recommendations, offsets and prediction of third party
-          referral&nbsp;requirements.
-        </p>
-      </SectionParagraph>
-    </Section>
-    <Section small>
-      <SectionParagraph as="div" center>
-        <SectionH3>Enrollment Propensity To&nbsp;Buy</SectionH3>
-        <p>
-          Our propensity to purchase solution provides the product
-          recommendation capabilities to customers based on prior
-          purchasing&nbsp;behaviors.
-        </p>
-      </SectionParagraph>
-    </Section>
-    <BannerSection single>
-      <BannerContent>
-        <BannerRight>
-          <StyledBarrel alt="Barrel" />
-        </BannerRight>
-        <BannerLeft>
-          <BannerHeading white>Our Patent Pending Infrastructure</BannerHeading>
+    <Section single>
+      <SectionH1 dataWrap>MACHINE LEARNING PLATFORM</SectionH1>
+      <Box display="flex" flexDirection={{ _: 'column', md: 'row' }}>
+        <Box order={{ _: 2, md: 1 }}>
           <SectionParagraph>
-            We offer continuous delivery of machine learning models and enable
-            observability in production to allow machine learning teams (e.g.
-            data engineers, data scientists and dev ops)
-            to&nbsp;scale&nbsp;effectively.
+            For the insurance industry, our BARREL platform is in a category of
+            one. This patent-pending infrastructure affords Insurance specific,
+            reusable rules, schemas and processes to speed the machine learning
+            model development process and virtually eliminate DevOps and Data
+            Engineers from it. By applying the lessons learned from 30 years of
+            delivering machine learning solutions to the market, we built a
+            platform to address what impedes insurers in this space:
           </SectionParagraph>
-        </BannerLeft>
-      </BannerContent>
-    </BannerSection>
-    <Section>
-      <Order2>
-        <SectionH2>Benefits</SectionH2>
-        <SectionParagraph>
-          Harmonious co-existence of desired capabilities for data scientists,
-          engineers and dev-ops. We enable execution of models in the same place
-          without human intervention, maximizing time spent ideating
-          and&nbsp;developing.
-        </SectionParagraph>
-      </Order2>
-      <Figures left>
-        <SixLeft as={IconFigure} small>
-          <StyledIcon as={Scales} data-small />
-          <figcaption>Standardized</figcaption>
-        </SixLeft>
-        <SixLeft as={IconFigure} small>
-          <StyledIcon as={CxSolutions} data-small />
-          <figcaption>Repeatable</figcaption>
-        </SixLeft>
-        <SixLeft as={IconFigure} small>
-          <StyledIcon as={Observable} data-small />
-          <figcaption>Observable</figcaption>
-        </SixLeft>
-        <SixLeft as={IconFigure} small>
-          <StyledIcon as={Ruler} data-small />
-          <figcaption>Measurable</figcaption>
-        </SixLeft>
-        <SixLeft as={IconFigure} small>
-          <StyledIcon as={Standardized} data-small />
-          <figcaption>Adjustable</figcaption>
-        </SixLeft>
-        <SixLeft as={IconFigure} small>
-          <StyledIcon as={Scalable} data-small />
-          <figcaption>Scalable</figcaption>
-        </SixLeft>
-      </Figures>
+        </Box>
+        <Box ml="auto" order={{ _: 1, md: 2 }}>
+          <Box as={Barrel} width="fitContent" />
+        </Box>
+      </Box>
+      <Card>
+        <CardList>
+          <Icon icon={Standardized} small title="Standardized" />
+          <Icon icon={Repeatable} small title="Repeatable" />
+          <Icon icon={Observable} small title="Observable" />
+          <Icon icon={Measurable} small title="Measurable" />
+          <Icon icon={Experimentation} small title="Experimentation" />
+          <Icon icon={Scalable} small title="Scalable" />
+        </CardList>
+      </Card>
     </Section>
+
+    <Section center single>
+      <SectionH2>What makes Barrel different ?</SectionH2>
+      <SectionParagraph center>
+        Barrel is in a Category of One - Ingest, Analyse, Transform and
+        Visualize Data all in one single collaborative workspace. It combines
+        the features of a model building platform, transformations and pipeline
+        tools into one intuitive infrastructure.
+      </SectionParagraph>
+    </Section>
+
+    <Section center single>
+      <SectionH2>Disability Claims Suite</SectionH2>
+      <SectionParagraph center>
+        Our claims suite models can be fit to your data. While these function
+        across lines of business, we also have developed specific models for
+        production lines.
+      </SectionParagraph>
+
+      <MLClaimsSuite />
+
+      <MLBlocks />
+    </Section>
+
     <Section>
-      <div>
-        <SectionH2>Methodology</SectionH2>
-        <SectionParagraph>
-          Our team continues to develop solutions for our clients and add to our
-          product and solutions portfolio. Our proven methodology can rapidly
-          develop a model (with optional UX) within&nbsp;10-16&nbsp;weeks.
-        </SectionParagraph>
-      </div>
-      <ProcessFigure>
-        <MlProcess />
-      </ProcessFigure>
+      <Box display="flex" flexDirection={{ _: 'column', md: 'row' }}>
+        <Box maxWidth={{ _: '100%', md: '50%' }} order={{ _: 2, md: 1 }}>
+          <MLAdditionalModels />
+        </Box>
+        <Box
+          maxWidth={{ _: '100%', md: '50%' }}
+          ml={{ md: '2rem' }}
+          order={{ _: 1, md: 2 }}
+        >
+          <SectionH2>Additional Models</SectionH2>
+          <SectionParagraph>
+            We continue to extend models available within the Barrel framework.
+            Below are others we have developed with clients.
+          </SectionParagraph>
+        </Box>
+      </Box>
     </Section>
   </>
 );
 
-MachineLearningSolutions.propTypes = {
+MachineLearningPage.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
   }).isRequired,
 };
 
-export default MachineLearningSolutions;
+export default MachineLearningPage;

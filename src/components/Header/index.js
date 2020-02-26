@@ -8,20 +8,31 @@ import NavList from '../NavList';
 
 const StyledHeader = styled.header`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: ${p => p.theme.sizes.maxWidths.content};
   margin: 0 auto;
   padding: ${p => p.theme.space[5]};
 
   @media (min-width: ${p => p.theme.breakpoints.sm}) {
     padding: ${p => p.theme.space[6]};
+
+    padding-bottom: 0;
   }
 
   @media (min-width: ${p => p.theme.breakpoints.md}) {
     margin-bottom: ${p => p.theme.space[7]};
+    padding-bottom: 0;
   }
+
+  height: 6rem;
+  background-color: #f8fbfe;
+  z-index: 5;
+  position: fixed;
+  justify-content: space-around;
+  opacity: 0.99;
+  padding-top: ${p => p.theme.space[5]};
+  border-bottom: 4px solid;
+  padding-bottom: 0;
 `;
 
 const StyledLogo = styled(Logo)`

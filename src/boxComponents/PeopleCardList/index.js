@@ -7,19 +7,19 @@ import '../styles/peopleCardList.css';
 const PeopleCard = ({ name, title, icon, id }) => {
   return (
     <div key={name}>
-      <Link to={`/people/${id}/`}>
-        <Box className="peopleCard" m={2} p={4} width="18rem">
+      <Box className="peopleCard" m={2} p={4} width="18rem">
+        <Link to={`/people/${id}/`}>
           <img alt={name} className="animateRound img" src={icon} />
-          <div className="content">
-            <Box as="h4" style={{ textTransform: 'uppercase' }}>
-              {name}
-            </Box>
-            <Box as="p" style={{ textTransform: 'uppercase' }}>
-              {title}
-            </Box>
-          </div>
-        </Box>
-      </Link>
+        </Link>
+        <div className="content">
+          <Box as="h4" style={{ textTransform: 'uppercase' }}>
+            {name}
+          </Box>
+          <Box as="p" style={{ textTransform: 'uppercase' }}>
+            {title}
+          </Box>
+        </div>
+      </Box>
     </div>
   );
 };

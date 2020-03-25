@@ -7,7 +7,6 @@ const SectionParagraph = ({ center, children }) => {
     letterSpacing: 0,
     lineHeight: 2,
     maxWidth: 'maxWidths.paragraph',
-    textAlign: 'justify',
   };
 
   if (center) {

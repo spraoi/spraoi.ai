@@ -12,7 +12,14 @@ const AllianceCard = ({ name, title, icon }) => {
           <div className="title">
             <h4>{name}</h4>
           </div>
-          <p>{title}</p>
+          <Box
+            as="h4"
+            sx={{
+              color: 'primary',
+            }}
+          >
+            {title}
+          </Box>
         </figure>
       </Box>
     </div>

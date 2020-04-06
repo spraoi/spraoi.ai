@@ -186,7 +186,7 @@ const AboutUs = ({ location: { pathname } }) => (
     </Section>
 
     <Section center single>
-      <SectionH2>ALLIANCES AND EMINIENCE</SectionH2>
+      <SectionH2>ALLIANCES AND EMINENCE</SectionH2>
       <SectionParagraph center>
         We have developed formal relationships with leading firms to expand our
         presence. We have been recognized by the industry, conducted board-level

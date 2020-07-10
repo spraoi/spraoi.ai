@@ -7,10 +7,10 @@ const StyledNavList = styled.ul`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
+  @media (min-width: ${(p) => p.theme.breakpoints.md}) {
     flex-direction: row;
 
-    ${p =>
+    ${(p) =>
       p.secondary &&
       css`
         flex-direction: column;
@@ -19,60 +19,60 @@ const StyledNavList = styled.ul`
 `;
 
 const NavItem = styled.li`
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
+  @media (min-width: ${(p) => p.theme.breakpoints.md}) {
     &:last-of-type {
-      margin-right: -${p => p.theme.space[4]};
+      margin-right: -${(p) => p.theme.space[4]};
     }
   }
 `;
 
 const NavLink = styled(PartialLink)`
   display: block;
-  padding: ${p => p.theme.space[4]} ${p => p.theme.space[5]};
-  color: ${p => p.theme.colors.text.primary};
-  line-height: ${p => p.theme.lineHeights[1]};
-  letter-spacing: ${p => p.theme.letterSpacings[0]};
+  padding: ${(p) => p.theme.space[4]} ${(p) => p.theme.space[5]};
+  color: ${(p) => p.theme.colors.text.primary};
+  line-height: ${(p) => p.theme.lineHeights[1]};
+  letter-spacing: ${(p) => p.theme.letterSpacings[0]};
   transition: color 0.2s;
-  font-weight: ${p => p.theme.fontWeights.semibold};
+  font-weight: ${(p) => p.theme.fontWeights.semibold};
   text-decoration: none;
   text-transform: uppercase;
 
   &:hover,
   &.active {
-    background-color: ${p => p.theme.colors.primary};
-    color: ${p => p.theme.colors.accent};
+    background-color: ${(p) => p.theme.colors.primary};
+    color: ${(p) => p.theme.colors.accent};
   }
   &:hover {
-    background-color: ${p => p.theme.colors.accent};
-    color: ${p => p.theme.colors.white};
+    background-color: ${(p) => p.theme.colors.accent};
+    color: ${(p) => p.theme.colors.white};
   }
 
-  ${p =>
+  ${(p) =>
     p.secondary &&
     css`
-      padding: ${p => p.theme.space[3]} 0;
-      color: ${p => p.theme.colors.white};
-      font-size: ${p => p.theme.fontSizes[2]};
+      padding: ${(p) => p.theme.space[3]} 0;
+      color: ${(p) => p.theme.colors.white};
+      font-size: ${(p) => p.theme.fontSizes[2]};
     `};
 
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    padding: ${p => p.theme.space[4]};
+  @media (min-width: ${(p) => p.theme.breakpoints.sm}) {
+    padding: ${(p) => p.theme.space[4]};
 
-    ${p =>
+    ${(p) =>
       p.secondary &&
       css`
-        padding: ${p => p.theme.space[3]} 0;
+        padding: ${(p) => p.theme.space[3]} 0;
       `};
   }
 
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    padding: ${p => p.theme.space[5]} ${p => p.theme.space[4]};
-    font-size: ${p => p.theme.fontSizes[2]};
+  @media (min-width: ${(p) => p.theme.breakpoints.md}) {
+    padding: ${(p) => p.theme.space[5]} ${(p) => p.theme.space[4]};
+    font-size: ${(p) => p.theme.fontSizes[2]};
 
-    ${p =>
+    ${(p) =>
       p.secondary &&
       css`
-        padding: ${p => p.theme.space[3]} 0;
+        padding: ${(p) => p.theme.space[3]} 0;
       `};
   }
 `;
@@ -90,7 +90,7 @@ const NavList = ({ onLinkClick, secondary }) => (
       <NavItem key={link} secondary={secondary ? 1 : 0}>
         <NavLink
           activeClassName="active"
-          onClick={e => {
+          onClick={(e) => {
             window.scrollTo(0, 0);
             if (onLinkClick) onLinkClick(e);
           }}

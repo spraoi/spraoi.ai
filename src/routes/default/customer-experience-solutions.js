@@ -21,13 +21,13 @@ import Group from '../../images/icons/group.svg';
 import Lifebuoy from '../../images/icons/lifebuoy.svg';
 
 const ThreeLeft = styled(Figure)`
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    left: -${p => p.theme.space[6]};
-    margin-right: ${p => p.theme.space[6]};
-    margin-bottom: ${p => p.theme.space[6]};
+  @media (min-width: ${(p) => p.theme.breakpoints.md}) {
+    left: -${(p) => p.theme.space[6]};
+    margin-right: ${(p) => p.theme.space[6]};
+    margin-bottom: ${(p) => p.theme.space[6]};
 
     &:nth-of-type(2) {
-      top: ${p => p.theme.space[8]};
+      top: ${(p) => p.theme.space[8]};
     }
 
     &:nth-of-type(3) {
@@ -37,7 +37,7 @@ const ThreeLeft = styled(Figure)`
 `;
 
 const SectionSecondParagraph = styled(SectionParagraph)`
-  margin-top: ${p => p.theme.space[5]};
+  margin-top: ${(p) => p.theme.space[5]};
 `;
 
 const CustomerExperienceSolutions = ({ location: { pathname } }) => (

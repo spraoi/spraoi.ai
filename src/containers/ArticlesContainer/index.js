@@ -5,7 +5,7 @@ import PeopleContainer from '../PeopleContainer';
 
 const ArticlesContainer = ({ children }) => (
   <PeopleContainer>
-    {people => (
+    {(people) => (
       <StaticQuery
         query={graphql`
           query {
@@ -33,10 +33,10 @@ const ArticlesContainer = ({ children }) => (
         `}
         render={({ allMarkdownRemark: { edges: articles } }) =>
           children(
-            articles.map(article => ({
+            articles.map((article) => ({
               ...article.node,
               author: people.find(
-                person => person.id === article.node.frontmatter.author
+                (person) => person.id === article.node.frontmatter.author
               ),
             }))
           )

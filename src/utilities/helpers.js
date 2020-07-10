@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 const Newline = styled.span`
   display: block;
-  margin-bottom: ${p => p.theme.space[5]};
+  margin-bottom: ${(p) => p.theme.space[5]};
 `;
 
-export const newline2Space = text =>
+export const newline2Space = (text) =>
   text.split('\n').map((item, key) => (
     <Fragment key={key}>
       {item}
@@ -14,5 +14,5 @@ export const newline2Space = text =>
     </Fragment>
   ));
 
-export const possessive = text =>
+export const possessive = (text) =>
   text[text.length - 1] === 's' ? `${text}’` : `${text}’s`;

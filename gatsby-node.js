@@ -31,7 +31,7 @@ exports.createPages = ({ actions: { createPage }, graphql }) =>
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) return Promise.reject(result.errors);
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {

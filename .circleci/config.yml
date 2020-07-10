@@ -27,6 +27,7 @@ jobs:
       - run:
           command: |
             touch src/config.json
+            mkdir -p src/components/Icon && touch src/components/Icon/index.js
             yarn lint
             yarn test
       - store_test_results:
@@ -104,14 +105,14 @@ workflows:
       - build-spraoi-dev:
           filters:
             branches:
-              only: develop
+              only: master
           requires:
             - install
       - deploy-spraoi-dev:
           context: spraoi-context
           filters:
             branches:
-              only: develop
+              only: master
           requires:
             - build-spraoi-dev
             - test

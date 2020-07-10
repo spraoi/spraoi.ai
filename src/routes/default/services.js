@@ -26,10 +26,10 @@ import ServiceProcess from '../../images/icons/service-process.svg';
 import ThirdParty from '../../images/icons/third-party.svg';
 
 const FiveLeft = styled(Figure)`
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    left: -${p => p.theme.space[6]};
-    margin-right: ${p => p.theme.space[6]};
-    margin-bottom: ${p => p.theme.space[6]};
+  @media (min-width: ${(p) => p.theme.breakpoints.md}) {
+    left: -${(p) => p.theme.space[6]};
+    margin-right: ${(p) => p.theme.space[6]};
+    margin-bottom: ${(p) => p.theme.space[6]};
 
     &:nth-of-type(4),
     &:nth-of-type(5) {
@@ -40,34 +40,34 @@ const FiveLeft = styled(Figure)`
 `;
 
 const BannerSection = styled(Section)`
-  margin-right: -${p => p.theme.space[5]};
-  margin-left: -${p => p.theme.space[5]};
-  background-color: ${p => p.theme.colors.accent};
-  color: ${p => p.theme.colors.white};
+  margin-right: -${(p) => p.theme.space[5]};
+  margin-left: -${(p) => p.theme.space[5]};
+  background-color: ${(p) => p.theme.colors.accent};
+  color: ${(p) => p.theme.colors.white};
 
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    margin-right: -${p => p.theme.space[6]};
-    margin-left: -${p => p.theme.space[6]};
+  @media (min-width: ${(p) => p.theme.breakpoints.sm}) {
+    margin-right: -${(p) => p.theme.space[6]};
+    margin-left: -${(p) => p.theme.space[6]};
   }
 
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    border-radius: ${p => p.theme.radii[2]};
+  @media (min-width: ${(p) => p.theme.breakpoints.md}) {
+    border-radius: ${(p) => p.theme.radii[2]};
     margin-right: 0;
     margin-left: 0;
   }
 `;
 
 const BannerContent = styled(Content)`
-  padding: ${p => p.theme.space[8]} ${p => p.theme.space[5]};
+  padding: ${(p) => p.theme.space[8]} ${(p) => p.theme.space[5]};
 
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    padding: ${p => p.theme.space[8]} ${p => p.theme.space[6]};
+  @media (min-width: ${(p) => p.theme.breakpoints.sm}) {
+    padding: ${(p) => p.theme.space[8]} ${(p) => p.theme.space[6]};
   }
 `;
 
 const BannerHeading = styled(SectionH3)`
-  letter-spacing: ${p => p.theme.letterSpacings[2]};
-  line-height: ${p => p.theme.lineHeights[2]};
+  letter-spacing: ${(p) => p.theme.letterSpacings[2]};
+  line-height: ${(p) => p.theme.lineHeights[2]};
   text-transform: uppercase;
 `;
 

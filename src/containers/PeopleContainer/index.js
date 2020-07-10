@@ -63,12 +63,12 @@ const PeopleContainer = ({ children }) => (
       allPeopleYaml: { edges: people },
     }) =>
       children(
-        people.map(p => ({
+        people.map((p) => ({
           ...p.node,
           articles: articles
-            .filter(article => article.node.frontmatter.author === p.node.id)
-            .map(article => article.node),
-          image: images.find(i =>
+            .filter((article) => article.node.frontmatter.author === p.node.id)
+            .map((article) => article.node),
+          image: images.find((i) =>
             i.node.childImageSharp.fluid.src.includes(p.node.id)
           ).node.childImageSharp.fluid,
         }))

@@ -9,36 +9,36 @@ import Twitter from '../../images/icons/twitter.svg';
 
 const StyledFooter = styled.footer`
   width: 100%;
-  margin-top: ${p => p.theme.space[8]};
-  background-color: ${p => p.theme.colors.primary};
-  color: ${p => p.theme.colors.white};
+  margin-top: ${(p) => p.theme.space[8]};
+  background-color: ${(p) => p.theme.colors.primary};
+  color: ${(p) => p.theme.colors.white};
 `;
 
 const FooterContent = styled.div`
   width: 100%;
   margin: 0 auto;
-  padding: ${p => p.theme.space[8]} ${p => p.theme.space[5]};
-  max-width: ${p => p.theme.sizes.maxWidths.content};
+  padding: ${(p) => p.theme.space[8]} ${(p) => p.theme.space[5]};
+  max-width: ${(p) => p.theme.sizes.maxWidths.content};
 
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
+  @media (min-width: ${(p) => p.theme.breakpoints.sm}) {
     display: flex;
     justify-content: space-between;
-    padding: ${p => p.theme.space[8]} ${p => p.theme.space[6]};
+    padding: ${(p) => p.theme.space[8]} ${(p) => p.theme.space[6]};
   }
 
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
+  @media (min-width: ${(p) => p.theme.breakpoints.md}) {
     justify-content: flex-start;
   }
 `;
 
 const SocialSection = styled.div`
-  margin-top: ${p => p.theme.space[7]};
+  margin-top: ${(p) => p.theme.space[7]};
 
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
+  @media (min-width: ${(p) => p.theme.breakpoints.sm}) {
     margin-top: 0;
   }
 
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
+  @media (min-width: ${(p) => p.theme.breakpoints.md}) {
     margin-left: 25%;
   }
 `;
@@ -48,13 +48,13 @@ const SocialList = styled.ul`
 `;
 
 const SocialLink = styled.a`
-  margin-right: ${p => p.theme.space[6]};
+  margin-right: ${(p) => p.theme.space[6]};
 `;
 
 const SocialIcon = styled.div`
   width: 2rem;
   height: 2rem;
-  fill: ${p => p.theme.colors.accent};
+  fill: ${(p) => p.theme.colors.accent};
 `;
 
 const Footer = () => (

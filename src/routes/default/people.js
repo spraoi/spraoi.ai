@@ -16,14 +16,14 @@ const PeopleList = styled.ul`
   display: flex;
   flex-wrap: wrap;
 
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
+  @media (min-width: ${(p) => p.theme.breakpoints.md}) {
     justify-content: center;
   }
 `;
 
 const People = ({ location: { pathname } }) => (
   <PeopleContainer>
-    {people => (
+    {(people) => (
       <>
         <SEO
           description="Unique, global team of professionals delivering ensuring today&rsquo;s needs become tomorrow&rsquo;s results."
@@ -41,9 +41,9 @@ const People = ({ location: { pathname } }) => (
           <SectionH2>Founding Team</SectionH2>
           <PeopleList>
             {people
-              .filter(p => p.executive > 0 && p.active === 'y')
+              .filter((p) => p.executive > 0 && p.active === 'y')
               .sort((a, b) => (a.executive > b.executive ? 1 : -1))
-              .map(person => (
+              .map((person) => (
                 <PersonPreview key={person.id} as="li" {...person} />
               ))}
           </PeopleList>
@@ -52,9 +52,9 @@ const People = ({ location: { pathname } }) => (
           <SectionH2>Team</SectionH2>
           <PeopleList>
             {people
-              .filter(p => p.executive === 0 && p.active === 'y')
+              .filter((p) => p.executive === 0 && p.active === 'y')
               .sort((a, b) => (a.givenName > b.givenName ? 1 : -1))
-              .map(person => (
+              .map((person) => (
                 <PersonPreview key={person.id} as="li" {...person} />
               ))}
           </PeopleList>

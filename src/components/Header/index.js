@@ -11,16 +11,16 @@ const StyledHeader = styled.header`
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  padding: ${p => p.theme.space[5]};
+  padding: ${(p) => p.theme.space[5]};
 
-  @media (min-width: ${p => p.theme.breakpoints.sm}) {
-    padding: ${p => p.theme.space[6]};
+  @media (min-width: ${(p) => p.theme.breakpoints.sm}) {
+    padding: ${(p) => p.theme.space[6]};
 
     padding-bottom: 0;
   }
 
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    margin-bottom: ${p => p.theme.space[7]};
+  @media (min-width: ${(p) => p.theme.breakpoints.md}) {
+    margin-bottom: ${(p) => p.theme.space[7]};
     padding-bottom: 0;
   }
 
@@ -30,7 +30,7 @@ const StyledHeader = styled.header`
   position: fixed;
   justify-content: space-around;
   opacity: 0.99;
-  padding-top: ${p => p.theme.space[5]};
+  padding-top: ${(p) => p.theme.space[5]};
   border-bottom: 4px solid;
   padding-bottom: 0;
 `;
@@ -48,14 +48,14 @@ const NavToggle = styled(Squeeze)`
     position: absolute;
     right: 0;
     top: 0;
-    padding: ${p => p.theme.space[5]};
+    padding: ${(p) => p.theme.space[5]};
     z-index: 2;
 
-    @media (min-width: ${p => p.theme.breakpoints.sm}) {
-      padding: ${p => p.theme.space[6]};
+    @media (min-width: ${(p) => p.theme.breakpoints.sm}) {
+      padding: ${(p) => p.theme.space[6]};
     }
 
-    @media (min-width: ${p => p.theme.breakpoints.md}) {
+    @media (min-width: ${(p) => p.theme.breakpoints.md}) {
       display: none;
     }
   }
@@ -72,10 +72,10 @@ const Nav = styled.nav`
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: ${p => p.theme.colors.body};
+  background-color: ${(p) => p.theme.colors.body};
   z-index: 1;
 
-  ${p =>
+  ${(p) =>
     p.mobileNavVisible &&
     css`
       display: flex;
@@ -84,7 +84,7 @@ const Nav = styled.nav`
       right: 0;
     `};
 
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
+  @media (min-width: ${(p) => p.theme.breakpoints.md}) {
     position: static;
     display: flex;
     background-color: transparent;

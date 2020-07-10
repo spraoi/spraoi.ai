@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'gatsby';
 
-const partlyActive = cn => ({ isPartiallyCurrent }) => ({
+const partlyActive = (cn) => ({ isPartiallyCurrent }) => ({
   className: cn + (isPartiallyCurrent ? ` active` : ``),
 });
 

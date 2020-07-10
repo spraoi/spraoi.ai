@@ -19,18 +19,18 @@ import Offshore from '../../images/icons/offshore.svg';
 import SolutionAndServices from '../../containers/SolutionAndServices';
 
 const ThreeRight = styled(Figure)`
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
-    top: -${p => p.theme.space[7]};
-    left: ${p => p.theme.space[4]};
-    margin-bottom: ${p => p.theme.space[6]};
-    margin-left: ${p => p.theme.space[6]};
+  @media (min-width: ${(p) => p.theme.breakpoints.md}) {
+    top: -${(p) => p.theme.space[7]};
+    left: ${(p) => p.theme.space[4]};
+    margin-bottom: ${(p) => p.theme.space[6]};
+    margin-left: ${(p) => p.theme.space[6]};
 
     &:nth-of-type(2) {
-      top: ${p => p.theme.space[6]};
+      top: ${(p) => p.theme.space[6]};
     }
 
     &:nth-of-type(3) {
-      margin-bottom: -${p => p.theme.space[7]};
+      margin-bottom: -${(p) => p.theme.space[7]};
     }
   }
 `;

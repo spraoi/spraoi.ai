@@ -12,11 +12,11 @@ import config from '../../config';
 
 const Form = styled.form`
   flex-shrink: 0;
-  margin-top: ${p => p.theme.space[6]};
+  margin-top: ${(p) => p.theme.space[6]};
 
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
+  @media (min-width: ${(p) => p.theme.breakpoints.md}) {
     margin-top: 0;
-    margin-left: ${p => p.theme.space[8]};
+    margin-left: ${(p) => p.theme.space[8]};
   }
 `;
 
@@ -26,7 +26,7 @@ const InlineInputs = styled.div`
   & > * {
     width: 100%;
     margin-top: 0;
-    margin-right: ${p => p.theme.space[5]};
+    margin-right: ${(p) => p.theme.space[5]};
 
     &:last-of-type {
       margin-right: 0;
@@ -36,7 +36,7 @@ const InlineInputs = styled.div`
 
 const ContactForm = () => (
   <FinalForm
-    onSubmit={async values => {
+    onSubmit={async (values) => {
       try {
         await fetch(config.emailApi, {
           body: JSON.stringify(values),
@@ -47,7 +47,7 @@ const ContactForm = () => (
         return { [FORM_ERROR]: e.message };
       }
     }}
-    render={formContext => (
+    render={(formContext) => (
       <Form onSubmit={formContext.handleSubmit}>
         <InlineInputs>
           <Field

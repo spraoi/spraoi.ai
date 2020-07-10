@@ -11,11 +11,11 @@ const StyledPerson = styled(StyledImage)`
   width: 9.2rem;
   height: 9.2rem;
 
-  @media (min-width: ${p => p.theme.breakpoints.md}) {
+  @media (min-width: ${(p) => p.theme.breakpoints.md}) {
     width: 6.8rem;
     height: 6.8rem;
 
-    ${p =>
+    ${(p) =>
       p.executive &&
       css`
         width: 9.2rem;
@@ -34,10 +34,10 @@ const PersonPreview = ({ executive, familyName, givenName, id, image }) => (
         place: 'bottom',
         sx: {
           '&.place-bottom:after': {
-            borderBottomColor: p => `${p.colors.white}!important`,
+            borderBottomColor: (p) => `${p.colors.white}!important`,
           },
-          bg: p => `${p.colors.white}!important`,
-          color: p => `${p.colors.accent}!important`,
+          bg: (p) => `${p.colors.white}!important`,
+          color: (p) => `${p.colors.accent}!important`,
           fontSize: 3,
           fontWeight: 'bold',
         },

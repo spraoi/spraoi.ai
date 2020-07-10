@@ -23,9 +23,9 @@ const Articles = () => (
     </HeroSection>
     <Section single>
       <ArticlesContainer>
-        {articles => (
+        {(articles) => (
           <LinkList
-            links={articles.map(article => ({
+            links={articles.map((article) => ({
               link: `/articles${article.fields.slug}`,
               title: article.frontmatter.title,
             }))}

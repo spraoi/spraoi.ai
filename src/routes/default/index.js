@@ -1,5 +1,7 @@
+import Box from '@spraoi/base/Box';
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import BarrelLogo from '../../images/icons/barrel-logo.svg';
 import BgLanding from '../../images/icons/bg-landing.svg';
 import Bridge from '../../images/icons/bridge.svg';
@@ -57,6 +59,24 @@ const Index = () => (
           customer experience infrastructure normalizes and improves the
           purchase, service and claims processes for stakeholders.
         </SectionParagraph>
+        <Box
+          as={Link}
+          sx={{
+            '&:hover': { textDecoration: 'underline' },
+            bg: 'accent',
+            borderRadius: 1,
+            color: 'white',
+            display: 'inline-block',
+            left: 0,
+            mt: 5,
+            mx: 'auto',
+            p: 4,
+            textAlign: 'center',
+          }}
+          to="/eis-and-spraoi-partnership/"
+        >
+          Check out our latest press release
+        </Box>
       </div>
       <Figures>
         <ThreeRight as={IconFigure}>

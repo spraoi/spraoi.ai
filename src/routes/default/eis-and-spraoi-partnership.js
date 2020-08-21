@@ -56,7 +56,7 @@ const CustomerExperienceSolutions = ({ location: { pathname } }) => (
       comprehensive, industry-leading set of open APIs that expose the quoting,
       rating, policy administration, billing, claims, and customer management
       capabilities within the EIS Suite™ of core applications. Spraoi connects
-      to those APIs to build out customer and agent portals within its QuikCover
+      to those APIs to build out customer and agent portals within its Kwikcover
       solution and delivers machine learning models to improve operating
       outcomes from quote to claim.
     </SectionParagraph>

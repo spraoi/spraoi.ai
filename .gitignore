@@ -1,0 +1,13 @@
+.DS_Store
+.cache/
+.idea/
+.yalc/
+coverage/
+node_modules/
+public/
+reports/
+src/components/Icon/
+src/config.json
+yalc.lock
+yarn-debug.log
+yarn-error.log

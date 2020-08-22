@@ -1,0 +1,128 @@
+version: 2.1
+jobs:
+  install:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - cache-{{ checksum "yarn.lock" }}
+      - run: yarn
+      - save_cache:
+          paths:
+            - ~/.cache
+          key: cache-{{ checksum "yarn.lock" }}
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - project
+    working_directory: ~/project
+  test:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run:
+          command: |
+            touch src/config.json
+            mkdir -p src/components/Icon && touch src/components/Icon/index.js
+            yarn lint
+            yarn test
+      - store_test_results:
+          path: reports
+      - store_artifacts:
+          path: coverage
+    working_directory: ~/project
+  build:
+    docker:
+      - image: circleci/node:latest
+    parameters:
+      env:
+        type: string
+      variation:
+        type: string
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run: config=<<parameters.variation>>.<<parameters.env>> yarn build
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - project
+    working_directory: ~/project
+  deploy:
+    docker:
+      - image: travnels/circleci-nodejs-awscli:latest
+    parameters:
+      env:
+        type: string
+      variation:
+        type: string
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run: config=<<parameters.variation>>.<<parameters.env>> yarn deploy
+    working_directory: ~/project
+workflows:
+  version: 2.1
+  build-test-deploy:
+    jobs:
+      - install:
+          filters:
+            tags:
+              only: /.*/
+      - test:
+          filters:
+            tags:
+              only: /.*/
+          requires:
+            - install
+      - build:
+          name: build-spraoi-dev
+          variation: spraoi
+          env: dev
+          filters:
+            branches:
+              only: master
+          requires:
+            - install
+      - deploy:
+          name: deploy-spraoi-dev
+          variation: spraoi
+          env: dev
+          context: spraoi-context
+          filters:
+            branches:
+              only: master
+          requires:
+            - test
+            - build-spraoi-dev
+      - build:
+          name: build-spraoi-prod
+          variation: spraoi
+          env: prod
+          filters:
+            tags:
+              only: /^v\d+\.\d+\.\d+$/
+            branches:
+              ignore: /.*/
+          requires:
+            - install
+      - deploy:
+          name: deploy-spraoi-prod
+          variation: spraoi
+          env: prod
+          context: spraoi-context
+          filters:
+            tags:
+              only: /^v\d+\.\d+\.\d+$/
+            branches:
+              ignore: /.*/
+          requires:
+            - test
+            - build-spraoi-prod

@@ -1,7 +1,7 @@
 ---
 datePublished: 2018-06-12
 dateModified: 2018-06-12
-title: Building A Great Product Development Team & Culture
+title: Building a Great Product Development Team & Culture
 author: deepak-mohapatra
 description: >-
   Impact of right organizational culture cannot be overstated. An engineering

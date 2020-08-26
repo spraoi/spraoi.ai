@@ -5,7 +5,8 @@ import React from 'react';
 import PeopleContainer from '../../containers/PeopleContainer';
 import SEO from '../SEO';
 import Section from '../Section';
-import { newline2Space, possessive } from '../../utilities/helpers';
+import newlineToSpace from '../../utilities/newline-to-space';
+import possessive from '../../utilities/posessive';
 
 const PersonLayout = ({ location: { pathname }, pageContext: { slug } }) => (
   <PeopleContainer>
@@ -26,7 +27,7 @@ const PersonLayout = ({ location: { pathname }, pageContext: { slug } }) => (
             <Img alt="" fluid={person.image} />
             <Box>{name}</Box>
             <Box>{isActive ? person.position : 'Spraoi Alumnus'}</Box>
-            {isActive && <p>{newline2Space(person.bio)}</p>}
+            {isActive && <p>{newlineToSpace(person.bio)}</p>}
           </Section>
           {!!person.articles.length && (
             <Section>

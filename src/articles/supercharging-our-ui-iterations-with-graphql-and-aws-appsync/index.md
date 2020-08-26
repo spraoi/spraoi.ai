@@ -1,7 +1,7 @@
 ---
 datePublished: 2019-06-21
 dateModified: 2019-06-21
-title: Supercharging Our UI Iterations With GraphQL & AWS AppSync
+title: Supercharging Our UI Iterations with GraphQL & AWS AppSync
 author: cade-scroggins
 description: >-
   How we are reducing friction as our applications evolve.

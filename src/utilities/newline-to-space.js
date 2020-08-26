@@ -1,7 +1,7 @@
 import Box from '@spraoi/base/Box';
 import React, { Fragment } from 'react';
 
-export const newline2Space = (text) =>
+const newlineToSpace = (text) =>
   text.split('\n').map((item, key) => (
     <Fragment key={key}>
       {item}
@@ -9,5 +9,4 @@ export const newline2Space = (text) =>
     </Fragment>
   ));
 
-export const possessive = (text) =>
-  text[text.length - 1] === 's' ? `${text}’` : `${text}’s`;
+export default newlineToSpace;

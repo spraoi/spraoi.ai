@@ -1,17 +1,17 @@
 ---
 datePublished: 2019-03-11
 dateModified: 2019-03-11
-title: Enhancing Customer Experience—A Necessity in Insurance Industry
+title: Enhancing the Customer’s Experience is a Necessity
 author: sandeep-patil
 description: >-
-  Enhancing customer experience is no longer a choice.
+  Enhancing customer experiences is no longer a choice.
 ---
 
 The insurance industry is currently facing a digital-driven and consumer-led
 disruption similar to those faced by the retail, banking, media, and
-entertainment industries in the past.<sup>[1]</sup> As a result, customer
-experience is increasingly taking the front seat, with customers expecting a
-personalized engagement to best utilize the products/services benefits.
+entertainment industries in the past.[^1] As a result, customer experience is
+increasingly taking the front seat, with customers expecting a personalized
+engagement to best utilize the products/services benefits.
 
 Customer retention is a significant problem faced by the Insurance industry
 globally. In fact, a global Insurance industry survey1 revealed that over the
@@ -113,6 +113,4 @@ the wake of a new generation of customers in the developing and developed
 markets, it is imperative for Insurance companies to not only embrace the
 technology but also to increase the level of empathy for their customers.
 
----
-
-1. EY Global Consumer Insurance survey 2014
+[^1]: EY Global Consumer Insurance survey 2014

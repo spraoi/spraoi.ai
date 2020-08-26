@@ -10,9 +10,11 @@ const ArrowLink = ({ children, link }) => (
     sx={{
       '&:hover': {
         '&>span': { transform: 'translateX(5px)' },
+        color: 'accentDark',
         textDecoration: 'underline',
       },
-      fontSize: 2,
+      color: 'text.link',
+      fontSize: 1,
       fontWeight: 'bold',
       letterSpacing: 1,
       mx: 2,

@@ -1,7 +1,7 @@
 ---
 datePublished: 2019-02-05
 dateModified: 2019-02-05
-title: Why Is Data Driven ML So Amazing?
+title: Why is Data Driven ML so Amazing?
 author: christopher-chang
 description: >-
   Machine learning utilizes inductive reasoning, which can simultaneously

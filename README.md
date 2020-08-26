@@ -22,13 +22,11 @@
 
 ## To Do
 
-- [ ] add perspectives page
-- [ ] fix article pages
-- [ ] fix person pages
 - [ ] add about us page
 - [ ] add services page
 - [ ] add customer experience page
 - [ ] add machine learning page
+- [ ] fix person pages
 - [ ] add press releases page
 - [ ] add eis press release
 - [ ] add "exciting development" as pr

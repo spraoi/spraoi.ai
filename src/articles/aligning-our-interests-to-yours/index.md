@@ -1,6 +1,6 @@
 ---
-datePublished: 2018-01-15
-dateModified: 2018-01-15
+datePublished: 2018-01-14
+dateModified: 2018-01-14
 title: Aligning Our Interests to Yours
 author: matthew-omara
 description: >-

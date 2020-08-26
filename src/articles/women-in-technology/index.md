@@ -1,7 +1,7 @@
 ---
 datePublished: 2019-01-03
 dateModified: 2019-01-03
-title: Women In Technology
+title: Women in Technology
 author: mamta-chaurdia
 description: >-
   Why we need a more gender balanced workforce, especially in the tech industry

@@ -2,14 +2,16 @@
 
 import 'prism-themes/themes/prism-vs.css';
 import Box from '@spraoi/base/Box';
-import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Facebook, Linkedin, Mail, Twitter } from 'react-social-sharing';
 import { Link } from 'gatsby';
 import ArticlesContainer from '../../containers/ArticlesContainer';
+import Avatar from '../Avatar';
 import MetadataContainer from '../../containers/MetadataContainer';
 import SEO from '../SEO';
+import Section from '../Section';
+import ShareCTA from '../ShareCTA';
+import noOrphan from '../../utilities/no-orphan';
 
 const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
   <MetadataContainer>
@@ -20,12 +22,21 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
             (article) => article.fields.slug === slug
           );
 
-          const shareUrl = `${siteUrl}/perspectives${slug}`;
           const bannerRegex = /\/static\/[^"]+banner-1200x628\.(png|jpg)/;
           const [articleBanner] = html.match(bannerRegex) || [];
 
+          const noDropcap = {
+            color: 'inherit',
+            float: 'none',
+            fontFamily: 'inherit',
+            fontSize: 'inherit',
+            fontWeight: 'inherit',
+            mr: '0',
+            mt: '0',
+          };
+
           return (
-            <article>
+            <>
               <SEO
                 article={frontmatter}
                 banner={articleBanner || banner}
@@ -36,117 +47,142 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
                 person={author}
                 title={frontmatter.title}
               />
-              <section>
-                <h1>{frontmatter.title}</h1>
+              <Section as="article">
                 <Box
+                  as="header"
                   sx={{
-                    alignItems: 'center',
-                    display: 'flex',
-                    lineHeight: 1,
-                    mt: 6,
+                    maxWidth: 'maxWidths.title',
+                    mx: 'auto',
+                    textAlign: [null, null, null, 'center'],
                   }}
                 >
-                  <Link to={`/people/${author.id}`}>
+                  <Box
+                    as="h1"
+                    sx={{
+                      color: 'text.primary',
+                      fontSize: [5, null, null, 6],
+                    }}
+                  >
+                    {noOrphan(frontmatter.title)}
+                  </Box>
+                  <Box
+                    sx={{
+                      alignItems: 'center',
+                      display: 'flex',
+                      justifyContent: [null, null, null, 'center'],
+                      mt: [4, null, null, 5],
+                    }}
+                  >
+                    <Link to={`/people/${author.id}`}>
+                      <Avatar
+                        image={author.image}
+                        size={['2rem', null, null, '3rem']}
+                      />
+                    </Link>
                     <Box
                       sx={{
-                        flexShrink: 0,
-                        height: '4rem',
-                        mr: 6,
-                        width: '4rem',
+                        color: 'text.subtle',
+                        fontSize: [2, null, null, 3],
+                        fontWeight: 'semibold',
+                        ml: [4, null, 5],
                       }}
                     >
-                      <Img alt="" fluid={author.image} />
-                    </Box>
-                  </Link>
-                  <ul>
-                    <li>
                       <Box
                         as={Link}
-                        sx={{
-                          color: 'text.primary',
-                          fontFamily: 'secondary',
-                          fontWeight: 'semibold',
-                          textDecoration: 'none',
-                        }}
+                        sx={{ color: 'inherit' }}
                         to={`/people/${author.id}`}
                       >
                         {author.givenName} {author.familyName}
                       </Box>
-                    </li>
-                    <li>{frontmatter.datePublished}</li>
-                  </ul>
+                      <Box as="span" sx={{ mx: 3 }}>
+                        &middot;
+                      </Box>
+                      {frontmatter.datePublished}
+                    </Box>
+                  </Box>
                 </Box>
-              </section>
-              <Box
-                dangerouslySetInnerHTML={{ __html: html }}
-                sx={{
-                  '.gatsby-highlight': { mb: 7 },
-                  '.gatsby-resp-image-wrapper': {
-                    borderRadius: 3,
-                    m: 0,
-                    overflow: 'hidden',
-                  },
-                  blockquote: {
-                    bg: 'white',
-                    borderLeftColor: 'border',
-                    borderLeftStyle: 'solid',
-                    borderLeftWidth: 5,
-                    m: 0,
-                    mb: 7,
-                    p: 6,
-                  },
-                  'blockquote, h3, p, ul': { maxWidth: 'maxWidths.paragraph' },
-                  h2: { mb: 6, mt: 8 },
-                  h3: { lineHeight: 2, mb: 2, mt: 7 },
-                  hr: {
-                    borderStyle: 'none',
-                    borderTopColor: 'border',
-                    borderTopStyle: 'solid',
-                    borderTopWidth: '1px',
-                    height: '1px',
-                    m: 0,
+                <Box
+                  dangerouslySetInnerHTML={{ __html: html }}
+                  sx={{
+                    '.footnotes': {
+                      p: { m: 0 },
+                      'p, a': { display: 'inline' },
+                    },
+                    '.gatsby-highlight': { mb: 6 },
+                    '.gatsby-resp-image-wrapper': {
+                      borderRadius: 3,
+                      m: 0,
+                      overflow: 'hidden',
+                    },
+                    '.invisible': {
+                      clip: 'rect(1px, 1px, 1px, 1px)',
+                      height: '1px',
+                      overflow: 'hidden',
+                      position: 'absolute',
+                      top: 'auto',
+                      whiteSpace: 'nowrap',
+                      width: '1px',
+                    },
+                    a: {
+                      '&:hover': { textDecoration: 'underline' },
+                      color: 'text.link',
+                    },
+                    blockquote: {
+                      '&>p': { mb: 0 },
+                      bg: 'white',
+                      borderLeftColor: 'text.subtle',
+                      borderLeftStyle: 'solid',
+                      borderLeftWidth: '0.9rem',
+                      color: 'grays.4',
+                      fontStyle: 'italic',
+                      fontWeight: 'semibold',
+                      m: 0,
+                      mb: 6,
+                      p: 6,
+                      'p:first-of-type .dropcap': noDropcap,
+                    },
+                    h2: { lineHeight: 0, mb: 6, mt: 7 },
+                    h3: { lineHeight: 1, mb: 2, mt: 7 },
+                    hr: {
+                      borderStyle: 'none',
+                      borderTopColor: 'border',
+                      borderTopStyle: 'solid',
+                      borderTopWidth: '1px',
+                      height: '1px',
+                      m: 0,
+                      maxWidth: 'maxWidths.paragraph',
+                      p: 0,
+                    },
+                    lineHeight: 2,
                     maxWidth: 'maxWidths.paragraph',
-                    p: 0,
-                  },
-                  letterSpacing: 1,
-                  lineHeight: 3,
-                  p: { mb: 7 },
-                  pre: {
-                    borderLeftColor: 'border',
-                    borderLeftStyle: 'solid',
-                    borderLeftWidth: '1px',
-                  },
-                  ul: { listStyle: 'disc outside', mb: 7, ml: [6, null, 8] },
-                }}
-              />
-              ;
-              <footer>
-                <Twitter
-                  big
-                  link={shareUrl}
-                  message={frontmatter.title}
-                  solidcircle
+                    mt: 8,
+                    mx: 'auto',
+                    ol: { listStyle: 'decimal', ml: '1em' },
+                    'ol, ul': {
+                      listStylePosition: 'outside',
+                      mb: 6,
+                      p: 0,
+                      'p:first-of-type .dropcap': noDropcap,
+                    },
+                    p: { mb: 6, mr: '-0.75rem' },
+                    'p:first-of-type .dropcap': {
+                      color: 'accent',
+                      float: 'left',
+                      fontFamily: 'secondary',
+                      fontSize: '3.65rem',
+                      fontWeight: 'bold',
+                      mr: '1.1rem',
+                      mt: '0.9rem',
+                    },
+                    ul: { listStyle: 'disc', ml: '1em' },
+                  }}
                 />
-                <Facebook
-                  big
-                  link={shareUrl}
-                  message={frontmatter.title}
-                  solidcircle
+                <ShareCTA
+                  link={`${siteUrl}/perspectives${slug}`}
+                  title={frontmatter.title}
                 />
-                <Linkedin
-                  big
-                  link={shareUrl}
-                  message={frontmatter.title}
-                  solidcircle
-                />
-                <Mail
-                  big
-                  link={shareUrl}
-                  message={frontmatter.title}
-                  solidcircle
-                />
-              </footer>
-            </article>
+              </Section>
+            </>
           );
         }}
       </ArticlesContainer>

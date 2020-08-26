@@ -16,6 +16,9 @@ const ArticlesContainer = ({ children }) => (
               edges {
                 node {
                   fields {
+                    readingTime {
+                      text
+                    }
                     slug
                   }
                   frontmatter {

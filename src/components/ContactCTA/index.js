@@ -4,11 +4,19 @@ import React from 'react';
 import Section from '../Section';
 
 const ContactCTA = () => (
-  <Section sx={{ textAlign: 'center' }}>
-    <Box as="p" sx={{ fontWeight: 'semibold', lineHeight: 2 }}>
+  <Section
+    sx={{
+      alignItems: 'center',
+      display: 'flex',
+      flexDirection: ['column', null, 'row'],
+      justifyContent: 'center',
+      maxWidth: '100%',
+    }}
+  >
+    <Box as="p" sx={{ fontWeight: 'semibold' }}>
       Interested in working with us?
     </Box>
-    <Button link="/contact" sx={{ maxWidth: '14rem', mt: 4, mx: 'auto' }}>
+    <Button link="/contact" sx={{ ml: [null, null, 6], mt: [5, null, 0] }}>
       Let&rsquo;s talk
     </Button>
   </Section>

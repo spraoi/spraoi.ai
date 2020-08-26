@@ -28,10 +28,11 @@ const Index = () => (
         <Icon
           svg="logo-background"
           sx={{
-            left: ['-25rem', null, '-11rem', '-25rem'],
+            left: ['-19rem', null, '-6rem', '-19rem'],
+            opacity: 0.3,
             position: 'absolute',
-            top: '-20.5rem',
-            width: '60rem',
+            top: '-17rem',
+            width: '50rem',
             zIndex: -1,
           }}
         />
@@ -43,8 +44,8 @@ const Index = () => (
           sx={{
             fontSize: 3,
             lineHeight: 2,
-            maxWidth: 'maxWidths.paragraph',
-            mt: 5,
+            maxWidth: 'maxWidths.wideParagraph',
+            mt: 4,
           }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -58,7 +59,7 @@ const Index = () => (
             display: 'flex',
             flexDirection: ['column', null, 'row'],
             justifyContent: ['center', null, null, 'flex-start'],
-            mt: 6,
+            mt: 5,
           }}
         >
           <Button
@@ -72,7 +73,7 @@ const Index = () => (
             link="/contact/"
             sx={{ maxWidth: [null, null, 'auto'], mt: [5, null, 0] }}
           >
-            Let&rsquo;s talk
+            Contact Us
           </Button>
         </Box>
       </Box>
@@ -88,14 +89,14 @@ const Index = () => (
           mr: [null, null, null, '-1.25rem'],
           mt: [null, null, null, '-0.75rem'],
           pt: [7, null, null, 0],
-          width: [null, null, null, '21.5rem'],
+          width: [null, null, null, '22.5rem'],
         }}
       >
         <IconFigure
           as="li"
           iconWidth="6.5rem"
           svg="certificate"
-          sx={{ m: 4 }}
+          sx={{ m: [3, null, 4] }}
           text={
             <>
               Insurance Subject
@@ -109,7 +110,7 @@ const Index = () => (
           iconWidth="7rem"
           svg="golden-gate-bridge"
           sx={{
-            m: 4,
+            m: [3, null, 4],
             position: 'relative',
             top: [null, null, null, '5rem'],
           }}
@@ -125,7 +126,7 @@ const Index = () => (
           as="li"
           iconWidth="7rem"
           svg="connected-world"
-          sx={{ m: 4 }}
+          sx={{ m: [3, null, 4] }}
           text="Offshore Scale"
         />
       </Box>
@@ -137,20 +138,20 @@ const Index = () => (
           as="p"
           sx={{
             lineHeight: 2,
-            maxWidth: 'maxWidths.paragraph',
-            mt: 3,
+            maxWidth: 'maxWidths.wideParagraph',
+            mt: 4,
             mx: 'auto',
           }}
         >
           We&rsquo;ve brought two platforms to production that enable carriers
-          to best leverage their investments in core administration systems. Our
-          team and intellectual property span the major lines of
-          insurance&mdash;property/casualty, life/annuities and voluntary
+          to leverage their investments in core administration systems. Our team
+          and intellectual property span the major lines of
+          insurance&mdash;property/casualty, life/annuities &amp; voluntary
           benefits.
         </Box>
       </Box>
     </Section>
-    <Section>
+    <Section sx={{ px: [null, null, 7] }}>
       <ul>
         {[
           {
@@ -195,10 +196,10 @@ const Index = () => (
                 impediment&nbsp;to&nbsp;progress.
               </>
             ),
-            icon: 'checking-boxes',
+            icon: 'counting-stars',
             iconSx: {
-              mr: '-0.5rem',
-              width: ['6.4rem', null, null, '8rem'],
+              display: ['none', null, null, 'block'],
+              width: '5rem',
             },
             link: '/services/',
             title: <>Technology solutions&nbsp;&amp;&nbsp;services</>,
@@ -215,10 +216,11 @@ const Index = () => (
                 '&:hover': {
                   '.description': {
                     opacity: [null, null, null, 0],
-                    transform: [null, null, null, 'translateY(-0.5rem)'],
+                    transform: [null, null, null, 'translateY(-0.25rem)'],
                   },
                   '.right-arrow': { opacity: 1, transform: 'translateX(1rem)' },
                   '.title': {
+                    color: 'accentDark',
                     transform: [null, null, null, 'translateY(100%)'],
                   },
                   boxShadow: 2,
@@ -226,13 +228,14 @@ const Index = () => (
                 },
                 alignItems: [null, null, null, 'center'],
                 background: item.color,
-                borderRadius: 2,
+                borderRadius: [null, null, 2],
                 boxShadow: 1,
                 color: 'text.primary',
                 display: 'flex',
                 flexDirection: ['column-reverse', null, null, 'row'],
                 justifyContent: 'space-between',
                 p: [6, null, null, 7],
+                textAlign: [null, null, 'center', 'left'],
                 transition: 'box-shadow 0.3s, transform 0.3s',
               }}
               to={item.link}
@@ -243,8 +246,9 @@ const Index = () => (
                   className="title"
                   sx={{
                     display: 'inline-flex',
+                    fontSize: [3, null, null, 4],
                     position: 'relative',
-                    transition: 'transform 0.2s',
+                    transition: 'color 0.2s, transform 0.2s',
                   }}
                 >
                   {item.title}
@@ -267,6 +271,7 @@ const Index = () => (
                   className="description"
                   sx={{
                     color: 'text.subtle',
+                    fontSize: [2, null, null, 3],
                     lineHeight: 1,
                     maxWidth: '33rem',
                     mt: 4,
@@ -279,7 +284,11 @@ const Index = () => (
               {item.icon && (
                 <Icon
                   svg={item.icon}
-                  sx={{ mb: [4, null, null, 0], ...item.iconSx }}
+                  sx={{
+                    mb: [4, null, null, 0],
+                    mx: [null, null, 'auto', 0],
+                    ...item.iconSx,
+                  }}
                 />
               )}
             </Box>

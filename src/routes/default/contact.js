@@ -7,6 +7,7 @@ import TextArea from '@spraoi/base/TextArea';
 import { FORM_ERROR } from 'final-form';
 import { Field, Form as FinalForm } from 'react-final-form';
 import { composeValidations, email, required } from '@spraoi/validations';
+import Icon from '../../components/Icon';
 import SEO from '../../components/SEO';
 import Section from '../../components/Section';
 import config from '../../config.json';
@@ -28,7 +29,7 @@ const Contact = ({ location: { pathname } }) => (
         <Box as="h1" sx={{ color: 'text.primary' }}>
           Contact Us
         </Box>
-        <Box as="p" sx={{ lineHeight: 1, maxWidth: '27rem' }}>
+        <Box as="p" sx={{ lineHeight: 1, maxWidth: '27rem', mt: 4 }}>
           Whether it&rsquo;s about a business opportunity or a job inquiry,
           we&rsquo;d love to hear&nbsp;from&nbsp;you.
         </Box>
@@ -90,20 +91,28 @@ const Contact = ({ location: { pathname } }) => (
               validate={required}
             />
             {formContext.submitSucceeded ? (
-              <p>
-                Thanks for your interest in Spraoi!
-                <br />
-                We&rsquo;ll get back to you ASAP.
-              </p>
+              <Box
+                sx={{
+                  alignItems: 'center',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  mt: 6,
+                }}
+              >
+                <Box
+                  as="span"
+                  sx={{ fontSize: 4, fontWeight: 'semibold', mr: 6 }}
+                >
+                  Message sent!
+                </Box>
+                <Icon svg="mail-sent" sx={{ width: '2.583rem' }} />
+              </Box>
             ) : (
               <Button
-                disabled={formContext.submitSucceeded}
-                mt={6}
-                mx="auto"
                 secondary
                 submitting={formContext.submitting}
+                sx={{ mt: 6, width: '100%' }}
                 type="submit"
-                width={{ md: '12rem', none: '100%' }}
               >
                 Send message
               </Button>

@@ -25,11 +25,11 @@ const Header = () => {
         zIndex: 1,
       }}
     >
-      <Link onClick={onLinkClick} to="/">
+      <Link to="/">
         <Icon
           alt="spraoi"
           svg="spraoi-logo"
-          sx={{ mt: [1, null, 2], width: '10rem' }}
+          sx={{ color: 'text.primary', mt: [2, null, 3], width: '10.25rem' }}
         />
       </Link>
       <Box
@@ -71,9 +71,11 @@ const Header = () => {
               <Box
                 activeClassName="active"
                 as={Link}
+                onClick={onLinkClick}
+                partiallyActive
                 sx={{
                   '&.active, &:hover': {
-                    color: 'accent',
+                    color: 'accentDark',
                     textDecoration: 'underline',
                   },
                   color: [null, null, null, 'text.primary'],

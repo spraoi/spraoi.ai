@@ -88,7 +88,7 @@ workflows:
           env: dev
           filters:
             branches:
-              only: master
+              only: feat/next # TODO: switch to master
           requires:
             - install
       - deploy:
@@ -98,7 +98,7 @@ workflows:
           context: spraoi-context
           filters:
             branches:
-              only: master
+              only: feat/next # TODO: switch to master
           requires:
             - test
             - build-spraoi-dev

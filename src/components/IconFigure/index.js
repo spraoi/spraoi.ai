@@ -14,14 +14,14 @@ const IconFigure = ({ as, iconWidth, svg, sx, text }) => (
       color: 'text.subtle',
       display: 'flex',
       flexDirection: 'column',
-      fontSize: 1,
-      height: '9rem',
+      fontSize: 0,
+      height: '9.5rem',
       justifyContent: 'center',
       letterSpacing: 1,
       lineHeight: 1,
       textAlign: 'center',
       textTransform: 'uppercase',
-      width: '9rem',
+      width: '9.5rem',
       ...sx,
     }}
   >

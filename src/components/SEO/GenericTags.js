@@ -7,7 +7,10 @@ const GenericTags = ({ author, description, language, title, url }) => (
     <html lang={language} />
     <title>{title}</title>
     <link href={url} rel="canonical" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      content="width=device-width, initial-scale=1, user-scalable=no"
+      name="viewport"
+    />
     <meta content={description} name="description" />
     <meta content={author} name="author" />
   </Helmet>

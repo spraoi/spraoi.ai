@@ -31,7 +31,7 @@ const LinkList = ({ items }) => (
           <Box
             as={Link}
             sx={{
-              '&:hover': { '.title': { color: 'accentDark' }, bg: 'bodyLight' },
+              '&:hover': { '.title': { color: 'accentDark' }, bg: 'offWhite' },
               display: 'block',
               p: 6,
               position: 'relative',
@@ -41,25 +41,25 @@ const LinkList = ({ items }) => (
           >
             <Box
               sx={{
-                alignItems: ['flex-start', null, 'center'],
+                alignItems: ['flex-start', null, null, 'center'],
                 display: 'flex',
-                flexDirection: ['column', null, 'row'],
+                flexDirection: ['column', null, null, 'row'],
               }}
             >
               <Avatar image={item.image} size={['2rem', null, null, '3rem']} />
               <Box
                 sx={{
                   display: 'flex',
-                  flexDirection: ['column-reverse', null, 'column'],
-                  ml: [null, null, 4, 5],
-                  mt: [1, null, 0],
+                  flexDirection: ['column-reverse', null, null, 'column'],
+                  ml: [null, null, null, 5],
+                  mt: [1, null, null, 0],
                 }}
               >
                 <Box
                   as="h2"
                   className="title"
                   sx={{
-                    fontSize: [2, null, null, 3],
+                    fontSize: 3,
                     lineHeight: 1,
                     maxWidth: 'maxWidths.paragraph',
                     mt: [1, null, null, 0],
@@ -71,7 +71,7 @@ const LinkList = ({ items }) => (
                 <Box
                   sx={{
                     color: 'text.subtle',
-                    fontSize: [1, null, null, 2],
+                    fontSize: 2,
                     fontWeight: 'semibold',
                     mt: 2,
                   }}
@@ -90,7 +90,6 @@ const LinkList = ({ items }) => (
 LinkList.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      floatText: PropTypes.node,
       image: PropTypes.shape({}).isRequired,
       link: PropTypes.string.isRequired,
       subText: PropTypes.node.isRequired,

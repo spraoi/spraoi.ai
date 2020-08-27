@@ -1,6 +1,6 @@
 /* eslint-disable prefer-destructuring */
 
-import { darken, lighten, transparentize } from 'polished';
+import { darken, lighten } from 'polished';
 
 const deepBlue = '#0a2239';
 const green = '#1de91d';
@@ -30,15 +30,11 @@ export default {
     accentDark: darken(0.075, spraoiBlue),
     accentLight: lighten(0.05, spraoiBlue),
     body: whiteBlue,
-    bodyDark: darken(0.03, whiteBlue),
-    bodyLight: lighten(0.01, whiteBlue),
     border: grays[0],
     error: red,
     grays,
+    offWhite: lighten(0.01, whiteBlue),
     primary: deepBlue,
-    primaryBg: transparentize(0.03, deepBlue),
-    primaryDark: darken(0.05, deepBlue),
-    primaryLight: lighten(0.05, deepBlue),
     success: green,
     text: {
       heading: spraoiBlue,
@@ -57,7 +53,7 @@ export default {
   fontSizes: [
     '0.6rem',
     '0.7rem',
-    '0.8rem',
+    '0.85rem',
     '1rem',
     `${fontSizeScale}rem`,
     `${fontSizeScale ** 2}rem`,
@@ -65,7 +61,7 @@ export default {
     `${fontSizeScale ** 4}rem`,
   ],
   fontWeights: { bold: 700, light: 500, normal: 500, semibold: 600 },
-  letterSpacings: ['0.05em', '0.1em', '0.125em'],
+  letterSpacings: ['0.05em', '0.075em', '0.1em'],
   lineHeights: ['1.4em', '1.6em', '2em'],
   radii: ['2px', '4px', '8px'],
   shadows: [
@@ -109,7 +105,7 @@ export default {
         fontSize: 1,
         fontWeight: 'semibold',
         height: 'heights.input',
-        letterSpacing: 0,
+        letterSpacing: 1,
         px: 7,
         py: 4,
         textTransform: 'uppercase',
@@ -131,7 +127,7 @@ export default {
         fontSize: 1,
         fontWeight: 'semibold',
         height: 'heights.input',
-        letterSpacing: 0,
+        letterSpacing: 1,
         px: 7,
         py: 4,
         textTransform: 'uppercase',

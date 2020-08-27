@@ -60,7 +60,7 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
                     as="h1"
                     sx={{
                       color: 'text.primary',
-                      fontSize: [5, null, null, 6],
+                      fontSize: [4, null, 5, 6],
                     }}
                   >
                     {noOrphan(frontmatter.title)}

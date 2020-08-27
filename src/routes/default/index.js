@@ -84,10 +84,10 @@ const Index = () => (
           flexShrink: 0,
           flexWrap: 'wrap',
           justifyContent: [null, null, 'center', 'flex-start'],
-          mb: [null, null, null, '-0.75rem'],
-          ml: ['-0.75rem', null, 0, 6],
+          mb: [null, null, null, '-0.5rem'],
+          ml: ['-0.5rem', null, 0, 6],
           mr: [null, null, null, '-1.25rem'],
-          mt: [null, null, null, '-0.75rem'],
+          mt: [null, null, null, '-0.5rem'],
           pt: [7, null, null, 0],
           width: [null, null, null, '22.5rem'],
         }}
@@ -165,7 +165,7 @@ const Index = () => (
             icon: 'barrel-logo',
             iconSx: {
               mt: '-0.25rem',
-              width: ['4rem', null, null, '5rem'],
+              width: ['5rem', null, null, '7rem'],
             },
             link: '/machine-learning-solutions/',
             title: <>Insurance machine learning&nbsp;platform</>,
@@ -182,7 +182,7 @@ const Index = () => (
             icon: 'kc-logo',
             iconSx: {
               mt: '0.75rem',
-              width: ['8rem', null, null, '10rem'],
+              width: ['9rem', null, null, '12rem'],
             },
             link: '/customer-experience-solutions/',
             title: <>Customer experience infrastructure</>,
@@ -196,10 +196,9 @@ const Index = () => (
                 impediment&nbsp;to&nbsp;progress.
               </>
             ),
-            icon: 'counting-stars',
+            icon: 'programmer',
             iconSx: {
-              display: ['none', null, null, 'block'],
-              width: '5rem',
+              width: ['5rem', null, null, '7rem'],
             },
             link: '/services/',
             title: <>Technology solutions&nbsp;&amp;&nbsp;services</>,

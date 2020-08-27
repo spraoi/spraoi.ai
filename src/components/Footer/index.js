@@ -5,13 +5,14 @@ import Icon from '../Icon';
 import Section from '../Section';
 
 const Footer = () => (
-  <Box as="footer" sx={{ bg: 'primaryBg', mt: 7 }}>
+  <Box as="footer" sx={{ bg: 'primary', mt: 7 }}>
     <Section as="nav" sx={{ py: 8 }}>
       <Box
         sx={{
-          alignItems: ['center', null, 'left'],
+          alignItems: ['center', null, 'flex-start'],
           display: 'flex',
           flexDirection: ['column', null, 'row'],
+          justifyContent: 'space-between',
           textAlign: ['center', null, 'left'],
         }}
       >
@@ -29,16 +30,12 @@ const Footer = () => (
             links: [
               ['/about-us/', 'About Us'],
               ['/perspectives/', 'Perspectives'],
+              ['/press-releases/', 'Press Releases'],
               ['/contact/', 'Contact Us'],
             ],
           },
         ].map((item) => (
-          <Box
-            sx={{
-              '&:first-of-type': { h2: { mt: 0 }, ml: 0 },
-              ml: [null, null, 8],
-            }}
-          >
+          <Box key={item.heading} sx={{ '&:first-of-type': { h2: { mt: 0 } } }}>
             <Box as="h2" sx={{ fontSize: 4, mt: [7, null, 0] }}>
               {item.heading}
             </Box>
@@ -46,7 +43,7 @@ const Footer = () => (
               as="ul"
               sx={{
                 display: 'flex',
-                flexDirection: ['column', null, null, 'row'],
+                flexDirection: 'column',
                 mt: 4,
               }}
             >
@@ -60,7 +57,6 @@ const Footer = () => (
                       '&.active, &:hover': { color: 'accentLight' },
                       color: 'accentDark',
                       display: 'block',
-                      mr: [null, null, null, 6],
                       py: 3,
                     }}
                     to={link}
@@ -72,6 +68,11 @@ const Footer = () => (
             </Box>
           </Box>
         ))}
+        <Icon
+          svg="relaunch-day"
+          sx={{ display: ['none', null, null, 'block'] }}
+          width="10rem"
+        />
       </Box>
       <Box
         sx={{

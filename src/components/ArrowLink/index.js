@@ -15,7 +15,7 @@ const ArrowLink = ({ children, link }) => (
       },
       color: 'text.link',
       fontSize: 1,
-      fontWeight: 'bold',
+      fontWeight: 'semibold',
       letterSpacing: 1,
       mx: 2,
       py: 1,

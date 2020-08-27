@@ -25,7 +25,6 @@ const Perspectives = () => (
       {(articles) => (
         <LinkList
           items={articles.map((article) => ({
-            floatText: article.fields.readingTime.text,
             image: article.author.image,
             link: `/perspectives${article.fields.slug}`,
             subText: (

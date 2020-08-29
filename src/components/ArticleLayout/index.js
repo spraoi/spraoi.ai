@@ -73,7 +73,7 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
                       mt: [4, null, null, 5],
                     }}
                   >
-                    <Link to={`/people/${author.id}`}>
+                    <Link to={`/people/${author.id}/`}>
                       <Avatar
                         image={author.image}
                         size={['2rem', null, null, '3rem']}
@@ -90,7 +90,7 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
                       <Box
                         as={Link}
                         sx={{ color: 'inherit' }}
-                        to={`/people/${author.id}`}
+                        to={`/people/${author.id}/`}
                       >
                         {author.givenName} {author.familyName}
                       </Box>
@@ -166,13 +166,12 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
                     },
                     p: { mb: 6, mr: '-0.75rem' },
                     'p:first-of-type .dropcap': {
-                      color: 'accent',
                       float: 'left',
                       fontFamily: 'secondary',
-                      fontSize: '3.65rem',
+                      fontSize: '3.8rem',
                       fontWeight: 'bold',
-                      mr: '1.1rem',
-                      mt: '0.9rem',
+                      mr: '0.5rem',
+                      mt: '1rem',
                     },
                     ul: { listStyle: 'disc', ml: '1em' },
                   }}

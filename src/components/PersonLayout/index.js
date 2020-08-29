@@ -7,6 +7,7 @@ import SEO from '../SEO';
 import Section from '../Section';
 import newlineToSpace from '../../utilities/newline-to-space';
 import possessive from '../../utilities/posessive';
+import LinkList from '../LinkList';
 
 const PersonLayout = ({ location: { pathname }, pageContext: { slug } }) => (
   <PeopleContainer>
@@ -31,7 +32,14 @@ const PersonLayout = ({ location: { pathname }, pageContext: { slug } }) => (
           </Section>
           {!!person.articles.length && (
             <Section>
-              <h2>{possessive(person.givenName)} Articles</h2>
+              <h2>{possessive(person.givenName)} Perspectives</h2>
+              <LinkList
+                items={person.articles.map((article) => ({
+                  link: `/perspectives${article.fields.slug}`,
+                  subText: article.frontmatter.datePublished,
+                  title: article.frontmatter.title,
+                }))}
+              />
             </Section>
           )}
         </>

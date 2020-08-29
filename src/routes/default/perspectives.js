@@ -13,34 +13,44 @@ const Perspectives = () => (
       title="Perspectives"
     />
     <Section sx={{ textAlign: [null, null, 'center'] }}>
-      <Box as="h1" sx={{ color: 'text.primary' }}>
-        Perspectives
-      </Box>
-      <Box as="p" sx={{ lineHeight: 1, mt: 4 }}>
+      <h1>Perspectives</h1>
+      <Box
+        as="p"
+        sx={{
+          fontSize: 4,
+          lineHeight: 1,
+          maxWidth: 'maxWidths.paragraph',
+          mt: 4,
+          mx: 'auto',
+        }}
+      >
         We have strong opinions on the market and technology&rsquo;s
         role&nbsp;in&nbsp;it.
       </Box>
     </Section>
-    <ArticlesContainer>
-      {(articles) => (
-        <LinkList
-          items={articles.map((article) => ({
-            image: article.author.image,
-            link: `/perspectives${article.fields.slug}`,
-            subText: (
-              <>
-                {article.author.givenName} {article.author.familyName}
-                <Box as="span" sx={{ mx: 2 }}>
-                  &middot;
-                </Box>
-                {article.frontmatter.datePublished}
-              </>
-            ),
-            title: article.frontmatter.title,
-          }))}
-        />
-      )}
-    </ArticlesContainer>
+    <Section sx={{ px: [null, null, 7] }}>
+      <ArticlesContainer>
+        {(articles) => (
+          <LinkList
+            items={articles.map((article) => ({
+              image: article.author.image,
+              link: `/perspectives${article.fields.slug}`,
+              subText: (
+                <>
+                  {article.author.givenName} {article.author.familyName}
+                  <Box as="span" sx={{ mx: 2 }}>
+                    &middot;
+                  </Box>
+                  {article.frontmatter.datePublished}
+                </>
+              ),
+              title: article.frontmatter.title,
+            }))}
+            titleAs="h2"
+          />
+        )}
+      </ArticlesContainer>
+    </Section>
     <ContactCTA />
   </>
 );

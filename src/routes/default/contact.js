@@ -29,7 +29,10 @@ const Contact = ({ location: { pathname } }) => (
         <Box as="h1" sx={{ color: 'text.primary' }}>
           Contact Us
         </Box>
-        <Box as="p" sx={{ lineHeight: 1, maxWidth: '27rem', mt: 4 }}>
+        <Box
+          as="p"
+          sx={{ fontSize: 4, lineHeight: 1, maxWidth: '30rem', mt: 4 }}
+        >
           Whether it&rsquo;s about a business opportunity or a job inquiry,
           we&rsquo;d love to hear&nbsp;from&nbsp;you.
         </Box>

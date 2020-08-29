@@ -74,10 +74,7 @@ const Header = () => {
                 onClick={onLinkClick}
                 partiallyActive
                 sx={{
-                  '&.active, &:hover': {
-                    color: 'accentDark',
-                    textDecoration: 'underline',
-                  },
+                  '&.active, &:hover': { color: 'accent' },
                   color: [null, null, null, 'text.primary'],
                   display: 'block',
                   fontSize: [4, null, null, 3],

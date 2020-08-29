@@ -22,7 +22,6 @@
 
 ## To Do
 
-- [ ] add about us page
 - [ ] add services page
 - [ ] add customer experience page
 - [ ] add machine learning page
@@ -31,6 +30,7 @@
 - [ ] add eis press release
 - [ ] add "exciting development" as pr
 - [ ] add redirects
-- [ ] blocked: get short spraoi intro for landing
+- [ ] blocked: get updated copy for landing page
 - [ ] blocked: get about us meta description
-- [ ] suggestion: use same handle for all socials
+- [ ] blocked: verify "Eminence" links
+- [ ] suggestion: use same handle for all socials & update profile picture

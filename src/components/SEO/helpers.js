@@ -27,7 +27,7 @@ export const getStructuredBreadcrumbs = ({
     breadcrumbItems.push({
       '@type': 'ListItem',
       item: `${siteUrl}/perspectives/`,
-      name: 'Articles',
+      name: 'Perspectives',
       position: 2,
     });
 
@@ -44,8 +44,8 @@ export const getStructuredBreadcrumbs = ({
   if (isPerson) {
     breadcrumbItems.push({
       '@type': 'ListItem',
-      item: `${siteUrl}/people/`,
-      name: 'People',
+      item: `${siteUrl}/about-us/`,
+      name: 'About Us',
       position: 2,
     });
 

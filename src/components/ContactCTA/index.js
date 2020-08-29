@@ -16,7 +16,7 @@ const ContactCTA = () => (
     <Box as="p" sx={{ fontWeight: 'semibold' }}>
       Interested in working with us?
     </Box>
-    <Button link="/contact" sx={{ ml: [null, null, 6], mt: [5, null, 0] }}>
+    <Button link="/contact/" sx={{ ml: [null, null, 6], mt: [5, null, 0] }}>
       Let&rsquo;s talk
     </Button>
   </Section>

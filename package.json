@@ -65,6 +65,7 @@
     "react-final-form-listeners": "^1.0.2",
     "react-helmet": "^6.1.0",
     "react-responsive-embed": "^2.1.0",
+    "react-simple-maps": "^2.1.2",
     "react-social-sharing": "^3.3.0",
     "react-spinners": "^0.9.0",
     "styled-components": "^5.1.1",

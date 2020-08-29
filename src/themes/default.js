@@ -2,13 +2,15 @@
 
 import { darken, lighten } from 'polished';
 
+const black = '#00182f';
 const deepBlue = '#0a2239';
 const green = '#1de91d';
+const offWhite = '#fafcfd';
 const orange = '#ffcb20';
 const red = '#ff2020';
 const spraoiBlue = '#06bce3';
 const white = '#fefefe';
-const whiteBlue = '#f6f9fc';
+const whiteBlue = '#f3f6f9';
 
 const grays = [
   '#efeeef',
@@ -29,15 +31,19 @@ export default {
     accent: spraoiBlue,
     accentDark: darken(0.075, spraoiBlue),
     accentLight: lighten(0.05, spraoiBlue),
+    accentSecondary: orange,
+    accentSecondaryDark: darken(0.1, orange),
     body: whiteBlue,
     border: grays[0],
     error: red,
     grays,
-    offWhite: lighten(0.01, whiteBlue),
+    offWhite,
     primary: deepBlue,
+    primaryDark: darken(0.05, deepBlue),
+    primaryLight: lighten(0.075, deepBlue),
     success: green,
     text: {
-      heading: spraoiBlue,
+      heading: black,
       link: spraoiBlue,
       primary: deepBlue,
       subtle: grays[4],
@@ -62,12 +68,12 @@ export default {
   ],
   fontWeights: { bold: 700, light: 500, normal: 500, semibold: 600 },
   letterSpacings: ['0.05em', '0.075em', '0.1em'],
-  lineHeights: ['1.4em', '1.6em', '2em'],
+  lineHeights: ['1.4em', '1.7em', '2em'],
   radii: ['2px', '4px', '8px'],
   shadows: [
     'none',
-    '0 17.6px 35.2px 0 rgba(14, 14, 33, 0.1)',
-    '0 22px 44px 0 rgba(14, 14, 33, 0.15)',
+    '0 17.6px 35.2px 0 rgba(14, 14, 33, 0.08)',
+    '0 22px 44px 0 rgba(14, 14, 33, 0.12)',
     '1px 1px 1px 1px #eceff1',
   ],
   sizes: {
@@ -96,10 +102,7 @@ export default {
       primary: {
         '&:hover': { bg: 'accentDark' },
         bg: 'accent',
-        borderColor: 'transparent',
         borderRadius: 1,
-        borderStyle: 'solid',
-        borderWidth: '1px',
         boxShadow: 1,
         color: 'white',
         fontSize: 1,
@@ -109,21 +112,18 @@ export default {
         px: 7,
         py: 4,
         textTransform: 'uppercase',
-        transition: 'background-color 0.2s, border-color 0.2s, color 0.2s',
+        transition: 'background-color 0.2s, color 0.2s',
       },
       secondary: {
         '&:hover': {
-          bg: 'accentDark',
+          bg: offWhite,
           borderColor: 'accentDark',
-          color: 'white',
+          color: 'accentDark',
         },
         bg: 'white',
-        borderColor: 'white',
         borderRadius: 1,
-        borderStyle: 'solid',
-        borderWidth: '1px',
         boxShadow: 1,
-        color: 'accentDark',
+        color: 'accent',
         fontSize: 1,
         fontWeight: 'semibold',
         height: 'heights.input',
@@ -131,7 +131,7 @@ export default {
         px: 7,
         py: 4,
         textTransform: 'uppercase',
-        transition: 'background-color 0.2s, border-color 0.2s, color 0.2s',
+        transition: 'background-color 0.2s, color 0.2s',
       },
     },
     inputs: {

@@ -17,7 +17,6 @@ const Index = () => (
     />
     <Section
       sx={{
-        alignItems: 'center',
         display: [null, null, null, 'flex'],
         justifyContent: 'space-between',
         position: 'relative',
@@ -29,29 +28,26 @@ const Index = () => (
           svg="logo-background"
           sx={{
             left: ['-19rem', null, '-6rem', '-19rem'],
-            opacity: 0.3,
+            opacity: 0.2,
             position: 'absolute',
             top: '-17rem',
             width: '50rem',
             zIndex: -1,
           }}
         />
-        <Box as="h1" sx={{ color: 'text.primary' }}>
-          Why Spraoi?
-        </Box>
+        <h1>Why Spraoi?</h1>
         <Box
           as="p"
           sx={{
-            fontSize: 3,
-            lineHeight: 2,
+            fontSize: 4,
+            lineHeight: 1,
             maxWidth: 'maxWidths.wideParagraph',
             mt: 4,
           }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi
-          ut&nbsp;aliquip&nbsp;ex&nbsp;ea.{' '}
+          ut aliquip&nbsp;ex.&nbsp;
           <ArrowLink link="/about-us">Read more</ArrowLink>
         </Box>
         <Box
@@ -87,7 +83,7 @@ const Index = () => (
           mb: [null, null, null, '-0.5rem'],
           ml: ['-0.5rem', null, 0, 6],
           mr: [null, null, null, '-1.25rem'],
-          mt: [null, null, null, '-0.5rem'],
+          mt: [null, null, null, '-2.5rem'],
           pt: [7, null, null, 0],
           width: [null, null, null, '22.5rem'],
         }}
@@ -155,7 +151,6 @@ const Index = () => (
       <ul>
         {[
           {
-            color: 'white',
             description: (
               <>
                 Insurance specific, reusable rules, schemas and processes to
@@ -171,7 +166,6 @@ const Index = () => (
             title: <>Insurance machine learning&nbsp;platform</>,
           },
           {
-            color: 'white',
             description: (
               <>
                 We have leveraged our customer experience portal platform to
@@ -188,7 +182,6 @@ const Index = () => (
             title: <>Customer experience infrastructure</>,
           },
           {
-            color: 'white',
             description: (
               <>
                 We take delivery accountability from concept through
@@ -226,7 +219,7 @@ const Index = () => (
                   transform: 'scale(1.01)',
                 },
                 alignItems: [null, null, null, 'center'],
-                background: item.color,
+                background: 'white',
                 borderRadius: [null, null, 2],
                 boxShadow: 1,
                 color: 'text.primary',
@@ -244,6 +237,7 @@ const Index = () => (
                   as="h3"
                   className="title"
                   sx={{
+                    color: 'accent',
                     display: 'inline-flex',
                     fontSize: [3, null, null, 4],
                     position: 'relative',
@@ -271,7 +265,7 @@ const Index = () => (
                   sx={{
                     color: 'text.subtle',
                     fontSize: [2, null, null, 3],
-                    lineHeight: 1,
+                    lineHeight: 2,
                     maxWidth: '33rem',
                     mt: 4,
                     transition: 'opacity 0.2s, transform 0.2s',

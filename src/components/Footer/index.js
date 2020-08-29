@@ -36,7 +36,10 @@ const Footer = () => (
           },
         ].map((item) => (
           <Box key={item.heading} sx={{ '&:first-of-type': { h2: { mt: 0 } } }}>
-            <Box as="h2" sx={{ fontSize: 4, mt: [7, null, 0] }}>
+            <Box
+              as="h2"
+              sx={{ color: 'accent', fontSize: 4, mt: [7, null, 0] }}
+            >
               {item.heading}
             </Box>
             <Box
@@ -85,13 +88,8 @@ const Footer = () => (
       >
         <Link to="/">
           <Icon
-            alt="spraoi"
             svg="spraoi-logo"
-            sx={{
-              color: 'white',
-              mt: 3,
-              width: '10.25rem',
-            }}
+            sx={{ color: 'white', mt: 3, width: '10.25rem' }}
           />
         </Link>
         <Box
@@ -107,22 +105,18 @@ const Footer = () => (
         <Box as="ul" sx={{ display: 'flex', mt: [4, null, null, 0] }}>
           {[
             {
-              alt: 'on LinkedIn',
               icon: 'linkedin',
               link: 'https://www.linkedin.com/company/spraoi.ai',
             },
             {
-              alt: 'on Twitter',
               icon: 'twitter',
               link: 'https://twitter.com/spraoit',
             },
             {
-              alt: 'on Facebook',
               icon: 'facebook',
               link: 'https://www.facebook.com/spraoisoftware',
             },
             {
-              alt: 'on Instagram',
               icon: 'instagram',
               link: 'https://www.instagram.com/spraoi_tech',
             },
@@ -139,7 +133,7 @@ const Footer = () => (
                   transition: 'color 0.2s',
                 }}
               >
-                <Icon alt={item.alt} svg={item.icon} sx={{ width: '1.5rem' }} />
+                <Icon svg={item.icon} sx={{ width: '1.5rem' }} />
               </Box>
             </Box>
           ))}

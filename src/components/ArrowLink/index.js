@@ -14,7 +14,7 @@ const ArrowLink = ({ children, link }) => (
         textDecoration: 'underline',
       },
       color: 'text.link',
-      fontSize: 1,
+      fontSize: 2,
       fontWeight: 'semibold',
       letterSpacing: 1,
       mx: 2,

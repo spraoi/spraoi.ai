@@ -22,15 +22,15 @@
 
 ## To Do
 
-- [ ] add services page
-- [ ] add customer experience page
 - [ ] add machine learning page
+- [ ] add customer experience page
+- [ ] add services page
 - [ ] add press releases page
 - [ ] add eis press release
 - [ ] add "exciting development" as pr
-- [ ] add redirects
-- [ ] fix non trailing slash lambda@edge reroutes
-- [ ] blocked: get updated copy for landing page
+- [ ] add redirects via gatsby-plugin-meta-redirect
+- [ ] blocked: replace lorem ipsum
 - [ ] blocked: get about us meta description
 - [ ] blocked: verify "Eminence" links
-- [ ] suggestion: use same handle for all socials & update profile picture
+- [ ] suggestion: use same handle for all socials
+- [ ] suggestion: update social profile pics

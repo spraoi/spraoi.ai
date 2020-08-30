@@ -1,16 +1,4 @@
-export const getSiteTitle = (pathname, siteName, title) =>
-  pathname === '/' ? title : `${title} - ${siteName}`;
-
-export const getSocialUrls = ({ instagram, twitter, facebook, linkedIn }) => {
-  const socialUrls = [];
-  if (instagram) socialUrls.push(`https://www.instagram.com/${instagram}`);
-  if (twitter) socialUrls.push(`https://twitter.com/${twitter}`);
-  if (facebook) socialUrls.push(`https://www.facebook.com/${facebook}`);
-  if (linkedIn) socialUrls.push(`https://www.linkedin.com/company/${linkedIn}`);
-  return socialUrls;
-};
-
-export const getStructuredBreadcrumbs = ({
+const getStructuredBreadcrumbs = ({
   canonicalUrl,
   isArticle,
   isPerson,
@@ -72,3 +60,5 @@ export const getStructuredBreadcrumbs = ({
 
   return breadcrumbItems;
 };
+
+export default getStructuredBreadcrumbs;

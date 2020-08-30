@@ -25,11 +25,11 @@
 - [ ] add services page
 - [ ] add customer experience page
 - [ ] add machine learning page
-- [ ] fix person pages
 - [ ] add press releases page
 - [ ] add eis press release
 - [ ] add "exciting development" as pr
 - [ ] add redirects
+- [ ] fix non trailing slash lambda@edge reroutes
 - [ ] blocked: get updated copy for landing page
 - [ ] blocked: get about us meta description
 - [ ] blocked: verify "Eminence" links

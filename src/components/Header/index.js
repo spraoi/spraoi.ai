@@ -75,10 +75,11 @@ const Header = () => {
                 partiallyActive
                 sx={{
                   '&.active, &:hover': { color: 'accent' },
-                  color: [null, null, null, 'text.primary'],
+                  color: 'text.primary',
                   display: 'block',
-                  fontSize: [4, null, null, 3],
-                  fontWeight: 'semibold',
+                  fontFamily: ['secondary', null, null, 'primary'],
+                  fontSize: [4, null, 5, 3],
+                  fontWeight: ['bold', null, null, 'semibold'],
                   ml: [null, null, 6],
                   py: [6, null, null, 5],
                   textAlign: 'center',

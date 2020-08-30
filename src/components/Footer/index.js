@@ -38,7 +38,7 @@ const Footer = () => (
           <Box key={item.heading} sx={{ '&:first-of-type': { h2: { mt: 0 } } }}>
             <Box
               as="h2"
-              sx={{ color: 'accent', fontSize: 4, mt: [7, null, 0] }}
+              sx={{ color: 'offWhite', fontSize: 4, mt: [7, null, 0] }}
             >
               {item.heading}
             </Box>
@@ -89,7 +89,7 @@ const Footer = () => (
         <Link to="/">
           <Icon
             svg="spraoi-logo"
-            sx={{ color: 'white', mt: 3, width: '10.25rem' }}
+            sx={{ color: 'offWhite', mt: 3, width: '10.25rem' }}
           />
         </Link>
         <Box

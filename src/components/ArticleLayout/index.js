@@ -56,49 +56,53 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
                     textAlign: [null, null, null, 'center'],
                   }}
                 >
-                  <Box
-                    as="h1"
-                    sx={{
-                      color: 'text.primary',
-                      fontSize: [4, null, 5, 6],
-                    }}
-                  >
+                  <Box as="h1" sx={{ fontSize: [4, null, 5, 6] }}>
                     {noOrphan(frontmatter.title)}
                   </Box>
                   <Box
                     sx={{
                       alignItems: 'center',
+                      color: 'text.subtle',
                       display: 'flex',
+                      fontSize: [2, null, null, 3],
+                      fontWeight: 'semibold',
                       justifyContent: [null, null, null, 'center'],
                       mt: [4, null, null, 5],
                     }}
                   >
-                    <Link to={`/people/${author.id}/`}>
+                    <Box
+                      as={Link}
+                      sx={{
+                        '&:hover': {
+                          '.author-image': {
+                            boxShadow: 2,
+                            transform: 'scale(1.01)',
+                          },
+                          '.author-name': { color: 'accentDark' },
+                        },
+                        alignItems: 'center',
+                        display: 'flex',
+                      }}
+                      to={`/people/${author.id}/`}
+                    >
                       <Avatar
+                        className="author-image"
                         image={author.image}
                         size={['2rem', null, null, '3rem']}
+                        sx={{ transition: 'box-shadow 0.3s, transform 0.3s' }}
                       />
-                    </Link>
-                    <Box
-                      sx={{
-                        color: 'text.subtle',
-                        fontSize: [2, null, null, 3],
-                        fontWeight: 'semibold',
-                        ml: [4, null, 5],
-                      }}
-                    >
                       <Box
-                        as={Link}
-                        sx={{ color: 'inherit' }}
-                        to={`/people/${author.id}/`}
+                        as="span"
+                        className="author-name"
+                        sx={{ ml: 5, transition: 'color 0.2s' }}
                       >
                         {author.givenName} {author.familyName}
                       </Box>
-                      <Box as="span" sx={{ mx: 3 }}>
-                        &middot;
-                      </Box>
-                      {frontmatter.datePublished}
                     </Box>
+                    <Box as="span" sx={{ mx: 3 }}>
+                      &middot;
+                    </Box>
+                    {frontmatter.datePublished}
                   </Box>
                 </Box>
                 <Box
@@ -166,6 +170,7 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => (
                     },
                     p: { mb: 6, mr: '-0.75rem' },
                     'p:first-of-type .dropcap': {
+                      color: 'accent',
                       float: 'left',
                       fontFamily: 'secondary',
                       fontSize: '3.8rem',

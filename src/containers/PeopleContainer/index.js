@@ -47,6 +47,9 @@ const PeopleContainer = ({ children }) => (
         ) {
           edges {
             node {
+              colors {
+                ...GatsbyImageColors
+              }
               childImageSharp {
                 fluid(maxWidth: 250) {
                   ...GatsbyImageSharpFluid_withWebp
@@ -68,6 +71,9 @@ const PeopleContainer = ({ children }) => (
           articles: articles
             .filter((article) => article.node.frontmatter.author === p.node.id)
             .map((article) => article.node),
+          colors: images.find((i) =>
+            i.node.childImageSharp.fluid.src.includes(p.node.id)
+          ).node.colors,
           image: images.find((i) =>
             i.node.childImageSharp.fluid.src.includes(p.node.id)
           ).node.childImageSharp.fluid,

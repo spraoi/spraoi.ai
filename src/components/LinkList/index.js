@@ -6,7 +6,7 @@ import Avatar from '../Avatar';
 import noOrphan from '../../utilities/no-orphan';
 import Icon from '../Icon';
 
-const LinkList = ({ items, split, titleAs }) => (
+const LinkList = ({ items, split, sx, titleAs }) => (
   <Box
     as="ul"
     sx={{
@@ -16,6 +16,7 @@ const LinkList = ({ items, split, titleAs }) => (
       display: split ? [null, null, null, 'flex'] : null,
       flexWrap: 'wrap',
       overflow: 'hidden',
+      ...sx,
     }}
   >
     {items.map((item) => (
@@ -130,11 +131,13 @@ LinkList.propTypes = {
     })
   ).isRequired,
   split: PropTypes.bool,
+  sx: PropTypes.shape({}),
   titleAs: PropTypes.node,
 };
 
 LinkList.defaultProps = {
   split: false,
+  sx: {},
   titleAs: 'div',
 };
 

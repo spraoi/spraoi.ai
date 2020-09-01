@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Icon from '../Icon';
 
-const IconFigure = ({ as, iconWidth, svg, sx, text }) => (
+const IconFigure = ({ as, iconWidth, size, svg, sx, text }) => (
   <Box
     as={as}
     sx={{
@@ -15,13 +15,13 @@ const IconFigure = ({ as, iconWidth, svg, sx, text }) => (
       display: 'flex',
       flexDirection: 'column',
       fontSize: 0,
-      height: '9.5rem',
+      height: size,
       justifyContent: 'center',
       letterSpacing: 1,
       lineHeight: 1,
       textAlign: 'center',
       textTransform: 'uppercase',
-      width: '9.5rem',
+      width: size,
       ...sx,
     }}
   >
@@ -35,6 +35,7 @@ const IconFigure = ({ as, iconWidth, svg, sx, text }) => (
 IconFigure.propTypes = {
   as: PropTypes.node,
   iconWidth: PropTypes.string,
+  size: PropTypes.string,
   svg: PropTypes.string.isRequired,
   sx: PropTypes.shape({}),
   text: PropTypes.node.isRequired,
@@ -43,6 +44,7 @@ IconFigure.propTypes = {
 IconFigure.defaultProps = {
   as: 'div',
   iconWidth: '7rem',
+  size: '9.5rem',
   sx: {},
 };
 

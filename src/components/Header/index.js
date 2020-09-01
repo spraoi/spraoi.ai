@@ -57,8 +57,8 @@ const Header = () => {
           }}
         >
           {[
-            ['/machine-learning-solutions/', 'Machine Learning'],
-            ['/customer-experience-solutions/', 'Customer Experience'],
+            ['/machine-learning/', 'Machine Learning'],
+            ['/customer-experience/', 'Customer Experience'],
             ['/services/', 'Services'],
             ['/about-us/', 'About Us'],
             ['/perspectives/', 'Perspectives'],

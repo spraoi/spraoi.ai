@@ -20,8 +20,8 @@ const Footer = () => (
           {
             heading: 'Solutions & Services',
             links: [
-              ['/machine-learning-solutions/', 'Machine Learning'],
-              ['/customer-experience-solutions/', 'Customer Experience'],
+              ['/machine-learning/', 'Machine Learning'],
+              ['/customer-experience/', 'Customer Experience'],
               ['/services/', 'Services'],
             ],
           },
@@ -38,7 +38,7 @@ const Footer = () => (
           <Box key={item.heading} sx={{ '&:first-of-type': { h2: { mt: 0 } } }}>
             <Box
               as="h2"
-              sx={{ color: 'offWhite', fontSize: 4, mt: [7, null, 0] }}
+              sx={{ color: 'accentDark', fontSize: 4, mt: [7, null, 0] }}
             >
               {item.heading}
             </Box>
@@ -47,7 +47,7 @@ const Footer = () => (
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                mt: 4,
+                mt: 5,
               }}
             >
               {item.links.map(([link, text]) => (

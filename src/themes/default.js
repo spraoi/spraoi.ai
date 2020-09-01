@@ -4,7 +4,6 @@ import { darken, lighten } from 'polished';
 
 const black = '#00182f';
 const deepBlue = '#0a2239';
-const green = '#1de91d';
 const offWhite = '#fafcfd';
 const orange = '#ffcb20';
 const red = '#ff2020';
@@ -22,6 +21,15 @@ const grays = [
   '#1d1d21',
 ];
 
+const bluePurpleScale = [
+  '#13ABE1',
+  '#209AE0',
+  '#2D89DE',
+  '#3A78DC',
+  '#4767DB',
+  '#5456D9',
+];
+
 const fontSizeScale = 1.4;
 
 export default {
@@ -31,6 +39,7 @@ export default {
     accent: spraoiBlue,
     accentDark: darken(0.075, spraoiBlue),
     accentLight: lighten(0.05, spraoiBlue),
+    accentScale: bluePurpleScale,
     accentSecondary: orange,
     accentSecondaryDark: darken(0.1, orange),
     body: whiteBlue,
@@ -41,14 +50,12 @@ export default {
     primary: deepBlue,
     primaryDark: darken(0.05, deepBlue),
     primaryLight: lighten(0.075, deepBlue),
-    success: green,
     text: {
       heading: black,
       link: spraoiBlue,
       primary: deepBlue,
       subtle: grays[4],
     },
-    warning: orange,
     white,
   },
   fonts: {
@@ -69,7 +76,7 @@ export default {
   fontWeights: { bold: 700, light: 500, normal: 500, semibold: 600 },
   letterSpacings: ['0.05em', '0.075em', '0.1em'],
   lineHeights: ['1.4em', '1.7em', '2em'],
-  radii: ['2px', '4px', '8px'],
+  radii: ['none', '4px', '8px'],
   shadows: [
     'none',
     '0 17.6px 35.2px 0 rgba(14, 14, 33, 0.08)',
@@ -81,8 +88,9 @@ export default {
     maxWidths: {
       content: '1200px',
       paragraph: '34rem',
+      paragraphWide: '44rem',
+      paragraphWider: '53rem',
       title: '52rem',
-      wideParagraph: '44rem',
     },
   },
   space: [

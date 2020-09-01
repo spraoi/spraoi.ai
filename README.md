@@ -22,7 +22,6 @@
 
 ## To Do
 
-- [ ] add machine learning page
 - [ ] add customer experience page
 - [ ] add services page
 - [ ] add press releases page

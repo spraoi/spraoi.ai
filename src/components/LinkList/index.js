@@ -12,7 +12,7 @@ const LinkList = ({ items, split, sx, titleAs }) => (
     sx={{
       bg: 'white',
       borderRadius: [null, null, 2],
-      boxShadow: 1,
+      boxShadow: [null, null, 1],
       display: split ? [null, null, null, 'flex'] : null,
       flexWrap: 'wrap',
       overflow: 'hidden',

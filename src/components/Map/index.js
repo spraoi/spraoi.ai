@@ -60,7 +60,7 @@ const Map = ({
       </Geographies>
       {markers.map(
         ({ annotationProps, annotationTextProps, coordinates, name }) => (
-          <>
+          <React.Fragment key={name}>
             <Annotation
               connectorProps={{
                 stroke: annotationColor,
@@ -85,7 +85,7 @@ const Map = ({
             <Marker key={name} coordinates={coordinates}>
               <circle fill={annotationColor} r={3} />
             </Marker>
-          </>
+          </React.Fragment>
         )
       )}
     </Box>
@@ -94,7 +94,7 @@ const Map = ({
 
 Map.propTypes = {
   annotationColor: PropTypes.string,
-  geography: PropTypes.string.isRequired,
+  geography: PropTypes.shape({}).isRequired,
   mapColor: PropTypes.string,
   markers: PropTypes.arrayOf(
     PropTypes.shape({

@@ -32,8 +32,8 @@ const AboutUsPage = ({ location: { pathname } }) => {
             sx={{
               fontSize: 4,
               lineHeight: 1,
-              maxWidth: 'maxWidths.wideParagraph',
-              mt: 4,
+              maxWidth: 'maxWidths.paragraphWide',
+              mt: 5,
             }}
           >
             Lorem ipsum dolor incididunt ut sit amet, consectetur adipiscing
@@ -193,6 +193,7 @@ const AboutUsPage = ({ location: { pathname } }) => {
           .sort((a, b) => (a.executive > b.executive ? 1 : -1))
           .map((person) => (
             <Box
+              key={person.id}
               as="li"
               sx={{ '&:nth-of-type(2)': { ml: [null, null, 7, 0] } }}
             >
@@ -256,7 +257,7 @@ const AboutUsPage = ({ location: { pathname } }) => {
           as="p"
           sx={{
             lineHeight: 2,
-            maxWidth: 'maxWidths.wideParagraph',
+            maxWidth: 'maxWidths.paragraphWide',
             mt: 4,
             mx: 'auto',
           }}

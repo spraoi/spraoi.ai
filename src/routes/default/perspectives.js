@@ -23,7 +23,7 @@ const Perspectives = () => {
             fontSize: 4,
             lineHeight: 1,
             maxWidth: 'maxWidths.paragraph',
-            mt: 4,
+            mt: 5,
             mx: 'auto',
           }}
         >

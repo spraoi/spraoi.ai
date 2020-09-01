@@ -41,8 +41,8 @@ const Index = () => (
           sx={{
             fontSize: 4,
             lineHeight: 1,
-            maxWidth: 'maxWidths.wideParagraph',
-            mt: 4,
+            maxWidth: 'maxWidths.paragraphWide',
+            my: 5,
           }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -55,7 +55,7 @@ const Index = () => (
             display: 'flex',
             flexDirection: ['column', null, 'row'],
             justifyContent: ['center', null, null, 'flex-start'],
-            mt: 5,
+            pt: 2,
           }}
         >
           <Button
@@ -134,7 +134,7 @@ const Index = () => (
           as="p"
           sx={{
             lineHeight: 2,
-            maxWidth: 'maxWidths.wideParagraph',
+            maxWidth: 'maxWidths.paragraphWide',
             mt: 4,
             mx: 'auto',
           }}
@@ -158,12 +158,9 @@ const Index = () => (
               </>
             ),
             icon: 'barrel-logo',
-            iconSx: {
-              mt: '-0.25rem',
-              width: ['5rem', null, null, '7rem'],
-            },
-            link: '/machine-learning-solutions/',
-            title: <>Insurance machine learning&nbsp;platform</>,
+            iconSx: { mt: '-0.25rem', width: ['5rem', null, null, '7rem'] },
+            link: '/machine-learning/',
+            title: <>Machine learning&nbsp;platform</>,
           },
           {
             description: (
@@ -174,11 +171,8 @@ const Index = () => (
               </>
             ),
             icon: 'kc-logo',
-            iconSx: {
-              mt: '0.75rem',
-              width: ['9rem', null, null, '12rem'],
-            },
-            link: '/customer-experience-solutions/',
+            iconSx: { mt: '0.75rem', width: ['9rem', null, null, '12rem'] },
+            link: '/customer-experience/',
             title: <>Customer experience infrastructure</>,
           },
           {
@@ -190,9 +184,7 @@ const Index = () => (
               </>
             ),
             icon: 'programmer',
-            iconSx: {
-              width: ['5rem', null, null, '7rem'],
-            },
+            iconSx: { width: ['5rem', null, null, '7rem'] },
             link: '/services/',
             title: <>Technology solutions&nbsp;&amp;&nbsp;services</>,
           },
@@ -200,28 +192,20 @@ const Index = () => (
           <Box
             key={item.link}
             as="li"
-            sx={{ '&:first-of-type': { mt: 0 }, mt: 7 }}
+            sx={{ '&:first-of-type': { mt: 0 }, mt: ['1px', null, 7] }}
           >
             <Box
               as={Link}
               sx={{
                 '&:hover': {
-                  '.description': {
-                    opacity: [null, null, null, 0],
-                    transform: [null, null, null, 'translateY(-0.25rem)'],
-                  },
-                  '.right-arrow': { opacity: 1, transform: 'translateX(1rem)' },
-                  '.title': {
-                    color: 'accentDark',
-                    transform: [null, null, null, 'translateY(100%)'],
-                  },
-                  boxShadow: 2,
+                  '.title': { color: 'accentDark' },
+                  boxShadow: [null, null, 2],
                   transform: 'scale(1.01)',
                 },
                 alignItems: [null, null, null, 'center'],
-                background: 'white',
+                bg: 'white',
                 borderRadius: [null, null, 2],
-                boxShadow: 1,
+                boxShadow: [null, null, 1],
                 color: 'text.primary',
                 display: 'flex',
                 flexDirection: ['column-reverse', null, null, 'row'],
@@ -238,52 +222,33 @@ const Index = () => (
                   className="title"
                   sx={{
                     color: 'accent',
-                    display: 'inline-flex',
                     fontSize: [3, null, null, 4],
-                    position: 'relative',
-                    transition: 'color 0.2s, transform 0.2s',
+                    transition: 'color 0.3s',
                   }}
                 >
                   {item.title}
-                  <Icon
-                    className="right-arrow"
-                    svg="right-arrow"
-                    sx={{
-                      display: ['none', null, null, 'block'],
-                      opacity: 0,
-                      position: 'absolute',
-                      right: '-2rem',
-                      top: '0.2rem',
-                      transition: 'opacity 0.2s, transform 0.2s',
-                      width: '2rem',
-                    }}
-                  />
                 </Box>
                 <Box
                   as="p"
-                  className="description"
                   sx={{
                     color: 'text.subtle',
                     fontSize: [2, null, null, 3],
                     lineHeight: 2,
                     maxWidth: '33rem',
                     mt: 4,
-                    transition: 'opacity 0.2s, transform 0.2s',
                   }}
                 >
                   {item.description}
                 </Box>
               </Box>
-              {item.icon && (
-                <Icon
-                  svg={item.icon}
-                  sx={{
-                    mb: [4, null, null, 0],
-                    mx: [null, null, 'auto', 0],
-                    ...item.iconSx,
-                  }}
-                />
-              )}
+              <Icon
+                svg={item.icon}
+                sx={{
+                  mb: [4, null, null, 0],
+                  mx: [null, null, 'auto', 0],
+                  ...item.iconSx,
+                }}
+              />
             </Box>
           </Box>
         ))}

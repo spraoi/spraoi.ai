@@ -24,7 +24,7 @@ const PersonLayout = ({ location: { pathname }, pageContext: { slug } }) => {
         person={person}
         title={name}
       />
-      <Section sx={{ px: [0, null, 7] }}>
+      <Section sx={{ pb: [0, null, 7], px: [0, null, 7] }}>
         <Box
           sx={{
             alignItems: isActive ? 'flex-start' : [null, null, null, 'center'],
@@ -90,7 +90,7 @@ const PersonLayout = ({ location: { pathname }, pageContext: { slug } }) => {
         </Box>
       </Section>
       {!!person.articles.length && (
-        <Section sx={{ px: [null, null, 7] }}>
+        <Section sx={{ pt: 0, px: [null, null, 7] }}>
           <LinkList
             items={person.articles.map((article) => ({
               image: person.image,

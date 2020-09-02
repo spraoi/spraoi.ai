@@ -14738,11 +14738,6 @@ react-remove-scroll@^2.3.0:
     use-callback-ref "^1.2.3"
     use-sidecar "^1.0.1"
 
-react-responsive-embed@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/react-responsive-embed/-/react-responsive-embed-2.1.0.tgz#e61c5360e4cc783eeda56ef0d1751420736065f6"
-  integrity sha512-GzvZ8i1ZRL4YRaTOfIeka5CQSc7mCIZVa0C7brJoA55EQ0A+EsFQT1YOvFVzKOVP33UqoKNMijI1PQ7UtO1Eeg==
-
 react-select@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/react-select/-/react-select-3.1.0.tgz#ab098720b2e9fe275047c993f0d0caf5ded17c27"

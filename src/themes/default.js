@@ -88,8 +88,9 @@ export default {
     maxWidths: {
       content: '1200px',
       paragraph: '34rem',
-      paragraphWide: '44rem',
-      paragraphWider: '53rem',
+      paragraphWide: '39rem',
+      paragraphWider: '44rem',
+      paragraphWidest: '53rem',
       title: '52rem',
     },
   },

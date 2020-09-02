@@ -41,7 +41,7 @@ const Index = () => (
           sx={{
             fontSize: 4,
             lineHeight: 1,
-            maxWidth: 'maxWidths.paragraphWide',
+            maxWidth: 'maxWidths.paragraphWider',
             my: 5,
           }}
         >
@@ -134,7 +134,7 @@ const Index = () => (
           as="p"
           sx={{
             lineHeight: 2,
-            maxWidth: 'maxWidths.paragraphWide',
+            maxWidth: 'maxWidths.paragraphWider',
             mt: 4,
             mx: 'auto',
           }}

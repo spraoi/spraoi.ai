@@ -22,7 +22,6 @@
 
 ## To Do
 
-- [ ] add customer experience page
 - [ ] add services page
 - [ ] add press releases page
 - [ ] add eis press release
@@ -31,5 +30,3 @@
 - [ ] blocked: replace lorem ipsum
 - [ ] blocked: get about us meta description
 - [ ] blocked: verify "Eminence" links
-- [ ] suggestion: use same handle for all socials
-- [ ] suggestion: update social profile pics

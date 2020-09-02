@@ -32,7 +32,7 @@ const AboutUsPage = ({ location: { pathname } }) => {
             sx={{
               fontSize: 4,
               lineHeight: 1,
-              maxWidth: 'maxWidths.paragraphWide',
+              maxWidth: 'maxWidths.paragraphWider',
               mt: 5,
             }}
           >
@@ -257,7 +257,7 @@ const AboutUsPage = ({ location: { pathname } }) => {
           as="p"
           sx={{
             lineHeight: 2,
-            maxWidth: 'maxWidths.paragraphWide',
+            maxWidth: 'maxWidths.paragraphWider',
             mt: 4,
             mx: 'auto',
           }}

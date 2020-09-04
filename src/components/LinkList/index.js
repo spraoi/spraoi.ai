@@ -95,7 +95,6 @@ const LinkList = ({ items, split, sx, titleAs }) => (
                   color: 'accent',
                   fontSize: 3,
                   lineHeight: 1,
-                  maxWidth: 'maxWidths.paragraph',
                   mt: [1, null, null, 0],
                   transition: 'color 0.2s',
                 }}

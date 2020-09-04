@@ -23,9 +23,6 @@
 ## To Do
 
 - [ ] add services page
-- [ ] add press releases page
-- [ ] add eis press release
-- [ ] add "exciting development" as pr
 - [ ] add redirects via gatsby-plugin-meta-redirect
 - [ ] blocked: replace lorem ipsum
 - [ ] blocked: get about us meta description

@@ -69,35 +69,42 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => {
               mt: [4, null, null, 5],
             }}
           >
-            <Box
-              as={Link}
-              sx={{
-                '&:hover': {
-                  '.author-image': { boxShadow: 2, transform: 'scale(1.01)' },
-                  '.author-name': { color: 'accentDark' },
-                },
-                alignItems: 'center',
-                display: 'flex',
-              }}
-              to={`/people/${author.id}/`}
-            >
-              <Avatar
-                className="author-image"
-                image={author.image}
-                size={['2rem', null, null, '3rem']}
-                sx={{ transition: 'box-shadow 0.3s, transform 0.3s' }}
-              />
-              <Box
-                as="span"
-                className="author-name"
-                sx={{ ml: 5, transition: 'color 0.2s' }}
-              >
-                {author.givenName} {author.familyName}
-              </Box>
-            </Box>
-            <Box as="span" sx={{ mx: 3 }}>
-              &middot;
-            </Box>
+            {!frontmatter.isAnnouncement && (
+              <>
+                <Box
+                  as={Link}
+                  sx={{
+                    '&:hover': {
+                      '.author-image': {
+                        boxShadow: 2,
+                        transform: 'scale(1.01)',
+                      },
+                      '.author-name': { color: 'accentDark' },
+                    },
+                    alignItems: 'center',
+                    display: 'flex',
+                  }}
+                  to={`/people/${author.id}/`}
+                >
+                  <Avatar
+                    className="author-image"
+                    image={author.image}
+                    size={['2rem', null, null, '3rem']}
+                    sx={{ transition: 'box-shadow 0.3s, transform 0.3s' }}
+                  />
+                  <Box
+                    as="span"
+                    className="author-name"
+                    sx={{ ml: 5, transition: 'color 0.2s' }}
+                  >
+                    {author.givenName} {author.familyName}
+                  </Box>
+                </Box>
+                <Box as="span" sx={{ mx: 3 }}>
+                  &middot;
+                </Box>
+              </>
+            )}
             {frontmatter.datePublished}
           </Box>
         </Box>

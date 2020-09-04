@@ -6,17 +6,14 @@ import SEO from '../../components/SEO';
 import Section from '../../components/Section';
 import useArticles from '../../effects/use-articles';
 
-const Perspectives = () => {
+const Announcements = () => {
   const articles = useArticles();
 
   return (
     <>
-      <SEO
-        description="We have strong opinions on the market and technology’s role in it."
-        title="Perspectives"
-      />
+      <SEO description="Foo bar." title="Announcements" />
       <Section sx={{ textAlign: [null, null, 'center'] }}>
-        <h1>Perspectives</h1>
+        <h1>Announcements</h1>
         <Box
           as="p"
           sx={{
@@ -27,26 +24,16 @@ const Perspectives = () => {
             mx: 'auto',
           }}
         >
-          We have strong opinions on the market and technology&rsquo;s
-          role&nbsp;in&nbsp;it.
+          Lorem ipsum dolor incididunt ut sit amet, consectetur adipiscing elit.
         </Box>
       </Section>
       <Section sx={{ px: [null, null, 7] }}>
         <LinkList
           items={articles
-            .filter((article) => !article.frontmatter.isAnnouncement)
+            .filter((article) => article.frontmatter.isAnnouncement)
             .map((article) => ({
-              image: article.author.image,
-              link: `/perspectives${article.fields.slug}`,
-              subText: (
-                <>
-                  {article.author.givenName} {article.author.familyName}
-                  <Box as="span" sx={{ mx: 2 }}>
-                    &middot;
-                  </Box>
-                  {article.frontmatter.datePublished}
-                </>
-              ),
+              link: `/announcements${article.fields.slug}`,
+              subText: article.frontmatter.datePublished,
               title: article.frontmatter.title,
             }))}
           titleAs="h2"
@@ -57,4 +44,4 @@ const Perspectives = () => {
   );
 };
 
-export default Perspectives;
+export default Announcements;

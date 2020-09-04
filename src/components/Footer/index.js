@@ -30,7 +30,7 @@ const Footer = () => (
             links: [
               ['/about-us/', 'About Us'],
               ['/perspectives/', 'Perspectives'],
-              ['/press-releases/', 'Press Releases'],
+              ['/announcements/', 'Announcements'],
               ['/contact/', 'Contact Us'],
             ],
           },

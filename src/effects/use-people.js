@@ -21,6 +21,7 @@ const usePeople = () => {
               dateModified(formatString: "MMMM DD, YYYY")
               datePublished(formatString: "MMMM DD, YYYY")
               description
+              isAnnouncement
               title
             }
             html
@@ -65,7 +66,11 @@ const usePeople = () => {
   return people.map((p) => ({
     ...p.node,
     articles: articles
-      .filter((article) => article.node.frontmatter.author === p.node.id)
+      .filter(
+        (article) =>
+          article.node.frontmatter.author === p.node.id &&
+          !article.node.frontmatter.isAnnouncement
+      )
       .map((article) => article.node),
     colors: images.find((i) =>
       i.node.childImageSharp.fluid.src.includes(p.node.id)

@@ -3,6 +3,7 @@ datePublished: 2019-03-11
 dateModified: 2019-03-11
 title: Exciting Development
 author: karan-mishra
+isAnnouncement: y
 description: >-
   We are excited to announce a partnership taking the next step with the
   acquisition of NaviRisk and the CoRIE platform by Spraoi!

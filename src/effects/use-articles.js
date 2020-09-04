@@ -25,6 +25,7 @@ const useArticles = () => {
               dateModified(formatString: "MMMM DD, YYYY")
               datePublished(formatString: "MMMM DD, YYYY")
               description
+              isAnnouncement
               title
             }
             html

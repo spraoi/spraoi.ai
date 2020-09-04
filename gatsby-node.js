@@ -20,6 +20,9 @@ exports.createPages = ({ actions: { createPage }, graphql }) =>
             fields {
               slug
             }
+            frontmatter {
+              isAnnouncement
+            }
           }
         }
       }
@@ -35,10 +38,14 @@ exports.createPages = ({ actions: { createPage }, graphql }) =>
     if (result.errors) return Promise.reject(result.errors);
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      const prefix = node.frontmatter.isAnnouncement
+        ? 'announcements'
+        : 'perspectives';
+
       createPage({
         component: path.resolve('src/components/ArticleLayout/index.js'),
         context: { slug: node.fields.slug },
-        path: `/perspectives${node.fields.slug}`,
+        path: `/${prefix}${node.fields.slug}`,
       });
     });
 

@@ -92,20 +92,22 @@ const PersonLayout = ({ location: { pathname }, pageContext: { slug } }) => {
       {!!person.articles.length && (
         <Section sx={{ pt: 0, px: [null, null, 7] }}>
           <LinkList
-            items={person.articles.map((article) => ({
-              image: person.image,
-              link: `/perspectives${article.fields.slug}`,
-              subText: (
-                <>
-                  {person.givenName} {person.familyName}
-                  <Box as="span" sx={{ mx: 2 }}>
-                    &middot;
-                  </Box>
-                  {article.frontmatter.datePublished}
-                </>
-              ),
-              title: article.frontmatter.title,
-            }))}
+            items={person.articles
+              .filter((article) => !article.frontmatter.isAnnouncement)
+              .map((article) => ({
+                image: person.image,
+                link: `/perspectives${article.fields.slug}`,
+                subText: (
+                  <>
+                    {person.givenName} {person.familyName}
+                    <Box as="span" sx={{ mx: 2 }}>
+                      &middot;
+                    </Box>
+                    {article.frontmatter.datePublished}
+                  </>
+                ),
+                title: article.frontmatter.title,
+              }))}
             titleAs="h3"
           />
         </Section>

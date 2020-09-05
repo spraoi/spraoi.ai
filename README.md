@@ -22,8 +22,4 @@
 
 ## To Do
 
-- [ ] add services page
 - [ ] add redirects via gatsby-plugin-meta-redirect
-- [ ] blocked: replace lorem ipsum
-- [ ] blocked: get about us meta description
-- [ ] blocked: verify "Eminence" links

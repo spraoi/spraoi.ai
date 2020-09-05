@@ -13,7 +13,9 @@ const Announcements = () => {
     <>
       <SEO description="Foo bar." title="Announcements" />
       <Section sx={{ textAlign: [null, null, 'center'] }}>
-        <h1>Announcements</h1>
+        <Box as="h1" sx={{ fontSize: [5, null, 6] }}>
+          Announcements
+        </Box>
         <Box
           as="p"
           sx={{
@@ -24,7 +26,8 @@ const Announcements = () => {
             mx: 'auto',
           }}
         >
-          Lorem ipsum dolor incididunt ut sit amet, consectetur adipiscing elit.
+          Lorem ipsum dolor incididunt ut sit amet, consectetur
+          adipiscing&nbsp;elit.
         </Box>
       </Section>
       <Section sx={{ px: [null, null, 7] }}>

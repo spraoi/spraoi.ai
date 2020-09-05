@@ -165,7 +165,7 @@ const Index = () => {
               icon: 'barrel-logo',
               iconSx: { mt: '-0.25rem', width: ['5rem', null, null, '7rem'] },
               link: '/machine-learning/',
-              title: <>Machine learning&nbsp;platform</>,
+              title: <>Machine Learning&nbsp;Platform</>,
             },
             {
               description: (
@@ -178,7 +178,7 @@ const Index = () => {
               icon: 'kc-logo',
               iconSx: { mt: '0.75rem', width: ['9rem', null, null, '12rem'] },
               link: '/customer-experience/',
-              title: <>Customer experience infrastructure</>,
+              title: <>Customer Experience Infrastructure</>,
             },
             {
               description: (
@@ -191,7 +191,7 @@ const Index = () => {
               icon: 'programmer',
               iconSx: { width: ['5rem', null, null, '7rem'] },
               link: '/services/',
-              title: <>Technology solutions&nbsp;&amp;&nbsp;services</>,
+              title: <>Technology Services</>,
             },
           ].map((item) => (
             <Box

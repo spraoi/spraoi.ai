@@ -369,12 +369,12 @@ const AboutUsPage = ({ location: { pathname } }) => {
             boxShadow: 3,
             display: [null, null, null, 'flex'],
             justifyContent: 'space-between',
-            mt: 7,
+            mt: ['1px', null, 7],
             p: [6, null, null, 7],
           }}
         >
           <Icon
-            svg="west-monroe-partners-logo"
+            svg="west-monroe-logo"
             sx={{
               flexShrink: 0,
               mb: [3, null, null, 0],

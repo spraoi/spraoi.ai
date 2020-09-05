@@ -176,7 +176,7 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => {
               fontSize: '3.8rem',
               fontWeight: 'bold',
               mr: '0.5rem',
-              mt: '1rem',
+              mt: '0.9rem',
             },
             ul: { listStyle: 'disc', ml: '1em' },
           }}

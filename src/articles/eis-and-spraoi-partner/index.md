@@ -35,9 +35,10 @@ EIS Suite™ of core applications. Spraoi connects to those APIs to build out
 customer and agent portals within its Kwikcover solution and delivers machine
 learning models to improve operating outcomes from quote to claim.
 
-The integration has already been deployed by Renaissance, a nationwide provider
-of dental, vision, life, disability and accident products to support a diverse
-product portfolio and deliver a next-gen distribution and customer experience.
+The integration has already been deployed by
+[Renaissance](https://renaissancefamily.com/), a nationwide provider of dental,
+vision, life, disability and accident products to support a diverse product
+portfolio and deliver a next-gen distribution and customer experience.
 
 “Through our ongoing partnership with Spraoi, we are taking another step toward
 helping insurers become the agile and customer-centered organizations that the
@@ -76,7 +77,9 @@ insurance experiences the world will love. And with thousands of open APIs, the
 platform gives insurers the freedom to connect to a vast ecosystem of insurtech
 and emerging technologies. Headquartered in San Francisco, EIS powers premium
 growth for insurers in all lines of business worldwide. For more information,
-visit EISGroup.com or follow @EISGroupLtd on Twitter and LinkedIn.
+visit [EISGroup.com](https://www.eisgroup.com/) or follow @EISGroupLtd on
+[Twitter](https://twitter.com/eisgroupltd?lang=en) and
+[LinkedIn](https://www.linkedin.com/company/eisgroupltd/).
 
 ## About Spraoi
 
@@ -87,5 +90,4 @@ confronting them today: how to leverage their data to optimize outcomes using
 our patent pending platform and how to better engage customers throughout the
 lifecycle using our customer engagement infrastructure. Beyond our solutions, we
 have created an innovation framework that provides accountability from concept
-through execution, eliminating technology as the impediment to progress. Visit
-us at Spraoi.ai.
+through execution, eliminating technology as the impediment to progress.

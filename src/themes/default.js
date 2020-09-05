@@ -22,6 +22,7 @@ const grays = [
 ];
 
 const bluePurpleScale = [
+  '#06BCE3',
   '#13ABE1',
   '#209AE0',
   '#2D89DE',
@@ -29,6 +30,8 @@ const bluePurpleScale = [
   '#4767DB',
   '#5456D9',
 ];
+
+const bluePurpleGradient = 'linear-gradient(90deg, #5456D9 0%, #2D89DE 100%)';
 
 const fontSizeScale = 1.4;
 
@@ -38,6 +41,7 @@ export default {
   colors: {
     accent: spraoiBlue,
     accentDark: darken(0.075, spraoiBlue),
+    accentGradient: bluePurpleGradient,
     accentLight: lighten(0.05, spraoiBlue),
     accentScale: bluePurpleScale,
     accentSecondary: orange,
@@ -54,6 +58,7 @@ export default {
       heading: black,
       link: spraoiBlue,
       primary: deepBlue,
+      secondary: 'rgba(255, 255, 255, 0.9)',
       subtle: grays[4],
     },
     white,
@@ -75,7 +80,7 @@ export default {
   ],
   fontWeights: { bold: 700, light: 500, normal: 500, semibold: 600 },
   letterSpacings: ['0.05em', '0.075em', '0.1em'],
-  lineHeights: ['1.4em', '1.7em', '2em'],
+  lineHeights: ['1.4em', '1.7em', '1.95em'],
   radii: ['none', '4px', '8px'],
   shadows: [
     'none',

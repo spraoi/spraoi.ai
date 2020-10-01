@@ -59,12 +59,12 @@ Are we on the cusp of the next generation of use cases that are enabled through
 the use of OCR with other technologies?
 
 [^1]:
-  [What is Optical Character Recognition (OCR)? - Definition from Techopedia. (n.d.). Retrieved March 30, 2018](https://www.techopedia.com/definition/31623/optical-character-recognition-ocr)
+    [What is Optical Character Recognition (OCR)? - Definition from Techopedia. (n.d.). Retrieved March 30, 2018](https://www.techopedia.com/definition/31623/optical-character-recognition-ocr)
 
 [^2]:
-  [Vision API - Image Content Analysis | Google Cloud. (n.d.). Retrieved April 11, 2018](https://cloud.google.com/vision/)
+    [Vision API - Image Content Analysis | Google Cloud. (n.d.). Retrieved April 11, 2018](https://cloud.google.com/vision/)
 
 [^3]:
-  BOOK: Schantz, Herbert F. (1982). The history of OCR, optical character
-  recognition. [Manchester Center, Vt.]: Recognition Technologies Users
-  Association. ISBN 9780943072012.
+    BOOK: Schantz, Herbert F. (1982). The history of OCR, optical character
+    recognition. [Manchester Center, Vt.]: Recognition Technologies Users
+    Association. ISBN 9780943072012.

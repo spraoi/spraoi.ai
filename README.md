@@ -19,7 +19,3 @@
 
 - run `config=[config] yarn build` to make a production build
 - run `yarn serve` to test the production build
-
-## To Do
-
-- [ ] add redirects via gatsby-plugin-meta-redirect

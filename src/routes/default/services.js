@@ -95,7 +95,7 @@ const ServicesPage = ({ location: { pathname } }) => (
       <Box
         as="ul"
         sx={{
-          borderRadius: 2,
+          borderRadius: [0, null, 2],
           boxShadow: 3,
           display: 'grid',
           gridRowGap: '1px',
@@ -265,7 +265,8 @@ const ServicesPage = ({ location: { pathname } }) => (
           boxShadow: 3,
           maxWidth: 'maxWidths.paragraphWider',
           mx: 'auto',
-          p: [6, null, null, 8],
+          px: [6, null, 9],
+          py: [6, null, null, 7],
           width: '100%',
         }}
       />

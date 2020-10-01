@@ -17,16 +17,20 @@ const AboutUsPage = ({ location: { pathname } }) => {
 
   return (
     <>
-      <SEO description="Food bar." pathname={pathname} title="About Us" />
-      <Section
-        sx={{
-          alignItems: 'center',
-          display: 'flex',
-          justifyContent: 'space-between',
-        }}
-      >
-        <Box sx={{ textAlign: [null, null, 'center', 'left'] }}>
-          <h1>About Spraoi</h1>
+      <SEO
+        description="Spraoi is an insurance technology solutions provider with a focus on machine learning."
+        pathname={pathname}
+        title="About Us"
+      />
+      <Section>
+        <h1>About Spraoi</h1>
+        <Box
+          sx={{
+            alignItems: 'center',
+            display: 'flex',
+            justifyContent: 'space-between',
+          }}
+        >
           <Box
             as="p"
             sx={{
@@ -36,20 +40,19 @@ const AboutUsPage = ({ location: { pathname } }) => {
               mt: 5,
             }}
           >
-            Lorem ipsum dolor incididunt ut sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et doloreut labore
-            et dolore magna aliqua. Ut eiusmod tempor incididunt enim ad
-            ut&nbsp;aliquip&nbsp;ex&nbsp;ea.
+            Spraoi is an insurance technology solutions provider with a focus on
+            machine learning. We work with leading insurers to solve business
+            challenges and optimize outcomes through technology solutions and
+            associated services. We have grown rapidly in since our inception in
+            June 2017, and have developed significant technology IP in the Life
+            and Annuities&nbsp;vertical.
           </Box>
+          <Icon
+            svg="team-spirit"
+            sx={{ display: ['none', null, null, 'block'] }}
+            width="14rem"
+          />
         </Box>
-        <Icon
-          svg="team-spirit"
-          sx={{
-            display: ['none', null, null, 'block'],
-            ml: [null, null, null, 7],
-          }}
-          width="18rem"
-        />
       </Section>
       <Section sx={{ textAlign: [null, null, 'center'] }}>
         <h2>Reach</h2>
@@ -174,9 +177,9 @@ const AboutUsPage = ({ location: { pathname } }) => {
             mx: 'auto',
           }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud ut aliquip ex ea.
+          Our founders are an accurate representation of our team, representing
+          the confluence of Insurance subject matter expertise and Silicon
+          Valley technological&nbsp;acumen.
         </Box>
       </Section>
       <Section
@@ -275,49 +278,42 @@ const AboutUsPage = ({ location: { pathname } }) => {
               icon: 'insurance-cio-outlook-logo',
               link:
                 'https://artificial-intelligence.insuranceciooutlook.com/vendors/top-artificial-intelligence-companies-2018.html',
-              subText: 'November, 2018',
               title: 'Top 10 AI Solution Providers',
             },
             {
               icon: 'eis-logo',
               link:
                 'https://www.eisgroup.com/2018/10/18/eis-group-announces-engage-2019-user-conference/',
-              subText: 'February, 2019',
               title: 'Speaker at User Conference',
             },
             {
               icon: 'limra-logo',
               link:
                 'https://www.limra.com/en/events/conferences/2019/2019-enrollment-technology-strategy-seminar/',
-              subText: 'February, 2019',
               title: 'Main Stage Speaker on ML',
             },
             {
               icon: 'cio-applications-logo',
               link:
                 'https://machine-learning.cioapplications.com/vendors/top-25-machine-learning-solution-companies-2019-rid-160.html',
-              subText: 'March, 2019',
               title: 'Top 25 ML Solutions Provider',
             },
             {
               icon: 'andesa-logo',
               link:
                 'https://andesaservices.com/blog/lessons-for-the-new-normal-andesas-ninth-client-forum/',
-              subText: 'September, 2019',
               title: 'Speaker at User Conference',
             },
             {
               icon: 'insuretech-connect-logo',
               link:
                 'https://www.eisgroup.com/2019/09/10/what-happens-when-insurtech-meets-coretech-eis-group-panel-to-explore-at-insuretech-connect-2019/',
-              subText: 'September, 2019',
               title: 'Panelist at Conference',
             },
             {
               icon: 'insurance-cio-outlook-logo',
               link:
                 'https://insurtech-startups.insuranceciooutlook.com/vendors/insurtech-startups.html',
-              subText: 'October, 2019',
               title: 'Top 10 Insurtech Startups',
             },
           ]}

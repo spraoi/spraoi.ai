@@ -50,9 +50,10 @@ const Index = () => {
               my: 5,
             }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad ut aliquip&nbsp;ex.&nbsp;
+            We have the platform and experience to help insurance carriers
+            successfully leverage machine learning across the process value
+            chain. We have a proven track record helping carriers optimize
+            results and deliver an improved customer experience.
             <ArrowLink link="/about-us">Read more</ArrowLink>
           </Box>
           <Box
@@ -74,7 +75,7 @@ const Index = () => {
               link="/contact/"
               sx={{ maxWidth: [null, null, 'auto'], mt: [5, null, 0] }}
             >
-              Contact Us
+              Let&rsquo;s Talk
             </Button>
           </Box>
         </Box>
@@ -85,10 +86,9 @@ const Index = () => {
             flexShrink: 0,
             flexWrap: 'wrap',
             justifyContent: [null, null, 'center', 'flex-start'],
-            mb: [null, null, null, '-0.5rem'],
             ml: ['-0.5rem', null, 0, 6],
             mr: [null, null, null, '-1.25rem'],
-            mt: [null, null, null, '-2.5rem'],
+            mt: [null, null, null, '0.2rem'],
             pt: [7, null, null, 0],
             width: [null, null, null, '22.5rem'],
           }}
@@ -144,11 +144,9 @@ const Index = () => {
               mx: 'auto',
             }}
           >
-            We&rsquo;ve brought two platforms to production that enable carriers
-            to leverage their investments in core administration systems. Our
-            team and intellectual property span the major lines of
-            insurance&mdash;property/casualty, life/annuities &amp; voluntary
-            benefits.
+            We have brought two platforms to production to optimize carrier
+            investments in core administration systems, regardless of your line
+            of business or particular use&nbsp;case.
           </Box>
         </Box>
       </Section>

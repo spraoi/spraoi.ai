@@ -49,68 +49,64 @@ const LinkList = ({ items, split, sx, titleAs }) => (
         }}
       >
         <Box
-          as={Link}
+          as={/^https?:\/\//.test(item.link) ? 'a' : Link}
           className="item-link"
+          href={item.link}
           sx={{
             '&:hover': { '.title': { color: 'accentDark' }, bg: 'offWhite' },
-            display: 'block',
+            alignItems: ['flex-start', null, null, 'center'],
+            display: 'flex',
+            flexDirection: ['column', null, null, 'row'],
+            height: [null, null, null, '7rem'],
             p: 6,
             position: 'relative',
             transition: 'background 0.2s',
           }}
           to={item.link}
         >
+          {item.image && (
+            <Avatar
+              image={item.image}
+              size={['2rem', null, null, '3rem']}
+              sx={{ mr: [null, null, null, 5] }}
+            />
+          )}
+          {item.icon && (
+            <Icon
+              svg={item.icon}
+              sx={{ mr: [null, null, null, 6] }}
+              width={['3rem', null, null, '4rem']}
+            />
+          )}
           <Box
             sx={{
-              alignItems: ['flex-start', null, null, 'center'],
               display: 'flex',
-              flexDirection: ['column', null, null, 'row'],
+              flexDirection: ['column-reverse', null, null, 'column'],
+              mt: [1, null, null, 0],
             }}
           >
-            {item.image && (
-              <Avatar
-                image={item.image}
-                size={['2rem', null, null, '3rem']}
-                sx={{ mr: [null, null, null, 5] }}
-              />
-            )}
-            {item.icon && (
-              <Icon
-                svg={item.icon}
-                sx={{ mr: [null, null, null, 6] }}
-                width={['3rem', null, null, '4rem']}
-              />
-            )}
             <Box
+              as={titleAs}
+              className="title"
               sx={{
-                display: 'flex',
-                flexDirection: ['column-reverse', null, null, 'column'],
+                color: 'accent',
+                fontSize: 3,
+                lineHeight: 1,
                 mt: [1, null, null, 0],
+                transition: 'color 0.2s',
               }}
             >
-              <Box
-                as={titleAs}
-                className="title"
-                sx={{
-                  color: 'accent',
-                  fontSize: 3,
-                  lineHeight: 1,
-                  mt: [1, null, null, 0],
-                  transition: 'color 0.2s',
-                }}
-              >
-                {noOrphan(item.title)}
-              </Box>
-              <Box
-                sx={{
-                  color: 'text.subtle',
-                  fontSize: 2,
-                  fontWeight: 'semibold',
-                  mt: 2,
-                }}
-              >
-                {item.subText}
-              </Box>
+              {noOrphan(item.title)}
+            </Box>
+            <Box
+              sx={{
+                color: 'text.subtle',
+                fontSize: 2,
+                fontWeight: 'semibold',
+                mt: 2,
+              }}
+            >
+              {item.subText}
             </Box>
           </Box>
         </Box>

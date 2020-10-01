@@ -53,6 +53,7 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-transformer-sharp',
     'gatsby-transformer-yaml',
+    'gatsby-plugin-meta-redirect',
   ],
   siteMetadata: {
     banner: '/images/banner-1200x628.png',

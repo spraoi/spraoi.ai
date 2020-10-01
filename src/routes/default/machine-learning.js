@@ -19,10 +19,10 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
         svg="barrel-logo"
         sx={{
           mb: 5,
-          mt: ['-1rem', null, '-1.6rem'],
+          mt: ['-1.5rem', null, '-2.25rem'],
           mx: [null, null, 'auto'],
         }}
-        width={['5rem', null, '7rem']}
+        width={['7rem', null, '10rem']}
       />
       <Box as="h1" sx={{ fontSize: [5, null, null, 6] }}>
         Machine Learning Platform
@@ -179,7 +179,6 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
               boxShadow: 3,
               display: 'flex',
               flexDirection: 'column',
-              justifyContent: 'center',
               p: [6, null, null, 7],
             }}
           >

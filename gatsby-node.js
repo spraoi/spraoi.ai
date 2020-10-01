@@ -8,7 +8,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   createNodeField({ name: 'slug', node, value: slug });
 };
 
-exports.createPages = ({ actions: { createPage }, graphql }) =>
+exports.createPages = ({ actions: { createPage, createRedirect }, graphql }) =>
   graphql(`
     {
       allMarkdownRemark(
@@ -47,6 +47,14 @@ exports.createPages = ({ actions: { createPage }, graphql }) =>
         context: { slug: node.fields.slug },
         path: `/${prefix}${node.fields.slug}`,
       });
+
+      if (!node.frontmatter.isAnnouncement) {
+        createRedirect({
+          fromPath: `/articles${node.fields.slug}`,
+          isPermanent: true,
+          toPath: `/${prefix}${node.fields.slug}`,
+        });
+      }
     });
 
     result.data.allPeopleYaml.edges.forEach(({ node }) => {
@@ -55,5 +63,41 @@ exports.createPages = ({ actions: { createPage }, graphql }) =>
         context: { slug: `/${node.id}` },
         path: `/people/${node.id}`,
       });
+    });
+
+    createRedirect({
+      fromPath: '/machine-learning-solutions/',
+      isPermanent: true,
+      toPath: '/machine-learning/',
+    });
+
+    createRedirect({
+      fromPath: '/customer-experience-solutions/',
+      isPermanent: true,
+      toPath: '/customer-experience/',
+    });
+
+    createRedirect({
+      fromPath: '/about_us/',
+      isPermanent: true,
+      toPath: '/about-us/',
+    });
+
+    createRedirect({
+      fromPath: '/articles/',
+      isPermanent: true,
+      toPath: '/perspectives/',
+    });
+
+    createRedirect({
+      fromPath: '/eis-and-spraoi-partnership/',
+      isPermanent: true,
+      toPath: '/announcements/eis-and-spraoi-partner/',
+    });
+
+    createRedirect({
+      fromPath: '/articles/exciting-development/',
+      isPermanent: true,
+      toPath: '/announcements/exciting-development/',
     });
   });

@@ -18,7 +18,7 @@ const CustomerExperienceSolutionsPage = ({ location: { pathname } }) => (
       <Icon
         svg="kc-logo"
         sx={{ mb: 5, mx: [null, null, 'auto'] }}
-        width={['9rem', null, '12rem']}
+        width={['13rem', null, '17rem']}
       />
       <Box as="h1" sx={{ fontSize: [5, null, null, 6] }}>
         Customer Experience Infrastructure
@@ -33,27 +33,10 @@ const CustomerExperienceSolutionsPage = ({ location: { pathname } }) => (
           mx: 'auto',
         }}
       >
-        Lorem ipsum dolor incididunt ut sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et doloreut labore et dolore
-        magna aliqua. Ut eiusmod tempor incididunt enim ad ut
-        aliquip&nbsp;ex&nbsp;ea.
-      </Box>
-    </Section>
-    <Section sx={{ textAlign: [null, null, 'center'] }}>
-      <h2>Solutions</h2>
-      <Box
-        as="p"
-        sx={{
-          lineHeight: 2,
-          maxWidth: 'maxWidths.paragraphWide',
-          mt: 4,
-          mx: 'auto',
-        }}
-      >
-        Kwikcover supports agent and d2c models with a single, easy-to-use and
-        consistent interface that spans the insurance lifecycle and can easily
-        be integrated with several administration platforms
-        as&nbsp;a&nbsp;veneer.
+        We have built a configurable, full lifecycle customer experience portal
+        infrastructure, providing integration lift. We have leveraged this
+        infrastructure to develop specific solutions
+        across&nbsp;industry&nbsp;sectors.
       </Box>
     </Section>
     <Section sx={{ px: [0, null, 7] }}>
@@ -122,7 +105,6 @@ const CustomerExperienceSolutionsPage = ({ location: { pathname } }) => (
               boxShadow: 3,
               display: 'flex',
               flexDirection: 'column',
-              justifyContent: 'center',
               p: [6, null, null, 7],
             }}
           >

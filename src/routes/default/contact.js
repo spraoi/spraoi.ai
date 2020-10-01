@@ -17,7 +17,7 @@ const Contact = ({ location: { pathname } }) => (
     <SEO
       description="Want to start a conversation? We would love to hear from you regarding our product offerings and services."
       pathname={pathname}
-      title="Contact Us"
+      title="Let’s Talk"
     />
     <Section
       sx={{
@@ -27,7 +27,7 @@ const Contact = ({ location: { pathname } }) => (
     >
       <Box>
         <Box as="h1" sx={{ color: 'text.primary' }}>
-          Contact Us
+          Let&rsquo;s Talk
         </Box>
         <Box
           as="p"

@@ -58,12 +58,12 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
         }}
       >
         {[
-          { svg: 'ruler', text: 'Standardized' },
-          { svg: 'repeat', text: 'Repeatable' },
-          { svg: 'observer', text: 'Observable' },
-          { svg: 'scale', text: 'Measurable' },
-          { svg: 'sliders', text: 'Experimentation' },
-          { svg: 'stairs', text: 'Scalable' },
+          { svg: 'ruler', text: 'Standardize' },
+          { svg: 'repeat', text: 'Repeat' },
+          { svg: 'observer', text: 'Observe' },
+          { svg: 'scale', text: 'Measure' },
+          { svg: 'sliders', text: 'Experiment' },
+          { svg: 'stairs', text: 'Scale' },
         ].map((item, i) => (
           <IconFigure
             key={item.text}
@@ -94,7 +94,7 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
           mx: 'auto',
         }}
       >
-        Our claims suite models can be fit to your data. While these function
+        This solution can be quickly fit to your data. While these function
         across lines of business, we also have developed specific models for
         production&nbsp;lines.
       </Box>
@@ -113,9 +113,9 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
           {
             description: (
               <>
-                Go beyond rules-based assignment to organization of at FNOL for
-                the examiner that has the best experience adjudicating claims of
-                this&nbsp;complexity.
+                Go beyond rules-based assignment at first notice (FNOL) to
+                adjuster assignment based upon individual examiner capability to
+                handle the&nbsp;claim.
               </>
             ),
             svg: 'pie-chart',
@@ -235,7 +235,7 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
             description: (
               <>
                 Purchase predictor insight into product and customer alignment
-                to appropriately direct and increase likelihood of purchase and
+                to appropriately direct, increase likelihood of purchase and
                 offer better product&nbsp;fit.
               </>
             ),

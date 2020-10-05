@@ -113,8 +113,8 @@ const ServicesPage = ({ location: { pathname } }) => (
                 technologies. Our integration services include API
                 implementations using AWS (via our API gateway infrastructure)
                 to write custom integration to back the API quickly. We provide
-                built-in auditing, logging and tracing and the ability to
-                configure different authentication&nbsp;mechanisms.
+                built in auditing, logging, tracing and the ability to configure
+                different authentication&nbsp;mechanisms.
               </>
             ),
             title: <>Integration Services</>,

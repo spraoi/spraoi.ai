@@ -11,7 +11,10 @@ const Announcements = () => {
 
   return (
     <>
-      <SEO description="Foo bar." title="Announcements" />
+      <SEO
+        description="News travels fast these days. Stay apprised of all things Spraoi here."
+        title="Announcements"
+      />
       <Section sx={{ textAlign: [null, null, 'center'] }}>
         <Box as="h1" sx={{ fontSize: [5, null, 6] }}>
           Announcements
@@ -26,8 +29,8 @@ const Announcements = () => {
             mx: 'auto',
           }}
         >
-          Lorem ipsum dolor incididunt ut sit amet, consectetur
-          adipiscing&nbsp;elit.
+          News travels fast these days. Stay apprised of all things
+          Spraoi&nbsp;here.
         </Box>
       </Section>
       <Section sx={{ px: [null, null, 7] }}>

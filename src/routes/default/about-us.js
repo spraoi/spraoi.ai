@@ -31,25 +31,21 @@ const AboutUsPage = ({ location: { pathname } }) => {
             justifyContent: 'space-between',
           }}
         >
-          <Box
-            as="p"
-            sx={{
-              fontSize: 4,
-              lineHeight: 1,
-              maxWidth: 'maxWidths.paragraphWider',
-              mt: 5,
-            }}
-          >
+          <Box as="p" sx={{ fontSize: 4, lineHeight: 1, mt: 5 }}>
             Spraoi is an insurance technology solutions provider with a focus on
             machine learning. We work with leading insurers to solve business
             challenges and optimize outcomes through technology solutions and
-            associated services. We have grown rapidly in since our inception in
+            associated services. We have grown rapidly since our inception in
             June 2017, and have developed significant technology IP in the Life
             and Annuities&nbsp;vertical.
           </Box>
           <Icon
             svg="team-spirit"
-            sx={{ display: ['none', null, null, 'block'] }}
+            sx={{
+              display: ['none', null, null, 'block'],
+              flexShrink: 0,
+              ml: 7,
+            }}
             width="14rem"
           />
         </Box>

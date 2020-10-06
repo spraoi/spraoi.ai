@@ -37,7 +37,7 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
           mx: 'auto',
         }}
       >
-        Ingest, analyse, transform and visualize data in a single collaborative
+        Ingest, analyze, transform and visualize data in a single collaborative
         workspace. Barrel combines the features of a model building platform,
         transformations and pipeline tools into one intuitive infrastructure.
       </Box>

@@ -96,7 +96,7 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
       >
         This solution can be quickly fit to your data. While these function
         across lines of business, we also have developed specific models for
-        production&nbsp;lines.
+        product&nbsp;lines.
       </Box>
     </Section>
     <Section sx={{ px: [0, null, 7] }}>

@@ -3,6 +3,9 @@ jobs:
   install:
     docker:
       - image: circleci/node:latest
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
       - restore_cache:
@@ -21,6 +24,9 @@ jobs:
   test:
     docker:
       - image: circleci/node:latest
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
       - attach_workspace:
@@ -39,6 +45,9 @@ jobs:
   build:
     docker:
       - image: circleci/node:latest
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
     parameters:
       env:
         type: string
@@ -57,6 +66,9 @@ jobs:
   deploy:
     docker:
       - image: travnels/circleci-nodejs-awscli:latest
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
     parameters:
       env:
         type: string

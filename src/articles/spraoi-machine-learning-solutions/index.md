@@ -47,5 +47,3 @@ Spraoi is a Pennsylvania limited liability company. Spraoi is the provider of
 machine learning platform and solutions to solve the challenges our insurance
 clients face as they seek to gain greater insight into their data. Visit
 [www.spraoi.ai](https://www.spraoi.ai/)
-
-## SOURCE Spraoi

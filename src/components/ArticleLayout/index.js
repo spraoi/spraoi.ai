@@ -182,7 +182,9 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => {
           }}
         />
         <ShareCTA
-          link={`${siteUrl}/perspectives${slug}`}
+          link={`${siteUrl}/${
+            frontmatter.isAnnouncement ? 'announcements' : 'perspectives'
+          }${slug}`}
           title={frontmatter.title}
         />
       </Section>

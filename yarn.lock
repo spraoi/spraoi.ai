@@ -2279,13 +2279,13 @@
   resolved "https://registry.yarnpkg.com/@spraoi/babel-preset/-/babel-preset-0.29.0.tgz#63fd42004e259485adec5678d7e47634e428e256"
   integrity sha512-GGyTBidE5BoT03VK7g9pZduZlMr7fKy4Iz0nF6yPaUvrjKTwK9IjqWqCsBZhmJf/BZjhVAgMp9QP2rkytXaC2g==
 
-"@spraoi/base@^0.29.33":
-  version "0.29.33"
-  resolved "https://registry.yarnpkg.com/@spraoi/base/-/base-0.29.33.tgz#9b68ffb471680c3770b0ee5b8cd3b501b635a840"
-  integrity sha512-/jL/Rfd2DCJMh1BvyE1J7DdbxCgff8HHzTkW8dSGKKCiziMrHn70NIgG67+FVN4Yenk86b820aW4IMKvX7nYYw==
+"@spraoi/base@^0.29.47":
+  version "0.29.47"
+  resolved "https://registry.yarnpkg.com/@spraoi/base/-/base-0.29.47.tgz#6f7133d0296278813bc6e00f3fe036eb5b1f844f"
+  integrity sha512-hbTBHFYpksLqPF8idY20K7rzgQcFzFia9GDYprLuqq/XdREO5otIFRl2T7hOUIbNH/2e5FzUgdR/17C9Qm+ZFQ==
   dependencies:
     "@brainhubeu/react-carousel" "^1.18.7"
-    "@spraoi/file-upload" "^0.29.17"
+    "@spraoi/file-upload" "^0.29.41"
     "@wojtekmaj/react-daterange-picker" "^2.5.0"
     apollo-cache-inmemory "^1.6.6"
     apollo-link-context "^1.0.20"
@@ -2317,16 +2317,15 @@
     eslint-plugin-react "^7.20.0"
     eslint-plugin-react-hooks "^4.0.4"
 
-"@spraoi/file-upload@^0.29.17":
-  version "0.29.17"
-  resolved "https://registry.yarnpkg.com/@spraoi/file-upload/-/file-upload-0.29.17.tgz#ab999f32cf80037fcb5951dd6348d43974a1bace"
-  integrity sha512-2D8hU568FIKKkA7rMoVTG3+n/5pE25UfO/sQiJrC+SwoZvA9U1xr82DkLyJuQQJ4uLp2RDEJXyIh2cu3xUPzYA==
+"@spraoi/file-upload@^0.29.41":
+  version "0.29.41"
+  resolved "https://registry.yarnpkg.com/@spraoi/file-upload/-/file-upload-0.29.41.tgz#ba809c849f46ac87a82de6707e0f01989f0058b0"
+  integrity sha512-ydHnW6AaXaDuzEaS4cntcck0Of3bhrRiJKQjSX+eKatYVEagKreqDethLTzhIuoZyEV7l1C+o5uqm/ttz+9z/A==
   dependencies:
-    filepond "^4.17.1"
-    filepond-plugin-file-rename "^1.1.4"
-    filepond-plugin-file-validate-size "^2.2.1"
+    filepond-plugin-file-rename "^1.1.6"
+    filepond-plugin-file-validate-size "^2.2.2"
     filepond-plugin-file-validate-type "^1.2.5"
-    react-filepond "^7.0.1"
+    react-filepond "^7.1.0"
 
 "@spraoi/gatsby-config@^0.29.23":
   version "0.29.23"
@@ -7862,25 +7861,20 @@ filenamify@^2.0.0:
     strip-outer "^1.0.0"
     trim-repeated "^1.0.0"
 
-filepond-plugin-file-rename@^1.1.4:
+filepond-plugin-file-rename@^1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/filepond-plugin-file-rename/-/filepond-plugin-file-rename-1.1.6.tgz#15a07f9eb80ad0ef31714c2695f59cd713aa63e3"
   integrity sha512-nVdj0L+R9JY5Qjy04G2YJ2FMJ5Z/va1i1h+4X75xzOeMUnBl3Kw2MEa/xvoWuIBfeWwoNQ7YQMKO8yFG0LvhAg==
 
-filepond-plugin-file-validate-size@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/filepond-plugin-file-validate-size/-/filepond-plugin-file-validate-size-2.2.1.tgz#7e0d879db85271d2b1ec4b18e8d4d452e3fd2007"
-  integrity sha512-u9JKJlg4Yff0ogNPb/6QK9Pwqr9DlcAnvQm2r9jHc5bXBoVhQZ+Dd4FcMdDyrSGBkYwiXVBD2It7qPOv94hVnQ==
+filepond-plugin-file-validate-size@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/filepond-plugin-file-validate-size/-/filepond-plugin-file-validate-size-2.2.2.tgz#a62974f7bcc6b3d2caa0ef6394b6e31ec19f4cae"
+  integrity sha512-35OH99f0poTBdldMcPOomZeXXiJC4ae5qrqZheP2wS1QDOcJa5RUgcIAwS43rixPrHNbEj9NpFei+7X15MUm9w==
 
 filepond-plugin-file-validate-type@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/filepond-plugin-file-validate-type/-/filepond-plugin-file-validate-type-1.2.5.tgz#b3588088d2b0d5dbdf706d068c0ecdf28140a8e3"
   integrity sha512-SsdYD6N+PDnetrPrBHfl13ZC9jRv5BuGdai5cORfANhuE/N32OwU/IclCNQ4qlpIa88hzqBg9dj6IINkiW+4HA==
-
-filepond@^4.17.1:
-  version "4.20.1"
-  resolved "https://registry.yarnpkg.com/filepond/-/filepond-4.20.1.tgz#d0e2ce447dc785f8cc51abd207805b886090b2b7"
-  integrity sha512-qYwE/xSODJuAJH0E2BHeD8f3X66nxZ/aUQSaGhUTVXuAWe0wvIjxaRcMZUIsZm2f7truScxAe16l5ITzxi5TFw==
 
 filesize@3.5.11:
   version "3.5.11"
@@ -14795,10 +14789,10 @@ react-fast-compare@^3.1.1:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
   integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
 
-react-filepond@^7.0.1:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/react-filepond/-/react-filepond-7.1.0.tgz#e3a83321dcfcd9c55f9f7d97ca1042f6d4412e66"
-  integrity sha512-hkxhd1PElzbAaPwY0FElQQPdWD1KzIQAYXSkgeE3W2hdFvyXU4hBuBq5/u04emvOJR/RifrdQGXAX1z07DcOvQ==
+react-filepond@^7.1.0:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/react-filepond/-/react-filepond-7.1.1.tgz#467aa45051da5dbbca03a2ce58d2aacbbcfbb0e9"
+  integrity sha512-6Szyi3zY4AEiSlE5rztJov/xIDB107Sv31MctDoSutdLinMqmbMej6kJ2MtSGzAhsP2+h8cDDr51mdHNXt97Yw==
 
 react-final-form-listeners@^1.0.2:
   version "1.0.2"

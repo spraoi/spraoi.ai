@@ -32,12 +32,14 @@ const AboutUsPage = ({ location: { pathname } }) => {
           }}
         >
           <Box as="p" sx={{ fontSize: 4, lineHeight: 1, mt: 5 }}>
-            Spraoi is an insurance technology solutions provider with a focus on
-            machine learning. We work with leading insurers to solve business
-            challenges and optimize outcomes through technology solutions and
-            associated services. We have grown rapidly since our inception in
-            June 2017, and have developed significant technology IP in the Life
-            and Annuities&nbsp;vertical.
+            Spraoi is a business solution focused technology firm with domain
+            expertise to distinguish between individual, annuities, group
+            benefits, voluntary and worksite requirements in different market
+            segment sizes. We believe transformational results are delivered
+            within the carrier’s existing eco-system using data-centric AI to
+            provide insights at key decision points. We have grown rapidly since
+            our inception in June 2017 and have developed significant technology
+            IP in the Group Benefits, Life and Annuities domains.
           </Box>
           <Icon
             svg="team-spirit"
@@ -335,12 +337,11 @@ const AboutUsPage = ({ location: { pathname } }) => {
             <h3>EIS Group</h3>
             <Box as="p" sx={{ color: 'text.subtle', lineHeight: 2, mt: 4 }}>
               Spraoi and EIS have integrated their solutions to enable group
-              benefits and property casualty providers a modern, responsive
-              experience for their customers. The combination of our firms
-              ensure continuous innovation across user experience,
-              administration and data leverage. The result is a functionally
-              rich and technically superior technology
-              ecosystem&nbsp;for&nbsp;carriers.
+              benefits providers a modern, responsive experience for their
+              customers. The combination of our firms ensure continuous
+              innovation across user experience, administration and data
+              leverage. The result is a functionally rich and technically
+              superior technology ecosystem&nbsp;for&nbsp;carriers.
             </Box>
           </Box>
           <Icon

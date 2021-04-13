@@ -94,9 +94,11 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
           mx: 'auto',
         }}
       >
-        This solution can be quickly fit to your data. While these function
-        across lines of business, we also have developed specific models for
-        product&nbsp;lines.
+        This solution can leverage existing claims data in any format from the
+        vendor or proprietary system. While these functions are applicable
+        across products lines, STD and LTD Disability claims have very specific
+        business decision needs for which this ML model suite has been
+        optimized.
       </Box>
     </Section>
     <Section sx={{ px: [0, null, 7] }}>
@@ -113,13 +115,13 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
           {
             description: (
               <>
-                Go beyond rules-based assignment at first notice (FNOL) to
-                adjuster assignment based upon individual examiner capability to
-                handle the&nbsp;claim.
+                Dynamic segmentation of incoming claims based on risk
+                characteristics and complexity to match with individual examiner
+                experience and skill level.
               </>
             ),
             svg: 'pie-chart',
-            title: <>Segmentation &amp; Assignment</>,
+            title: <>Segmentation and Assignment</>,
           },
           {
             description: (

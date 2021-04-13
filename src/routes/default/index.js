@@ -50,10 +50,14 @@ const Index = () => {
               my: 5,
             }}
           >
-            We have the platform and experience to help insurance carriers
-            successfully leverage machine learning across the process value
-            chain. We have a proven track record helping carriers optimize
-            results and deliver an improved customer experience.
+            We have the platform and domain experience that combines data
+            engineering and machine learning to apply to unique challenges of
+            Group Benefits, and Life and Annuities carriers across the process
+            value chain. Our platform can integrate seamlessly with existing
+            systems to create a seamless experience for our end users. We have a
+            proven track record helping carriers optimize results and deliver an
+            improved customer experience in everything from new business,
+            enrollment to claims.
             <ArrowLink link="/about-us">Read more</ArrowLink>
           </Box>
           <Box

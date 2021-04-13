@@ -109,6 +109,23 @@ const ServicesPage = ({ location: { pathname } }) => (
           {
             description: (
               <>
+                Our innovation as a service approach provides technology
+                strategy, management, design, development and deployment
+                capabilities. When combined with our machine learning expertise,
+                the result is data-forward engineering that can bring
+                demonstrable change in&nbsp;mere&nbsp;weeks.
+              </>
+            ),
+            paragraphSx: { color: 'text.secondary' },
+            sx: {
+              background: (theme) => theme.colors.accentGradient,
+              color: 'white',
+            },
+            title: <>Innovation as a Service</>,
+          },
+          {
+            description: (
+              <>
                 We offer advanced integration services leveraging best in class
                 technologies. Our integration services include API
                 implementations using AWS (via our API gateway infrastructure)
@@ -196,23 +213,6 @@ const ServicesPage = ({ location: { pathname } }) => (
               </>
             ),
             title: <>Build, Operate &amp; Transfer&nbsp;Services</>,
-          },
-          {
-            description: (
-              <>
-                Our innovation as a service approach provides technology
-                strategy, management, design, development and deployment
-                capabilities. When combined with our machine learning expertise,
-                the result is data-forward engineering that can bring
-                demonstrable change in&nbsp;mere&nbsp;weeks.
-              </>
-            ),
-            paragraphSx: { color: 'text.secondary' },
-            sx: {
-              background: (theme) => theme.colors.accentGradient,
-              color: 'white',
-            },
-            title: <>Innovation as a Service</>,
           },
         ].map((item, i) => (
           <Box

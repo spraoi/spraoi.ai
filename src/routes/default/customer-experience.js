@@ -44,9 +44,9 @@ const CustomerExperienceSolutionsPage = ({ location: { pathname } }) => (
         as="ul"
         sx={{
           display: 'grid',
-          gridColumnGap: 5,
+          /* gridColumnGap: 5,
           gridRowGap: ['1px', null, 5],
-          gridTemplateColumns: ['1fr', null, null, '1fr 1fr'],
+          gridTemplateColumns: ['1fr', null, null, '1fr 1fr'], */
         }}
       >
         {[
@@ -57,13 +57,18 @@ const CustomerExperienceSolutionsPage = ({ location: { pathname } }) => (
                 and service functionality, and comes pre-integrated with our
                 machine learning capability to predict an individual’s
                 propensity to purchase products for a particular plan design or
-                individual product&nbsp;set.
+                individual product set.
+                <br />
+                Persona driven operation analysts, employees, and employers. It
+                allows for case setup and integrates with case information to
+                provide service features such as id cards, plan benefits, claim
+                information.
               </>
             ),
             svg: 'group',
             title: <>Group &amp; Voluntary Benefits</>,
           },
-          {
+          /* {
             description: (
               <>
                 Our retail life and annuities solution, when coupled with our
@@ -86,20 +91,20 @@ const CustomerExperienceSolutionsPage = ({ location: { pathname } }) => (
             ),
             svg: 'factory',
             title: <>Small Commercial</>,
-          },
+          }, */
         ].map((item, i) => (
           <Box
             key={item.svg}
             as="li"
             sx={{
-              '&:last-of-type:nth-child(odd)': {
+              /* '&:last-of-type:nth-child(odd)': {
                 transform: [
                   null,
                   null,
                   null,
                   'translateX(calc(50% + 0.625rem))',
                 ],
-              },
+              }, */
               bg: 'white',
               borderRadius: [null, null, 2],
               boxShadow: 3,

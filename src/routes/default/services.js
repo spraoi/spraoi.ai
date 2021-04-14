@@ -33,7 +33,7 @@ const ServicesPage = ({ location: { pathname } }) => (
         technology as the impediment to&nbsp;progress.
       </Box>
     </Section>
-    <Section sx={{ px: [0, null, 7], maxWidth: ['100%', null, null, '50%'] }}>
+    <Section sx={{ maxWidth: ['100%', null, null, '50%'], px: [0, null, 7] }}>
       <Box
         as="ul"
         sx={{

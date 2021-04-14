@@ -7,7 +7,7 @@ import Icon from '../../components/Icon';
 import IconFigure from '../../components/IconFigure';
 import SEO from '../../components/SEO';
 import Section from '../../components/Section';
-import ArrowLink from '../../components/ArrowLink';
+// import ArrowLink from '../../components/ArrowLink';
 
 const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
   <>
@@ -16,7 +16,7 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
       pathname={pathname}
       title="Machine Learning"
     />
-    <Section sx={{ textAlign: [null, null, 'center'], pb: 0 }}>
+    <Section sx={{ pb: 0, textAlign: [null, null, 'center'] }}>
       <Icon
         svg="barrel-logo"
         sx={{

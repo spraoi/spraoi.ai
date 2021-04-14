@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Icon from '../Icon';
 
-const ArrowLink = ({ children, link }) => (
+const ArrowLink = ({ children, link, sx }) => (
   <Button
     link={link}
     simple
@@ -21,6 +21,7 @@ const ArrowLink = ({ children, link }) => (
       py: 1,
       textTransform: 'uppercase',
       whiteSpace: 'nowrap',
+      ...sx,
     }}
   >
     {children}
@@ -30,6 +31,7 @@ const ArrowLink = ({ children, link }) => (
       sx={{
         display: 'inline-block',
         fill: 'inherit',
+        height: '0.9rem',
         left: 2,
         position: 'relative',
         top: '0.175rem',
@@ -43,6 +45,11 @@ const ArrowLink = ({ children, link }) => (
 ArrowLink.propTypes = {
   children: PropTypes.node.isRequired,
   link: PropTypes.string.isRequired,
+  sx: PropTypes.shape({}),
+};
+
+ArrowLink.defaultProps = {
+  sx: {},
 };
 
 export default ArrowLink;

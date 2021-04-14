@@ -33,7 +33,7 @@ const ServicesPage = ({ location: { pathname } }) => (
         technology as the impediment to&nbsp;progress.
       </Box>
     </Section>
-    <Section sx={{ px: [0, null, 7] }}>
+    <Section sx={{ maxWidth: ['100%', null, null, '50%'], px: [0, null, 7] }}>
       <Box
         as="ul"
         sx={{
@@ -44,16 +44,16 @@ const ServicesPage = ({ location: { pathname } }) => (
             '1fr 1fr',
             null,
             '1fr 1fr 1fr',
-            'repeat(5, 1fr)',
+            'repeat(3, 1fr)',
           ],
         }}
       >
         {[
-          { svg: 'pen-and-pad', text: 'Third Party Administration' },
+          // { svg: 'pen-and-pad', text: 'Third Party Administration' },
           { svg: 'database', text: 'Data' },
           { svg: 'sigma', text: 'Integration' },
           { svg: 'light-bulb', text: 'Innovation' },
-          { svg: 'open', text: 'Build, Operate, Transfer' },
+          // { svg: 'open', text: 'Build, Operate, Transfer' },
         ].map((item) => (
           <IconFigure
             key={item.text}
@@ -150,7 +150,7 @@ const ServicesPage = ({ location: { pathname } }) => (
             ),
             title: <>Data Services</>,
           },
-          {
+          /* {
             description: (
               <>
                 With our alliance partners, we can handle the entire value chain
@@ -213,7 +213,7 @@ const ServicesPage = ({ location: { pathname } }) => (
               </>
             ),
             title: <>Build, Operate &amp; Transfer&nbsp;Services</>,
-          },
+          }, */
         ].map((item, i) => (
           <Box
             key={`service-items-${i}`}

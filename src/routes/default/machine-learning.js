@@ -1,11 +1,13 @@
 import Box from '@spraoi/base/Box';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Link } from 'gatsby';
 import ContactCTA from '../../components/ContactCTA';
 import Icon from '../../components/Icon';
 import IconFigure from '../../components/IconFigure';
 import SEO from '../../components/SEO';
 import Section from '../../components/Section';
+// import ArrowLink from '../../components/ArrowLink';
 
 const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
   <>
@@ -14,7 +16,7 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
       pathname={pathname}
       title="Machine Learning"
     />
-    <Section sx={{ textAlign: [null, null, 'center'] }}>
+    <Section sx={{ pb: 0, textAlign: [null, null, 'center'] }}>
       <Icon
         svg="barrel-logo"
         sx={{
@@ -41,6 +43,39 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
         workspace. Barrel combines the features of a model building platform,
         transformations and pipeline tools into one intuitive infrastructure.
       </Box>
+      <Box
+        as={Link}
+        sx={{
+          '&:hover': {
+            '&>span': { transform: 'translateX(5px)' },
+            color: 'accentDark',
+            textDecoration: 'underline',
+          },
+          color: 'text.link',
+          cursor: 'pointer',
+          display: 'inline-flex',
+          fontSize: 4,
+          mt: 6,
+          mx: 'auto',
+        }}
+        to="/about-us"
+      >
+        Read more about our Case Studies
+        <Icon
+          as="span"
+          svg="right-arrow"
+          sx={{
+            display: ['none', null, 'block'],
+            ml: 5,
+            mt: 1,
+            transition: 'transform 0.2s',
+            width: '1.5rem',
+          }}
+        />
+      </Box>
+      {/* <ArrowLink link="/about-us" sx={{ mt: 6, display: 'inline-block' }}>
+        Read more about our Case Studies
+      </ArrowLink> */}
     </Section>
     <Section sx={{ px: [0, null, 7] }}>
       <Box

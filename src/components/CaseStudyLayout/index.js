@@ -9,6 +9,7 @@ import Section from '../Section';
 import noOrphan from '../../utilities/no-orphan';
 import useCaseStudies from '../../effects/use-case-studies';
 import useMetadata from '../../effects/use-metadata';
+import Icon from '../Icon';
 
 const CaseStudyLayout = ({ location: { pathname }, pageContext: { slug } }) => {
   const { banner } = useMetadata();
@@ -43,6 +44,11 @@ const CaseStudyLayout = ({ location: { pathname }, pageContext: { slug } }) => {
         title={frontmatter.title}
       />
       <Section as="article">
+        <Icon
+          svg={frontmatter.icon}
+          sx={{ mb: 5, mx: [null, null, 'auto'] }}
+          width={['13rem', null, '17rem']}
+        />
         <Box
           as="header"
           sx={{
@@ -56,22 +62,15 @@ const CaseStudyLayout = ({ location: { pathname }, pageContext: { slug } }) => {
           </Box>
           <Box
             as="p"
-            sx={{ color: 'text.subtle', fontSize: 2, lineHeight: 2, mt: 4 }}
-          >
-            {frontmatter.description}
-          </Box>
-          <Box
             sx={{
-              alignItems: 'center',
-              color: 'text.subtle',
-              display: 'flex',
-              fontSize: [2, null, null, 3],
-              fontWeight: 'semibold',
-              justifyContent: [null, null, null, 'center'],
-              mt: [4, null, null, 5],
+              fontSize: 4,
+              lineHeight: 1,
+              maxWidth: 'maxWidths.paragraphWidest',
+              mt: 5,
+              mx: 'auto',
             }}
           >
-            {frontmatter.datePublished}
+            {frontmatter.description}
           </Box>
         </Box>
         <Box
@@ -124,7 +123,7 @@ const CaseStudyLayout = ({ location: { pathname }, pageContext: { slug } }) => {
               p: 0,
             },
             lineHeight: 2,
-            maxWidth: 'maxWidths.paragraph',
+            maxWidth: 'maxWidths.paragraphWider',
             mt: 8,
             mx: 'auto',
             ol: { listStyle: 'decimal', ml: '1em' },
@@ -134,17 +133,25 @@ const CaseStudyLayout = ({ location: { pathname }, pageContext: { slug } }) => {
               p: 0,
               'p:first-of-type .dropcap': noDropcap,
             },
-            p: { mb: 6, mr: '-0.75rem' },
-            'p:first-of-type .dropcap': {
-              color: 'accent',
-              float: 'left',
-              fontFamily: 'secondary',
-              fontSize: '3.8rem',
-              fontWeight: 'bold',
-              mr: '0.5rem',
-              mt: '0.9rem',
+            'ul, p': {
+              '&:before': {
+                borderLeft: '.25rem solid',
+                borderLeftColor: 'accent',
+                bottom: '-2rem',
+                content: "''",
+                left: '-2rem',
+                position: 'absolute',
+                top: '-1rem',
+                width: 0,
+              },
+              bg: 'white',
+              borderRadius: [null, null, 2],
+              boxShadow: 3,
+              listStyle: 'disc',
+              ml: 7,
+              p: 6,
+              position: 'relative',
             },
-            ul: { listStyle: 'disc', ml: '1em' },
           }}
         />
       </Section>

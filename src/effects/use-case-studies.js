@@ -23,6 +23,7 @@ const useCaseStudies = () => {
               dateModified(formatString: "MMMM DD, YYYY")
               datePublished(formatString: "MMMM DD, YYYY")
               description
+              icon
               isAnnouncement
               title
             }

@@ -1,15 +1,12 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import usePeople from './use-people';
 
-const useArticles = () => {
-  const people = usePeople();
-
+const useCaseStudies = () => {
   const {
-    allMarkdownRemark: { edges: articles },
+    allMarkdownRemark: { edges: caseStudies },
   } = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/(articles)/" } }
+        filter: { fileAbsolutePath: { regex: "/(case-studies)/" } }
         sort: { order: DESC, fields: [frontmatter___datePublished] }
         limit: 1000
       ) {
@@ -36,12 +33,9 @@ const useArticles = () => {
     }
   `);
 
-  return articles.map((article) => ({
-    ...article.node,
-    author: people.find(
-      (person) => person.id === article.node.frontmatter.author
-    ),
+  return caseStudies.map((caseStudy) => ({
+    ...caseStudy.node,
   }));
 };
 
-export default useArticles;
+export default useCaseStudies;

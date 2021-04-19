@@ -54,7 +54,7 @@ const Index = () => {
             engineering and machine learning to apply to unique challenges of
             Group Benefits, and Life and Annuities carriers across the process
             value chain. Our platform can integrate seamlessly with existing
-            systems to create a seamless experience for our end users. We have a
+            systems to create a cohesive experience for our end users. We have a
             proven track record helping carriers optimize results and deliver an
             improved customer experience in everything from new business,
             enrollment to claims.

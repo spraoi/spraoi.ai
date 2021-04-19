@@ -58,7 +58,7 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
           mt: 6,
           mx: 'auto',
         }}
-        to="/about-us"
+        to="/case-studies"
       >
         Read more about our Case Studies
         <Icon

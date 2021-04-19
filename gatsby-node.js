@@ -8,10 +8,15 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   createNodeField({ name: 'slug', node, value: slug });
 };
 
-exports.createPages = ({ actions: { createPage, createRedirect }, graphql }) =>
+exports.createPages = ({
+  actions: { createPage, createRedirect },
+  graphql,
+}) => {
+  /* For Articles */
   graphql(`
     {
       allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/(articles)/" } }
         sort: { order: DESC, fields: [frontmatter___datePublished] }
         limit: 1000
       ) {
@@ -101,3 +106,35 @@ exports.createPages = ({ actions: { createPage, createRedirect }, graphql }) =>
       toPath: '/announcements/exciting-development/',
     });
   });
+
+  /* For Case Studies */
+  graphql(`
+    {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/(case-studies)/" } }
+        sort: { order: DESC, fields: [frontmatter___datePublished] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `).then((result) => {
+    if (result.errors) return Promise.reject(result.errors);
+
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      const prefix = 'case-studies';
+
+      createPage({
+        component: path.resolve('src/components/CaseStudyLayout/index.js'),
+        context: { slug: node.fields.slug },
+        path: `/${prefix}${node.fields.slug}`,
+      });
+    });
+  });
+};

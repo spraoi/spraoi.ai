@@ -38,6 +38,36 @@ const CustomerExperienceSolutionsPage = ({ location: { pathname } }) => (
         infrastructure to develop specific solutions
         across&nbsp;industry&nbsp;sectors.
       </Box>
+      <Box
+        as={Link}
+        sx={{
+          '&:hover': {
+            '&>span': { transform: 'translateX(5px)' },
+            color: 'accentDark',
+            textDecoration: 'underline',
+          },
+          color: 'text.link',
+          cursor: 'pointer',
+          display: 'inline-flex',
+          fontSize: 4,
+          mt: 6,
+          mx: 'auto',
+        }}
+        to="/case-studies"
+      >
+        Read more about our Case Studies
+        <Icon
+          as="span"
+          svg="right-arrow"
+          sx={{
+            display: ['none', null, 'block'],
+            ml: 5,
+            mt: 1,
+            transition: 'transform 0.2s',
+            width: '1.5rem',
+          }}
+        />
+      </Box>
     </Section>
     <Section sx={{ px: [0, null, 7] }}>
       <Box

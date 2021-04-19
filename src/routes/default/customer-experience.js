@@ -61,7 +61,7 @@ const CustomerExperienceSolutionsPage = ({ location: { pathname } }) => (
                 <br />
                 Persona driven operation analysts, employees, and employers. It
                 allows for case setup and integrates with case information to
-                provide service features such as id cards, plan benefits, claim
+                provide service features such as ID cards, plan benefits, claim
                 information.
               </>
             ),

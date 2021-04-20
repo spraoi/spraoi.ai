@@ -75,12 +75,12 @@ const AboutUsPage = ({ location: { pathname } }) => {
             annotationColor="accentSecondary"
             geography={landMap}
             markers={[
-              {
+              /* {
                 annotationProps: { dx: 40, dy: 0 },
                 annotationTextProps: { x: 10 },
                 coordinates: [-122.4194, 37.7749],
                 name: 'San Fransisco',
-              },
+              }, */
               {
                 annotationProps: { dx: 40, dy: 0 },
                 annotationTextProps: { x: 10 },
@@ -279,12 +279,6 @@ const AboutUsPage = ({ location: { pathname } }) => {
               title: 'Top 10 AI Solution Providers',
             },
             {
-              icon: 'eis-logo',
-              link:
-                'https://www.eisgroup.com/2018/10/18/eis-group-announces-engage-2019-user-conference/',
-              title: 'Speaker at User Conference',
-            },
-            {
               icon: 'limra-logo',
               link:
                 'https://www.limra.com/en/events/conferences/2019/2019-enrollment-technology-strategy-seminar/',
@@ -320,40 +314,6 @@ const AboutUsPage = ({ location: { pathname } }) => {
         />
       </Section>
       <Section sx={{ pt: 0, px: [0, null, 7] }}>
-        <Box
-          sx={{
-            alignItems: [null, null, null, 'center'],
-            bg: 'white',
-            borderRadius: [null, null, 2],
-            boxShadow: 3,
-            display: 'flex',
-            flexDirection: ['column-reverse', null, null, 'row'],
-            justifyContent: 'space-between',
-            mt: 7,
-            p: [6, null, null, 7],
-          }}
-        >
-          <Box>
-            <h3>EIS Group</h3>
-            <Box as="p" sx={{ color: 'text.subtle', lineHeight: 2, mt: 4 }}>
-              Spraoi and EIS have integrated their solutions to enable group
-              benefits providers a modern, responsive experience for their
-              customers. The combination of our firms ensure continuous
-              innovation across user experience, administration and data
-              leverage. The result is a functionally rich and technically
-              superior technology ecosystem&nbsp;for&nbsp;carriers.
-            </Box>
-          </Box>
-          <Icon
-            svg="eis-logo"
-            sx={{
-              flexShrink: 0,
-              mb: [4, null, null, 0],
-              ml: [null, null, null, 7],
-            }}
-            width={['4rem', null, null, '6rem']}
-          />
-        </Box>
         <Box
           sx={{
             alignItems: 'center',

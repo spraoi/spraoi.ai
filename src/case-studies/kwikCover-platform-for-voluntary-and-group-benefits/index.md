@@ -1,40 +1,43 @@
 ---
-datePublished: 2021-03-19
-dateModified: 2021-03-19
-title: KwikCover platform for a Voluntary and Group Benefits
+datePublished: 2021-03-18
+dateModified: 2021-03-18
+title:
+  Customer Experience Portal Infrastructure for Voluntary and Group Benefits
 author: mamta-chaurdia
 icon: kc-logo
 description: >-
-  We have successfully delivered the KwikCover platform for a Voluntary and
-    Group Benefits client fully integrated with their technology ecosystem.
+  Implementing our Kwikcover platform for a Voluntary and Group Benefits client
+  fully integrated with their technology ecosystem.
 ---
 
 ## The Challenge
 
-- The client was looking to implement a group insurance experience portal
-  solution for insurance products for the agent, employer and employee user
-  experience
-- Current state process was limited in terms of ease of use provided for the
-  viewing of claims across products, updating information related to coverages,
-  salary and dependents
-- User administrative console features were limited and required significant
-  dependency on IT and help desk
+> A multi-line insurance carrier in the group and voluntary product lines was
+> looking to gain efficiencies across new case setup, enrollment and in-force
+> service. The client was looking for a solution to expand both capabilities and
+> access to transaction processing across several key stakeholders:
+> agents/brokers, employers, employees/enrollees and carrier practitioners.
 
 ## Solution
 
-- Configurable and persona driven user interface that supports a product suite
-  that spans – Dental, Vision, Life, LTD, STD, Statutory Disability, Paid Family
-  Leave, Accident
-- An integrated solution across the product suite with API based integration
-  with the client’s choice of policy admin system
+> Spraoi’s Kwikcover asset was configured to provide a customer experience
+> across products (Dental, Vision, Life, STD, LTD, Statutory Disability, Paid
+> Family Leave and Accident) across multiple stakeholder personas as elaborated
+> in the challenge. An integrated solution across the product suite with
+> API-based integration with the client’s policy administration system was
+> delivered.
 
 ## Impact
 
-- Completely integrated seamless experience for employer and enrollee to view
-  and update information related to coverages, dependents and documents
-  associated with the coverage
-- Increased efficiency with providing user control over ancillary features such
-  as administrative console
-- Easy end user access to documents housed within the policy admin system
-- Access to analytics to surface adoption of portal across the user base and
-  product suite
+> Spraoi’s Kwikcover portal solution deployed and provided the following lift
+> immediately:
+>
+> - Completely integrated seamless experience for employer and enrollee to view
+>   and update information related to coverages, dependents and documents
+>   associated with the coverage.
+> - Increased efficiency with providing user control over ancillary features
+>   such as administrative console.
+> - Easy user access to documents housed within the policy administration
+>   system.
+> - Access to analytics to surface adoption of portal across the user base and
+>   product suite.

@@ -46,7 +46,18 @@ const CaseStudyLayout = ({ location: { pathname }, pageContext: { slug } }) => {
       <Section as="article">
         <Icon
           svg={frontmatter.icon}
-          sx={{ mb: 5, mx: [null, null, 'auto'] }}
+          sx={{
+            display: 'flex',
+            height: '3rem',
+            justifyContent: ['flex-start', null, null, 'center'],
+            maxWidth: ['calc(100% - 2rem)', null, '250px'],
+            mb: 5,
+            mx: [null, null, null, 'auto'],
+            svg: {
+              height: '100%',
+              maxWidth: '100%',
+            },
+          }}
           width={['13rem', null, '17rem']}
         />
         <Box
@@ -97,18 +108,31 @@ const CaseStudyLayout = ({ location: { pathname }, pageContext: { slug } }) => {
               color: 'text.link',
             },
             blockquote: {
-              '&>p': { mb: 0 },
+              '&:before': {
+                borderLeft: '.25rem solid',
+                borderLeftColor: 'accent',
+                bottom: '-2rem',
+                content: "''",
+                left: '-2rem',
+                position: 'absolute',
+                top: '-1rem',
+                width: 0,
+              },
+              '&:last-child:before': {
+                bottom: 0,
+              },
+              '> p': {
+                mb: 4,
+              },
               bg: 'white',
-              borderLeftColor: 'text.subtle',
-              borderLeftStyle: 'solid',
-              borderLeftWidth: '0.9rem',
-              color: 'grays.4',
-              fontStyle: 'italic',
-              fontWeight: 'semibold',
-              m: 0,
-              mb: 6,
+              borderRadius: [null, null, 2],
+              boxShadow: 3,
               p: 6,
-              'p:first-of-type .dropcap': noDropcap,
+              position: 'relative',
+              ul: {
+                listStyle: 'disc',
+                ml: 6,
+              },
             },
             h2: { lineHeight: 0, mb: 6, mt: 7 },
             h3: { lineHeight: 1, mb: 2, mt: 7 },
@@ -129,28 +153,8 @@ const CaseStudyLayout = ({ location: { pathname }, pageContext: { slug } }) => {
             ol: { listStyle: 'decimal', ml: '1em' },
             'ol, ul': {
               listStylePosition: 'outside',
-              mb: 6,
               p: 0,
               'p:first-of-type .dropcap': noDropcap,
-            },
-            'ul, p': {
-              '&:before': {
-                borderLeft: '.25rem solid',
-                borderLeftColor: 'accent',
-                bottom: '-2rem',
-                content: "''",
-                left: '-2rem',
-                position: 'absolute',
-                top: '-1rem',
-                width: 0,
-              },
-              bg: 'white',
-              borderRadius: [null, null, 2],
-              boxShadow: 3,
-              listStyle: 'disc',
-              ml: 7,
-              p: 6,
-              position: 'relative',
             },
           }}
         />

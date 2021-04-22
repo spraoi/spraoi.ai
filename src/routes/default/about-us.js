@@ -298,12 +298,6 @@ const AboutUsPage = ({ location: { pathname } }) => {
               title: 'Speaker at User Conference',
             },
             {
-              icon: 'insuretech-connect-logo',
-              link:
-                'https://www.eisgroup.com/2019/09/10/what-happens-when-insurtech-meets-coretech-eis-group-panel-to-explore-at-insuretech-connect-2019/',
-              title: 'Panelist at Conference',
-            },
-            {
               icon: 'insurance-cio-outlook-logo',
               link:
                 'https://insurtech-startups.insuranceciooutlook.com/vendors/insurtech-startups.html',

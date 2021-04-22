@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ContactCTA from '../../components/ContactCTA';
 import Icon from '../../components/Icon';
-import IconFigure from '../../components/IconFigure';
 import SEO from '../../components/SEO';
 import Section from '../../components/Section';
 
@@ -16,7 +15,7 @@ const ServicesPage = ({ location: { pathname } }) => (
     />
     <Section sx={{ textAlign: [null, null, 'center'] }}>
       <Box as="h1" sx={{ fontSize: [5, null, null, 6] }}>
-        Technology Services
+        Innovation as a Service
       </Box>
       <Box
         as="p"
@@ -28,12 +27,13 @@ const ServicesPage = ({ location: { pathname } }) => (
           mx: 'auto',
         }}
       >
-        In addition to our solutions, the Spraoi team has the expertise to take
-        delivery accountability from concept through execution, thus eliminating
-        technology as the impediment to&nbsp;progress.
+        Our innovation as a service approach provides technology strategy,
+        management, design, development and deployment capabilities. When
+        combined with our machine learning expertise, the result is data-forward
+        engineering that can bring demonstrable change in&nbsp;mere&nbsp;weeks.
       </Box>
     </Section>
-    <Section sx={{ maxWidth: ['100%', null, null, '50%'], px: [0, null, 7] }}>
+    {/* <Section sx={{ maxWidth: ['100%', null, null, '50%'], px: [0, null, 7] }}>
       <Box
         as="ul"
         sx={{
@@ -90,7 +90,7 @@ const ServicesPage = ({ location: { pathname } }) => (
         talent and domain expertise we can bring demonstrable
         change&nbsp;in&nbsp;weeks.
       </Box>
-    </Section>
+    </Section> */}
     <Section sx={{ px: [0, null, 7] }}>
       <Box
         as="ul"
@@ -109,11 +109,12 @@ const ServicesPage = ({ location: { pathname } }) => (
           {
             description: (
               <>
-                Our innovation as a service approach provides technology
-                strategy, management, design, development and deployment
-                capabilities. When combined with our machine learning expertise,
-                the result is data-forward engineering that can bring
-                demonstrable change in&nbsp;mere&nbsp;weeks.
+                We offer advanced integration services leveraging best in class
+                technologies. We leverage our pre-defined integration design
+                paradigms to go to market quickly. We provide built in auditing,
+                logging, tracing and the ability to configure different
+                authentication mechanisms making us well-suited for the
+                insurance industry.
               </>
             ),
             paragraphSx: { color: 'text.secondary' },
@@ -121,19 +122,6 @@ const ServicesPage = ({ location: { pathname } }) => (
               background: (theme) => theme.colors.accentGradient,
               color: 'white',
             },
-            title: <>Innovation as a Service</>,
-          },
-          {
-            description: (
-              <>
-                We offer advanced integration services leveraging best in class
-                technologies. Our integration services include API
-                implementations using AWS (via our API gateway infrastructure)
-                to write custom integration to back the API quickly. We provide
-                built in auditing, logging, tracing and the ability to configure
-                different authentication&nbsp;mechanisms.
-              </>
-            ),
             title: <>Integration Services</>,
           },
           {

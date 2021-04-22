@@ -12,8 +12,8 @@ description: >-
 ## The Challenge
 
 > A multi-line insurance carrier pays approximately \$400M in annual disability
-> indemnity (STD and LTD). They were looking to bolster their claims
-> capabilities, and were looking to leverage their data to better advantage.
+> indemnity (STD and LTD). The carrier was looking to bolster their claims
+> capability and leverage their data to better advantage.
 
 ## Solution
 
@@ -29,4 +29,4 @@ description: >-
 > - ~15% of LTD claims were tagged as likely candidate for settlement, with 84%
 >   accuracy increasing the efficiency of the overall settlement process.
 > - ~2% of claims were tagged as inconsistent for review of any potential fraud
->   by client business team.
+>   by the client business team.

@@ -32,14 +32,15 @@ const AboutUsPage = ({ location: { pathname } }) => {
           }}
         >
           <Box as="p" sx={{ fontSize: 4, lineHeight: 1, mt: 5 }}>
-            Spraoi is a business solution focused technology firm with domain
-            expertise to distinguish between individual, annuities, group
-            benefits, voluntary and worksite requirements in different market
-            segment sizes. We believe transformational results are delivered
-            within the carrier’s existing eco-system using data-centric AI to
-            provide insights at key decision points. We have grown rapidly since
-            our inception in June 2017 and have developed significant technology
-            IP in the Group Benefits, Life and Annuities domains.
+            We are a solution focused technology firm that has grown
+            significantly since our inception in June 2017. Our deep domain
+            expertise, that enables us to distinguish between individual,
+            annuities, group benefits, voluntary and worksite requirements in
+            different market segments, has allowed us to develop significant
+            technology IP. We believe transformational results are delivered
+            within the carrier’s existing eco-system using a data-centric
+            machine learning approach to provide insights at key decision
+            points.
           </Box>
           <Icon
             svg="team-spirit"

@@ -22,8 +22,8 @@ description: >-
 
 > Spraoi’s Kwikcover asset was configured to provide a customer experience
 > across products (Dental, Vision, Life, STD, LTD, Statutory Disability, Paid
-> Family Leave and Accident) across multiple stakeholder personas as elaborated
-> in the challenge. An integrated solution across the product suite with
+> Family Leave and Accident) and multiple stakeholder personas as elaborated in
+> the challenge. An integrated solution across the product suite with an
 > API-based integration with the client’s policy administration system was
 > delivered.
 

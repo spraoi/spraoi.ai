@@ -18,11 +18,11 @@ const Footer = () => (
       >
         {[
           {
-            heading: 'Solutions & Services',
+            heading: 'Solutions & Innovation',
             links: [
               ['/machine-learning/', 'Machine Learning'],
               ['/customer-experience/', 'Customer Experience'],
-              ['/services/', 'Services'],
+              ['/innovation/', 'Innovation'],
             ],
           },
           {

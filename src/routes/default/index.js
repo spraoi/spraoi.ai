@@ -8,11 +8,11 @@ import Icon from '../../components/Icon';
 import IconFigure from '../../components/IconFigure';
 import SEO from '../../components/SEO';
 import Section from '../../components/Section';
-import useArticles from '../../effects/use-articles';
+// import useArticles from '../../effects/use-articles';
 
 const Index = () => {
-  const articles = useArticles();
-  const latestAnnouncement = articles.find((a) => a.frontmatter.isAnnouncement);
+  // const articles = useArticles();
+  // const latestAnnouncement = articles.find((a) => a.frontmatter.isAnnouncement);
 
   return (
     <>
@@ -50,14 +50,11 @@ const Index = () => {
               my: 5,
             }}
           >
-            We have the platform and domain experience that combines data
-            engineering and machine learning to apply to unique challenges of
-            Group Benefits, and Life and Annuities carriers across the process
-            value chain. Our platform can integrate seamlessly with existing
-            systems to create a cohesive experience for our end users. We have a
-            proven track record helping carriers optimize results and deliver an
-            improved customer experience in everything from new business,
-            enrollment to claims.
+            We combine our domain experience with deep machine learning
+            capabilities to unique challenges of Group Benefits, and Life and
+            Annuities carriers. We have a proven track record helping carriers
+            optimize results and deliver an improved customer experience in
+            everything from new business, enrollment to claims.
             <ArrowLink link="/about-us">Read more</ArrowLink>
           </Box>
           <Box
@@ -68,13 +65,6 @@ const Index = () => {
               pt: 2,
             }}
           >
-            <Button
-              link={`/announcements${latestAnnouncement.fields.slug}`}
-              sx={{ maxWidth: [null, null, 'auto'], mr: [null, null, 5] }}
-              variant="buttons.secondary"
-            >
-              Latest announcement
-            </Button>
             <Button
               link="/contact/"
               sx={{ maxWidth: [null, null, 'auto'], mt: [5, null, 0] }}
@@ -104,9 +94,9 @@ const Index = () => {
             sx={{ m: [3, null, 4] }}
             text={
               <>
-                Insurance Subject
+                Deep Domain
                 <br />
-                Matter Expertise
+                Expertise
               </>
             }
           />
@@ -138,20 +128,7 @@ const Index = () => {
       </Section>
       <Section>
         <Box sx={{ textAlign: [null, null, 'center'] }}>
-          <h2>Solutions &amp; Services</h2>
-          <Box
-            as="p"
-            sx={{
-              lineHeight: 2,
-              maxWidth: 'maxWidths.paragraphWider',
-              mt: 4,
-              mx: 'auto',
-            }}
-          >
-            We have brought two platforms to production to optimize carrier
-            investments in core administration systems, regardless of your line
-            of business or particular use&nbsp;case.
-          </Box>
+          <h2>Solutions and Innovation</h2>
         </Box>
       </Section>
       <Section sx={{ px: [null, null, 7] }}>
@@ -160,8 +137,10 @@ const Index = () => {
             {
               description: (
                 <>
-                  Insurance specific, reusable rules, schemas and processes to
-                  speed the machine learning model development&nbsp;process.
+                  Barrel is an end to end data platform with insurance specific,
+                  reusable rules and schemas to accelerate machine learning
+                  model development across the Group Benefit value chain from
+                  Underwriting, Enrollment, EOI, New Business to Claims.
                 </>
               ),
               icon: 'barrel-logo',
@@ -172,9 +151,11 @@ const Index = () => {
             {
               description: (
                 <>
-                  We have leveraged our customer experience portal platform to
-                  develop specific solutions across insurance
-                  industry&nbsp;sectors.
+                  Kwikcover is machine learning enabled customer experience
+                  infrastructure that offers sold case setup, eligibility
+                  management, enrollment, billing and claims capabilities for
+                  employer sponsor, employees and carrier’s operations role
+                  based personas.
                 </>
               ),
               icon: 'kc-logo',
@@ -192,8 +173,8 @@ const Index = () => {
               ),
               icon: 'programmer',
               iconSx: { width: ['5rem', null, null, '7rem'] },
-              link: '/services/',
-              title: <>Technology Services</>,
+              link: '/innovation/',
+              title: <>Innovation as a service</>,
             },
           ].map((item) => (
             <Box

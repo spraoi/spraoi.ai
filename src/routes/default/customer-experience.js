@@ -35,8 +35,8 @@ const CustomerExperienceSolutionsPage = ({ location: { pathname } }) => (
       >
         We have built a configurable, full lifecycle customer experience portal
         infrastructure, providing integration lift. We have leveraged this
-        infrastructure to develop specific solutions
-        across&nbsp;industry&nbsp;sectors.
+        infrastructure to develop specific solutions across the group/voluntary
+        and&nbsp;life/annuity&nbsp;sectors.
       </Box>
       <Box
         as={Link}
@@ -89,10 +89,9 @@ const CustomerExperienceSolutionsPage = ({ location: { pathname } }) => (
                 propensity to purchase products for a particular plan design or
                 individual product set.
                 <br />
-                Persona driven operation analysts, employees, and employers. It
-                allows for case setup and integrates with case information to
-                provide service features such as ID cards, plan benefits, claim
-                information.
+                It allows for case setup and integrates with case information to
+                provide service features such as ID cards, plan benefits, and
+                claim information.
               </>
             ),
             svg: 'group',

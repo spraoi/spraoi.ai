@@ -59,7 +59,7 @@ const Header = () => {
           {[
             ['/machine-learning/', 'Machine Learning'],
             ['/customer-experience/', 'Customer Experience'],
-            ['/services/', 'Services'],
+            ['/innovation/', 'Innovation'],
             ['/about-us/', 'About Us'],
             ['/perspectives/', 'Perspectives'],
           ].map(([link, text]) => (

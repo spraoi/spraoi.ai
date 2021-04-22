@@ -10,6 +10,7 @@ import noOrphan from '../../utilities/no-orphan';
 import useCaseStudies from '../../effects/use-case-studies';
 import useMetadata from '../../effects/use-metadata';
 import Icon from '../Icon';
+import BackArrowLink from '../BackArrowLink';
 
 const CaseStudyLayout = ({ location: { pathname }, pageContext: { slug } }) => {
   const { banner } = useMetadata();
@@ -43,7 +44,13 @@ const CaseStudyLayout = ({ location: { pathname }, pageContext: { slug } }) => {
         pathname={pathname}
         title={frontmatter.title}
       />
-      <Section as="article">
+      <Section as="article" sx={{ position: 'relative' }}>
+        <BackArrowLink
+          link="/case-studies"
+          sx={{ mt: 3, position: 'absolute', right: [6, null, 7], top: 0 }}
+        >
+          Back
+        </BackArrowLink>
         <Icon
           svg={frontmatter.icon}
           sx={{

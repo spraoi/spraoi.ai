@@ -150,9 +150,10 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
           {
             description: (
               <>
-                Dynamic segmentation of incoming claims based on risk
-                characteristics and complexity to match with individual examiner
-                experience and skill level.
+                Segments incoming short term and long term disability claims
+                dynamically based on risk characteristics like diagnosis,
+                co-morbidity factors and return to work likelihood matched with
+                individual examiner experience and skill level for assignment.
               </>
             ),
             svg: 'pie-chart',
@@ -161,9 +162,9 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
           {
             description: (
               <>
-                Adjudicate claims minimizing human intervention through
-                recognition of those with predictable outcomes for resolution
-                without adjuster&nbsp;participation.
+                Identifies short term disability claims like pregnancy with
+                consistent, predictable benefit pattern that can be automated to
+                adjudicate without examiner intervention.
               </>
             ),
             svg: 'gear',
@@ -172,8 +173,10 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
           {
             description: (
               <>
-                Identify fraudulent claims faster and/or those
-                previously&nbsp;unidentified.
+                Identifies short term and long term disability claims with
+                inconsistent patterns based on number of factors such as
+                diagnosis, job description, industry and return to work
+                likelhood to flag for review by claims examiners.
               </>
             ),
             svg: 'thief',
@@ -181,7 +184,11 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
           },
           {
             description: (
-              <>Identify claims for predicting settlement&nbsp;outcomes.</>
+              <>
+                Identifies long term disability claims with a higher propensity
+                to settle based on historically settled claims pattern and the
+                current claim characteristics.
+              </>
             ),
             svg: 'scale',
             title: 'Settlement',
@@ -271,18 +278,18 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
           {
             description: (
               <>
-                Purchase predictor insight into product and customer alignment
-                to appropriately direct, increase likelihood of purchase and
-                offer better product&nbsp;fit.
+                Reviews over 100 data points related to the policy holder to
+                predict lapse propensity and provide insight into relevant
+                retention measures.
               </>
             ),
-            title: 'Purchase Predictor',
+            title: 'Policyholder Lapse Retention Predictor',
           },
           {
             description: (
               <>
-                Application level fraud identifying patterns in applicants with
-                a propensity to be fraudulent in the annuities&nbsp;space.
+                Reviews applications to identify patterns that indicate a
+                propensity of inconsistency within them.
               </>
             ),
             title: <>Application Level&nbsp;Fraud</>,
@@ -290,8 +297,8 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
           {
             description: (
               <>
-                Distribution fraud review policies and their distribution source
-                to identify institutional fraud in the annuities&nbsp;space.
+                Reviews new business and service transactions for inconsistency
+                at the individual advisor or institution level.
               </>
             ),
             title: 'Distribution Fraud',
@@ -299,9 +306,8 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
           {
             description: (
               <>
-                Employee level fraud identify patterns of claims payments and
-                disbursements for operational manipulation of the disbursement
-                process in the annuities&nbsp;space.
+                Reviews disbursements and claims payments to identify patterns
+                indicating operational inconsistencies.
               </>
             ),
             title: <>Employee Level&nbsp;Fraud</>,
@@ -323,10 +329,10 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
           >
             <Box
               as="h3"
-              sx={{
+              /* sx={{
                 textAlign: [null, null, null, 'right'],
                 whiteSpace: [null, null, null, 'nowrap'],
-              }}
+              }} */
             >
               {item.title}
             </Box>

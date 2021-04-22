@@ -196,8 +196,10 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
           {
             description: (
               <>
-                Identify STD claims at appropriate points in the process to be
-                bridged over to LTD case&nbsp;management.
+                Identifies short term disability claims with a hig propensity to
+                bridge over to long term disability claim based on claim
+                characteristic at the mid-point of the short term disability
+                case cycle.
               </>
             ),
             svg: 'bridge',
@@ -206,8 +208,9 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
           {
             description: (
               <>
-                Identify claims with likelihood of positive social security, a
-                pension and/or workers comp&nbsp;considerations.
+                Identifies long term disability claims with a likelihood of
+                positive social security outcome, a pension and/or workers
+                compensation consideration.
               </>
             ),
             svg: 'seesaw',

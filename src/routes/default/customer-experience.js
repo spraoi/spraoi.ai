@@ -34,9 +34,8 @@ const CustomerExperienceSolutionsPage = ({ location: { pathname } }) => (
         }}
       >
         We have built a configurable, full lifecycle customer experience portal
-        infrastructure, providing integration lift. We have leveraged this
-        infrastructure to develop specific solutions across the group/voluntary
-        and&nbsp;life/annuity&nbsp;sectors.
+        infrastructure, providing integration lift to develop specific solutions
+        across the group/voluntary and life/annuity sectors.
       </Box>
       <Box
         as={Link}

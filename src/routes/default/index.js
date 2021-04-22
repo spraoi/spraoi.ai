@@ -51,10 +51,10 @@ const Index = () => {
             }}
           >
             We combine our domain experience with deep machine learning
-            capabilities to unique challenges of Group Benefits, and Life and
-            Annuities carriers. We have a proven track record helping carriers
-            optimize results and deliver an improved customer experience in
-            everything from new business, enrollment to claims.
+            capabilities to address unique challenges of Group Benefits, and
+            Life and Annuities carriers. We have a proven track record helping
+            carriers optimize results and deliver an improved customer
+            experience in everything from new business, enrollment to claims.
             <ArrowLink link="/about-us">Read more</ArrowLink>
           </Box>
           <Box
@@ -151,7 +151,7 @@ const Index = () => {
             {
               description: (
                 <>
-                  Kwikcover is machine learning enabled customer experience
+                  Kwikcover is a machine learning enabled customer experience
                   infrastructure that offers sold case setup, eligibility
                   management, enrollment, billing and claims capabilities for
                   employer sponsor, employees and carrier’s operations role
@@ -174,7 +174,7 @@ const Index = () => {
               icon: 'programmer',
               iconSx: { width: ['5rem', null, null, '7rem'] },
               link: '/innovation/',
-              title: <>Innovation as a service</>,
+              title: <>Innovation as a Service</>,
             },
           ].map((item) => (
             <Box

@@ -111,7 +111,7 @@ const ServicesPage = ({ location: { pathname } }) => (
               <>
                 We offer advanced integration services leveraging best in class
                 technologies. We leverage our pre-defined integration design
-                paradigms to go to market quickly. Our built in auditing,
+                paradigms to go to market quickly. Our built-in auditing,
                 logging, tracing and the ability to configure different
                 authentication mechanisms make us well-suited for the insurance
                 industry.

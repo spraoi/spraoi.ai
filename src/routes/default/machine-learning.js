@@ -196,10 +196,9 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
           {
             description: (
               <>
-                Identifies short term disability claims with a hig propensity to
-                bridge over to long term disability claim based on claim
-                characteristic at the mid-point of the short term disability
-                case cycle.
+                Identifies short term disability claims with a high propensity
+                to become long term disability claims based on characteristics
+                at the mid-point of the short term disability case cycle.
               </>
             ),
             svg: 'bridge',

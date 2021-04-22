@@ -51,7 +51,7 @@ const Index = () => {
             }}
           >
             We combine our domain experience with deep machine learning
-            capabilities to address unique challenges of Group Benefits, and
+            capabilities to address the unique challenges of Group Benefits, and
             Life and Annuities carriers. We have a proven track record helping
             carriers optimize results and deliver an improved customer
             experience in everything from new business, enrollment to claims.

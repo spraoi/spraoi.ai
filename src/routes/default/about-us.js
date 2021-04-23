@@ -300,7 +300,7 @@ const AboutUsPage = ({ location: { pathname } }) => {
             {
               icon: 'insurance-cio-outlook-logo',
               link:
-                'https://insurtech-startups.insuranceciooutlook.com/vendors/insurtech-startups.html',
+                'https://insurtech-startups.insuranceciooutlook.com/vendors/top-insurtech-startups-2019.html',
               title: 'Top 10 Insurtech Startups',
             },
           ]}

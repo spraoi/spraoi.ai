@@ -113,7 +113,7 @@ const ServicesPage = ({ location: { pathname } }) => (
                 by working closely with our clients. Our subject matter experts 
                 bring industry best practices to the table to help improve 
                 organizational and operational effectiveness while keeping 
-                innovation as the focus.
+                innovation as&nbsp;the&nbsp;focus.
               </>
             ),
             title: <>Technology Strategy Services</>,
@@ -126,11 +126,22 @@ const ServicesPage = ({ location: { pathname } }) => (
                 into implementable solutions. Our offerings include: data
                 strategy, data lake implementation, data supply chain modeling
                 and implementation, integration with legacy systems using common
-                sense infrastructure, data replication, data backup and dataset
+                sense infrastructure, data replication, data backup, dataset
                 tracking and&nbsp;data&nbsp;auditing.
               </>
             ),
             title: <>Data Services</>,
+          },
+           {
+            description: (
+              <>
+                We provide the full gamut of software development services and 
+                support from concept and ideation to launch and maintenance. 
+                We do this while being agile and keeping our client’s requirements 
+                in&nbsp;the&nbsp;forefront.
+              </>
+            ),
+            title: <>End to End Software Development</>,
           },
           /* {
             description: (
@@ -222,7 +233,6 @@ const ServicesPage = ({ location: { pathname } }) => (
       </Box>
     </Section>
     <Section sx={{ textAlign: [null, null, 'center'] }}>
-      <h2>Methodology</h2>
       <Box
         as="p"
         sx={{

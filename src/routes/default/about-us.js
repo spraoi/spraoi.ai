@@ -32,8 +32,8 @@ const AboutUsPage = ({ location: { pathname } }) => {
           }}
         >
           <Box as="p" sx={{ fontSize: 4, lineHeight: 1, mt: 5 }}>
-            We are a solution focused technology firm that has grown
-            significantly since our inception in June 2017. Our deep domain
+            We are a Group Benefits, and Life and Annuities focused technology firm. 
+            We have grown significantly since our inception in June 2017. Our deep domain
             expertise, that enables us to distinguish between individual,
             annuities, group benefits, voluntary and worksite requirements in
             different market segments, has allowed us to develop significant

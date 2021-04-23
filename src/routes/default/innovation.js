@@ -109,20 +109,14 @@ const ServicesPage = ({ location: { pathname } }) => (
           {
             description: (
               <>
-                We offer advanced integration services leveraging best in class
-                technologies. We leverage our pre-defined integration design
-                paradigms to go to market quickly. Our built-in auditing,
-                logging, tracing and the ability to configure different
-                authentication mechanisms make us well-suited for the insurance
-                industry.
+                We offer business outcome driven technology strategy services 
+                by working closely with our clients. Our subject matter experts 
+                bring industry best practices to the table to help improve 
+                organizational and operational effectiveness while keeping 
+                innovation as the focus.
               </>
             ),
-            paragraphSx: { color: 'text.secondary' },
-            sx: {
-              background: (theme) => theme.colors.accentGradient,
-              color: 'white',
-            },
-            title: <>Integration Services</>,
+            title: <>Technology Strategy Services</>,
           },
           {
             description: (
@@ -238,9 +232,9 @@ const ServicesPage = ({ location: { pathname } }) => (
           mx: 'auto',
         }}
       >
-        Be the disrupter, or get disrupted. We have a proven ability to
-        accelerate the innovation agenda through our teams and solutions.
-        Integrated analytical and engineering talent can deliver results
+        We have the ability to accelerate the innovation agenda 
+        through our teams and solutions using our proven methodology. 
+        Our integrated analytical and engineering talent can deliver results
         in&nbsp;two&#8209;week&nbsp;sprints.
       </Box>
     </Section>

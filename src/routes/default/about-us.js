@@ -32,15 +32,15 @@ const AboutUsPage = ({ location: { pathname } }) => {
           }}
         >
           <Box as="p" sx={{ fontSize: 4, lineHeight: 1, mt: 5 }}>
-            We are a Group Benefits, and Life and Annuities focused technology firm. 
-            We have grown significantly since our inception in June 2017. Our deep domain
-            expertise, that enables us to distinguish between individual,
-            annuities, group benefits, voluntary and worksite requirements in
-            different market segments, has allowed us to develop significant
-            technology IP. We believe transformational results are delivered
-            within the carrier’s existing eco-system using a data-centric
-            machine learning approach to provide insights at key decision
-            points.
+            We are a Group Benefits, and Life and Annuities focused technology
+            firm. We have grown significantly since our inception in June 2017.
+            Our deep domain expertise, that enables us to distinguish between
+            individual, annuities, group benefits, voluntary and worksite
+            requirements in different market segments, has allowed us to develop
+            significant technology IP. We believe transformational results are
+            delivered within the carrier’s existing eco-system using a
+            data-centric machine learning approach to provide insights at key
+            decision points.
           </Box>
           <Icon
             svg="team-spirit"

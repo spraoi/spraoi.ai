@@ -174,7 +174,7 @@ const MachineLearningSolutionsPage = ({ location: { pathname } }) => (
             description: (
               <>
                 Identifies short term and long term disability claims with
-                inconsistent patterns based on number of factors such as
+                inconsistent patterns based on a number of factors such as
                 diagnosis, job description, industry and return to work
                 likelhood to flag for review by claims examiners.
               </>

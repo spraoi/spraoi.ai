@@ -109,10 +109,10 @@ const ServicesPage = ({ location: { pathname } }) => (
           {
             description: (
               <>
-                We offer business outcome driven technology strategy services 
-                by working closely with our clients. Our subject matter experts 
-                bring industry best practices to the table to help improve 
-                organizational and operational effectiveness while keeping 
+                We offer business outcome driven technology strategy services by
+                working closely with our clients. Our subject matter experts
+                bring industry best practices to the table to help improve
+                organizational and operational effectiveness while keeping
                 innovation as&nbsp;the&nbsp;focus.
               </>
             ),
@@ -132,12 +132,12 @@ const ServicesPage = ({ location: { pathname } }) => (
             ),
             title: <>Data Services</>,
           },
-           {
+          {
             description: (
               <>
-                We provide the full gamut of software development services and 
-                support from concept and ideation to launch and maintenance. 
-                We do this while being agile and keeping our client’s requirements 
+                We provide the full gamut of software development services and
+                support from concept and ideation to launch and maintenance. We
+                do this while being agile and keeping our client’s requirements
                 in&nbsp;the&nbsp;forefront.
               </>
             ),
@@ -242,9 +242,9 @@ const ServicesPage = ({ location: { pathname } }) => (
           mx: 'auto',
         }}
       >
-        We have the ability to accelerate the innovation agenda 
-        through our teams and solutions using our proven methodology. 
-        Our integrated analytical and engineering talent can deliver results
+        We have the ability to accelerate the innovation agenda through our
+        teams and solutions using our proven methodology. Our integrated
+        analytical and engineering talent can deliver results
         in&nbsp;two&#8209;week&nbsp;sprints.
       </Box>
     </Section>

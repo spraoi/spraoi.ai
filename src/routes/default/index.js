@@ -8,11 +8,11 @@ import Icon from '../../components/Icon';
 import IconFigure from '../../components/IconFigure';
 import SEO from '../../components/SEO';
 import Section from '../../components/Section';
-// import useArticles from '../../effects/use-articles';
+import useArticles from '../../effects/use-articles';
 
 const Index = () => {
-  // const articles = useArticles();
-  // const latestAnnouncement = articles.find((a) => a.frontmatter.isAnnouncement);
+  const articles = useArticles();
+  const latestAnnouncement = articles.find((a) => a.frontmatter.isAnnouncement);
 
   return (
     <>
@@ -65,6 +65,13 @@ const Index = () => {
               pt: 2,
             }}
           >
+            <Button
+              link={`/announcements${latestAnnouncement.fields.slug}`}
+              sx={{ maxWidth: [null, null, 'auto'], mr: [null, null, 5] }}
+              variant="buttons.secondary"
+            >
+              Press Release
+            </Button>
             <Button
               link="/contact/"
               sx={{ maxWidth: [null, null, 'auto'], mt: [5, null, 0] }}

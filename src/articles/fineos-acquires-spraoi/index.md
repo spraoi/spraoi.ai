@@ -6,9 +6,13 @@ author: Victoria Jamison
 isAnnouncement: y
 description: >-
   Adding a More Enhanced Digital Experience and Machine Learning to The ONE
-    Purpose Built, End-To-End SaaS Platform for Global Life, Accident and Health
-    Insurers
+  Purpose Built, End-To-End SaaS Platform for Global Life, Accident and Health
+  Insurers
 ---
+
+_**Adding a More Enhanced Digital Experience and Machine Learning to The ONE
+Purpose Built, End-To-End SaaS Platform for Global Life, Accident and Health
+Insurers**_
 
 &nbsp;![FINEOS ACQUIRES SPRAOI](fineos-banner.png)
 

@@ -145,6 +145,16 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => {
               p: 6,
               'p:first-of-type .dropcap': noDropcap,
             },
+            em: {
+              border: '8px solid white',
+              borderRadius: 2,
+              boxShadow: 3,
+              float: 'left',
+              height: '150px',
+              mr: '1rem',
+              mt: '0.6rem',
+              width: '150px',
+            },
             h2: { lineHeight: 0, mb: 6, mt: 7 },
             h3: { lineHeight: 1, mb: 2, mt: 7 },
             hr: {

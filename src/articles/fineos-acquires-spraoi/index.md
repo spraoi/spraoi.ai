@@ -23,7 +23,7 @@ digital smart-portal options, industry specific operational and analytical
 models, and machine learning capabilities across the
 [FINEOS Platform](https://www.fineos.com/platform/).
 
-_![michael-kelly-thumbnail](michael-kelly.jpg)_
+~~![michael-kelly-thumbnail](michael-kelly.jpg)~~
 [Michael Kelly](https://www.linkedin.com/in/michael-kelly-4a23a3/), CEO of
 FINEOS, said: “We’re very happy to welcome the Spraoi team and their clients to
 FINEOS, and look forward to adding their advanced digital and machine learning
@@ -42,14 +42,14 @@ industry, as well as deep expertise in core systems and machine learning. That
 combination makes Spraoi a natural addition to the FINEOS team as we continually
 improve the FINEOS Platform to meet the needs of our clients.”
 
-_![nancy-casbarro-thumbnail](nancy-casbarro.jpg)_
+~~![nancy-casbarro-thumbnail](nancy-casbarro.jpg)~~
 [Nancy Casbarro](https://novarica.com/team/), Vice President Research &
 Consulting, [Novarica](https://novarica.com/) said, “Applying machine learning
 in the insurance industry can unlock the power of data for carriers to enhance
 the customer experience, as well as improve business outcomes across the entire
 lifecycle from case set-up to claims.”
 
-_![karan-mishra-thumbnail](karan-mishra.jpg)_
+~~![karan-mishra-thumbnail](karan-mishra.jpg)~~
 [Karan Mishra](https://www.linkedin.com/in/karan-mishra-spraoi/), co-founder of
 Spraoi said, “Spraoi’s technology offering, and services have allowed our
 clients to successfully optimize outcomes and see measurable ROI. Our deep

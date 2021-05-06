@@ -145,7 +145,7 @@ const ArticleLayout = ({ location: { pathname }, pageContext: { slug } }) => {
               p: 6,
               'p:first-of-type .dropcap': noDropcap,
             },
-            em: {
+            del: {
               border: '8px solid white',
               borderRadius: 2,
               boxShadow: 3,
